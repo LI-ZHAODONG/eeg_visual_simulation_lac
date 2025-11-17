@@ -1,10 +1,9 @@
 #First Step: Preprocess EEG Data
-python Scripts/preprocess.py \       
-  --vhdr sub-01/ses-01/eeg/sub-01_ses-01_task-visual_eeg.vhdr \
-  --out_dir outputs/sub-01
+python Scripts/Preprocess_continous.py   
+
 
 #Second Strp: Run Visualization Script
-python Scripts/raw_visuals.py
+ python Scripts/raw_visuals_continous.py
 
 
 #donot forget to change the paths according to your data organization!
