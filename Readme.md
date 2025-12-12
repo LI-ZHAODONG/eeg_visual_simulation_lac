@@ -1,4 +1,4 @@
-# EEG Visual Task – Preprocessing & Milestone 3
+# EEG Visual Task – Preprocessing
 
 This repository contains a complete EEG preprocessing and inspection pipeline for a visual task recorded in **BrainVision** format. The focus is on **artifact handling, ICA-based cleaning, and diagnostic visualization**
 
