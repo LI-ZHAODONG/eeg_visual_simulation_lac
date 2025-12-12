@@ -148,6 +148,26 @@ def main(vhdr_path, out_dir):
 
     # 5) Apply ICA and epoch final data
     final_epochs = apply_ica_and_epoch(raw, ica, bad_components)
+    # ===== Milestone 3 plots =====
+    evoked = final_epochs.average()
+
+    # Butterfly plot (all channels)
+    fig_b = evoked.plot(spatial_colors=True, show=False)
+    fig_b.savefig(out_dir / f"{vhdr_path.stem}-butterfly.png", dpi=300)
+
+    # Robust channel selection
+    for ch in ["Oz", "O1", "O2", "Pz", "Cz"]:
+        if ch in evoked.ch_names:
+            pick_ch = ch
+            break
+    else:
+        pick_ch = evoked.ch_names[0]
+    
+    fig_e = evoked.plot(picks=[pick_ch], show=False)
+    fig_e.savefig(out_dir / f"{vhdr_path.stem}-erp_{pick_ch}.png", dpi=300)
+
+    print("Using channel:", pick_ch)
+
 
     # 6) Save ICA solution (with exclude list set)
     ica_fname = out_dir / f"{vhdr_path.stem}-ica.fif"
