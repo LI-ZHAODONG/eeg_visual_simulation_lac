@@ -34,20 +34,71 @@ repo-root/
 ## Requirements
 
 - Python ≥ 3.9
-- `mne`
-- `numpy`
-- `matplotlib`
+- mne
+- numpy
+- scipy
+- matplotlib
 
 Optional (recommended):
-- `python-picard` (for Picard ICA)
+- python-picard (for Picard ICA)
 
-### Installation
+---
+
+## Python Environment Setup
+
+To ensure reproducibility, all scripts are intended to be run inside a dedicated Python virtual environment.
+
+### Create a virtual environment
+
+From the repository root:
 
 ```bash
-pip install mne numpy matplotlib python-picard
+python3 -m venv eeg-env
 ```
 
+### Activate the environment
+
+macOS / Linux:
+```bash
+source eeg-env/bin/activate
+```
+
+Windows:
+```bash
+eeg-env\\Scripts\\activate
+```
+
+After activation, the shell prompt should display `(eeg-env)`.
+
+---
+
 If `python-picard` is **not installed**, change the ICA method in `preprocess.py` from `picard` to `fastica`.
+
+---
+
+
+## Installing Dependencies
+
+All required Python packages are listed in `requirements.txt`.
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Verify installation
+
+```bash
+python -c "import mne, numpy, matplotlib; print('Environment setup successful')"
+```
+
+If Picard ICA is required:
+
+```bash
+python -c "import picard; print('Picard ICA available')"
+```
+
+If `python-picard` is not installed, change the ICA method in `preprocess.py` from `picard` to `fastica`.
 
 ---
 
