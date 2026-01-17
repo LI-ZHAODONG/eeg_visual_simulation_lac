@@ -148,6 +148,8 @@ def main(vhdr_path, out_dir):
 
     # 5) Apply ICA and epoch final data
     final_epochs = apply_ica_and_epoch(raw, ica, bad_components)
+    final_epochs.save(out_dir / f"{vhdr_path.stem}-final-epo.fif", overwrite=True)
+
     # ===== Milestone 3 plots =====
     evoked = final_epochs.average()
 
