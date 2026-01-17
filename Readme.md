@@ -278,3 +278,171 @@ For **Subject 01**, the preprocessing and analysis pipeline successfully:
 - Produced clean and interpretable evoked responses
 
 The results demonstrate that the implemented pipeline is effective and suitable for subsequent EEG analysis.
+
+
+
+# -------------------------------------------------------
+# Milestone 4 – Condition-Based ERP Analysis
+
+## Objective
+
+The objective of **Milestone 4** is to analyze and compare **event-related potentials (ERPs)** between two experimental conditions using preprocessed EEG data. This milestone builds directly on **Milestone 3**, where artifact-free epochs were generated using ICA-based preprocessing. The focus here is on identifying **temporal and spatial differences** in brain responses evoked by the two conditions.
+
+---
+
+## Dataset and Preprocessing Recap
+
+- **Dataset:** ds006547  
+- **Subject:** sub-01  
+- **Task:** visual  
+- **EEG channels:** 63  
+- **Epoch time window:** −0.5 s to 3.5 s relative to stimulus onset  
+- **Total epochs:** 456
+
+All EEG data were preprocessed in **Milestone 3**, including:
+
+- Automatic bad channel detection and interpolation  
+- Line noise removal (notch filtering)  
+- ICA-based artifact removal  
+- Epoching of cleaned continuous data
+
+The final preprocessed epochs used for Milestone 4 are stored in:
+
+```
+sub-01_ses-01_task-visual_eeg-final-epo.fif
+```
+
+---
+
+## Experimental Conditions
+
+Epochs were divided into two experimental conditions based on event codes.
+
+### Condition A
+
+- **Event codes:** 1–22  
+- **Number of epochs:** 264
+
+### Condition B
+
+- **Event codes:** 41–56  
+- **Number of epochs:** 192
+
+These two conditions correspond to different stimulus categories in the visual task.
+
+---
+
+## ERP Computation
+
+For each condition, ERPs were computed by averaging all epochs belonging to that condition:
+
+- **Condition A ERP:** average of 264 trials  
+- **Condition B ERP:** average of 192 trials
+
+All ERPs were computed using identical preprocessing parameters, baseline settings, and time windows to ensure a valid comparison.
+
+---
+
+## Butterfly Plots (All Channels)
+
+### Purpose
+
+Butterfly plots were generated to visualize ERP responses across **all 63 EEG channels simultaneously** for each condition.
+
+### Observations
+
+- Both conditions show clear stimulus-locked responses after stimulus onset.
+- ERP waveforms are smooth and consistent across channels.
+- The overall temporal structure is similar for both conditions.
+- Subtle amplitude differences are visible between Condition A and Condition B.
+
+### Interpretation
+
+The butterfly plots confirm good signal quality and demonstrate that both conditions evoke reliable neural responses suitable for further comparison.
+
+---
+
+## Single-Channel ERP Comparison (Oz)
+
+### Rationale
+
+The electrode **Oz** was selected for detailed analysis because it is located over the **visual cortex**, which is highly relevant for a visual task.
+
+### Analysis
+
+- ERPs at Oz were extracted for both conditions.
+- The two ERPs were plotted together using identical scaling.
+- A difference waveform was computed as **Condition B − Condition A**.
+
+### Observations
+
+- Both conditions show a clear post-stimulus positive deflection.
+- Condition B consistently shows a larger amplitude than Condition A.
+- The difference waveform remains positive after stimulus onset.
+
+### Interpretation
+
+Condition B elicits stronger visual cortical activity than Condition A, suggesting enhanced visual processing or attentional engagement.
+
+---
+
+## Topographic Analysis
+
+### Time Windows
+
+Scalp topographies were computed for three post-stimulus time windows:
+
+- **100–200 ms**  
+- **200–300 ms**  
+- **300–400 ms**
+
+These windows capture early, intermediate, and later stages of visual processing.
+
+---
+
+### Condition-Specific Topographies
+
+#### Condition A
+
+- Voltage distributions show dominant posterior scalp activity.
+- Spatial patterns remain stable across time windows.
+- The distribution is consistent with visual cortex activation.
+
+#### Condition B
+
+- Similar posterior dominance is observed.
+- Overall amplitudes are higher compared to Condition A.
+- Spatial patterns remain physiologically plausible.
+
+---
+
+### Difference Topographies (Condition B − Condition A)
+
+### Purpose
+
+Difference maps were computed to highlight spatial regions where the two conditions differ.
+
+### Observations
+
+- Strongest differences appear over posterior electrodes.
+- Differences increase in magnitude in later time windows.
+- Spatial patterns align with the single-channel Oz ERP results.
+
+### Interpretation
+
+Condition B produces stronger posterior cortical responses than Condition A, confirming condition-dependent modulation of visual processing.
+
+---
+
+## Summary of Findings
+
+- Both conditions evoke clear and reliable ERPs.
+- Condition B consistently shows higher amplitudes than Condition A.
+- Differences are observed both temporally (ERP waveforms) and spatially (topographic maps).
+- Effects are localized to brain regions associated with visual processing.
+
+---
+
+## Conclusion
+
+Milestone 4 successfully demonstrates condition-specific differences in EEG responses using ERP waveforms and scalp topographies. The results are physiologically meaningful, consistent across analyses, and validate the preprocessing pipeline established in Milestone 3. The analysis confirms that the experimental conditions modulate visual cortical activity in a systematic and interpretable manner.
