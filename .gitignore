@@ -1,3 +1,6 @@
 
 # Large derived EEG outputs
 *.fif
+
+# Large derived EEG outputs
+*.fif
