@@ -26,8 +26,7 @@ def main():
     # This file is: Dataset/Scripts/run_all_subjects.py
     scripts_dir = Path(__file__).resolve().parent      # .../Dataset/Scripts
     dataset_root = scripts_dir.parent                  # .../Dataset
-    workspace_root = dataset_root.parent.parent        # D:/projects/EEG
-    subjects_root = workspace_root / "ds006547"        # D:/projects/EEG/ds006547
+    subjects_root = dataset_root / "ds006547"          # .../Dataset/ds006547
 
     preprocess_script = scripts_dir / "preprocess.py"
 
@@ -47,37 +46,27 @@ def main():
         print(f"No sub-* directories found inside '{subjects_root}'")
         return
 
-    # Find all subject folders inside ds006547/
-    sub_dirs = sorted(
-        d for d in subjects_root.iterdir()
-        if d.is_dir() and d.name.startswith("sub-")
-    )
-
-    if not sub_dirs:
-        print(f"No sub-* directories found inside '{subjects_root}'")
-        return
-
     print(f"Found {len(sub_dirs)} subjects in {subjects_root}.\n")
 
-    from tqdm import tqdm
-    pbar = tqdm(sub_dirs, desc="Processing Subjects")
-
-    for sub_dir in pbar:
+    for sub_dir in sub_dirs:
         sub_name = sub_dir.name
         vhdr_path = find_vhdr(sub_dir)
 
         if vhdr_path is None:
+            print(f"[{sub_name}] No .vhdr found in {sub_dir}/ses-01/eeg → skipping.\n")
             continue
-
-        pbar.set_postfix_str(f"Current: {sub_name}")
 
         # Outputs go to: Dataset/outputs/sub-XX
         out_dir = dataset_root / "outputs" / sub_name
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        # Use absolute paths to avoid relativity issues
-        vhdr_arg = vhdr_path.resolve()
-        out_arg = out_dir.resolve()
+        print(f"[{sub_name}]")
+        print(f"  VHDR:    {vhdr_path}")
+        print(f"  OUT_DIR: {out_dir}")
+
+        # Build arguments relative to Dataset/ (dataset_root)
+        vhdr_arg = vhdr_path.relative_to(dataset_root)
+        out_arg = out_dir.relative_to(dataset_root)
 
         cmd = [
             sys.executable,                 # same Python interpreter / venv
@@ -86,11 +75,14 @@ def main():
             "--out_dir", str(out_arg),      # e.g. outputs/sub-01
         ]
 
-        # run with cwd = Dataset/
+        print("  Running:", " ".join(cmd))
+        # IMPORTANT: run with cwd = Dataset/
         result = subprocess.run(cmd, cwd=str(dataset_root))
 
-        if result.returncode != 0:
-            print(f"\n[ERROR] {sub_name} failed with code {result.returncode}")
+        if result.returncode == 0:
+            print("  ➜ DONE\n")
+        else:
+            print(f"  ➜ ERROR (code {result.returncode})\n")
 
 
 if __name__ == "__main__":
