@@ -58,23 +58,13 @@ def run_ica(raw, n_components=60):
     return ica
 
 
-def apply_ica_and_epoch(raw, ica, good_components=None, bad_components=None):
+def apply_ica_and_epoch(raw, ica, bad_components):
     """
-    Apply ICA. 
-    If good_components is provided, reconstruct signal using ONLY those.
-    Otherwise, exclude bad_components.
-    Then create final epochs (-0.5 to 3.5 s, baseline -0.5–0).
+    Apply ICA, excluding bad_components, then create final epochs
+    (-0.5 to 3.5 s, baseline -0.5–0).
     """
-    if good_components is not None:
-        print(f"Reconstructing signal using ONLY ICA components: {good_components}")
-        # To keep only 'good', we exclude everything EXCEPT those.
-        all_inds = list(range(ica.n_components_))
-        exclude_inds = [i for i in all_inds if i not in good_components]
-        ica.exclude = exclude_inds
-    elif bad_components is not None:
-        print(f"Excluding ICA components: {bad_components}")
-        ica.exclude = bad_components
-    
+    print(f"Excluding ICA components: {bad_components}")
+    ica.exclude = bad_components
     clean_raw = ica.apply(raw.copy())
 
     # Final epochs for analysis
@@ -84,137 +74,36 @@ def apply_ica_and_epoch(raw, ica, good_components=None, bad_components=None):
         clean_raw,
         events,
         event_id=None,
-        tmin=-0.6, # Extra buffer for Hilbert/cropping
-        tmax=3.6,
-        baseline=(-0.5, 0.0), # Apply baseline correction
+        tmin=-0.5,
+        tmax=3.5,
+        baseline=(-0.5, 0.0),
         preload=True,
     )
-    # Set the actual analysis window
-    final_epochs.crop(tmin=-0.5, tmax=3.5)
-    
     print(f"Final epochs shape: {final_epochs.get_data().shape}")
     return final_epochs
 
 
-def reject_outliers_broadband(epochs):
-    """
-    Reject trials with high broadband gamma (80–100 Hz) activity (z > 4).
-    As per paper: "To isolate trials corrupted by broadband muscular or ocular 
-    artifacts, we first extracted log power in the 80–100 Hz band... 
-    Trials with |z| > 4 were excluded."
-    """
-    print("Performing 80-100 Hz outlier rejection...")
-    # Ensure data is loaded
-    epochs.load_data()
-    
-    from mne.filter import filter_data
-    sfreq = epochs.info['sfreq']
-    
-    # Pick only EEG channels
-    eeg_picks = mne.pick_types(epochs.info, eeg=True, exclude='bads')
-    data = epochs.get_data(picks=eeg_picks, tmin=0, tmax=3) # (n_epochs, n_channels, n_times)
-    
-    # Force contiguous copy to avoid MNE/NumPy AttributeError during x.shape = ...
-    data_c = np.ascontiguousarray(data.copy())
-    
-    # Filter for 80-100 Hz
-    filtered = filter_data(data_c, sfreq, 80, 100, fir_design="firwin", verbose=False)
-    
-    # Compute power (mean square) per trial
-    max_power = np.max(np.mean(filtered**2, axis=1), axis=1) 
-    log_power = np.log10(max_power + 1e-10)
-    
-    z = (log_power - np.mean(log_power)) / (np.std(log_power) + 1e-10)
-    keep_mask = np.abs(z) <= 4
-    
-    n_rejected = len(epochs) - np.sum(keep_mask)
-    if n_rejected > 0:
-        print(f"  Rejected {n_rejected} epochs with |z| > 4 in 80-100 Hz band.")
-        epochs = epochs[keep_mask]
-    else:
-        print("  No epochs rejected based on 80-100 Hz criteria.")
-    
-    return epochs
-
-
 def compute_band_amplitude(final_epochs, fmin, fmax, label):
-    """
-    Filter into band and compute |task| - |baseline| analytic amplitude per channel.
-    Uses Hilbert transform as per paper's 'absolute analytic amplitude'.
-    """
-    print(f"Computing {label} power ({fmin}-{fmax} Hz)...")
-    # Ensure data is loaded
-    final_epochs.load_data()
-    
-    from mne.filter import filter_data
-    from scipy.signal import hilbert
-    
-    sfreq = final_epochs.info['sfreq']
-    data = final_epochs.get_data() # (n_epochs, n_channels, n_times)
-    
-    # Create a contiguous copy to avoid MNE _prep_for_filtering errors
-    data_c = np.ascontiguousarray(data.copy())
-    
-    # Apply band-pass filter
-    filtered = filter_data(data_c, sfreq, fmin, fmax, fir_design="firwin", verbose=False)
-    
-    # Apply Hilbert transform to get analytic signal envelope
-    print(f"  Applying Hilbert envelope...")
-    # Hilbert along the time axis (last axis)
-    analytic = hilbert(filtered, axis=-1)
-    envelope = np.abs(analytic)
+    """Filter into band and compute |task| - |baseline| amplitude per channel."""
+    band_epochs = final_epochs.copy().filter(fmin, fmax, fir_design="firwin")
+    data = band_epochs.get_data()  # (n_epochs, n_channels, n_times)
 
-    times = final_epochs.times
+    times = band_epochs.times
 
-    # Indices for baseline (-0.5–0) and task (0.5–2.5) as per paper intent
-    # Note: Stimulus starts at 0. Paper often evaluates specific windows.
+    # Indices for baseline (-0.5–0) and task (0–3.0)
     baseline_mask = (times >= -0.5) & (times <= 0.0)
     task_mask = (times >= 0.0) & (times <= 3.0)
-    
-    # Average envelope over time windows
-    baseline_mean = envelope[:, :, baseline_mask].mean(axis=2) # (n_epochs, n_channels)
-    task_mean = envelope[:, :, task_mask].mean(axis=2)
 
-    diff = task_mean - baseline_mean  # Analytic amplitude difference
-    print(f"  {label} band: computed analytic amplitude differences.")
+    # Rectified amplitude (absolute value)
+    abs_data = np.abs(data)
+
+    baseline_mean = abs_data[:, :, baseline_mask].mean(axis=2)
+    task_mean = abs_data[:, :, task_mask].mean(axis=2)
+
+    diff = task_mean - baseline_mean  # |task| - |baseline|
+    print(f"{label} band: computed per-epoch per-channel amplitude differences.")
     return diff  # shape: (n_epochs, n_channels)
 
-
-def find_visual_components(ica, raw, n_keep=5):
-    """
-    Automated heuristic to find 'visual' components.
-    Looks for components with high weights on posterior electrodes 
-    and low weights on frontal ones.
-    """
-    print(f"Automatically searching for top {n_keep} visual components...")
-    
-    # Normalize channel names to handle Oz vs OZ vs oz
-    ch_names_upper = [ch.upper() for ch in raw.ch_names]
-    
-    post_targets = ["OZ", "O1", "O2", "POZ", "PO3", "PO4"]
-    front_targets = ["FP1", "FP2", "FZ", "F3", "F4", "F7", "F8"]
-    
-    post_channels = [raw.ch_names[i] for i, ch in enumerate(ch_names_upper) if ch in post_targets]
-    front_channels = [raw.ch_names[i] for i, ch in enumerate(ch_names_upper) if ch in front_targets]
-
-    if not post_channels:
-        print("  WARNING: No posterior channels found! Using fallback (first n components).")
-        return list(range(n_keep))
-        
-    post_picks = mne.pick_channels(raw.ch_names, post_channels)
-    front_picks = mne.pick_channels(raw.ch_names, front_channels)
-    
-    # Get spatial maps (n_channels, n_components)
-    maps = ica.get_components() 
-    
-    # Score = Power in back - Power in front
-    post_score = np.abs(maps[post_picks, :]).mean(axis=0)
-    front_score = np.abs(maps[front_picks, :]).mean(axis=0)
-    
-    scores = post_score - (0.5 * front_score) # Penalize frontal activity
-    
-    best_inds = np.argsort(scores)[-n_keep:]
-    return sorted(best_inds.tolist())
 
 def main(vhdr_path, out_dir):
     vhdr_path = Path(vhdr_path)
@@ -227,9 +116,7 @@ def main(vhdr_path, out_dir):
     # 1) Bad channel detection + interpolation
     raw = detect_bad_channels_ssd(raw)
 
-    # 2) Filter data (1–100 Hz) and remove line noise (60 Hz)
-    print("Filtering data 1–100 Hz and removing 60 Hz line noise...")
-    raw.filter(1.0, 100.0, fir_design="firwin")
+    # 2) Line noise removal (60 Hz)
     raw.notch_filter(60.0)
 
     # 3) Run ICA
@@ -255,25 +142,13 @@ def main(vhdr_path, out_dir):
 
     print("Auto-detected EOG components:", eog_inds)
 
-    # RECONSTRUCTION STRATEGY: 
-    # For Subject 01 we know the best ones, for others we use the heuristic.
-    # Check filename for sub-01 (more robust than path string)
-    if "sub-01" in vhdr_path.name.lower():
-        print("Subject 01 detected: Using manual ICA component list [9, 11, 14]")
-        good_components = [9, 11, 14] 
-    else:
-        good_components = find_visual_components(ica, raw, n_keep=4)
-        print(f"Using automated visual components: {good_components}")
-        
-    final_epochs = apply_ica_and_epoch(raw, ica, good_components=good_components)
-    
-    # 5) 80-100 Hz Outlier Rejection
-    final_epochs = reject_outliers_broadband(final_epochs)
-    
-    # Save final epochs
-    final_epochs_path = out_dir / f"{vhdr_path.stem}-final-epo.fif"
-    print(f"Saving final epochs to {final_epochs_path}")
-    final_epochs.save(final_epochs_path, overwrite=True)
+    # Optionally extend this list manually after visual inspection
+    manual_bad = []  # e.g. [3, 7] once you inspect components
+    bad_components = sorted(list(set(eog_inds + manual_bad)))
+
+    # 5) Apply ICA and epoch final data
+    final_epochs = apply_ica_and_epoch(raw, ica, bad_components)
+    final_epochs.save(out_dir / f"{vhdr_path.stem}-final-epo.fif", overwrite=True)
 
     # ===== Milestone 3 plots =====
     evoked = final_epochs.average()
@@ -299,11 +174,10 @@ def main(vhdr_path, out_dir):
     # 6) Save ICA solution (with exclude list set)
     ica_fname = out_dir / f"{vhdr_path.stem}-ica.fif"
     print(f"Saving ICA solution to {ica_fname}")
-    ica.save(ica_fname, overwrite=True)
+    ica.save(ica_fname,overwrite=True)
 
     # 7) Compute alpha and gamma amplitude differences
-    # Standardize bands: Alpha 8-12, Gamma 40-80
-    alpha_diff = compute_band_amplitude(final_epochs, 8, 12, label="Alpha")
+    alpha_diff = compute_band_amplitude(final_epochs, 8, 13, label="Alpha")
     gamma_diff = compute_band_amplitude(final_epochs, 40, 80, label="Gamma")
 
     # 8) Save results
