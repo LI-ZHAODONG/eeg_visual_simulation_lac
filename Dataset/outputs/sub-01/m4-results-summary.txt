@@ -1,9 +1,9 @@
-Milestone 4 â€“ Subject 01 summary
+Milestone 4 ¨C Subject 01 summary
 --------------------------------
 Epochs file: sub-01_ses-01_task-visual_eeg-final-epo.fif
 Total epochs: 456
-Condition A (codes 1â€“22): 264 epochs
-Condition B (codes 41â€“56): 192 epochs
+Condition A (codes 1¨C22): 264 epochs
+Condition B (codes 41¨C56): 192 epochs
 ERP overlay channel: Oz
 Outputs:
   m4-butterfly_A.png
