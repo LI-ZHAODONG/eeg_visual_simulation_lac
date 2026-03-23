@@ -1,6 +1,21 @@
 
-# Large derived EEG outputs
-*.fif
+# Large derived EEG outputs - ignore everything in outputs except JSON files
+Dataset/outputs/*
+!Dataset/outputs/*.json
+!Dataset/outputs/**/*.json
+!Dataset/outputs/*/
 
-# Large derived EEG outputs
+# Large output files
 *.fif
+*.npy
+*.npz
+*.png
+eeg-env/
+
+# IDE and system files
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/

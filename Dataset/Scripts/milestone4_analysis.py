@@ -32,7 +32,7 @@ def main():
     print("Total epochs:", len(epochs))
 
     # ---- Define conditions by EVENT CODES (robust; avoids string query issues) ----
-    condA_codes = list(range(1, 23))     # 1..22
+    condA_codes = list(range(1, 21))     # 1..20 from the paper figures
     condB_codes = list(range(41, 57))    # 41..56
 
     mask_A = np.isin(epochs.events[:, 2], condA_codes)
@@ -66,7 +66,7 @@ def main():
 
     # ---- 2) ERP overlay at chosen channel ----
     fig_cmp = mne.viz.plot_compare_evokeds(
-    {"A(1-22)": evoked_A, "B(41-56)": evoked_B},
+    {"A(1-20)": evoked_A, "B(41-56)": evoked_B},
     picks=[pick_ch],
     show=False,
     )
@@ -106,7 +106,7 @@ def main():
         f.write("--------------------------------\n")
         f.write(f"Epochs file: {epochs_path.name}\n")
         f.write(f"Total epochs: {len(epochs)}\n")
-        f.write(f"Condition A (codes 1–22): {len(epochs_A)} epochs\n")
+        f.write(f"Condition A (codes 1–20): {len(epochs_A)} epochs\n")
         f.write(f"Condition B (codes 41–56): {len(epochs_B)} epochs\n")
         f.write(f"ERP overlay channel: {pick_ch}\n")
         f.write("Outputs:\n")
