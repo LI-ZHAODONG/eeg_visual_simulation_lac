@@ -244,7 +244,27 @@ def main():
 
     print(f"Loading raw BrainVision file: {vhdr_path}")
     raw = mne.io.read_raw_brainvision(vhdr_path, preload=True, verbose=False)
+    # Set correct channel types for non-EEG channels
+    channel_type_map = {}
+    for ch in raw.ch_names:
+        ch_lower = ch.lower()
+        if ch_lower == "ecg":
+            channel_type_map[ch] = "ecg"
+        elif ch_lower == "resp":
+            channel_type_map[ch] = "resp"
+        elif ch_lower in {"photosensor", "optical"}:
+            channel_type_map[ch] = "misc"
 
+    if channel_type_map:
+        raw.set_channel_types(channel_type_map, verbose=False)
+
+    # Keep only EEG channels for this pipeline
+    non_eeg_to_drop = [ch for ch in ["photosensor", "optical", "ecg", "resp"] if ch in raw.ch_names]
+    if non_eeg_to_drop:
+        raw.drop_channels(non_eeg_to_drop)
+
+    print("Interpolating bad channels.")
+    
     detection = detect_bad_channels(
         raw,
         l_freq=args.ssd_l_freq,
