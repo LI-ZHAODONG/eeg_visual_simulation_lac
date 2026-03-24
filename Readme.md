@@ -121,9 +121,11 @@ python Dataset/Scripts/preprocess.py \
 
 This step:
 
+- automatically detects and sets correct channel types (ECG, RESP, photosensor)
+- drops non-EEG channels to preserve signal integrity
 - detects bad channels using `10-100 Hz` SSD z-scores
 - interpolates bad channels
-- applies `60 Hz` notch filtering
+- applies `60 Hz` notch filtering (with harmonic support up to 180 Hz)
 - creates an ICA-prep copy filtered at `1-100 Hz`
 - downsamples to `200 Hz`
 - epochs `-1.0 to 4.0 s` for ICA training
@@ -132,6 +134,14 @@ This step:
   - bad-channel JSON
   - preprocess summary JSON
   - ICA review template JSON
+
+**Optional parameters:**
+- `--notch-freq`: Base notch frequency (default: 60 Hz)
+- `--notch-max-freq`: Highest harmonic to notch (default: 180 Hz)
+- `--bad-z-thresh`: Z-score threshold for bad-channel detection (default: 1.0)
+- `--ica-method`: ICA algorithm - picard, fastica, or infomax (default: picard)
+- `--n-components`: Number of ICA components (default: 60)
+- `--resample-sfreq`: ICA training sampling rate (default: 200 Hz)
 
 ### 2. Automatic ICA Component Labeling (NEW)
 
