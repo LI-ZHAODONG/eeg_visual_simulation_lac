@@ -218,13 +218,11 @@ def main():
     print(f"Loading ICA: {ica_path}")
     ica = mne.preprocessing.read_ica(ica_path, verbose=False)
 
-    all_components = set(range(ica.n_components_))
-    if kept_components:
-        ica.exclude = sorted(all_components.difference(kept_components))
-    else:
-        ica.exclude = rejected_components
+    ica.exclude = sorted(rejected_components)
 
-    print(f"Keeping components: {kept_components}")
+
+    print(f"Explicitly kept components: {kept_components}")
+    print(f"Explicitly rejected components: {rejected_components}")
     print(f"Excluding components: {ica.exclude}")
     clean_raw = ica.apply(raw.copy())
 
