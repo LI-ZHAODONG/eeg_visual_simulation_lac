@@ -71,8 +71,8 @@ for i in {1..31}; do
     # Step 2.5: Refine the ICA Review JSON
     echo "🛠️ [Step 2.5] Refining borderline ICA decisions..."
     python Dataset/Scripts/refine_ica_review.py \
-      --review-json "$REVIEW_JSON" \
-      --out-json "$REFINED_REVIEW_JSON"
+    --review-json "$REVIEW_JSON" \
+    --out-json "$REFINED_REVIEW_JSON"
     if [ $? -ne 0 ]; then
         echo "❌ ERROR on Step 2.5 for ${SUB_ID}. Skipping."
         continue
