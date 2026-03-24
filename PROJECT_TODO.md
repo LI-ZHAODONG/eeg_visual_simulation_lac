@@ -37,6 +37,15 @@ Done:
   - generates ICA review figures
   - creates/updates a component review JSON
 
+- [Dataset/Scripts/auto_inspect_ica.py](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/auto_inspect_ica.py) **(NEW)**
+  - automated ICA component labeling using `mne-icalabel`
+  - confidence-based component classification
+  - summary statistics for kept/rejected/unsure components
+
+- [Dataset/Scripts/refine_ica_review.py](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/refine_ica_review.py) **(NEW)**
+  - refines borderline ICA decisions
+  - applies heuristics to improve component classification
+
 - [Dataset/Scripts/apply_reviewed_ica.py](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/apply_reviewed_ica.py)
   - applies reviewed ICA decisions
   - reconstructs cleaned sensor-space EEG
@@ -110,6 +119,20 @@ Done:
 - [Dataset/Scripts/retinotopy_model_fit.py](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/retinotopy_model_fit.py)
   - compares linear vs divisive-style retinotopy summation
   - includes blank-corrected alpha comparison
+
+### Full Pipeline Automation
+
+Done:
+
+- [Dataset/Scripts/Phase_1.sh](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/Phase_1.sh) **(NEW)**
+  - full automation of steps 1-8 for all 31 subjects
+  - automatic ICA inspection with confidence thresholding
+  - automated ICA refinement
+  - automatic band power extraction
+  - automatic condition and orientation analysis
+  - automatic ERSP computation
+  - comprehensive error handling and logging
+  - supports skipping preprocessing if already completed
 
 ## What Still Does Not Fully Match The Paper
 

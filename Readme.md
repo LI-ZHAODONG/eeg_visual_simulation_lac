@@ -85,7 +85,30 @@ When running BrainVision files from a git-annex dataset, pass the subject-facing
 
 Do not manually replace that with the resolved `.git/annex/objects/...` path. The scripts now preserve the original `.vhdr` path so MNE can find the matching `.vmrk` and `.eeg` sidecars.
 
-## Rebuilt Run Order
+## Full Automation with Phase 1 Script
+
+**New:** All steps 1-8 can now be automated for all 31 subjects using a single bash script:
+
+```bash
+bash Dataset/Scripts/Phase_1.sh
+```
+
+This script:
+- Loops through subjects 01-31
+- Skips preprocessing (assumes already completed)
+- Runs automatic ICA labeling with `mne-icalabel` (threshold = 0.60)
+- Refines borderline ICA decisions
+- Applies ICA exclusions and generates cleaned data
+- Extracts alpha/gamma band power
+- Builds retinotopy and orientation summaries
+- Computes ERSP statistics
+- Includes error handling and checkpoints for each step
+
+**Prerequisites:**
+- All subjects must have preprocessed ICA files (`*-ica.fif`)
+- Raw BIDS dataset at `/Volumes/personal/EEG/project/ds006547`
+
+## Manual Run Order (Individual Steps)
 
 The core run order for one subject is:
 
@@ -110,7 +133,37 @@ This step:
   - preprocess summary JSON
   - ICA review template JSON
 
-### 2. Review ICA components
+### 2. Automatic ICA Component Labeling (NEW)
+
+```bash
+python Dataset/Scripts/auto_inspect_ica.py \
+  --ica-path Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif \
+  --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr \
+  --threshold 0.60
+```
+
+This step:
+
+- uses `mne-icalabel` to automatically classify ICA components
+- marks components as `keep`, `reject`, or `unsure` based on confidence threshold
+- saves automated review JSON with component classifications
+- provides summary of kept/rejected/unsure counts
+
+### 2.5. Refine ICA Decisions (NEW)
+
+```bash
+python Dataset/Scripts/refine_ica_review.py \
+  --review-json Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_component_review.json \
+  --out-json Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_component_review-refined.json
+```
+
+This step:
+
+- refines borderline ICA decisions from mne-icalabel
+- applies heuristics to improve classification
+- saves refined review JSON
+
+### 3. Manual ICA Review (Optional)
 
 ```bash
 python Dataset/Scripts/manual_inspect_ica.py \
@@ -118,11 +171,12 @@ python Dataset/Scripts/manual_inspect_ica.py \
   --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr
 ```
 
-This step:
+This step (optional for manual refinement):
 
 - saves ICA topography figures
 - optionally saves ICA property plots if the raw file is supplied
-- creates or updates the review JSON where components are marked `keep` or `reject`
+- interactive review and component marking if needed
+- creates or updates the manual review JSON where components are marked `keep` or `reject`
 
 Important behavior:
 
@@ -130,7 +184,7 @@ Important behavior:
 - if you want to reject only a few artifact components, set those to `"keep": false` and avoid marking a tiny keep-only subset by mistake
 - for first-pass review, it is usually safer to reject only clear artifacts than to keep only one or two components
 
-### 3. Apply reviewed ICA decisions
+### 4. Apply reviewed ICA decisions
 
 ```bash
 python Dataset/Scripts/apply_reviewed_ica.py \
