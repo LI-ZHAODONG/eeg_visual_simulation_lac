@@ -70,7 +70,7 @@ def rebuild_ica_prep_raw(vhdr_path, preprocess_summary):
 
     sfreq = preprocessing.get("ica_training_resample_hz", 200.0)
     raw.resample(sfreq, verbose=False)
-    raw.set_eeg_reference("average", projection=False, verbose=False)
+   
     return raw
 
 
