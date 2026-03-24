@@ -30,6 +30,22 @@ def preserve_user_path(path_like):
 
 def rebuild_ica_prep_raw(vhdr_path, preprocess_summary):
     raw = mne.io.read_raw_brainvision(vhdr_path, preload=True, verbose=False)
+    channel_type_map = {}
+    for ch in raw.ch_names:
+        ch_lower = ch.lower()
+        if ch_lower == "ecg":
+            channel_type_map[ch] = "ecg"
+        elif ch_lower == "resp":
+            channel_type_map[ch] = "resp"
+        elif ch_lower in {"photosensor", "optical"}:
+            channel_type_map[ch] = "misc"
+
+    if channel_type_map:
+        raw.set_channel_types(channel_type_map, verbose=False)
+
+    to_drop = [ch for ch in ["photosensor", "optical", "ecg", "resp"] if ch in raw.ch_names]
+    if to_drop:
+        raw.drop_channels(to_drop)
 
     preprocessing = preprocess_summary.get("preprocessing", {})
     bad_channels = preprocessing.get("bad_channels", [])
@@ -54,6 +70,7 @@ def rebuild_ica_prep_raw(vhdr_path, preprocess_summary):
 
     sfreq = preprocessing.get("ica_training_resample_hz", 200.0)
     raw.resample(sfreq, verbose=False)
+    raw.set_eeg_reference("average", projection=False, verbose=False)
     return raw
 
 
