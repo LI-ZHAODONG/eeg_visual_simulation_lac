@@ -123,9 +123,9 @@ def fit_ica(training_raw, method, n_components, max_iter, random_state):
         random_state=random_state,
     )
     if method == "picard":
-        fit_kwargs["fit_params"] = {"extended": True}
+        fit_kwargs["fit_params"] = {"ortho": False, "extended": True}
 
-    ica = mne.preprocessing.ICA(**fit_kwargs)
+    ica = mne.preprocessing.ICA(**fit_kwargs)   
     ica.fit(training_raw, verbose=False)
     return ica, actual_n_components
 
@@ -264,7 +264,7 @@ def main():
         raw.drop_channels(non_eeg_to_drop)
 
     print("Interpolating bad channels.")
-    
+
     detection = detect_bad_channels(
         raw,
         l_freq=args.ssd_l_freq,
