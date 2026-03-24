@@ -1,0 +1,344 @@
+{
+  "sigma": 0.5,
+  "n_subjects": 3,
+  "per_subject": [
+    {
+      "subject": "sub-01",
+      "picked_channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.6933655484322754e-07,
+            "linear_prediction": -3.9353618100160145e-07,
+            "divnorm_prediction": -2.6235745400106764e-07,
+            "blank_corrected_linear_prediction": -6.770775781892115e-07,
+            "linear_mae": 1.241996261583739e-07,
+            "divnorm_mae": 6.979100842159905e-09,
+            "blank_corrected_linear_mae": 4.07741023345984e-07
+          },
+          "gamma": {
+            "observed_full": -6.570103247912647e-08,
+            "linear_prediction": 2.8997952976844623e-07,
+            "divnorm_prediction": 1.9331968651229748e-07,
+            "linear_mae": 3.556805622475727e-07,
+            "divnorm_mae": 2.5902071899142396e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.6933655484322754e-07,
+            "linear_prediction": -1.404171390103568e-06,
+            "divnorm_prediction": -9.361142600690453e-07,
+            "blank_corrected_linear_prediction": -1.687712787291178e-06,
+            "linear_mae": 1.1348348352603404e-06,
+            "divnorm_mae": 6.667777052258177e-07,
+            "blank_corrected_linear_mae": 1.4183762324479504e-06
+          },
+          "gamma": {
+            "observed_full": -6.570103247912647e-08,
+            "linear_prediction": 1.3568927260343564e-07,
+            "divnorm_prediction": 9.045951506895709e-08,
+            "linear_mae": 2.0139030508256213e-07,
+            "divnorm_mae": 1.5616054754808356e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.6933655484322754e-07,
+            "linear_prediction": 4.2005807088418387e-07,
+            "divnorm_prediction": 1.6802322835367355e-07,
+            "blank_corrected_linear_prediction": -1.4702472349103618e-07,
+            "linear_mae": 6.893946257274114e-07,
+            "divnorm_mae": 4.373597831969011e-07,
+            "blank_corrected_linear_mae": 1.2231183135219136e-07
+          },
+          "gamma": {
+            "observed_full": -6.570103247912647e-08,
+            "linear_prediction": -5.343945074637277e-08,
+            "divnorm_prediction": -2.1375780298549105e-08,
+            "linear_mae": 1.2261581732753707e-08,
+            "divnorm_mae": 4.432525218057737e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.6933655484322754e-07,
+            "linear_prediction": -1.963310132573156e-06,
+            "divnorm_prediction": -4.3629114057181246e-07,
+            "blank_corrected_linear_prediction": -3.097475721323596e-06,
+            "linear_mae": 1.6939735777299285e-06,
+            "divnorm_mae": 1.6695458572858492e-07,
+            "blank_corrected_linear_mae": 2.8281391664803685e-06
+          },
+          "gamma": {
+            "observed_full": -6.570103247912647e-08,
+            "linear_prediction": -7.553748767577807e-08,
+            "divnorm_prediction": -1.6786108372395127e-08,
+            "linear_mae": 9.836455196651595e-09,
+            "divnorm_mae": 4.8914924106731347e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.6933655484322754e-07,
+            "linear_prediction": -3.951711982792266e-07,
+            "divnorm_prediction": -2.634474655194844e-07,
+            "blank_corrected_linear_prediction": -6.787125954668366e-07,
+            "linear_mae": 1.2583464343599906e-07,
+            "divnorm_mae": 5.889089323743125e-09,
+            "blank_corrected_linear_mae": 4.0937604062360907e-07
+          },
+          "gamma": {
+            "observed_full": -6.570103247912647e-08,
+            "linear_prediction": -1.0007465191832134e-07,
+            "divnorm_prediction": -6.671643461221422e-08,
+            "linear_mae": 3.437361943919486e-08,
+            "divnorm_mae": 1.0154021330877509e-09
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-02",
+      "picked_channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -3.6421127053272984e-07,
+            "linear_prediction": -7.473556165689795e-07,
+            "divnorm_prediction": -4.982370777126531e-07,
+            "blank_corrected_linear_prediction": -7.655288082046451e-07,
+            "linear_mae": 3.831443460362497e-07,
+            "divnorm_mae": 1.3402580717992322e-07,
+            "blank_corrected_linear_mae": 4.0131753767191525e-07
+          },
+          "gamma": {
+            "observed_full": 5.526665253347499e-08,
+            "linear_prediction": 1.6210725636876335e-07,
+            "divnorm_prediction": 1.0807150424584224e-07,
+            "linear_mae": 1.0684060383528836e-07,
+            "divnorm_mae": 5.2804851712367246e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -3.6421127053272984e-07,
+            "linear_prediction": -1.7568663051945763e-08,
+            "divnorm_prediction": -1.1712442034630508e-08,
+            "blank_corrected_linear_prediction": -3.5741854687611106e-08,
+            "linear_mae": 3.4664260748078407e-07,
+            "divnorm_mae": 3.524988284980993e-07,
+            "blank_corrected_linear_mae": 3.2846941584511873e-07
+          },
+          "gamma": {
+            "observed_full": 5.526665253347499e-08,
+            "linear_prediction": 4.124316661553671e-08,
+            "divnorm_prediction": 2.749544441035781e-08,
+            "linear_mae": 1.4023485917938279e-08,
+            "divnorm_mae": 2.7771208123117183e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -3.6421127053272984e-07,
+            "linear_prediction": -8.899933289624633e-07,
+            "divnorm_prediction": -3.559973315849853e-07,
+            "blank_corrected_linear_prediction": -9.263397122337942e-07,
+            "linear_mae": 5.257820584297335e-07,
+            "divnorm_mae": 8.213938947744513e-09,
+            "blank_corrected_linear_mae": 5.621284417010644e-07
+          },
+          "gamma": {
+            "observed_full": 5.526665253347499e-08,
+            "linear_prediction": 1.132157148420459e-07,
+            "divnorm_prediction": 4.528628593681836e-08,
+            "linear_mae": 5.794906230857091e-08,
+            "divnorm_mae": 9.98036659665663e-09
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -3.6421127053272984e-07,
+            "linear_prediction": -1.4653535686484983e-06,
+            "divnorm_prediction": -3.2563412636633293e-07,
+            "blank_corrected_linear_prediction": -1.53804633519116e-06,
+            "linear_mae": 1.1011422981157685e-06,
+            "divnorm_mae": 3.8577144166396904e-08,
+            "blank_corrected_linear_mae": 1.1738350646584303e-06
+          },
+          "gamma": {
+            "observed_full": 5.526665253347499e-08,
+            "linear_prediction": 1.1487113844600818e-07,
+            "divnorm_prediction": 2.5526919654668484e-08,
+            "linear_mae": 5.960448591253319e-08,
+            "divnorm_mae": 2.9739732878806507e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -3.6421127053272984e-07,
+            "linear_prediction": -1.4646553265127254e-06,
+            "divnorm_prediction": -9.76436884341817e-07,
+            "blank_corrected_linear_prediction": -1.4828285181483908e-06,
+            "linear_mae": 1.1004440559799956e-06,
+            "divnorm_mae": 6.122256138090872e-07,
+            "blank_corrected_linear_mae": 1.118617247615661e-06
+          },
+          "gamma": {
+            "observed_full": 5.526665253347499e-08,
+            "linear_prediction": 2.963775182945214e-07,
+            "divnorm_prediction": 1.975850121963476e-07,
+            "linear_mae": 2.4111086576104643e-07,
+            "divnorm_mae": 1.4231835966287263e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-03",
+      "picked_channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -9.120482082466558e-07,
+            "linear_prediction": -8.335037036595325e-07,
+            "divnorm_prediction": -5.556691357730216e-07,
+            "blank_corrected_linear_prediction": -9.171502292090674e-07,
+            "linear_mae": 7.854450458712326e-08,
+            "divnorm_mae": 3.5637907247363413e-07,
+            "blank_corrected_linear_mae": 5.1020209624116276e-09
+          },
+          "gamma": {
+            "observed_full": -1.2882702612150907e-08,
+            "linear_prediction": 4.698243983997611e-08,
+            "divnorm_prediction": 3.1321626559984077e-08,
+            "linear_mae": 5.986514245212702e-08,
+            "divnorm_mae": 4.420432917213498e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -9.120482082466558e-07,
+            "linear_prediction": -9.956763056357215e-07,
+            "divnorm_prediction": -6.637842037571477e-07,
+            "blank_corrected_linear_prediction": -1.0793228311852566e-06,
+            "linear_mae": 8.362809738906573e-08,
+            "divnorm_mae": 2.4826400448950806e-07,
+            "blank_corrected_linear_mae": 1.6727462293860083e-07
+          },
+          "gamma": {
+            "observed_full": -1.2882702612150907e-08,
+            "linear_prediction": 1.6575011083970917e-08,
+            "divnorm_prediction": 1.1050007389313945e-08,
+            "linear_mae": 2.9457713696121824e-08,
+            "divnorm_mae": 2.393271000146485e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -9.120482082466558e-07,
+            "linear_prediction": -2.2030957035536816e-06,
+            "divnorm_prediction": -8.812382814214727e-07,
+            "blank_corrected_linear_prediction": -2.3703887546527514e-06,
+            "linear_mae": 1.2910474953070258e-06,
+            "divnorm_mae": 3.080992682518309e-08,
+            "blank_corrected_linear_mae": 1.4583405464060955e-06
+          },
+          "gamma": {
+            "observed_full": -1.2882702612150907e-08,
+            "linear_prediction": -4.2683288509324284e-08,
+            "divnorm_prediction": -1.7073315403729712e-08,
+            "linear_mae": 2.9800585897173377e-08,
+            "divnorm_mae": 4.190612791578805e-09
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -9.120482082466558e-07,
+            "linear_prediction": -5.013415750827963e-06,
+            "divnorm_prediction": -1.1140923890728807e-06,
+            "blank_corrected_linear_prediction": -5.348001853026103e-06,
+            "linear_mae": 4.101367542581307e-06,
+            "divnorm_mae": 2.0204418082622494e-07,
+            "blank_corrected_linear_mae": 4.435953644779448e-06
+          },
+          "gamma": {
+            "observed_full": -1.2882702612150907e-08,
+            "linear_prediction": 7.768285735164213e-09,
+            "divnorm_prediction": 1.7262857189253805e-09,
+            "linear_mae": 2.065098834731512e-08,
+            "divnorm_mae": 1.4608988331076289e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -9.120482082466558e-07,
+            "linear_prediction": -1.3120304215589926e-06,
+            "divnorm_prediction": -8.746869477059951e-07,
+            "blank_corrected_linear_prediction": -1.3956769471085277e-06,
+            "linear_mae": 3.999822133123369e-07,
+            "divnorm_mae": 3.736126054066063e-08,
+            "blank_corrected_linear_mae": 4.83628738861872e-07
+          },
+          "gamma": {
+            "observed_full": -1.2882702612150907e-08,
+            "linear_prediction": -2.8530959926447242e-08,
+            "divnorm_prediction": -1.902063995096483e-08,
+            "linear_mae": 1.5648257314296334e-08,
+            "divnorm_mae": 6.1379373388139216e-09
+          }
+        }
+      }
+    }
+  ],
+  "aggregated": {
+    "left_right": {
+      "alpha_linear_mae_mean": 1.9529615892724897e-07,
+      "alpha_divnorm_mae_mean": 1.6579466016523908e-07,
+      "alpha_blank_corrected_linear_mae_mean": 2.713868606601036e-07,
+      "gamma_linear_mae_mean": 1.7412876951166269e-07,
+      "gamma_divnorm_mae_mean": 1.186766332919754e-07,
+      "n_subjects": 3
+    },
+    "top_bottom": {
+      "alpha_linear_mae_mean": 5.217018467100633e-07,
+      "alpha_divnorm_mae_mean": 4.225135127378084e-07,
+      "alpha_blank_corrected_linear_mae_mean": 6.380400904105566e-07,
+      "gamma_linear_mae_mean": 8.162383489887407e-08,
+      "gamma_divnorm_mae_mean": 6.928815522422187e-08,
+      "n_subjects": 3
+    },
+    "quadrants": {
+      "alpha_linear_mae_mean": 8.354080598213902e-07,
+      "alpha_divnorm_mae_mean": 1.5879454965660958e-07,
+      "alpha_blank_corrected_linear_mae_mean": 7.142602731531171e-07,
+      "gamma_linear_mae_mean": 3.3337076646166e-08,
+      "gamma_divnorm_mae_mean": 1.9498743856270932e-08,
+      "n_subjects": 3
+    },
+    "octants": {
+      "alpha_linear_mae_mean": 2.2988278061423348e-06,
+      "alpha_divnorm_mae_mean": 1.3585863690706892e-07,
+      "alpha_blank_corrected_linear_mae_mean": 2.812642625306082e-06,
+      "gamma_linear_mae_mean": 3.003064315216663e-08,
+      "gamma_divnorm_mae_mean": 3.108788177220471e-08,
+      "n_subjects": 3
+    },
+    "fovea_periphery": {
+      "alpha_linear_mae_mean": 5.420869709094438e-07,
+      "alpha_divnorm_mae_mean": 2.1849198789116366e-07,
+      "alpha_blank_corrected_linear_mae_mean": 6.705406757003807e-07,
+      "gamma_linear_mae_mean": 9.704424750484587e-08,
+      "gamma_divnorm_mae_mean": 4.982389971159144e-08,
+      "n_subjects": 3
+    }
+  },
+  "outputs": {
+    "error_plot": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/retinotopy_model_fit_errors.png"
+  },
+  "notes": [
+    "The divisive model here is a simple fixed-sigma approximation inferred from the paper summary.",
+    "Prediction = sum(parts) / (1 + sigma * (n_parts - 1)).",
+    "This is closer to the paper's intent than the previous repo state, but may still differ from the authors' exact implementation."
+  ]
+}

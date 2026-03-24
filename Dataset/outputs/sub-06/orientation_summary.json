@@ -1,0 +1,226 @@
+{
+  "picked_channel": "Oz",
+  "trigger_rows": [
+    {
+      "code": 41,
+      "deg": 0.0,
+      "alpha": -1.7837330007854516e-06,
+      "gamma": 3.8915076657273645e-07
+    },
+    {
+      "code": 42,
+      "deg": 22.5,
+      "alpha": -1.5010007745408836e-06,
+      "gamma": -1.100473292026899e-08
+    },
+    {
+      "code": 43,
+      "deg": 45.0,
+      "alpha": -1.5445455141953179e-06,
+      "gamma": -1.5855560746550235e-07
+    },
+    {
+      "code": 44,
+      "deg": 67.5,
+      "alpha": -1.3049103157504551e-06,
+      "gamma": 8.08900343659026e-08
+    },
+    {
+      "code": 45,
+      "deg": 90.0,
+      "alpha": -1.5144804695207415e-06,
+      "gamma": -1.5854476872997426e-07
+    },
+    {
+      "code": 46,
+      "deg": 112.5,
+      "alpha": -3.3350561176435654e-07,
+      "gamma": 2.0453889180426478e-07
+    },
+    {
+      "code": 47,
+      "deg": 135.0,
+      "alpha": -2.19317545407016e-06,
+      "gamma": 1.1489542887126946e-07
+    },
+    {
+      "code": 48,
+      "deg": 157.5,
+      "alpha": -1.910988742479458e-06,
+      "gamma": 1.2712052013896539e-07
+    },
+    {
+      "code": 49,
+      "deg": 180.0,
+      "alpha": -1.6368832457882652e-06,
+      "gamma": 2.0175365834766e-07
+    },
+    {
+      "code": 50,
+      "deg": 202.5,
+      "alpha": -1.5137160847197433e-06,
+      "gamma": 9.033982346525024e-08
+    },
+    {
+      "code": 51,
+      "deg": 225.0,
+      "alpha": -1.528723658192571e-06,
+      "gamma": -1.5430099335079356e-07
+    },
+    {
+      "code": 52,
+      "deg": 247.5,
+      "alpha": -1.6801362645134579e-06,
+      "gamma": 1.1429551449913005e-07
+    },
+    {
+      "code": 53,
+      "deg": 270.0,
+      "alpha": -3.650782171619123e-07,
+      "gamma": -1.5808432024070778e-08
+    },
+    {
+      "code": 54,
+      "deg": 292.5,
+      "alpha": -8.85408766347935e-07,
+      "gamma": -2.59207143165579e-07
+    },
+    {
+      "code": 55,
+      "deg": 315.0,
+      "alpha": 7.769272278156808e-07,
+      "gamma": 7.03942654246317e-08
+    },
+    {
+      "code": 56,
+      "deg": 337.5,
+      "alpha": -1.3668353192512219e-07,
+      "gamma": 2.12029721390342e-07
+    }
+  ],
+  "orientation_groups": [
+    {
+      "label": "orientation_cardinal_combined",
+      "codes": [
+        56,
+        52,
+        48,
+        44
+      ],
+      "alpha": -1.2581797136671232e-06,
+      "gamma": 1.33583947598585e-07
+    },
+    {
+      "label": "orientation_oblique_perfect_45",
+      "codes": [
+        54,
+        50,
+        46,
+        42
+      ],
+      "alpha": -1.0584078093432298e-06,
+      "gamma": 6.166709795916755e-09
+    },
+    {
+      "label": "orientation_oblique_vertical_pm_22_5",
+      "codes": [
+        55,
+        49,
+        47,
+        41
+      ],
+      "alpha": -1.209216118207049e-06,
+      "gamma": 1.940485298040744e-07
+    },
+    {
+      "label": "orientation_oblique_horizontal_pm_22_5",
+      "codes": [
+        53,
+        51,
+        45,
+        43
+      ],
+      "alpha": -1.2382069647676356e-06,
+      "gamma": -1.2180245039258525e-07
+    },
+    {
+      "label": "orientation_horizontal",
+      "codes": [
+        52,
+        44
+      ],
+      "alpha": -1.4925232901319564e-06,
+      "gamma": 9.759277443251632e-08
+    },
+    {
+      "label": "orientation_vertical",
+      "codes": [
+        56,
+        48
+      ],
+      "alpha": -1.02383613720229e-06,
+      "gamma": 1.695751207646537e-07
+    }
+  ],
+  "direction_groups": [
+    {
+      "label": "leftward",
+      "codes": [
+        42,
+        41,
+        56,
+        55
+      ],
+      "alpha": -6.611225198589441e-07,
+      "gamma": 1.651425051168603e-07
+    },
+    {
+      "label": "rightward",
+      "codes": [
+        50,
+        49,
+        48,
+        47
+      ],
+      "alpha": -1.8136908817644065e-06,
+      "gamma": 1.3352735770578629e-07
+    },
+    {
+      "label": "upward",
+      "codes": [
+        46,
+        45,
+        44,
+        43
+      ],
+      "alpha": -1.1743604778077177e-06,
+      "gamma": -7.917862506327312e-09
+    },
+    {
+      "label": "downward",
+      "codes": [
+        54,
+        53,
+        52,
+        51
+      ],
+      "alpha": -1.114836726553969e-06,
+      "gamma": -7.875526351032833e-08
+    }
+  ],
+  "correlations": {
+    "orientation": 0.03730498575887875,
+    "direction": -0.01076008066001834
+  },
+  "outputs": {
+    "trigger_summary": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/orientation_trigger_summary.png",
+    "orientation_group_summary": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/orientation_group_summary.png",
+    "direction_group_summary": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/direction_group_summary.png",
+    "orientation_scatter": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/orientation_alpha_gamma_scatter.png",
+    "direction_scatter": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/direction_alpha_gamma_scatter.png",
+    "orientation_alpha_ttests": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/orientation_alpha_ttests.png",
+    "orientation_gamma_ttests": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/orientation_gamma_ttests.png",
+    "direction_alpha_ttests": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/direction_alpha_ttests.png",
+    "direction_gamma_ttests": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-06/direction_gamma_ttests.png"
+  }
+}

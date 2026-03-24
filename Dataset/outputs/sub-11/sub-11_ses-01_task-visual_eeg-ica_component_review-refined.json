@@ -1,0 +1,288 @@
+{
+  "subject": "sub-11",
+  "session": "ses-01",
+  "recording": "sub-11_ses-01_task-visual_eeg",
+  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "component_decisions": {
+    "0": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Diffuse bilateral frontal negativity with no clear dipolar structure \u2014 field extends uniformly across anterior scalp with weak posterior positivity. Not spatially smooth or dipolar enough. Noisy segment image with broadly distributed variance."
+    },
+    "1": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "Strong frontal positivity maximal at Fp1/Fp2 with posterior negativity \u2014 classic eye blink/EOG topography. Segment image shows persistent orange (positive) activity across upper segments consistent with EOG contamination. Reject."
+    },
+    "2": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Focal negativity concentrated at right posterior/temporal edge with no clear opposing pole inside the scalp. Not dipolar. Noisy 1/f spectrum with high variance. Edge-boundary distribution rules out neural source."
+    },
+    "3": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Broad anterior negativity with diffuse weak posterior positivity \u2014 not a clean dipole. Topography is spatially smeared and asymmetric. Segment image shows activity concentrated in early segments, possibly movement-related. Reject."
+    },
+    "4": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Entirely red topography covering the whole scalp with multiple irregular sign-change contours \u2014 clearly non-dipolar. Multiple focal hotspots visible. Consistent broadband noise. Reject."
+    },
+    "5": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Uniform diffuse negativity across entire scalp with no dominant pole or clear dipolar structure. Topography is essentially a flat blue field. Very weak signal. Reject."
+    },
+    "6": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Focal right-central positivity embedded in broadly positive surround \u2014 not dipolar, no opposing negative pole. Topography appears to reflect a local hotspot rather than a dipolar source. Reject on strict criteria."
+    },
+    "7": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Left-right asymmetric topography with right frontal positivity and left posterior negativity \u2014 could superficially suggest a dipole but orientation is oblique and irregular, not consistent with a clean neural dipole. Reject."
+    },
+    "8": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Right posterior/occipital focal positivity with broad anterior negativity \u2014 plausible dipolar structure consistent with a posterior visual source. Spectrum shows a clear alpha peak (~10 Hz) which strongly supports neural origin. Time course is continuous and well-behaved. Keep."
+    },
+    "9": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Focal high-amplitude positivity at left posterior-temporal/mastoid edge with no dipolar counterpart inside the scalp. Clearly an edge/electrode artifact. High variance outliers concentrated in mid-recording. Reject."
+    },
+    "10": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Right fronto-central positivity with diffuse blue surround \u2014 partially dipole-like but the hot spot is too focal and the opposing field is too weak and non-smooth. Does not meet strict dipolar criteria for a clean neural source."
+    },
+    "11": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Anterior positivity (fronto-temporal) with posterior negativity \u2014 superficially dipolar but asymmetric and the negative pole extends to the edge. Not consistent with a clean posterior neural source. Reject."
+    },
+    "12": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Focal left anterior/frontotemporal negativity concentrated near the edge with very weak opposing field. Not dipolar. Small isolated positive island at right front. Segment image suggests sporadic edge contamination."
+    },
+    "13": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Diffuse uniform negativity across entire scalp with no poles \u2014 essentially a DC/reference-like field. No dipolar structure whatsoever. Flat noisy spectrum. Reject."
+    },
+    "14": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Clear centro-parietal focal positivity with surrounding negativity \u2014 smooth, spatially well-defined, and dipolar. Spectrum shows a prominent alpha peak (~10 and ~20 Hz harmonics) strongly supporting neural origin. Clean, low-variance time course. Keep."
+    },
+    "15": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Broadly positive field covering right temporal and posterior regions with weak central negativity \u2014 not a clean dipole. Multiple irregular contours. No dominant alpha peak in spectrum. Reject."
+    },
+    "16": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Central blue focus surrounded by red \u2014 ring-like topography that does not correspond to a dipolar neural source. This pattern is commonly seen in reference artifacts or non-dipolar mixing. Reject."
+    },
+    "17": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Left parieto-occipital focal positivity with surrounding negativity \u2014 smooth and dipolar, consistent with a lateral posterior visual or parietal source. Spectrum shows clear alpha (~10 Hz) and beta peaks. Well-behaved continuous time course. Keep."
+    },
+    "18": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Left centro-parietal focal positivity with smooth blue surround \u2014 dipolar and spatially clean. Spectrum has a clear 1/f slope with alpha peak. Topography is consistent with a parietal/posterior neural source. Time course is stable. Keep."
+    },
+    "19": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "Bilateral lateral positivity at left and right temporal/mastoid edges with central negativity \u2014 classic bilateral temporal muscle or reference artifact pattern. Not dipolar. Step-like deflection in time course. Extreme variance outlier. Reject."
+    },
+    "20": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Central-parietal negativity embedded in a broadly positive field \u2014 not a clean dipole. The negative pole is spatially isolated and asymmetric with no well-defined opposing positive counterpart. Noisy time course and scattered variance. Reject."
+    },
+    "21": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Right centro-parietal focal positivity with smooth surrounding negativity \u2014 spatially clean and dipolar. Spectrum shows a clear alpha peak (~10 Hz) confirming neural origin. Continuous, well-behaved time course with low variance. Keep."
+    },
+    "22": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Right parieto-occipital focal positivity with broad surrounding negativity \u2014 smooth and well-defined dipolar pattern consistent with a lateral posterior visual source. Spectrum shows clear alpha (~10 Hz) and beta peaks. Stable time course. Keep."
+    },
+    "23": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Broadly positive field with multiple irregular contour regions across the scalp \u2014 not dipolar. Several independent hotspots visible (inferior posterior and bilateral temporal). Extremely high variance outlier near end of recording. Reject."
+    },
+    "24": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Focal midline posterior positivity (P-Oz region) with smooth surrounding negativity \u2014 clean dipolar topography consistent with a midline occipital/visual source. Spectrum shows 1/f slope. Stable and continuous time course across all segments. Keep."
+    },
+    "25": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Central-parietal negativity surrounded by a broadly positive field \u2014 the negative pole is well-defined but the surround is too diffuse and asymmetric. Topography does not clearly qualify as a smooth dipole. High variance outlier. Reject on strict criteria."
+    },
+    "26": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Right frontocentral positivity with weak diffuse posterior negativity \u2014 the positive pole is near the edge of the anterior scalp and the field is asymmetric. Not a clean posterior dipole. Extreme single variance outlier. Reject."
+    },
+    "27": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Right frontotemporal positivity and left frontotemporal negativity at the anterior edges \u2014 bilateral edge-confined distribution typical of reference artifact or temporal muscle. Not dipolar. Extreme variance outlier. Reject."
+    },
+    "28": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Right posterior-temporal negativity with left anterior positivity \u2014 oblique, asymmetric field not consistent with a clean neural dipole. Irregular contours. No clear alpha peak in spectrum. Reject."
+    },
+    "29": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Left anterior/temporal negativity at the edge with diffuse posterior positive surround \u2014 edge-confined distribution, not dipolar. High variance outliers distributed across recording. Reject."
+    },
+    "30": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Diffuse blue field covering most of the scalp with multiple small irregular positive islands \u2014 no dominant dipolar structure. Highly fragmented and non-smooth topography. Flat noisy spectrum rising toward high frequencies. Reject."
+    },
+    "31": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Broadly positive field (red) with a focal right central negativity \u2014 the negative focus is embedded inside a large positive surround making it resemble a ring artifact rather than a clean dipole. Variance bursts at end of recording. Reject."
+    },
+    "32": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Right posterior-temporal negativity extending to the edge, with irregular positive islands \u2014 not dipolar, edge-confined. Multiple positive patches suggest non-neural mixing. Extreme variance outliers throughout. Reject."
+    },
+    "33": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Left temporal-parietal focal positivity with irregular blue surround containing separate positive islands inferiorly \u2014 not a clean dipole. Multiple sign-change regions. Scattered high variance throughout recording. Reject."
+    },
+    "34": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Left frontotemporal focal positivity very close to the anterior edge with weak diffuse opposing field \u2014 not dipolar. Topography is too peripheral and edge-confined to be a neural source. Variance increases sharply toward end of recording. Reject."
+    },
+    "35": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Broad left fronto-central positivity tapering to posterior negativity \u2014 superficially dipole-like but asymmetric, with the positive field dominating much of the scalp. Orientation and extent not consistent with a clean posterior neural source. Reject."
+    },
+    "36": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "Left parieto-occipital focal positivity with smooth surrounding blue field \u2014 spatially clean dipolar topography consistent with a lateral posterior visual/parietal source. Spectrum shows clear alpha (~10 Hz) and beta peaks. Stable time course. Keep."
+    },
+    "37": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Right temporal/parietal focal positivity with broadly positive anterior surround and weak posterior negativity \u2014 not a clean dipole. The opposing field is too weak and the topography too asymmetric. Despite an alpha-like spectral bump, topography fails strict dipolar criteria. Reject."
+    },
+    "38": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Tight focal red hotspot at the fronto-central scalp with a broad diffuse blue surround; overly concentrated with no plausible dipolar counter-pole at appropriate distance. Segment image shows persistent broadband activity. Reject."
+    },
+    "39": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Very focal red hotspot at right fronto-central area near the scalp rim with a small adjacent blue region; not a spatially smooth dipole. The concentration is too tight and asymmetric relative to the counter-pole. Reject."
+    },
+    "40": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Focal blue hotspot in the left posterior-temporal region embedded in a broader warm surround with a large red region at the right; the two poles are spatially irregular and asymmetric, not consistent with a clean dipole. Reject."
+    },
+    "41": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Concentrated blue activity at the frontal midline/rim with a diffuse warm surround; the field is not spatially smooth and the blue region is confined to the scalp edge. Not a clean dipolar pattern. Reject."
+    },
+    "42": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Nearly uniform warm (red/orange) field covering most of the scalp with a central blue region and additional peripheral spots; multi-polar, non-dipolar pattern. Flat, broadband spectrum with no clear neural peak confirms global noise. Reject."
+    },
+    "43": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Warm diffuse field across the entire scalp with a focal red hotspot at the inferior-left boundary and no coherent dipolar structure. Segment image shows persistent broadband activity across all trials. Reject."
+    },
+    "44": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Focal blue concentration at the left fronto-temporal edge/rim with a broad warm counter-field; activity is concentrated at the scalp boundary and is not consistent with a smooth neural dipole. Reject."
+    },
+    "45": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Highly irregular topography with multiple small red hotspots scattered across a globally warm field; clearly non-dipolar and fragmented. Segment image shows persistent activity across all trials. Reject."
+    },
+    "46": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Red region at the frontal-right area and a broad blue field over posterior scalp; the two poles are spatially irregular with complex contour lines and no clean dipolar axis. Not a credible neural source. Reject."
+    },
+    "47": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Globally warm/red field with a central-inferior focal region and fragmented blue patches; no coherent dipolar structure. Flat broadband spectrum and persistent segment image confirm this is noise. Reject."
+    },
+    "48": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Focal red region at right posterior-temporal area with a broad diffuse blue surround; though there is a visible polarity contrast, the red pole is asymmetrically placed near the scalp edge and the field is not spatially smooth. Extreme variance spikes further support artifact. Reject."
+    },
+    "49": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Globally warm/red field with scattered irregular blue patches and multiple small focal regions; clearly non-dipolar. Segment image shows persistent broadband activity. Reject."
+    },
+    "50": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Focal red hotspot at left posterior-inferior area with an adjacent blue region and a warm background field; the poles are spatially irregular and confined near the scalp boundary. Not a clean dipole. Reject."
+    },
+    "51": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Red region centrally with blue extending into the posterior-inferior area; contour lines are irregular and non-dipolar, with the main activity suggesting a mixed or split-source pattern. Segment image is featureless/noisy. Reject."
+    },
+    "52": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Broad blue field with a focal red region at the right posterior-temporal area and an additional small red patch at the left; two separate red foci with no coherent dipolar axis. Not a clean neural source. Reject."
+    },
+    "53": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Very focal red hotspot at the right temporal edge/rim with a broad diffuse blue surround; the activity is concentrated at the scalp boundary, not consistent with a smooth dipolar field. Extreme variance outlier (400 AU) confirms artifact. Reject."
+    },
+    "54": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Focal red hotspot at the right posterior-temporal area with a broad blue field and an additional small red region at the inferior-left edge; two disconnected poles without a coherent dipolar axis. Segment image shows continuous broadband noise. Reject."
+    },
+    "55": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Focal red hotspot at the inferior-posterior edge/boundary with a broad blue surround and a small isolated blue sub-spot; the main activity is at the scalp rim and not consistent with a neural dipole. Reject."
+    }
+  }
+}

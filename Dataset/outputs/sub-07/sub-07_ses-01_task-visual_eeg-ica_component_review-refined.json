@@ -1,0 +1,288 @@
+{
+  "subject": "sub-07",
+  "session": "ses-01",
+  "recording": "sub-07_ses-01_task-visual_eeg",
+  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "component_decisions": {
+    "0": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "broad frontal field, classic blink pattern"
+    },
+    "1": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "focal right-frontal hotspot, non-dipolar"
+    },
+    "2": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "broad inferior field, non-dipolar"
+    },
+    "3": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "frontal focal hotspot, sharp and non-smooth"
+    },
+    "4": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "strong frontal dominance with smooth spread"
+    },
+    "5": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "large-scale non-dipolar gradient"
+    },
+    "6": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "right temporal focal hotspot, EMG-like"
+    },
+    "7": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "left frontal sharp hotspot, non-dipolar"
+    },
+    "8": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "asymmetric gradient, not a clean dipole"
+    },
+    "9": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "broad asymmetric field, lacks dipolar structure"
+    },
+    "10": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "left inferior focal hotspot, EMG-like"
+    },
+    "11": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "clear posterior dipole with smooth spatial gradient"
+    },
+    "12": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "right focal hotspot, sharp and non-dipolar"
+    },
+    "13": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "asymmetric posterior-lateral pattern, not clean dipole"
+    },
+    "14": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "left edge hotspot outside scalp, non-physiologic"
+    },
+    "15": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "broad posterior dipole, smooth and physiologic"
+    },
+    "16": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "right edge focal hotspot, non-dipolar"
+    },
+    "17": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "inferior-left edge dominance, non-dipolar"
+    },
+    "18": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "strong frontal focal activity, non-dipolar"
+    },
+    "19": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "frontal hotspot with irregular field"
+    },
+    "20": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "clear left-right dipole over posterior regions"
+    },
+    "21": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "posterior-lateral activity but asymmetric and not a clean dipole"
+    },
+    "22": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "frontal pole dominance with smooth spread, blink-like"
+    },
+    "23": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "tight right temporal hotspot, non-dipolar"
+    },
+    "24": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "broad non-dipolar field, lacks clear polarity separation"
+    },
+    "25": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "right temporal focal cluster, EMG-like"
+    },
+    "26": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "central hotspot but not clearly dipolar"
+    },
+    "27": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "sharp right posterior hotspot, overly focal"
+    },
+    "28": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "extreme right edge hotspot, non-physiologic"
+    },
+    "29": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "diffuse non-dipolar field across scalp"
+    },
+    "30": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "asymmetric field, not a clean dipole"
+    },
+    "31": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "frontal-central pattern but not clearly dipolar"
+    },
+    "32": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "frontal focal hotspot, non-dipolar"
+    },
+    "33": {
+      "label": "posterior_visual_component",
+      "keep": true,
+      "notes": "posterior inferior dipole, smooth and symmetric"
+    },
+    "34": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "frontal polarity mix, lacks clear dipole"
+    },
+    "35": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "broad uniform field, no dipolar structure"
+    },
+    "36": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "left temporal focal hotspot"
+    },
+    "37": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "central focal activity but not dipolar"
+    },
+    "38": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "left temporal pattern, asymmetric"
+    },
+    "39": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "extreme left edge hotspot"
+    },
+    "40": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "right focal hotspot, non-dipolar"
+    },
+    "41": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "right temporal edge hotspot, non-dipolar"
+    },
+    "42": {
+      "label": "brain_component",
+      "keep": true,
+      "notes": "clear left frontal\u2013right posterior dipole, smooth field"
+    },
+    "43": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "large inferior edge dominance, non-physiologic"
+    },
+    "44": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "left focal hotspot, overly sharp"
+    },
+    "45": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "central focal patch without dipolar structure"
+    },
+    "46": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "right temporal elongated hotspot, EMG-like"
+    },
+    "47": {
+      "label": "brain_component",
+      "keep": true,
+      "notes": "central dipole, symmetric and smooth"
+    },
+    "48": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "diffuse with focal hotspot, not clean dipole"
+    },
+    "49": {
+      "label": "brain_component",
+      "keep": true,
+      "notes": "left\u2013right dipole, plausible cortical source"
+    },
+    "50": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "inferior boundary dominance"
+    },
+    "51": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "no clear dipole, multiple weak foci"
+    },
+    "52": {
+      "label": "eye_artifact",
+      "keep": false,
+      "notes": "frontal dominance with bilateral peaks"
+    },
+    "53": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "inferior edge hotspot"
+    },
+    "54": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "diffuse field, lacks dipolar organization"
+    },
+    "55": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "posterior scattered hotspots, non-dipolar"
+    }
+  }
+}

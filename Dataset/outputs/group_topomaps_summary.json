@@ -1,0 +1,38 @@
+{
+  "n_subjects": 3,
+  "subjects": [
+    "sub-01",
+    "sub-02",
+    "sub-03"
+  ],
+  "conditions": {
+    "Blank": {
+      "n_subjects": 3
+    },
+    "Fovea": {
+      "n_subjects": 3
+    },
+    "Full Field": {
+      "n_subjects": 3
+    },
+    "Left Hemifield": {
+      "n_subjects": 3
+    },
+    "Lower Hemifield": {
+      "n_subjects": 3
+    },
+    "Periphery": {
+      "n_subjects": 3
+    },
+    "Right Hemifield": {
+      "n_subjects": 3
+    },
+    "Upper Hemifield": {
+      "n_subjects": 3
+    }
+  },
+  "outputs": {
+    "gamma_topomaps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/Condition_Wise_Gamma_Topomaps_rebuilt.png",
+    "alpha_topomaps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/Condition_Wise_Alpha_Topomaps_rebuilt.png"
+  }
+}

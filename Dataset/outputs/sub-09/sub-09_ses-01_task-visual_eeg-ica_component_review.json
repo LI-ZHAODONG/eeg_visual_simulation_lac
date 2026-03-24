@@ -1,0 +1,288 @@
+{
+  "subject": "sub-09",
+  "session": "ses-01",
+  "recording": "sub-09_ses-01_task-visual_eeg",
+  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "component_decisions": {
+    "0": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "Topography shows strong frontal positivity maximal at Fp1/Fp2 with diffuse posterior negativity \u2014 classic eye blink/EOG pattern. Time course shows slow drifts and transient bursts. Extremely high variance outliers (>1000 AU). Reject."
+    },
+    "1": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "Topography shows broad frontal negativity (blue) with inferior positivity \u2014 consistent with vertical EOG/blink. Time course shows slow undulating drift. One extreme variance outlier (~900 AU). Reject."
+    },
+    "2": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal, non-dipolar negativity concentrated at the frontocentral midline with concentric contours and no clear opposing pole \u2014 overly focal hotspot. Spectrum shows prominent 60 Hz peak. Sharp transient spike visible in time course. Reject."
+    },
+    "3": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Topography is entirely uniform deep blue with no dipolar structure \u2014 global, non-dipolar field. Segment image shows diffuse, sustained horizontal streaks across all segments. Not a neural source. Reject."
+    },
+    "4": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows an overly focal blue hotspot at left centroparietal region on a broad orange background \u2014 not a clean dipole. Segment image shows dense, sustained activity across many epochs suggestive of alpha/non-neural contamination. Reject."
+    },
+    "5": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right frontotemporal hotspot with no clear opposing pole \u2014 non-dipolar edge pattern. Time course shows a large transient spike at onset. Very high variance outliers (>1500 AU) clustered early. Reject."
+    },
+    "6": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a right frontotemporal focal maximum with left hemisphere negativity \u2014 asymmetric and non-dipolar, resembling a muscle or bridging artifact. Spectrum is flat/non-neural. Variance outliers are large and sparse. Reject."
+    },
+    "7": {
+      "label": "global_noise_component",
+      "keep": false,
+      "notes": "Topography is predominantly diffuse red across the entire scalp with a small central blue patch \u2014 not a dipolar pattern, resembles a global reference artifact. Segment image shows faint persistent horizontal activity. Reject."
+    },
+    "8": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows bilateral frontal edge maxima (left and right superior frontal) with no clear opposing pole and no posterior structure. Time course shows a large late transient burst. Extreme variance outlier (~8000 AU). Reject."
+    },
+    "9": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal blue hotspot at the left temporal/edge region with irregular surrounding contours \u2014 non-dipolar edge artifact. Variance shows a large cluster of outliers at the end of the recording. Reject."
+    },
+    "10": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a broad left frontocentral negativity with weak posterior positivity \u2014 not clearly dipolar, asymmetric and spread across the scalp. Spectrum shows elevated and relatively flat power across frequencies. Reject."
+    },
+    "11": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal hotspot at the right frontal edge with weak and asymmetric surrounding field \u2014 non-dipolar. Time course shows a moderate mid-recording transient. Variance outlier is very large (~1250 AU). Reject."
+    },
+    "12": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal blue hotspot at the left temporal edge with no clear opposing pole \u2014 classic edge artifact pattern. Variance shows many large outliers (up to ~700 AU) scattered throughout. Reject."
+    },
+    "13": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a central-left parietal focal maximum surrounded by global blue field \u2014 not truly dipolar, the 'opposing pole' is too diffuse and global. Segment image shows sustained low-amplitude widespread activity. Borderline but conservative rejection applies. Reject."
+    },
+    "14": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal blue hotspot at the right temporal edge with irregular surrounding contours \u2014 non-dipolar edge artifact. Very large variance outliers (>800 AU) throughout. Reject."
+    },
+    "15": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows dual foci \u2014 strong right frontal and left frontotemporal hotspots with posterior negativity \u2014 clearly non-dipolar, multi-focal pattern. Variance shows many large outliers clustered early. Reject."
+    },
+    "16": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows bilateral temporal/mastoid edge foci (strong red at both ears) with a central clear zone \u2014 classic bilateral edge/muscle artifact. Time course shows a large sustained negative deflection late in recording. Reject."
+    },
+    "17": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a broad left frontotemporal positivity with weak posterior negativity \u2014 not cleanly dipolar, asymmetric and poorly defined. Large variance outliers (>600 AU). Reject."
+    },
+    "18": {
+      "label": "temporal_muscle_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left frontotemporal hotspot with strong contours and no spatially smooth opposing pole \u2014 consistent with left temporal muscle artifact. Sharp transient spike visible in time course. Large variance outliers. Reject."
+    },
+    "19": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows an overly focal red hotspot at left temporal/ear edge with surrounding diffuse blue field \u2014 non-dipolar, focal edge pattern. No clear neural dipole structure. Reject."
+    },
+    "20": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows broad right frontotemporal positivity with weak left central negativity \u2014 not a clean dipole, asymmetric and spatially non-specific. Variance shows many clustered outliers early in recording. Reject."
+    },
+    "21": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows an overly focal right centrotemporal hotspot with irregular surrounding field and no clear opposing pole \u2014 non-dipolar edge/focal artifact. Variance outliers scattered throughout. Reject."
+    },
+    "22": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left centroparietal hotspot embedded in a globally blue field \u2014 no true opposing pole, non-dipolar. Segment image is nearly blank suggesting very low variance but the topography is not neural. Reject."
+    },
+    "23": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows irregular bilateral temporal/edge pattern with left temporal positivity and right diffuse negativity \u2014 non-dipolar, likely bridging or reference artifact. Extreme variance outlier (~38000 AU). Time course shows large late transient. Reject."
+    },
+    "24": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows multiple competing poles \u2014 strong frontal and inferior posterior positivity with central negativity \u2014 clearly non-dipolar, multi-focal. Very large variance outliers (>6000 AU). Time course shows slow sustained drift. Reject."
+    },
+    "25": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right centroparietal/temporal negativity embedded in a diffuse red background \u2014 not dipolar, resembles an isolated focal hotspot. Variance shows one extreme outlier (~780 AU). Reject."
+    },
+    "26": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "Topography shows strong right frontal positivity with posterior negativity \u2014 consistent with lateral eye movement or frontal EOG artifact. Time course shows a clear large transient. Very large variance outlier (~5200 AU). Reject."
+    },
+    "27": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows broad frontocentral positivity with a focal posterior central negativity \u2014 while superficially bipolar, the posterior negativity is too focal and the anterior field too diffuse to be a clean neural dipole. Reject."
+    },
+    "28": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left centroparietal hotspot with irregular surrounding contours and no clear opposing pole \u2014 non-dipolar edge-type artifact. Segment image shows faint horizontal streaks. Reject."
+    },
+    "29": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows dual foci \u2014 strong right frontocentral and left frontopolar maxima \u2014 multi-focal and non-dipolar. Inconsistent with a single neural generator. Reject."
+    },
+    "30": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": "Topography shows strong right frontotemporal positivity with diffuse central/posterior negativity \u2014 consistent with lateral eye or EOG artifact. Time course shows slow sustained drift. Very large variance outliers (>1500 AU) clustered early. Reject."
+    },
+    "31": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left frontotemporal hotspot near the scalp edge with no clear opposing pole \u2014 non-dipolar edge artifact. Time course is noisy and flat. Reject."
+    },
+    "32": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right centrotemporal negativity at the scalp edge with a small adjacent positivity \u2014 not a spatially smooth dipole, resembles an edge/bridging artifact. Variance distribution is right-skewed with many outliers late in recording. Reject."
+    },
+    "33": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows dual foci \u2014 a right frontal positivity and a central/left parietal positivity \u2014 with surrounding blue field and no coherent dipolar structure. Segment image is essentially blank. Reject."
+    },
+    "34": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left centroparietal hotspot with small isolated surrounding fields \u2014 non-dipolar, spatially inconsistent. Spectrum has a clear 60 Hz peak indicating electrical artifact. Large variance outliers. Reject."
+    },
+    "35": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal right temporal edge negativity with irregular surrounding field \u2014 non-dipolar edge artifact. Large variance outliers (>1700 AU). Time course shows sustained and variable drift. Reject."
+    },
+    "36": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left temporal/inferior edge hotspot with no clear opposing pole \u2014 non-dipolar, consistent with edge or muscle artifact. Many variance outliers distributed throughout. Reject."
+    },
+    "37": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right frontocentral hotspot with surrounding blue field \u2014 no clear opposing pole, non-dipolar. Large variance outlier (~2000 AU). Time course shows a large terminal negative deflection. Reject."
+    },
+    "38": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left temporal/edge negativity with small inferior positivity \u2014 non-dipolar edge artifact. Spectrum is relatively flat with high variance. Many large outliers throughout. Reject."
+    },
+    "39": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left centroparietal negativity on a diffuse positive background \u2014 not a clean dipole, too focal relative to the background field. Segment image shows faint widespread horizontal activity. Reject."
+    },
+    "40": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right centroparietal negativity embedded in a diffuse red background \u2014 not dipolar, no clear opposing pole. Segment image is nearly blank. Reject."
+    },
+    "41": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal inferior central/occipital hotspot with irregular surrounding contours and no spatially smooth opposing pole \u2014 non-dipolar. Segment image is blank. Reject."
+    },
+    "42": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right inferior/temporal edge hotspot with irregular multi-polar surrounding field \u2014 non-dipolar. Time course shows a large sustained biphasic drift. Very large variance outliers (>1600 AU). Reject."
+    },
+    "43": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right temporal edge negativity with irregular surrounding field and no clear opposing pole \u2014 non-dipolar edge artifact. Segment image is nearly blank. Large variance outliers. Reject."
+    },
+    "44": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a large left posterior negativity with right inferior positivity \u2014 while superficially bipolar, the field is very broad, asymmetric, and crosses into scalp edge territory. Spectrum is flat and elevated at high frequencies. Reject."
+    },
+    "45": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal right temporal/inferior edge hotspot with no clear opposing pole \u2014 non-dipolar edge artifact. Time course shows large slow sustained deflections. Extreme variance outliers (~10000 AU). Reject."
+    },
+    "46": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left centroparietal hotspot on a nearly blank background \u2014 overly focal with no opposing pole visible. Segment image shows widespread faint horizontal streaks. Reject."
+    },
+    "47": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal right frontal edge hotspot with irregular surrounding field \u2014 non-dipolar edge artifact. Large variance outliers (~400 AU). Reject."
+    },
+    "48": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left temporal/inferior negativity with a small adjacent positivity \u2014 not a spatially smooth dipole, resembles an edge or bridging artifact. Sharp transient spike visible in time course. Large variance outliers. Reject."
+    },
+    "49": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a broad left frontotemporal positivity with diffuse right/posterior negativity \u2014 not a clean dipole, multi-focal and asymmetric. Spectrum is elevated and relatively flat across all frequencies. Reject."
+    },
+    "50": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left centroparietal positivity embedded in a global blue field \u2014 non-dipolar, no clear opposing pole. Variance is distributed throughout the recording with many moderate outliers. Reject."
+    },
+    "51": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal right parieto-occipital hotspot with irregular surrounding field \u2014 non-dipolar. Time course shows two very large transient bursts. Extreme variance outliers (~40000 AU). Reject."
+    },
+    "52": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left posterior/inferior negativity with irregular contours extending to the scalp edge \u2014 non-dipolar edge artifact. Spectrum is flat. Large variance outliers (~900 AU). Reject."
+    },
+    "53": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a very focal left centroparietal/inferior negativity on a diffuse positive background \u2014 non-dipolar, overly focal hotspot near the scalp edge. Segment image nearly blank. Reject."
+    },
+    "54": {
+      "label": "edge_artifact",
+      "keep": false,
+      "notes": "Topography shows a focal left centroparietal/inferior edge negativity with no clear opposing pole \u2014 non-dipolar edge artifact. Segment image shows faint persistent horizontal activity. Reject."
+    },
+    "55": {
+      "label": "mixed_component",
+      "keep": false,
+      "notes": "Topography shows a right frontal edge positivity and a left frontocentral negativity \u2014 while superficially bipolar, the positivity is too focal and at the edge, and there are additional secondary poles visible. Spectrum shows a clear 60 Hz peak indicating electrical artifact. Sharp transient in time course. Reject."
+    }
+  }
+}
