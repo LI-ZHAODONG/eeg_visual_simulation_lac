@@ -1,0 +1,24 @@
+{
+  "linear_summation": {
+    "alpha_prediction": -1.004947789956846e-06,
+    "gamma_prediction": -4.3242398970314595e-08,
+    "alpha_error": 1.0854314680537472e-07,
+    "gamma_error": 6.1235392248279e-09
+  },
+  "divisive_normalization": {
+    "alpha_prediction": -1.339930386609128e-06,
+    "gamma_prediction": -5.765653196041946e-08,
+    "alpha_error": 4.4352574345765674e-07,
+    "gamma_error": 8.290593765276967e-09,
+    "sigma": 0.5
+  },
+  "observed": {
+    "alpha": -8.964046431514713e-07,
+    "gamma": -4.9365938195142495e-08
+  },
+  "model_comparison": {
+    "linear_total_error": 1.1466668603020263e-07,
+    "divnorm_total_error": 4.518163372229337e-07,
+    "divnorm_advantage": "no"
+  }
+}
