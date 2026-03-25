@@ -1,448 +1,211 @@
-# EEG Visual Task – Preprocessing
+# EEG Visual Simulation Project
 
-This repository contains a complete EEG preprocessing and inspection pipeline for a visual task recorded in **BrainVision** format. The focus is on **artifact handling, ICA-based cleaning, and diagnostic visualization**
+This repository contains two complete EEG analysis pipelines for the study:
 
-The pipeline is implemented using **MNE-Python** and is designed to be reproducible and easy to inspect step-by-step.
-
----
+> **Dissociable Spatial and Feature Tuning of Gamma and Alpha Rhythms in Human Visual Cortex**
 
 ## Repository Structure
 
-```
-repo-root/
-├── ds006547/                          # Raw BIDS dataset
-│   └── sub-01/
-│       └── ses-01/
-│           └── eeg/
-│               └── sub-01_ses-01_task-visual_eeg.vhdr
-│
-├── eeg_visual_simulation_lac/
-│   └── Dataset/
-│       ├── Scripts/
-│       │   ├── preprocess.py          # Main preprocessing + ICA + Milestone 3 plots
-│       │   ├── raw_visual.py           # Raw vs clean PSD and time-series plots
-│       │   └── manual_inspect_ica.py   # ICA component inspection
-│       │
-│       └── outputs/
-│           └── sub-01/                 # All generated outputs
-│
-└── README.md
-```
+- **Custom_pipeline_Dataset/**: Scripts and outputs for the original (custom) pipeline
+- **Bids_pipeline_Dataset/**: Scripts and outputs for the BIDS-aligned pipeline
+- **eeg-env/**: Python virtual environment (optional)
+- **Readme.md**: This documentation
+
+## Pipelines Overview
+
+### 1. Custom Pipeline
+- Located in: `Custom_pipeline_Dataset/` and described in this Readme
+- Implements a robust, paper-aligned analysis with some methodological updates
+- Scripts: preprocessing, ICA, band power extraction, group analysis, etc.
+
+### 2. BIDS Pipeline
+- Located in: `Bids_pipeline_Dataset/` and described in this Readme
+- Follows BIDS standards and includes additional robustness checks
+- Scripts: similar structure, but adapted for BIDS data organization
+
+## Results Overview
+
+All 31 subjects were processed end-to-end through two automated phases.
+
+### Retinotopy — Spatial Tuning
+
+| Condition | Alpha Mean | Gamma Mean |
+|-----------|-----------|-----------|
+| Full Field | −8.96 × 10⁻⁷ | −4.94 × 10⁻⁸ |
+| Left Hemifield | −1.05 × 10⁻⁶ | — |
+| Periphery | −1.10 × 10⁻⁶ | — |
+| Fovea | −6.36 × 10⁻⁷ | — |
+| Blank | ≈ 0 | ≈ 0 |
+
+- Strongest alpha suppression in periphery and contralateral hemifields
+- Blank condition confirms valid baseline (near-zero power change)
+
+### Divisive Normalization vs Linear Summation
+
+The divisive-normalization model (σ = 0.5) consistently outperforms linear summation at finer spatial scales:
+
+| Spatial Partition | Linear MAE | DivNorm MAE | Improvement |
+|-------------------|-----------|-------------|-------------|
+| Left / Right | 2.34 × 10⁻⁶ | 1.19 × 10⁻⁶ | ~2× |
+| Top / Bottom | 2.20 × 10⁻⁶ | 1.18 × 10⁻⁶ | ~2× |
+| Quadrants | 4.15 × 10⁻⁶ | 1.06 × 10⁻⁶ | ~4× |
+| Octants | 1.08 × 10⁻⁵ | 1.20 × 10⁻⁶ | **~9×** |
+| Fovea / Periphery | 2.47 × 10⁻⁶ | 1.23 × 10⁻⁶ | ~2× |
+
+### Orientation Tuning
+
+- **Alpha tuning index:** 1.29 — strong selectivity across 16 orientations
+- **Gamma tuning index:** 0.43 — moderate selectivity
+- **Tuning ratio (γ/α):** 0.33 — alpha shows ~3× stronger orientation tuning than gamma
+- 16 orientation bins (0°–337.5° in 22.5° steps, triggers 41–56)
+
+### Cross-Subject Consistency (n = 31)
+
+| Metric | Mean | Std | CV |
+|--------|------|-----|-----|
+| Alpha effect | −1.11 × 10⁻⁶ | 1.07 × 10⁻⁶ | −0.96 |
+| Gamma effect | −1.45 × 10⁻⁷ | 5.35 × 10⁻⁷ | −3.69 |
+
+Alpha effects are consistent (|CV| < 1); gamma effects show high inter-subject variability.
 
 ---
 
-## Requirements
+## How to Use
 
-- Python ≥ 3.9
-- mne
-- numpy
-- scipy
-- matplotlib
-
-Optional (recommended):
-- python-picard (for Picard ICA)
+- See each pipeline's scripts in their respective folders for detailed instructions, requirements, and results.
+- Both pipelines are self-contained and can be run independently.
+- Outputs are organized by pipeline for clarity.
 
 ---
 
-## Python Environment Setup
+## Google Colab / Google Drive
 
-To ensure reproducibility, all scripts are intended to be run inside a dedicated Python virtual environment.
+To run the merged notebook on Colab:
 
-### Create a virtual environment
+1. Upload the following folders to your Google Drive (inside any parent folder, e.g., `My Drive/eeg_visual_simulation_lac/`):
+    - `Custom_pipeline_Dataset/outputs/`  (contains Custom Pipeline results)
+    - `Bids_pipeline_Dataset/outputs/`  (contains BIDS Pipeline results)
+2. Upload the merged notebook file: `submission_report_merged.ipynb`
+3. Open the notebook in Colab and run all cells — Drive will be mounted automatically and the new folder structure will be used.
 
-From the repository root:
+> **Tip:** Only JSON summaries and PNG figures are needed. Raw `.fif` files are not required for the notebook to display results.
+
+---
+
+## Pipeline Architecture
+
+### Phase 1 — Per-Subject Processing (automated)
+
+```bash
+bash Custom_pipeline_Dataset/Scripts/Phase_1.sh
+```
+
+| Step | Script | Description |
+|------|--------|-------------|
+| 1 | `preprocess.py` | Channel typing, bad-channel detection, notch filter, 1–100 Hz bandpass, downsample to 200 Hz, ICA fit (Picard, 60 components) |
+| 2 | `auto_inspect_ica.py` | Automatic ICA labelling via `mne-icalabel` (threshold 0.60) |
+| 3 | `refine_ica_review.py` | Heuristic refinement of borderline ICA decisions |
+| 4 | `apply_reviewed_ica.py` | Apply exclusions, save cleaned raw + epochs + PSD QC |
+| 5 | `extract_band_power.py` | Alpha (8–13 Hz) and gamma (40–80 Hz) analytic amplitude; task − baseline |
+| 6 | `condition_analysis.py` | Per-subject retinotopy summaries and scatter plots |
+| 7 | `orientation_tuning_analysis.py` | Orientation tuning summaries, t-test heatmaps |
+| 8 | `extract_component_ersp.py` | Morlet ERSP (4–100 Hz), buffered epochs, baseline-corrected |
+| 9 | `orientation_ersp_stats.py` | ANOVA across orientation triggers, cluster masks |
+
+### Phase 2 — Group-Level Analysis (automated)
+
+```bash
+bash Custom_pipeline_Dataset/Scripts/Phase_2.sh
+```
+
+| Step | Script | Description |
+|------|--------|-------------|
+| 1 | `grand_average_analysis.py` | Grand-average retinotopy & orientation summaries |
+| 2 | `group_topomaps.py` | Condition-wise alpha/gamma scalp topomaps |
+| 3 | `group_statistical_analysis.py` | Group orientation/retinotopy statistics, consistency metrics |
+| 4 | `retinotopy_model_fit.py` | Linear vs divisive-normalization model comparison |
+| 5 | `group_ersp_statistics.py` | Group ERSP cluster statistics |
+
+---
+
+## Repository Layout
+
+```text
+.
+├── Custom_pipeline_Dataset/
+│   ├── Scripts/           # All analysis scripts + Phase_1.sh / Phase_2.sh
+│   │   └── condition_mapping.json
+│   └── outputs/
+│       ├── group_level/   # Group-level PNGs + JSONs
+│       ├── sub-01/        # Full example subject (PNGs + JSONs)
+│       ├── sub-02/        # JSON summaries only (PNGs on Google Drive)
+│       ├── ...
+│       └── sub-31/
+├── Bids_pipeline_Dataset/
+│   ├── Scripts/           # BIDS pipeline scripts
+│   └── outputs/
+│       ├── group_level/   # Group-level PNGs + JSONs
+│       ├── sub-01/        # Full example subject (PNGs + JSONs)
+│       ├── ...
+│       └── sub-31/
+├── submission_report_merged.ipynb  # Colab-ready final report (merged)
+├── Readme.md
+└── requirements.txt
+```
+
+## Installation
 
 ```bash
 python3 -m venv eeg-env
-```
-
-### Activate the environment
-
-macOS / Linux:
-```bash
 source eeg-env/bin/activate
-```
-
-Windows:
-```bash
-eeg-env\\Scripts\\activate
-```
-
-After activation, the shell prompt should display `(eeg-env)`.
-
----
-
-If `python-picard` is **not installed**, change the ICA method in `preprocess.py` from `picard` to `fastica`.
-
----
-
-
-## Installing Dependencies
-
-All required Python packages are listed in `requirements.txt`.
-
-```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### Verify installation
+**Prerequisites for running the pipeline** (not needed for the notebook):
+- Raw BIDS dataset from [OpenNeuro ds006547](https://openneuro.org/datasets/ds006547)
+- Preprocessed ICA files (`*-ica.fif`) for Phase 1
 
-```bash
-python -c "import mne, numpy, matplotlib; print('Environment setup successful')"
-```
+## Condition Mapping
 
-If Picard ICA is required:
+Condition labels are defined in `Custom_pipeline_Dataset/Scripts/condition_mapping.json`:
 
-```bash
-python -c "import picard; print('Picard ICA available')"
-```
+- **Retinotopy:** codes 1–20 (hemifields, quadrants, octants, fovea/periphery, blank)
+- **Orientation:** codes 41–56 (16 orientations, 0°–337.5° in 22.5° steps)
 
-If `python-picard` is not installed, change the ICA method in `preprocess.py` from `picard` to `fastica`.
+## Development Process
 
----
+The final automated pipeline (Phase 1 + Phase 2) evolved through several iterations. The repository preserves utility and exploratory scripts that supported this development:
 
-## Scripts Overview
+| Script | Role in Development |
+|--------|---------------------|
+| `raw_visual.py` | Early-stage raw EEG visualisation — used to inspect signal quality before designing the preprocessing pipeline |
+| `raw_visuals_continous.py` | Continuous-recording variant of the above; helped decide epoch boundaries and filtering strategy |
+| `Preprocess_continous.py` | Prototype continuous preprocessing — explored before settling on the event-centred approach in `preprocess.py` |
+| `manual_inspect_ica.py` | Original interactive ICA component review with topography plots; replaced by `auto_inspect_ica.py` + `refine_ica_review.py` for full automation |
+| `build_condition_table.py` | Utility that cross-references trigger codes with `condition_mapping.json` to verify event labelling |
+| `milestone4_analysis.py` | Earlier milestone deliverable — single-subject analysis that informed the design of the final per-subject and group-level scripts |
 
-### 1. `preprocess.py`
+### Why a different pipeline?
 
-This is the **main preprocessing pipeline**.
+Our professor required a **robustness check**, not a step-by-step reproduction. Key differences from the original paper's pipeline:
 
-It performs the following steps:
+| Stage | Original Paper | Our Pipeline | Rationale |
+|-------|---------------|-------------|-----------|
+| ICA algorithm | Unspecified (likely FastICA) | Picard (extended) | Modern, faster convergence |
+| Notch filter | Single 60 Hz | Harmonic series (60, 120, 180 Hz) | Removes sub-harmonics that bleed into gamma |
+| Bad-channel detection | Not specified | SSD z-score (10–100 Hz) | Automated, reproducible |
+| Alpha band | 8–12 Hz | 8–13 Hz | Captures individual alpha frequency variability |
+| Gamma extraction | Full 40–80 Hz | Sub-bands 40–55 & 65–80 Hz | Avoids 60 Hz line-noise region |
+| ICA review | Likely manual | Automated (`mne-icalabel` ≥ 0.60) + heuristic refinement | Scalable to 31 subjects |
 
-1. Load BrainVision EEG data (`.vhdr`)
-2. Detect bad channels using **SSD** (10–100 Hz)
-3. Interpolate detected bad channels
-4. Apply notch filtering for line noise (50 Hz or 60 Hz)
-5. Run **ICA** (Picard or FastICA)
-6. Automatically detect eye-related components (EOG / frontal EEG)
-7. Apply ICA and generate cleaned data
-8. Epoch cleaned data
-9. Generate **Milestone 3 diagnostic plots**
-10. Save ICA solution and band-power features
+By reproducing the paper's central findings (gamma/alpha dissociation, divisive normalisation, orientation tuning asymmetry) with these alternative choices, we demonstrate that the conclusions are **robust to preprocessing decisions**.
 
-#### Run command
+## Caveats
 
-From the repository root:
+This pipeline is **paper-aligned and substantially complete**, but not a guaranteed exact reproduction:
 
-```bash
-python eeg_visual_simulation_lac/Dataset/Scripts/preprocess.py \
-  --vhdr ds006547/sub-01/ses-01/eeg/sub-01_ses-01_task-visual_eeg.vhdr \
-  --out_dir eeg_visual_simulation_lac/Dataset/outputs/sub-01
-```
-
-#### Outputs
-
-- `sub-01_ses-01_task-visual_eeg-ica.fif`  
-- `sub-01_ses-01_task-visual_eeg-butterfly.png`  
-- `sub-01_ses-01_task-visual_eeg-erp_<channel>.png`  
-- `sub-01_ses-01_task-visual_eeg-alpha_diff.npy`  
-- `sub-01_ses-01_task-visual_eeg-gamma_diff.npy`
-
----
-
-### 2. `raw_visual.py`
-
-This script is used for **data quality diagnostics**.
-
-It generates:
-
-- Raw EEG power spectral density (PSD)
-- ICA-cleaned EEG PSD
-- Fixed-scale 10-second raw EEG segment
-- Fixed-scale 10-second clean EEG segment
-
-The script ensures that raw and clean plots use:
-- the **same time window**
-- the **same channels**
-- the **same amplitude scaling**
-
-This makes visual comparison meaningful.
-
----
-
-### 3. `manual_inspect_ica.py`
-
-Utility script for **manual ICA inspection**.
-
-- Plots ICA component topographies
-- Helps identify eye-blink, muscle, and cardiac artifacts
-- Supports manual selection of components to exclude
-
-This script is typically run **before finalizing** `ica.exclude`.
-
----
-
-## Preprocessing Pipeline Summary
-
-1. Load BrainVision EEG data
-2. Detect bad channels using SSD
-3. Interpolate bad channels
-4. Apply notch filtering for line noise at 60 Hz
-5. Run ICA
-6. Identify eye-related components
-7. Apply ICA to raw data
-8. Epoch cleaned data
-9. Generate Milestone 3 diagnostic plots
-10. Save ICA solution and band-power features
-
----
-
-## Milestone 3 Plots
-
-The following plots are generated automatically:
-
-- Raw vs Clean **Power Spectral Density (PSD)**
-- ICA component topographies
-- **Butterfly plot** of evoked responses
-- Single-channel ERP (Oz / O1 / O2 / Pz / Cz)
-- 10-second raw EEG segment
-- 10-second ICA-cleaned EEG segment
-
-These plots are intended for **diagnostic inspection**, not statistical inference.
-
----
-
-## Notes
-
-- ICA primarily removes **transient artifacts** (eye blinks, muscle bursts), so PSDs may look similar before and after ICA.
-- Line noise must be handled explicitly via notch filtering.
-- Raw data is never modified in-place; all processing uses copies.
-- Fixed scaling is used for time-series plots to allow fair comparison.
-
----
-
-# The results presented here correspond to **Subject 01** from the dataset.
-
-
-## Dataset
-
-- **Dataset ID:** ds006547
-- **Subject:** sub-01
-- **Session:** ses-01
-- **Task:** visual
-- **Data format:** BrainVision EEG (.vhdr / .eeg / .vmrk)
-
-
-## Results: Subject 01
-
-### ICA Decomposition and Artifact Identification
-
-Independent Component Analysis (ICA) was applied to the EEG data of **Subject 01**, producing 60 independent components. Visual inspection of the ICA scalp topographies revealed several components with spatial patterns characteristic of non-neural artifacts.
-
-Multiple components showed strong frontal dominance, consistent with **eye-blink and eye-movement artifacts**. Additional components exhibited focal activity near temporal electrodes, indicative of **muscle (EMG) artifacts**. These components were marked for exclusion and removed from the data.
-
-The remaining components displayed distributed and physiologically plausible scalp patterns, suggesting preservation of neural activity after artifact removal.
-
----
-
-### Power Spectral Density (PSD): Raw vs Cleaned EEG
-
-Power spectral density (PSD) estimates were computed for both the raw and ICA-cleaned EEG signals in the range **1–80 Hz**.
-
-The PSD plots show that the overall spectral profile is preserved after ICA cleaning. The characteristic 1/f power decrease remains visible, and no major suppression of physiological frequency bands (alpha, beta, gamma) is observed. This indicates that ICA removed transient artifacts without altering the underlying spectral structure of the EEG.
-
----
-
-### Time-Domain Inspection: Raw vs Cleaned EEG
-
-Ten-second EEG segments were extracted from the raw and cleaned data using identical channels, time windows, and a fixed scaling of **20 µV**.
-
-In the raw EEG, several channels exhibit high-amplitude transient fluctuations, particularly in frontal and temporal regions. After ICA cleaning, these fluctuations are substantially reduced while the background EEG activity remains intact. This confirms effective artifact attenuation by ICA.
-
----
-
-### Evoked Responses: Butterfly Plot
-
-Event-related potentials (ERPs) were computed by averaging **456 trials** across all **63 EEG channels**. The butterfly plot shows a clear stimulus-locked response following stimulus onset, with consistent temporal structure across channels.
-
-No large baseline drifts or residual artifacts are observed, indicating stable preprocessing and baseline correction.
-
----
-
-### Single-Channel ERP (Oz)
-
-A single-channel ERP was visualized at electrode **Oz**, a posterior site associated with visual processing. The waveform shows a clear post-stimulus response with smooth temporal dynamics and no abrupt artifact-related deflections.
-
-This confirms that ICA cleaning preserved meaningful neural responses while removing non-neural noise.
-
----
-
-## Summary
-
-For **Subject 01**, the preprocessing and analysis pipeline successfully:
-
-- Identified and removed eye- and muscle-related artifacts using ICA
-- Preserved the spectral characteristics of the EEG
-- Reduced transient artifacts in the time domain
-- Produced clean and interpretable evoked responses
-
-The results demonstrate that the implemented pipeline is effective and suitable for subsequent EEG analysis.
-
-
-
-# -------------------------------------------------------
-# Milestone 4 – Condition-Based ERP Analysis
-
-## Objective
-
-The objective of **Milestone 4** is to analyze and compare **event-related potentials (ERPs)** between two experimental conditions using preprocessed EEG data. This milestone builds directly on **Milestone 3**, where artifact-free epochs were generated using ICA-based preprocessing. The focus here is on identifying **temporal and spatial differences** in brain responses evoked by the two conditions.
-
----
-
-## Dataset and Preprocessing Recap
-
-- **Dataset:** ds006547  
-- **Subject:** sub-01  
-- **Task:** visual  
-- **EEG channels:** 63  
-- **Epoch time window:** −0.5 s to 3.5 s relative to stimulus onset  
-- **Total epochs:** 456
-
-All EEG data were preprocessed in **Milestone 3**, including:
-
-- Automatic bad channel detection and interpolation  
-- Line noise removal (notch filtering)  
-- ICA-based artifact removal  
-- Epoching of cleaned continuous data
-
-The final preprocessed epochs used for Milestone 4 are stored in:
-
-```
-sub-01_ses-01_task-visual_eeg-final-epo.fif
-```
-
----
-
-## Experimental Conditions
-
-Epochs were divided into two experimental conditions based on event codes.
-
-### Condition A
-
-- **Event codes:** 1–22  
-- **Number of epochs:** 264
-
-### Condition B
-
-- **Event codes:** 41–56  
-- **Number of epochs:** 192
-
-These two conditions correspond to different stimulus categories in the visual task.
-
----
-
-## ERP Computation
-
-For each condition, ERPs were computed by averaging all epochs belonging to that condition:
-
-- **Condition A ERP:** average of 264 trials  
-- **Condition B ERP:** average of 192 trials
-
-All ERPs were computed using identical preprocessing parameters, baseline settings, and time windows to ensure a valid comparison.
-
----
-
-## Butterfly Plots (All Channels)
-
-### Purpose
-
-Butterfly plots were generated to visualize ERP responses across **all 63 EEG channels simultaneously** for each condition.
-
-### Observations
-
-- Both conditions show clear stimulus-locked responses after stimulus onset.
-- ERP waveforms are smooth and consistent across channels.
-- The overall temporal structure is similar for both conditions.
-- Subtle amplitude differences are visible between Condition A and Condition B.
-
-### Interpretation
-
-The butterfly plots confirm good signal quality and demonstrate that both conditions evoke reliable neural responses suitable for further comparison.
-
----
-
-## Single-Channel ERP Comparison (Oz)
-
-### Rationale
-
-The electrode **Oz** was selected for detailed analysis because it is located over the **visual cortex**, which is highly relevant for a visual task.
-
-### Analysis
-
-- ERPs at Oz were extracted for both conditions.
-- The two ERPs were plotted together using identical scaling.
-- A difference waveform was computed as **Condition B − Condition A**.
-
-### Observations
-
-- Both conditions show a clear post-stimulus positive deflection.
-- Condition B consistently shows a larger amplitude than Condition A.
-- The difference waveform remains positive after stimulus onset.
-
-### Interpretation
-
-Condition B elicits stronger visual cortical activity than Condition A, suggesting enhanced visual processing or attentional engagement.
-
----
-
-## Topographic Analysis
-
-### Time Windows
-
-Scalp topographies were computed for three post-stimulus time windows:
-
-- **100–200 ms**  
-- **200–300 ms**  
-- **300–400 ms**
-
-These windows capture early, intermediate, and later stages of visual processing.
-
----
-
-### Condition-Specific Topographies
-
-#### Condition A
-
-- Voltage distributions show dominant posterior scalp activity.
-- Spatial patterns remain stable across time windows.
-- The distribution is consistent with visual cortex activation.
-
-#### Condition B
-
-- Similar posterior dominance is observed.
-- Overall amplitudes are higher compared to Condition A.
-- Spatial patterns remain physiologically plausible.
-
----
-
-### Difference Topographies (Condition B − Condition A)
-
-### Purpose
-
-Difference maps were computed to highlight spatial regions where the two conditions differ.
-
-### Observations
-
-- Strongest differences appear over posterior electrodes.
-- Differences increase in magnitude in later time windows.
-- Spatial patterns align with the single-channel Oz ERP results.
-
-### Interpretation
-
-Condition B produces stronger posterior cortical responses than Condition A, confirming condition-dependent modulation of visual processing.
-
----
-
-## Summary of Findings
-
-- Both conditions evoke clear and reliable ERPs.
-- Condition B consistently shows higher amplitudes than Condition A.
-- Differences are observed both temporally (ERP waveforms) and spatially (topographic maps).
-- Effects are localized to brain regions associated with visual processing.
-
----
-
-## Conclusion
-
-Milestone 4 successfully demonstrates condition-specific differences in EEG responses using ERP waveforms and scalp topographies. The results are physiologically meaningful, consistent across analyses, and validate the preprocessing pipeline established in Milestone 3. The analysis confirms that the experimental conditions modulate visual cortical activity in a systematic and interpretable manner.
+- Divisive-normalization uses a fixed σ = 0.5 approximation
+- ERSP clusters are threshold-based, not permutation-based
+- Gamma effects show high inter-subject variability (CV ≈ −3.7)
+- Retinotopy trigger codes 21–22 remain unresolved
