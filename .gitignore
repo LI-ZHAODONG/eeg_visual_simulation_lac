@@ -1,4 +1,11 @@
 
+# ── Planning/review docs (keep local only) ──
+PHASE_1_AUTOMATION.md
+PHASE_2_INSTRUCTIONS.md
+PROFESSOR_REQUIREMENTS_ASSESSMENT.md
+PROJECT_TODO.md
+paper_summary.txt
+
 # ── Large binary EEG files (always ignore) ──
 *.fif
 *.npy
