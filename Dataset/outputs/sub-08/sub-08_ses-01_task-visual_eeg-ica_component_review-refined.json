@@ -1,258 +1,269 @@
 {
   "subject": "sub-08",
-  "session": "ses-01",
   "recording": "sub-08_ses-01_task-visual_eeg",
-  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
   "component_decisions": {
     "0": {
-      "label": "artifact_flat",
+      "label": "other",
       "keep": false,
-      "notes": "uniform field, non-physiological (likely DC / reference)"
+      "notes": "Auto-rejected: other (67.7%)"
     },
     "1": {
-      "label": "eye_artifact",
-      "keep": false,
-      "notes": "frontal dominance, typical blink pattern"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (60.7%)"
     },
     "2": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "clear left-right dipole, smooth"
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (96.3%)"
     },
     "3": {
-      "label": "eye_artifact",
-      "keep": false,
-      "notes": "strong frontal positivity"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (84.8%)"
     },
     "4": {
-      "label": "eye_artifact",
-      "keep": false,
-      "notes": "similar frontal pattern"
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (58.8%)."
     },
     "5": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "right edge hotspot"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (52.3%)."
     },
     "6": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "clean dipole across hemispheres"
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Left unsure: eye blink (40.4%)."
     },
     "7": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "right temporal focal hotspot"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.4%)"
     },
     "8": {
-      "label": "artifact_flat",
+      "label": "other",
       "keep": false,
-      "notes": "nearly uniform field"
+      "notes": "Auto-rejected: other (89.7%)"
     },
     "9": {
-      "label": "heart_artifact",
-      "keep": false,
-      "notes": "sharp periodic spike, ECG-like"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (75.5%)"
     },
     "10": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "broad dipole, plausible cortical"
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (60.5%)"
     },
     "11": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "focal frontal dipole, acceptable"
+      "notes": "Auto-kept: brain (89.0%)"
     },
     "12": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "diffuse, not clearly dipolar"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (58.1%)."
     },
     "13": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "right edge dominance"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (71.8%)"
     },
     "14": {
-      "label": "eye_artifact",
-      "keep": false,
-      "notes": "left frontal dominance"
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (35.4%)."
     },
     "15": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "left edge hotspot"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (44.4%)."
     },
     "16": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "posterior dipole, clean"
+      "notes": "Auto-kept: brain (73.8%)"
     },
     "17": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "right edge + inferior hotspot"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (57.0%)."
     },
     "18": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "posterior dominant, smooth"
+      "notes": "Auto-kept: brain (91.3%)"
     },
     "19": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "non-dipolar, mixed field"
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (38.4%)."
     },
     "20": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "broad, low-amplitude, no focal artifact pattern"
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (42.6%)."
     },
     "21": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "clear dipole (left temporal\u2013central)"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (39.3%)."
     },
     "22": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "strong right temporal hotspot"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (51.9%)."
     },
     "23": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "posterior dipole, clean and smooth"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (58.8%)."
     },
     "24": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "left focal dipole, acceptable"
+      "notes": "Auto-kept: brain (97.2%)"
     },
     "25": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "strong right edge activation"
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (45.9%)."
     },
     "26": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "inferior-right focal hotspot"
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (47.5%)."
     },
     "27": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "posterior dipole, symmetric"
+      "notes": "Auto-kept: brain (94.9%)"
     },
     "28": {
-      "label": "eye_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "frontal dominance (likely blink)"
+      "notes": "Manual-assisted reject: borderline muscle artifact (52.4%)."
     },
     "29": {
-      "label": "eye_artifact",
-      "keep": false,
-      "notes": "frontal-right strong activity"
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (43.6%)."
     },
     "30": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "inferior/posterior dipole, smooth"
+      "notes": "Auto-kept: brain (83.9%)"
     },
     "31": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "clear right posterior dipole"
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (86.0%)"
     },
     "32": {
-      "label": "eye_artifact",
-      "keep": false,
-      "notes": "strong frontal asymmetry"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (61.2%)"
     },
     "33": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "complex non-dipolar pattern"
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Left unsure: eye blink (46.2%)."
     },
     "34": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "central dipole, smooth distribution"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (43.4%)."
     },
     "35": {
-      "label": "artifact_flat",
-      "keep": false,
-      "notes": "diffuse, no clear dipole"
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (83.6%)"
     },
     "36": {
-      "label": "brain_component",
+      "label": "brain",
       "keep": true,
-      "notes": "central focal dipole, stable"
+      "notes": "Auto-kept: brain (75.4%)"
     },
     "37": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "posterior-midline dipole"
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (68.6%)"
     },
     "38": {
-      "label": "temporal_muscle_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "right temporal hotspot"
+      "notes": "Manual-assisted reject: borderline muscle artifact (50.2%)."
     },
     "39": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "focal frontal dipole, acceptable"
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (35.0%)."
     },
     "40": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "strong inferior-left hotspot near jaw/neck"
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (46.1%)."
     },
     "41": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "smooth dipole, distributed pattern"
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (80.6%)"
     },
     "42": {
-      "label": "mixed_component",
+      "label": "other",
       "keep": false,
-      "notes": "multiple hotspots (right edge + inferior), non-dipolar"
+      "notes": "Auto-rejected: other (91.6%)"
     },
     "43": {
-      "label": "artifact_edge",
+      "label": "other",
       "keep": false,
-      "notes": "strong inferior-left edge activation"
+      "notes": "Auto-rejected: other (89.9%)"
     },
     "44": {
-      "label": "temporal_muscle_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "bilateral inferior hotspots (jaw/neck muscle)"
+      "notes": "Auto-rejected: other (93.8%)"
     },
     "45": {
-      "label": "mixed_component",
+      "label": "other",
       "keep": false,
-      "notes": "multiple focal inferior sources, not a clean dipole"
+      "notes": "Auto-rejected: other (97.4%)"
     },
     "46": {
-      "label": "brain_component",
-      "keep": true,
-      "notes": "central dipole, structured and stable"
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (57.4%)."
     },
     "47": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal, non-dipolar hotspot concentrated at right centro-parietal region with surrounding diffuse negativity \u2014 not a clean dipole. Spectrum is flat/non-neural with a small 60Hz notch artifact visible. Variance is scattered with multiple outlier epochs. Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (48.0%)."
     },
     "48": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Topography is highly irregular with multiple competing poles (right frontal, left temporal, right inferior) \u2014 clearly non-dipolar and spatially incoherent. Segment image shows sparse but strong transient bursts. Not consistent with a neural source. Reject."
+      "notes": "Auto-rejected: other (84.9%)"
     },
     "49": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Topography shows an overly focal hotspot at left temporal/inferior edge with surrounding weak blue field \u2014 not dipolar, likely an edge or bridging artifact. Spectrum is relatively flat. Variance shows a clustered burst around segments 1000\u20131400 suggesting non-stationary artifact. Reject."
+      "notes": "Auto-rejected: muscle artifact (77.4%)"
     }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
   }
 }

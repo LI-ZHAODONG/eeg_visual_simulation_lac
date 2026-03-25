@@ -1,72 +1,319 @@
 {
   "subject": "sub-17",
-  "session": "ses-01",
   "recording": "sub-17_ses-01_task-visual_eeg",
-  "notes": "Manual ICA decisions after reviewing topographies and properties.",
-  "component_decisions": {},
-  "generated_files": {
-    "topographies": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_components_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_components_1.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_components_2.png"
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
     ],
-    "properties": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic00_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic01_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic02_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic03_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic04_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic05_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic06_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic07_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic08_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic09_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic10_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic11_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic12_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic13_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic14_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic15_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic16_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic17_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic18_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic19_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic20_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic21_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic22_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic23_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic24_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic25_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic26_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic27_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic28_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic29_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic30_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic31_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic32_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic33_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic34_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic35_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic36_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic37_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic38_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic39_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic40_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic41_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic42_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic43_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic44_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic45_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic46_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic47_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic48_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic49_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic50_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic51_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic52_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic53_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic54_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-17/sub-17_ses-01_task-visual_eeg-ica_properties_ic55_0.png"
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
     ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (50.6%)."
+    },
+    "1": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (34.5%)."
+    },
+    "2": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (32.9%)."
+    },
+    "3": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (71.1%)"
+    },
+    "4": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (73.4%)"
+    },
+    "5": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (70.3%)"
+    },
+    "6": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (85.3%)"
+    },
+    "7": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (66.7%)"
+    },
+    "8": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (80.7%)"
+    },
+    "9": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (37.1%)."
+    },
+    "10": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (35.0%)."
+    },
+    "11": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (95.9%)"
+    },
+    "12": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (74.0%)"
+    },
+    "13": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (29.9%)."
+    },
+    "14": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (80.5%)"
+    },
+    "15": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (68.5%)"
+    },
+    "16": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.9%)"
+    },
+    "17": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (37.1%)."
+    },
+    "18": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (92.0%)"
+    },
+    "19": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (37.1%)."
+    },
+    "20": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (89.6%)"
+    },
+    "21": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (97.3%)"
+    },
+    "22": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (45.1%)."
+    },
+    "23": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (39.0%)."
+    },
+    "24": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (42.9%)."
+    },
+    "25": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (34.4%)."
+    },
+    "26": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (68.9%)"
+    },
+    "27": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (45.7%)."
+    },
+    "28": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (32.0%)."
+    },
+    "29": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (92.7%)"
+    },
+    "30": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (100.0%)"
+    },
+    "31": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (89.2%)"
+    },
+    "32": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (60.1%)"
+    },
+    "33": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (95.2%)"
+    },
+    "34": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline muscle artifact (59.2%)."
+    },
+    "35": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (96.8%)"
+    },
+    "36": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (95.1%)"
+    },
+    "37": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (79.6%)"
+    },
+    "38": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (70.3%)"
+    },
+    "39": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (75.8%)"
+    },
+    "40": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (67.8%)"
+    },
+    "41": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (95.5%)"
+    },
+    "42": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (38.2%)."
+    },
+    "43": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (33.5%)."
+    },
+    "44": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (38.3%)."
+    },
+    "45": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (59.1%)."
+    },
+    "46": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (51.2%)."
+    },
+    "47": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (33.8%)."
+    },
+    "48": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (46.0%)."
+    },
+    "49": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (73.9%)"
+    },
+    "50": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (66.8%)"
+    },
+    "51": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (31.4%)."
+    },
+    "52": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (56.1%)."
+    },
+    "53": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (81.6%)"
+    },
+    "54": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (96.1%)"
+    },
+    "55": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (95.7%)"
+    },
+    "56": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (36.2%)."
+    },
+    "57": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (67.3%)"
+    },
+    "58": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (91.9%)"
+    },
+    "59": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (46.2%)."
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
   }
 }

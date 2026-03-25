@@ -2,7 +2,7 @@
   "subject": "sub-11",
   "session": "ses-01",
   "recording": "sub-11_ses-01_task-visual_eeg",
-  "vhdr_path": "/Volumes/personal/EEG/project/ds006547/sub-11/ses-01/eeg/sub-11_ses-01_task-visual_eeg.vhdr",
+  "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-11/ses-01/eeg/sub-11_ses-01_task-visual_eeg.vhdr",
   "outputs": {
     "ica_fif": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-11/sub-11_ses-01_task-visual_eeg-ica.fif",
     "bad_channels_json": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-11/sub-11_ses-01_task-visual_eeg-bad_channels.json",

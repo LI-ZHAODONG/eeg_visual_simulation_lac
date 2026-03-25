@@ -1,343 +1,289 @@
 {
   "subject": "sub-12",
-  "session": "ses-01",
   "recording": "sub-12_ses-01_task-visual_eeg",
-  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
   "component_decisions": {
     "0": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Broad posterior negativity with smooth gradient from occipital to parietal \u2014 dipolar with weak anterior positivity. Spectrum shows a prominent alpha peak (~10 Hz) and beta harmonic strongly supporting neural origin. Stable, continuous time course across all 3000+ segments. Keep."
+      "notes": "Auto-kept: brain (99.8%)"
     },
     "1": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Strong frontal positivity maximal at Fp1/Fp2 with posterior negativity extending beyond scalp \u2014 classic EOG/eye blink topography. Extremely high variance outliers (up to 7000 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (90.0%)"
     },
     "2": {
-      "label": "global_noise_component",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Broadly positive red field covering entire scalp with a central blue ring \u2014 ring-like topography inconsistent with any dipolar neural source, likely a reference or common-mode artifact. Extreme variance outliers. Reject."
+      "notes": "Auto-rejected: eye blink (70.2%)"
     },
     "3": {
-      "label": "global_noise_component",
+      "label": "other",
       "keep": false,
-      "notes": "Nearly uniform red field with multiple irregular sign-change islands \u2014 not dipolar. Several separate hotspots visible (central, inferior posterior, bilateral temporal). Extreme variance outliers. Reject."
+      "notes": "Auto-rejected: other (72.2%)"
     },
     "4": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Broadly positive red field with a central blue ring \u2014 same ring artifact pattern as IC002. Not dipolar. Despite some alpha-like spectral activity, the topography is not consistent with a neural source. Extreme variance outliers. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (100.0%)"
     },
     "5": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Focal negativity at right fronto-central region with a separate small inferior positive island \u2014 fragmented, not dipolar. Topography is non-smooth and inconsistent. Extreme variance outliers (up to 1000 AU). Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (54.6%)."
     },
     "6": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Right posterior focal positivity with left anterior negativity \u2014 smooth and dipolar, consistent with a lateral occipital/visual source. Spectrum shows a prominent alpha (~10 Hz) and beta peak confirming neural origin. Very stable time course across all segments. Keep."
+      "notes": "Manual-assisted keep: borderline brain (59.5%)."
     },
     "7": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Nearly uniform dark red field with a single central focal hotspot and bilateral temporal sign-change islands \u2014 not dipolar. Segment image shows organized activity only in early segments suggesting a recording artifact. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.8%)"
     },
     "8": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Midline posterior negativity with bilateral anterior positivity \u2014 smooth, spatially clean dipolar pattern consistent with a midline occipital source. Spectrum shows a clear alpha peak (~10 Hz) and beta harmonics. Stable time course. Keep."
+      "notes": "Auto-kept: brain (99.8%)"
     },
     "9": {
-      "label": "edge_artifact",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Right anterior positivity and left posterior negativity concentrated near the edges \u2014 oblique, asymmetric and edge-confined. Not consistent with a clean neural dipole. Extreme variance outliers (up to 2000 AU). Reject."
+      "notes": "Auto-rejected: eye blink (99.1%)"
     },
     "10": {
-      "label": "edge_artifact",
+      "label": "heart beat",
       "keep": false,
-      "notes": "Left temporal/mastoid positivity concentrated at the edge with posterior red gradient \u2014 not dipolar. The positivity is confined to the left boundary and extends beyond the scalp. High variance outliers spread across recording. Reject."
+      "notes": "Auto-rejected: heart beat (95.4%)"
     },
     "11": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Right parieto-occipital focal positivity with smooth surrounding blue field \u2014 clean dipolar topography consistent with a lateral posterior visual source. Spectrum shows a prominent alpha (~10 Hz) and beta peak. Very stable time course. Keep."
+      "notes": "Auto-kept: brain (99.8%)"
     },
     "12": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Right posterior focal positivity with smooth surrounding negativity \u2014 well-defined dipolar pattern, spatially clean. Spectrum shows clear alpha (~10 Hz) and beta peaks. Continuous and stable time course. Keep."
+      "notes": "Auto-kept: brain (99.9%)"
     },
     "13": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Left posterior positivity and right posterior-temporal negativity \u2014 the dipole axis is lateralized and oblique with irregular contours. Not consistent with a clean posterior visual source. Reject on strict criteria."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.8%)"
     },
     "14": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Right temporal/posterior focal positivity very near the edge with left anterior negativity \u2014 edge-confined, not a smooth dipole. Variance outliers up to 300 AU scattered through mid-recording. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.3%)"
     },
     "15": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Left parieto-occipital focal positivity with smooth surrounding blue field \u2014 clean dipolar topography consistent with a lateral posterior visual source. Spectrum shows a prominent alpha (~10 Hz) peak. Stable time course. Keep."
+      "notes": "Auto-kept: brain (99.1%)"
     },
     "16": {
-      "label": "posterior_visual_component",
-      "keep": true,
-      "notes": "Central-parietal focal negativity surrounded by positive field \u2014 dipolar and spatially smooth, consistent with a posterior parietal neural source. Spectrum shows alpha (~10 Hz) and beta peaks. Stable time course. Keep."
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (88.8%)"
     },
     "17": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Focal negativity at inferior posterior/mastoid edge with a small left posterior positive patch \u2014 edge-confined and not dipolar. No meaningful alpha peak in spectrum. Scattered high variance. Reject."
+      "notes": "Auto-rejected: other (63.7%)"
     },
     "18": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Right anterior focal positivity at the scalp edge with diffuse posterior negativity \u2014 edge-confined, not a clean dipole. Extreme variance outlier (~45000 AU) and large step-like drift in time course. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.9%)"
     },
     "19": {
-      "label": "mixed_component",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Central-parietal positivity embedded in a blue field \u2014 the positive pole is spatially reasonable but the surrounding field is asymmetric and the topography contains irregular contours. Extreme variance outliers (up to 1100 AU). Reject on strict criteria."
+      "notes": "Auto-rejected: muscle artifact (70.7%)"
     },
     "20": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Focal negativity at right posterior/mastoid edge with no dipolar counterpart inside the scalp. Edge-confined and non-dipolar. Large step-like deflection in time course. Extreme variance outlier (~6000 AU). Reject."
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (38.6%)."
     },
     "21": {
-      "label": "mixed_component",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Left temporal positivity and right fronto-temporal negativity \u2014 oblique, asymmetric field not consistent with a clean neural dipole. Irregular contours, no smooth spatial gradient. High variance outliers (~3000 AU). Reject."
+      "notes": "Auto-rejected: muscle artifact (94.8%)"
     },
     "22": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Broadly positive red field with a left-central focal hotspot and a separate inferior positive island \u2014 multiple sign-change regions, not dipolar. Topography has irregular contours inconsistent with a single neural source. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (55.1%)."
     },
     "23": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Broadly positive red field with two separate focal hotspots (left-central and inferior) \u2014 clearly non-dipolar, multipolar pattern. Extreme variance outliers (~800 AU). Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (55.0%)."
     },
     "24": {
-      "label": "edge_artifact",
+      "label": "channel noise",
       "keep": false,
-      "notes": "Focal negativity at left fronto-temporal region near the edge with diffuse surrounding blue field \u2014 no clear dipolar counterpart. Edge-confined, not a neural dipole. Extreme variance outliers (~1000 AU). Reject."
+      "notes": "Manual-assisted reject: borderline channel noise (58.0%)."
     },
     "25": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Tight focal negativity at right posterior/mastoid edge with a small positive patch at right anterior \u2014 edge-confined, not a smooth dipole. Extreme variance outliers (~1100 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (81.9%)"
     },
     "26": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Left-central focal positivity embedded in a broadly positive red field with a separate inferior positive island \u2014 not dipolar, multiple irregular sign regions. Extreme variance outliers (~9000 AU). Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (57.3%)."
     },
     "27": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Right posterior focal negativity confined to the edge with a tiny anterior positivity patch \u2014 not a clean dipole, edge-confined. Spectrum shows unusual flat/rising shape with beta bump. High variance outliers (~650 AU). Reject."
+      "notes": "Auto-rejected: muscle artifact (83.2%)"
     },
     "28": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Left anterior focal negativity at the scalp edge with weak posterior positivity \u2014 edge-confined, not dipolar. Spectrum shows an unusual flat profile with beta bumps. Extreme variance outliers (~2000 AU). Reject."
+      "notes": "Auto-rejected: muscle artifact (92.4%)"
     },
     "29": {
-      "label": "mixed_component",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Right posterior-temporal positivity with small lateral negativity \u2014 the positive pole is near the edge and the opposing field is too weak and irregular. Spectrum shows unusual beta-dominant shape with no clear alpha. Very noisy time course. Reject."
+      "notes": "Auto-rejected: muscle artifact (98.0%)"
     },
     "30": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Right fronto-central focal negativity near edge with left anterior positivity \u2014 edge-confined and asymmetric, not a clean dipole. Spectrum shows alpha and beta bumps but topography fails dipolar criteria. Extreme variance outliers (~1400 AU). Reject."
+      "notes": "Auto-rejected: muscle artifact (99.0%)"
     },
     "31": {
-      "label": "posterior_visual_component",
+      "label": "brain",
       "keep": true,
-      "notes": "Left posterior focal negativity with bilateral anterior positivity \u2014 smooth, spatially clean dipolar pattern consistent with a lateral occipital/posterior visual source. Spectrum shows clear alpha (~10 Hz) and beta harmonics. Stable, oscillatory time course. Keep."
+      "notes": "Auto-kept: brain (99.9%)"
     },
     "32": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Right posterior focal negativity very near the temporal/mastoid edge with a small anterior positivity \u2014 edge-confined, not a clean neural dipole. Spectrum shows unusual flat/beta-dominant profile. Extreme variance outliers (~500 AU). Reject."
+      "notes": "Auto-rejected: muscle artifact (97.5%)"
     },
     "33": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Left temporal/mastoid focal positivity at the edge with a small nearby negativity \u2014 edge-confined, highly focal, not dipolar. High variance outliers spread across the recording (~430 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.7%)"
     },
     "34": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Left temporal/mastoid negativity confined to the edge with diffuse posterior positivity \u2014 edge-confined, not a clean dipole. Flat/broadband spectrum with no neural peaks. High variance outliers scattered throughout. Reject."
+      "notes": "Auto-rejected: muscle artifact (98.6%)"
     },
     "35": {
-      "label": "mixed_component",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Right posterior-temporal negativity with anterior-left positivity \u2014 oblique and asymmetric, the negative pole is near the edge. Not a clean dipolar distribution. High variance outliers (~880 AU). Reject."
+      "notes": "Auto-rejected: muscle artifact (90.5%)"
     },
     "36": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Topography shows strong activity concentrated at the frontal-left edge/rim extending beyond the scalp boundary; not dipolar. Extreme variance outliers confirm artifactual bursts."
+      "notes": "Auto-rejected: other (63.1%)"
     },
     "37": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Overly focal hotspot at lower-left edge (temporal/mastoid region) with a small, non-dipolar counter-pole. Pattern is consistent with electrode or edge artifact, not a neural dipole."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (56.8%)."
     },
     "38": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Focal hotspot at upper-right rim of scalp with a diffuse blue background; activity is concentrated at the boundary and not consistent with a smooth dipolar field. Extreme variance spikes confirm artifact."
+      "notes": "Auto-rejected: muscle artifact (99.7%)"
     },
     "39": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Very focal, overly concentrated blue hotspot at the left fronto-temporal edge, clearly at the electrode boundary. Non-dipolar and not spatially smooth. Irregular variance pattern."
+      "notes": "Auto-rejected: muscle artifact (91.5%)"
     },
     "40": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Activity concentrated at the right temporal/mastoid edge with a small isolated counter-pole; overall field is not dipolar and the distribution wraps around the scalp rim. Consistent with edge/electrode artifact."
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (40.0%)."
     },
     "41": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Focal red hotspot at the right posterior-temporal edge with a nearby blue counter-region; both are confined to the scalp rim and do not form a plausible dipolar pattern. Reject."
+      "notes": "Auto-rejected: muscle artifact (92.2%)"
     },
     "42": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Strong focal activity at the inferior posterior edge (neck/mastoid region) with adjacent blue counter-pole; pattern is at the scalp boundary and not a spatially smooth dipole. High variance outliers support artifact."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (34.1%)."
     },
     "43": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Extremely tight, focal red hotspot at the fronto-central scalp with a diffuse blue surround; the concentration is too focal and lacks a proper dipolar counter-pole at a plausible distance. Resembles a single bad electrode or edge artifact."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (52.7%)."
     },
     "44": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Nearly uniform warm (red/orange) field covering the entire scalp with a tiny central counter-spot; non-dipolar, diffuse global pattern. Segment image shows persistent activity across all trials. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (91.4%)"
     },
     "45": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Extremely tight concentric hotspot at the right central-temporal area with no meaningful counter-pole visible across the scalp. Overly focal, not dipolar. Spectrum shows an alpha peak but topography is not credible as a neural source."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.5%)"
     },
     "46": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Focal red hotspot at the left fronto-temporal edge/rim with a broad diffuse blue surround; activity is concentrated at the scalp boundary. Non-dipolar and consistent with an edge or electrode artifact."
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (49.8%)."
     },
     "47": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Tight focal blue hotspot at the fronto-central area near the scalp rim with a small isolated counter-contour below; lacks a proper smooth dipolar field. Extreme variance outliers (up to 30000 AU) further confirm artifact."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (68.9%)"
     },
     "48": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Multiple focal hotspots in the posterior/inferior region near the scalp boundary; pattern is fragmented and non-dipolar. Not consistent with a clean neural source."
+      "notes": "Auto-rejected: other (64.6%)"
     },
     "49": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Predominantly blue field with a focal hotspot in the left central-temporal area and broad diffuse surround extending to the inferior boundary; not a clean dipole. Segment image shows continuous low-level activity across all trials suggesting a slow drift or global noise source."
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (48.2%)."
     },
     "50": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a focal blue hotspot in the left posterior region with a separate red region at the inferior boundary; two spatially separated poles without a coherent dipolar axis. Segment image shows persistent broadband activity. Not a clean neural dipole."
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (49.3%)."
     },
     "51": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Fragmented topography with a red focal hotspot at the right posterior-temporal edge and a separate blue region at the inferior boundary; two disconnected poles with no coherent dipolar axis. Not a spatially smooth neural source."
+      "notes": "Auto-rejected: muscle artifact (86.0%)"
     },
     "52": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Strong focal red hotspot concentrated at the fronto-right scalp rim/edge, clearly at the boundary. The blue counter-field is diffuse and does not form a plausible dipole pair. Consistent with an edge or electrode artifact."
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Left unsure: eye blink (35.4%)."
     },
     "53": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Focal red hotspot in the right posterior-central region with an adjacent small blue counter-region, but the overall field is asymmetric, irregular, and embedded in a broad warm surround. Not a clean dipolar pattern. Segment image shows persistent broadband activity consistent with noise or mixed source."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (70.9%)"
     }
   },
   "generated_files": {
-    "topographies": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_components_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_components_1.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_components_2.png"
-    ],
-    "properties": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic00_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic01_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic02_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic03_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic04_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic05_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic06_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic07_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic08_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic09_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic10_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic11_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic12_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic13_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic14_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic15_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic16_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic17_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic18_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic19_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic20_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic21_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic22_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic23_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic24_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic25_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic26_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic27_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic28_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic29_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic30_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic31_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic32_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic33_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic34_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic35_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic36_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic37_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic38_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic39_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic40_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic41_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic42_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic43_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic44_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic45_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic46_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic47_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic48_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic49_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic50_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic51_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic52_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic53_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic54_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-12/sub-12_ses-01_task-visual_eeg-ica_properties_ic55_0.png"
-    ]
+    "topographies": [],
+    "properties": []
   }
 }

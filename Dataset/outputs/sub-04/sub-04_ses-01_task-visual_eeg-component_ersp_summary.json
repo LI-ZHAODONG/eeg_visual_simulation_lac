@@ -5,15 +5,16 @@
   "review_json": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-ica_component_review.json",
   "preprocess_summary_json": "/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-preprocess_summary.json",
   "kept_components": [
+    9,
     15,
     23,
     39,
     44,
-    46,
-    52
+    47,
+    51
   ],
   "n_epochs": 648,
-  "n_components": 6,
+  "n_components": 7,
   "freq_range_hz": [
     4.0,
     100.0
@@ -33,7 +34,7 @@
   ],
   "output_shape": [
     648,
-    6,
+    7,
     49,
     1001
   ],

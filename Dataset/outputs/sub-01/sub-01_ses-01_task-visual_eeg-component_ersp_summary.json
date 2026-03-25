@@ -7,14 +7,16 @@
   "kept_components": [
     6,
     8,
+    9,
     13,
-    25,
-    39,
-    43,
+    26,
+    28,
+    41,
+    52,
     53
   ],
   "n_epochs": 456,
-  "n_components": 7,
+  "n_components": 9,
   "freq_range_hz": [
     4.0,
     100.0
@@ -34,7 +36,7 @@
   ],
   "output_shape": [
     456,
-    7,
+    9,
     49,
     1001
   ],

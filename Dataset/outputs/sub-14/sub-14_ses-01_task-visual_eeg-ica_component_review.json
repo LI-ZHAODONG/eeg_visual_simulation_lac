@@ -1,359 +1,294 @@
 {
   "subject": "sub-14",
-  "session": "ses-01",
   "recording": "sub-14_ses-01_task-visual_eeg",
-  "notes": "Manual ICA decisions after reviewing topographies and properties.",
-  "component_decisions": {
-    
-  "0": {
-    "label": "eye_artifact",
-    "keep": false,
-    "notes": "Strong frontal topography with smooth spread and dominant low-frequency power; typical blink activity. Reject."
-  },
-  "1": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Symmetric central dipolar pattern with smooth spatial gradient and stable spectrum; consistent with neural origin. Keep."
-  },
-  "2": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Broad global field with coherent structure and no edge dominance; spectrum consistent with brain activity. Keep."
-  },
-  "3": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Clear anterior-posterior dipole with smooth gradients and consistent time course; likely neural source. Keep."
-  },
-  "4": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Focal right temporal hotspot with sharp spatial gradients; typical EMG contamination. Reject."
-  },
-  "5": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Central dipolar structure with smooth field and moderate variance; consistent with cortical source. Keep."
-  },
-  "6": {
-    "label": "edge_artifact",
-    "keep": false,
-    "notes": "Activity concentrated at top-right edge with irregular spatial pattern; non-physiological. Reject."
-  },
-  "7": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Inferior-right focal activity with high variance bursts; typical muscle artifact. Reject."
-  },
-  "8": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Highly localized left frontal hotspot with sharp edges; EMG-like activity. Reject."
-  },
-  "9": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Right temporal focal component with irregular dipole and noisy spectrum; muscle contamination. Reject."
-  },
-  "10": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Left temporal focal hotspot with sharp gradient and unstable variance; EMG artifact. Reject."
-  },
-  "11": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Right lateral focal activity with fragmented field and high-frequency content; muscle artifact. Reject."
-  },
-  "12": {
-    "label": "edge_artifact",
-    "keep": false,
-    "notes": "Activity clipped at left edge with incomplete topography; non-physiological. Reject."
-  },
-  "13": {
-    "label": "mixed_component",
-    "keep": false,
-    "notes": "Asymmetric left-right field with unclear dipole and mixed spectral characteristics; likely mixed source. Reject."
-  },
-  "14": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Posterior-dominant smooth dipolar pattern with stable spectrum; consistent with neural activity. Keep."
-  },
-  "15": {
-    "label": "edge_artifact",
-    "keep": false,
-    "notes": "Right edge-localized activity with irregular shape; lacks physiological dipole. Reject."
-  },
-  "16": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Central dipolar structure with smooth gradients and moderate power spectrum; neural origin likely. Keep."
-  },
-  "17": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Strong right lateral hotspot with high variance spikes; typical EMG artifact. Reject."
-  },
-  "18": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Focal right frontal hotspot with sharp boundaries and irregular field; muscle contamination. Reject."
-  },
-  "19": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Inferior-right localized activity with high variance and noisy structure; non-neural. Reject."
-  },
-  
-  "20": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Focal left inferior-temporal hotspot with sharp gradients and irregular spread; typical EMG contamination. Reject."
-  },
-  "21": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Clear central dipolar pattern with smooth gradients and coherent ERP; consistent with neural activity. Keep."
-  },
-  "22": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Posterior-dominant dipole with smooth spatial structure and stable spectrum; likely cortical source. Keep."
-  },
-  "23": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Highly focal right frontal hotspot with sharp edges and non-dipolar field; EMG artifact. Reject."
-  },
-  "24": {
-    "label": "mixed_component",
-    "keep": false,
-    "notes": "Irregular multi-lobed spatial pattern without a clear dipole and mixed spectral features; likely mixed source. Reject."
-  },
-  "25": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Strong right temporal hotspot with steep gradients and elevated variance bursts; muscle contamination. Reject."
-  },
-  "26": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Symmetric central dipole with smooth gradients and consistent low-frequency dominance; neural origin. Keep."
-  },
-  "27": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Posterior-inferior dipolar field with coherent spatial structure and stable ERP; likely brain component. Keep."
-  },
-  "28": {
-    "label": "eye_artifact",
-    "keep": false,
-    "notes": "Strong frontal dominance with broad smooth field and large slow deflections; typical eye-related activity. Reject."
-  },
-  "29": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Left-central dipolar structure with smooth gradients and physiologically plausible spectrum; keep."
-  },
- 
-  "30": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Left frontal focal hotspot with sharp edges and irregular spatial spread; typical EMG activity."
-  },
-  "31": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Clear dipolar structure with smooth gradients and plausible ERP; consistent with cortical source."
-  },
-  "32": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Highly localized left temporal activity with steep gradients; characteristic of muscle contamination."
-  },
-  "33": {
-    "label": "mixed_component",
-    "keep": false,
-    "notes": "Non-dipolar, multi-lobed pattern with opposing regions; likely mixture of brain and artifact."
-  },
-  "34": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Inferior-left focal hotspot near edge with sharp boundary; typical EMG source."
-  },
-  "35": {
-    "label": "eye_artifact",
-    "keep": false,
-    "notes": "Strong frontal dominance with broad field and slow ERP fluctuations; consistent with ocular activity."
-  },
-  "36": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Well-formed central dipole with smooth spatial distribution and stable spectrum."
-  },
-  "37": {
-    "label": "eye_artifact",
-    "keep": false,
-    "notes": "Frontal midline hotspot with slow drift and broad field; typical blink/eye component."
-  },
-  "38": {
-    "label": "eye_artifact",
-    "keep": false,
-    "notes": "Strong symmetric frontal activation with low-frequency dominance; classic ocular pattern."
-  },
-  "39": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Central dipolar field with smooth gradients and physiologically plausible spectrum."
-  },
-  "40": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Posterior-central dipole with coherent spatial structure and stable ERP."
-  },
-  "41": {
-    "label": "muscle_artifact",
-    "keep": false,
-    "notes": "Inferior focal hotspot with sharp spatial transitions; likely muscle artifact."
-  },
-  "42": {
-    "label": "brain_component",
-    "keep": true,
-    "notes": "Central dipolar configuration with smooth gradients and consistent low-frequency activity."
-  },
-  "43": {
-    "label": "eye_artifact",
-    "keep": false,
-    "notes": "Inferior/frontal pattern with slow fluctuations and broad field; consistent with eye movement."
-  },
-  "44": {
-    "label": "mixed_component",
-    "keep": false,
-    "notes": "Highly irregular, non-dipolar spatial pattern with multiple hotspots; mixed/artifactual source."
-  },
-  
-  "45": {
-    "label": "edge_artifact_right",
-    "keep": false,
-    "notes": "Strong lateral edge activation on the right side; non-dipolar and localized outside typical brain regions. Likely electrode/edge artifact."
-  },
-  "46": {
-    "label": "focal_noise_component",
-    "keep": false,
-    "notes": "Highly focal central hotspot with unnatural symmetry; lacks clear dipolar structure. Likely noise/artifact."
-  },
-  "47": {
-    "label": "mixed_artifact",
-    "keep": false,
-    "notes": "Irregular multi-lobed pattern with strong frontal/temporal involvement; non-physiological. Likely mixed artifact."
-  },
-  "48": {
-    "label": "focal_artifact_central",
-    "keep": false,
-    "notes": "Tight central hotspot with no clear dipole; spatially too focal. Likely noise/artifact."
-  },
-  "49": {
-    "label": "non_dipolar_component",
-    "keep": false,
-    "notes": "Diffuse asymmetric pattern without clear dipole structure; likely artifact rather than neural signal."
-  },
-  "50": {
-    "label": "muscle_artifact_left_frontal",
-    "keep": false,
-    "notes": "Strong left frontal edge activation; typical of muscle or electrode artifact."
-  },
-  "51": {
-    "label": "global_noise_component",
-    "keep": false,
-    "notes": "Broad diffuse field with large-scale gradients; lacks focal dipole. Likely global/reference noise."
-  },
-  "52": {
-    "label": "edge_artifact_bilateral",
-    "keep": false,
-    "notes": "Strong bilateral edge activations near lower scalp; non-brain origin. Likely electrode/movement artifact."
-  },
-  "53": {
-    "label": "peripheral_artifact",
-    "keep": false,
-    "notes": "Peripheral dominant activity with weak central structure; not consistent with neural dipole."
-  },
-  "54": {
-    "label": "temporal_edge_artifact",
-    "keep": false,
-    "notes": "Localized temporal edge hotspots; characteristic of electrode or muscle artifact."
-  }
-
-
-
-
-
-}
-,
-  "generated_files": {
-    "topographies": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_components_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_components_1.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_components_2.png"
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
     ],
-    "properties": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic00_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic01_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic02_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic03_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic04_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic05_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic06_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic07_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic08_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic09_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic10_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic11_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic12_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic13_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic14_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic15_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic16_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic17_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic18_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic19_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic20_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic21_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic22_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic23_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic24_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic25_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic26_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic27_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic28_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic29_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic30_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic31_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic32_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic33_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic34_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic35_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic36_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic37_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic38_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic39_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic40_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic41_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic42_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic43_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic44_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic45_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic46_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic47_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic48_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic49_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic50_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic51_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic52_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic53_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic54_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-14/sub-14_ses-01_task-visual_eeg-ica_properties_ic55_0.png"
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
     ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (99.3%)"
+    },
+    "1": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (94.9%)"
+    },
+    "2": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (72.1%)"
+    },
+    "3": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (30.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "4": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (76.9%)"
+    },
+    "5": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (70.4%)"
+    },
+    "6": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (80.5%)"
+    },
+    "7": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (28.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "8": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.2%)"
+    },
+    "9": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (59.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "10": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (93.0%)"
+    },
+    "11": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (36.7%) - Did not meet auto-decision rule. Please review."
+    },
+    "12": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (99.3%)"
+    },
+    "13": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (70.2%)"
+    },
+    "14": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (81.3%)"
+    },
+    "15": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Unsure: eye blink (56.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "16": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.7%)"
+    },
+    "17": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (63.1%)"
+    },
+    "18": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (60.6%)"
+    },
+    "19": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (83.1%)"
+    },
+    "20": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (84.2%)"
+    },
+    "21": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (56.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "22": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (85.9%)"
+    },
+    "23": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Unsure: eye blink (53.7%) - Did not meet auto-decision rule. Please review."
+    },
+    "24": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (87.6%)"
+    },
+    "25": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (47.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "26": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (62.7%)"
+    },
+    "27": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (49.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "28": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (34.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "29": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (60.8%)"
+    },
+    "30": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (96.0%)"
+    },
+    "31": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (37.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "32": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (68.2%)"
+    },
+    "33": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (36.3%) - Did not meet auto-decision rule. Please review."
+    },
+    "34": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (90.4%)"
+    },
+    "35": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Unsure: eye blink (42.3%) - Did not meet auto-decision rule. Please review."
+    },
+    "36": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (61.5%)"
+    },
+    "37": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (52.3%) - Did not meet auto-decision rule. Please review."
+    },
+    "38": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (73.6%)"
+    },
+    "39": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (74.0%)"
+    },
+    "40": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (70.6%)"
+    },
+    "41": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (71.2%)"
+    },
+    "42": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (44.7%) - Did not meet auto-decision rule. Please review."
+    },
+    "43": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (41.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "44": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (33.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "45": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (91.8%)"
+    },
+    "46": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (40.3%) - Did not meet auto-decision rule. Please review."
+    },
+    "47": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (80.4%)"
+    },
+    "48": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.8%)"
+    },
+    "49": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (90.2%)"
+    },
+    "50": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (47.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "51": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (39.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "52": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (36.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "53": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (48.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "54": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (59.3%) - Did not meet auto-decision rule. Please review."
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
   }
 }
-

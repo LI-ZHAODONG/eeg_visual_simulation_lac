@@ -1,21 +1,79 @@
 
-# Large derived EEG outputs - ignore everything in outputs except JSON files
-Dataset/outputs/*
-!Dataset/outputs/*.json
-!Dataset/outputs/**/*.json
-!Dataset/outputs/*/
-
-# Large output files
+# ── Large binary EEG files (always ignore) ──
 *.fif
 *.npy
 *.npz
-*.png
+*.eeg
+*.vhdr
+*.vmrk
+*.tsv
+
+# ── Virtual environment ──
 eeg-env/
 
-# IDE and system files
+# ── IDE and system files ──
 .DS_Store
 .vscode/
 __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+
+# ── Dataset outputs ──
+# Ignore everything inside outputs by default
+Dataset/outputs/*
+
+# Allow the directory structure to be traversed
+!Dataset/outputs/*/
+!Dataset/outputs/group_level/
+
+# Allow root-level outputs (PNGs + JSONs used by the notebook)
+!Dataset/outputs/*.json
+!Dataset/outputs/*.png
+
+# Allow group_level outputs (PNGs + JSONs)
+!Dataset/outputs/group_level/*.json
+!Dataset/outputs/group_level/*.png
+
+# Allow sub-01 outputs only (example subject used in notebook)
+!Dataset/outputs/sub-01/
+!Dataset/outputs/sub-01/*.json
+!Dataset/outputs/sub-01/*.png
+
+# For sub-02 through sub-31: JSON summaries only (tiny files for subject count check)
+!Dataset/outputs/sub-*/*.json
+
+# Block PNGs from all subjects except sub-01
+Dataset/outputs/sub-02/*.png
+Dataset/outputs/sub-03/*.png
+Dataset/outputs/sub-04/*.png
+Dataset/outputs/sub-05/*.png
+Dataset/outputs/sub-06/*.png
+Dataset/outputs/sub-07/*.png
+Dataset/outputs/sub-08/*.png
+Dataset/outputs/sub-09/*.png
+Dataset/outputs/sub-10/*.png
+Dataset/outputs/sub-11/*.png
+Dataset/outputs/sub-12/*.png
+Dataset/outputs/sub-13/*.png
+Dataset/outputs/sub-14/*.png
+Dataset/outputs/sub-15/*.png
+Dataset/outputs/sub-16/*.png
+Dataset/outputs/sub-17/*.png
+Dataset/outputs/sub-18/*.png
+Dataset/outputs/sub-19/*.png
+Dataset/outputs/sub-20/*.png
+Dataset/outputs/sub-21/*.png
+Dataset/outputs/sub-22/*.png
+Dataset/outputs/sub-23/*.png
+Dataset/outputs/sub-24/*.png
+Dataset/outputs/sub-25/*.png
+Dataset/outputs/sub-26/*.png
+Dataset/outputs/sub-27/*.png
+Dataset/outputs/sub-28/*.png
+Dataset/outputs/sub-29/*.png
+Dataset/outputs/sub-30/*.png
+Dataset/outputs/sub-31/*.png
+
+# Block raw EEG data and session folders inside subject dirs
+Dataset/outputs/sub-*/ses-01/

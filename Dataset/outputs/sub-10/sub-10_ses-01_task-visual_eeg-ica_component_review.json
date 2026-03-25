@@ -1,288 +1,319 @@
 {
   "subject": "sub-10",
-  "session": "ses-01",
   "recording": "sub-10_ses-01_task-visual_eeg",
-  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
   "component_decisions": {
     "0": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Topography shows multiple competing small foci (bilateral posterior positivity, frontal negativity) with no coherent dipolar structure \u2014 non-dipolar, multi-focal. Time course shows large variance expansion late in recording. Single extreme outlier (~1400 AU). Reject."
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (40.3%) - Did not meet auto-decision rule. Please review."
     },
     "1": {
-      "label": "mixed_component",
+      "label": "other",
       "keep": false,
-      "notes": "Topography shows irregular multi-focal pattern \u2014 bilateral frontotemporal positivity, central negativity, and inferior positivity \u2014 clearly non-dipolar. Time course shows a large early transient burst then rapid decay. Single extreme variance outlier. Reject."
+      "notes": "Auto-rejected: other (98.8%)"
     },
     "2": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Topography shows a very focal right inferior/temporal edge hotspot with surrounding diffuse positivity \u2014 non-dipolar edge artifact. Time course shows a sharp transient and a large late variance expansion. Single extreme variance outlier (~1400 AU). Reject."
+      "notes": "Auto-rejected: other (97.9%)"
     },
     "3": {
-      "label": "eye_blink_artifact",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Topography shows strong frontal positivity maximal at Fp1/Fp2 with posterior negativity \u2014 classic eye blink/EOG pattern. Time course shows multiple large transient bursts. Very large variance outliers (~4500 AU) early in recording. Reject."
+      "notes": "Auto-rejected: eye blink (96.7%)"
     },
     "4": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Topography shows broad frontal negativity (blue) maximal at the top with inferior/posterior positivity \u2014 consistent with vertical EOG/blink pattern. Large variance outliers (~450 AU) clustered early. Time course shows a sharp early transient. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.8%)"
     },
     "5": {
-      "label": "global_noise_component",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Topography is entirely uniform blue across the whole scalp with no opposing pole \u2014 global, non-dipolar field. Spectrum shows a prominent alpha peak (~10 Hz) but topography rules out a neural source. Time course shows a single massive transient (~1 AU spike). Extreme variance outlier (~4200 AU). Reject."
+      "notes": "Auto-rejected: eye blink (91.3%)"
     },
     "6": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Topography shows frontal positivity with posterior/inferior negativity \u2014 consistent with a blink/EOG pattern, though somewhat atypical with a focal central negativity. Time course shows a very sharp large transient (>1 AU). Extreme variance outliers (~2200 AU) clustered at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.6%)"
     },
     "7": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal right frontal edge negativity on a diffuse light background \u2014 non-dipolar, edge artifact. Large variance outliers (~950 AU) clustered early. Reject."
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (46.3%) - Did not meet auto-decision rule. Please review."
     },
     "8": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Topography is entirely uniform blue across the whole scalp with no opposing pole and no dipolar structure \u2014 global non-dipolar field. Time course shows a large transient spike at onset. Extreme variance outliers (~2900 AU) clustered at recording onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (79.0%)"
     },
     "9": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows broad left frontotemporal negativity with a small central/right positivity \u2014 not a clean dipole, the opposing pole is too weak and asymmetric. Large variance outliers (>1500 AU) clustered very early. Large transient spike in time course. Reject."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (40.9%) - Did not meet auto-decision rule. Please review."
     },
     "10": {
-      "label": "eye_blink_artifact",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Topography shows strong right frontal positivity extending to the vertex with diffuse posterior/left negativity \u2014 consistent with lateral eye movement or frontal EOG artifact. Time course shows a sharp transient and multiple large sustained deflections. Extreme variance outliers (~9500 AU) at onset. Reject."
+      "notes": "Auto-rejected: eye blink (96.6%)"
     },
     "11": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a very focal left temporal/inferior edge negativity with no clear opposing pole \u2014 non-dipolar edge artifact. Time course shows a sharp transient. Large variance outliers (~290 AU) scattered throughout. Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (38.9%) - Did not meet auto-decision rule. Please review."
     },
     "12": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Topography shows broad frontoparietal positivity with a central/posterior negativity \u2014 while it has a bipolar appearance, the field is too broad and gradient-like, consistent with a blink artifact. Spectrum shows alpha and theta peaks. Time course shows a large sharp transient spike at onset. Extreme variance outlier (~1400 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.0%)"
     },
     "13": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal frontocentral positivity embedded in a global blue field \u2014 not truly dipolar, too focal relative to the global surrounding field. Time course shows a massive sharp transient (>2.5 AU). Extreme variance outliers (>13000 AU) clustered at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (83.4%)"
     },
     "14": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a broad central positivity with bilateral temporal/posterior negativity \u2014 while superficially bipolar, the field is spatially diffuse and the negativity extends bilaterally in a non-dipolar way. Time course shows a large sharp transient. Very large variance outliers (~1250 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.1%)"
     },
     "15": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows broad frontocentral positivity with a central/posterior negativity and bilateral ear edge foci \u2014 multi-focal and non-dipolar. Spectrum shows alpha/theta peaks. Time course shows a sharp transient spike. Large variance outliers (~1100 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (73.9%)"
     },
     "16": {
-      "label": "edge_artifact",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Topography shows a focal right frontocentral positivity on a diffuse blue background \u2014 not dipolar, the surrounding negativity is too globally diffuse. Time course shows a very sharp large transient. Very large variance outliers (>1500 AU) at onset. Reject."
+      "notes": "Auto-rejected: eye blink (81.3%)"
     },
     "17": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal right posterior/occipital edge negativity with surrounding diffuse negativity and weak opposing field \u2014 non-dipolar edge artifact. Spectrum shows a clear alpha peak (~10 Hz). Large variance outliers (~110 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.7%)"
     },
     "18": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a left frontotemporal positivity with a right centroparietal negativity \u2014 while superficially bipolar, the field is asymmetric, the poles are laterally displaced, and the pattern is consistent with a muscle/bridging artifact. Time course shows large transient and sustained drift. Extreme variance outliers (~4300 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (95.9%)"
     },
     "19": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal inferior/neck positivity with a central negativity \u2014 the positivity is at the extreme inferior scalp edge, non-dipolar. Time course shows a massive transient spike (~10 AU) and extremely large variance outlier (~220000 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (89.5%)"
     },
     "20": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Topography shows a focal right inferior/temporal edge positivity with a broad frontal negativity \u2014 the positivity is at the scalp edge, non-dipolar. Time course shows a massive sharp transient (~5 AU). Extreme variance outlier (~50000 AU) at recording onset. Reject."
+      "notes": "Auto-rejected: other (60.1%)"
     },
     "21": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal right temporal edge hotspot with no clear opposing pole \u2014 non-dipolar, consistent with right temporal muscle artifact. Time course shows large slow sustained drift. Very large variance outliers (~11000 AU). Reject."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (54.9%) - Did not meet auto-decision rule. Please review."
     },
     "22": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Topography shows broad frontal negativity with inferior/posterior positivity \u2014 consistent with vertical EOG/blink pattern. Time course shows multiple large transient bursts. Very large variance outlier (~1750 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (95.9%)"
     },
     "23": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a focal right centroparietal positivity embedded in a global blue field \u2014 not a clean dipole, too focal relative to the surrounding field. Time course shows a large sharp transient. Large variance outliers (~650 AU) at onset. Reject."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (43.6%) - Did not meet auto-decision rule. Please review."
     },
     "24": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a very focal left temporal/inferior edge positivity with surrounding diffuse negativity \u2014 non-dipolar edge artifact. Time course shows sustained slow drift and large variance burst (~800 AU) at the end of the recording. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (97.6%)"
     },
     "25": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a right frontotemporal positivity with a small central negativity \u2014 while superficially bipolar, the positivity is near the edge and the field is asymmetric and non-dipolar. Time course shows multiple large transient bursts. Large variance outliers (~1250 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.6%)"
     },
     "26": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Topography shows a left frontotemporal positivity with frontal/central negativity \u2014 consistent with lateral eye movement or EOG artifact. Time course shows a large sharp transient at onset. Large variance outliers (~1400 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.9%)"
     },
     "27": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a broad frontocentral positivity with a focal central/parietal negativity \u2014 while superficially bipolar, the negative pole is too focal and the positive field is too broad and diffuse. Large variance outliers (~700 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.4%)"
     },
     "28": {
-      "label": "eye_blink_artifact",
-      "keep": false,
-      "notes": "Topography shows a strong left frontotemporal positivity with posterior negativity \u2014 consistent with lateral eye movement artifact. Time course shows multiple large repeated transients. Extreme variance outliers (~35000 AU) at onset. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (69.7%)"
     },
     "29": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "Topography shows a very focal left frontotemporal hotspot with surrounding diffuse negativity \u2014 non-dipolar, consistent with left temporal muscle artifact. Time course is noisy and irregular throughout. Large variance outliers (~1000 AU) distributed throughout. Reject."
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (27.3%) - Did not meet auto-decision rule. Please review."
     },
     "30": {
-      "label": "edge_artifact",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Topography shows a focal left temporal/inferior edge hotspot with no clear opposing pole \u2014 non-dipolar edge artifact. Time course shows a sharp transient. Large variance outliers (~700 AU) at onset. Reject."
+      "notes": "Auto-rejected: eye blink (81.5%)"
     },
     "31": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a right frontotemporal positivity with a broad left posterior negativity \u2014 asymmetric and non-dipolar, resembling a bridging or muscle artifact. Time course shows a sustained slow drift. Very large variance outliers (~1500 AU). Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (93.1%)"
     },
     "32": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a focal right temporal positivity with broad posterior-inferior negativity \u2014 not a clean dipole; the positivity is too focal and near the edge relative to the broad negativity. Time course shows sustained low-amplitude activity. Variance increases sharply late in recording. Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (45.9%) - Did not meet auto-decision rule. Please review."
     },
     "33": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a broad central/right parietal positivity with surrounding diffuse negativity \u2014 not a clean dipole, field is spatially diffuse and asymmetric. Time course shows a sharp transient. Very large variance outliers (~2500 AU). Reject."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (48.6%) - Did not meet auto-decision rule. Please review."
     },
     "34": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal left temporal/inferior edge hotspot with no clear opposing pole \u2014 non-dipolar edge artifact. Segment image shows faint persistent horizontal streaks. Very large variance outliers (~2100 AU) late in recording. Reject."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (44.8%) - Did not meet auto-decision rule. Please review."
     },
     "35": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal left frontocentral hotspot embedded in a diffuse blue background \u2014 non-dipolar, overly focal with no spatially smooth opposing pole. Segment image shows faint persistent horizontal streaks. Large variance outliers (~620 AU) late in recording. Reject."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (97.8%)"
     },
     "36": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Topography shows a focal left centrotemporal/inferior edge hotspot with no opposing pole \u2014 non-dipolar edge artifact. Large variance outliers (~620 AU) at onset and late in recording. Reject."
+      "notes": "Auto-rejected: muscle artifact (92.5%)"
     },
     "37": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography shows a focal right frontal edge hotspot with diffuse surrounding positivity and no clear opposing pole \u2014 non-dipolar edge artifact. Time course shows a large sharp transient. Large variance outliers (~1500 AU) throughout. Reject."
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (29.9%) - Did not meet auto-decision rule. Please review."
     },
     "38": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Topography shows a left centroparietal positivity with a right temporal/posterior negativity \u2014 while superficially bipolar, the field is asymmetric and the poles are laterally displaced in a pattern inconsistent with a single neural generator. Time course shows multiple large transient bursts. Extreme variance outlier (~32000 AU) at onset. Reject."
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (59.1%) - Did not meet auto-decision rule. Please review."
     },
     "39": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Strong focal negativity at left posterior/temporal edge of scalp, not dipolar. Non-physiological field distribution extending beyond electrode coverage. Noisy time course with extreme variance outliers early in recording."
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (31.0%) - Did not meet auto-decision rule. Please review."
     },
     "40": {
-      "label": "eye_blink_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Topography shows dominant frontal positivity maximal at Fp1/Fp2 region \u2014 classic eye blink/EOG pattern. Step-like deflections in time course consistent with slow eye movements or blinks. Extreme variance outliers confirm."
+      "notes": "Auto-rejected: muscle artifact (65.2%)"
     },
     "41": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Focal hotspot on right posterior-temporal edge, not dipolar. Negative polarity concentrated at electrode boundary with no clear opposing pole. Variance burst localized to end of recording, suggesting recording artifact."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (50.1%) - Did not meet auto-decision rule. Please review."
     },
     "42": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Topography dominated by left temporal/mastoid edge with strong positivity and no clear dipolar counterpart. Single sharp transient spike in time course. Consistent with electrode/mastoid artifact, not neural."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (48.4%) - Did not meet auto-decision rule. Please review."
     },
     "43": {
-      "label": "edge_artifact",
+      "label": "other",
       "keep": false,
-      "notes": "Focal hotspot at right posterior-temporal edge with diffuse opposing surround \u2014 not a clean dipole. Variance burst at end of recording. Spatially too peripheral and non-smooth to be neural."
+      "notes": "Auto-rejected: other (90.1%)"
     },
     "44": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Strong focal negativity concentrated at left anterior edge/frontotemporal boundary. Not dipolar, no smooth opposing pole. High variance with many outlier segments throughout recording."
+      "notes": "Auto-rejected: muscle artifact (78.8%)"
     },
     "45": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Extreme focal hotspot at right posterior/mastoid edge \u2014 clearly outside dipolar range. No plausible neural counterpart. Activity confined to boundary electrode cluster, consistent with edge/reference artifact."
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (55.3%) - Did not meet auto-decision rule. Please review."
     },
     "46": {
-      "label": "mixed_component",
-      "keep": false,
-      "notes": "Focal frontocentral positivity with small blue patch at right side \u2014 superficially dipole-like but too frontal and asymmetric. Topography is not smooth enough and location is inconsistent with clean neural source. Reject on strict criteria."
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (53.9%) - Did not meet auto-decision rule. Please review."
     },
     "47": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Dominant focal negativity at right temporal/mastoid edge with very weak central positive region. Not a clean dipole. Edge-confined distribution is characteristic of electrode or reference artifact."
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (63.9%)"
     },
     "48": {
-      "label": "edge_artifact",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Focal hotspot at right temporal/mastoid edge, highly concentrated with no clear opposing pole visible within the scalp. Not dipolar. Variance bursts at end of recording reinforce artifact interpretation."
+      "notes": "Auto-rejected: muscle artifact (64.0%)"
     },
     "49": {
-      "label": "mixed_component",
+      "label": "muscle artifact",
       "keep": false,
-      "notes": "Topography shows posterior negativity with frontal positivity \u2014 vaguely dipolar but asymmetric and spatially irregular. Single large transient spike in time course is a red flag. Not clean enough to retain."
+      "notes": "Auto-rejected: muscle artifact (94.5%)"
     },
     "50": {
-      "label": "edge_artifact",
-      "keep": false,
-      "notes": "Very focal high-amplitude positivity at right frontotemporal region near edge, with asymmetric weak surround. Not a clean dipole. Step-like slow drifts in time course suggest eye movement or electrode artifact."
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (40.3%) - Did not meet auto-decision rule. Please review."
     },
     "51": {
-      "label": "global_noise_component",
-      "keep": false,
-      "notes": "Topography is diffuse and non-dipolar \u2014 multiple sign changes across scalp with no dominant pole pair. Low-amplitude irregular field. Single large transient in time course. Extreme variance outlier at start of recording."
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (59.9%) - Did not meet auto-decision rule. Please review."
     },
     "52": {
-      "label": "eye_blink_artifact",
+      "label": "eye blink",
       "keep": false,
-      "notes": "Textbook frontal topography with tight positivity at vertex/frontal midline and bilateral temporal spread \u2014 consistent with eye blink or frontalis muscle. Step-like time course pattern matches EOG/blink. Reject."
+      "notes": "Auto-rejected: eye blink (70.8%)"
     },
     "53": {
-      "label": "temporal_muscle_artifact",
-      "keep": false,
-      "notes": "Topography shows two separate foci \u2014 left temporal positivity and left anterior negativity \u2014 a hallmark of lateral muscle artifact. Spatially not dipolar. Broadly distributed variance throughout recording."
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (56.7%) - Did not meet auto-decision rule. Please review."
     },
     "54": {
-      "label": "global_noise_component",
+      "label": "other",
       "keep": false,
-      "notes": "Diffuse blue field with weak, spatially fragmented warm patches \u2014 no clear dipolar structure. Multiple poorly defined sign regions. Flat, noisy time course. Not consistent with any neural source."
+      "notes": "Auto-rejected: other (84.3%)"
     },
     "55": {
-      "label": "global_noise_component",
+      "label": "other",
       "keep": false,
-      "notes": "Complex multipolar topography with several independent sign regions \u2014 not dipolar. Multiple interleaved warm/cool patches without smooth spatial structure. Transient spike and extreme early variance outliers. Reject."
+      "notes": "Auto-rejected: other (87.5%)"
+    },
+    "56": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (54.1%) - Did not meet auto-decision rule. Please review."
+    },
+    "57": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (53.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "58": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (59.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "59": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (82.5%)"
     }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
   }
 }

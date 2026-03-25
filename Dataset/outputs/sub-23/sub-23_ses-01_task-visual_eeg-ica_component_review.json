@@ -1,77 +1,309 @@
 {
   "subject": "sub-23",
-  "session": "ses-01",
   "recording": "sub-23_ses-01_task-visual_eeg",
-  "notes": "Manual ICA decisions after reviewing topographies and properties.",
-  "component_decisions": {
-
-
-}
-,
-  "generated_files": {
-    "topographies": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_components_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_components_1.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_components_2.png"
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
     ],
-    "properties": [
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic00_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic01_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic02_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic03_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic04_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic05_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic06_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic07_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic08_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic09_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic10_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic11_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic12_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic13_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic14_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic15_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic16_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic17_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic18_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic19_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic20_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic21_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic22_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic23_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic24_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic25_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic26_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic27_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic28_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic29_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic30_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic31_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic32_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic33_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic34_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic35_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic36_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic37_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic38_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic39_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic40_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic41_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic42_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic43_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic44_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic45_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic46_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic47_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic48_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic49_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic50_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic51_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic52_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic53_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic54_0.png",
-      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/outputs/sub-23/sub-23_ses-01_task-visual_eeg-ica_properties_ic55_0.png"
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
     ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (61.0%)"
+    },
+    "1": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (76.8%)"
+    },
+    "2": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (49.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "3": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (60.9%)"
+    },
+    "4": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (61.7%)"
+    },
+    "5": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (77.2%)"
+    },
+    "6": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (77.9%)"
+    },
+    "7": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (43.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "8": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (68.4%)"
+    },
+    "9": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.0%)"
+    },
+    "10": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (73.6%)"
+    },
+    "11": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (65.3%)"
+    },
+    "12": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (58.6%) - Did not meet auto-decision rule. Please review."
+    },
+    "13": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (38.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "14": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (38.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "15": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (73.2%)"
+    },
+    "16": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (93.9%)"
+    },
+    "17": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (45.1%) - Did not meet auto-decision rule. Please review."
+    },
+    "18": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (57.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "19": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (57.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "20": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (82.1%)"
+    },
+    "21": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (48.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "22": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (68.2%)"
+    },
+    "23": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (44.1%) - Did not meet auto-decision rule. Please review."
+    },
+    "24": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (37.6%) - Did not meet auto-decision rule. Please review."
+    },
+    "25": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (30.1%) - Did not meet auto-decision rule. Please review."
+    },
+    "26": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (80.7%)"
+    },
+    "27": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (56.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "28": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (45.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "29": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (92.3%)"
+    },
+    "30": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.6%)"
+    },
+    "31": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (61.3%)"
+    },
+    "32": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (49.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "33": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (66.1%)"
+    },
+    "34": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (89.1%)"
+    },
+    "35": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (50.3%) - Did not meet auto-decision rule. Please review."
+    },
+    "36": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (40.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "37": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (92.5%)"
+    },
+    "38": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (70.5%)"
+    },
+    "39": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (59.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "40": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (75.7%)"
+    },
+    "41": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (85.1%)"
+    },
+    "42": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (44.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "43": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (79.9%)"
+    },
+    "44": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (65.5%)"
+    },
+    "45": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (50.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "46": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Unsure: eye blink (52.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "47": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (72.3%)"
+    },
+    "48": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (97.0%)"
+    },
+    "49": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (50.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "50": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (52.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "51": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (54.3%) - Did not meet auto-decision rule. Please review."
+    },
+    "52": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (96.3%)"
+    },
+    "53": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (57.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "54": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (92.8%)"
+    },
+    "55": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (76.7%)"
+    },
+    "56": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (89.3%)"
+    },
+    "57": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (65.2%)"
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
   }
 }
-

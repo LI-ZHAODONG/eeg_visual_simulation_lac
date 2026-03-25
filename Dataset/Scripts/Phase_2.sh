@@ -7,19 +7,25 @@ PHASE2_DIR="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outp
 
 MANIFEST_JSON="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/outputs/group_level/phase2_manifest.json"
 
-RETINO_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/group_retinotopy_analysis.py"
-ORIENT_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/group_orientation_analysis.py"
-ERSP_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/group_ersp_analysis.py"
+RETINO_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/retinotopy_model_fit.py"
+GRAND_AVG_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/grand_average_analysis.py"
+TOPOMAP_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/group_topomaps.py"
+GROUP_STAT_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/group_statistical_analysis.py"
+ERSP_SCRIPT="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/group_ersp_statistics.py"
+MAPPING_JSON="/Volumes/personal/EEG/project/eeg_visual_simulation_lac/Dataset/Scripts/condition_mapping.json"
 
 echo "=================================================="
 echo " 🚀 STARTING PHASE 2 GROUP-LEVEL AUTOMATION 🚀 "
 echo "=================================================="
 
+cd "$PROJECT_DIR" || { echo "❌ ERROR: Could not find the project folder at $PROJECT_DIR"; exit 1; }
+source "${PROJECT_DIR}/eeg-env/bin/activate"
+
 mkdir -p "$PHASE2_DIR"
 
 echo "🧾 Building manifest of valid subjects..."
 
-python - <<EOF
+python3 - <<EOF
 import json
 from pathlib import Path
 
@@ -88,34 +94,61 @@ echo "=================================================="
 echo " 📊 STARTING GROUP ANALYSIS "
 echo "=================================================="
 
-# ---------- Retinotopy ----------
-if [ -f "$RETINO_SCRIPT" ]; then
-    echo "👁️ Running group retinotopy..."
-    python "$RETINO_SCRIPT" \
-      --manifest-json "$MANIFEST_JSON" \
+# ---------- Step 1: Grand Average ----------
+if [ -f "$GRAND_AVG_SCRIPT" ]; then
+    echo "📈 Running grand average analysis..."
+    python3 "$GRAND_AVG_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR" \
+      --mapping-json "$MAPPING_JSON" \
       --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on grand average analysis."; fi
+else
+    echo "⚠️ Grand average script not found. Skipping."
+fi
+
+# ---------- Step 2: Topomaps ----------
+if [ -f "$TOPOMAP_SCRIPT" ]; then
+    echo "🗺️ Running group topomaps..."
+    python3 "$TOPOMAP_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR" \
+      --mapping-json "$MAPPING_JSON" \
+      --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group topomaps."; fi
+else
+    echo "⚠️ Topomap script not found. Skipping."
+fi
+
+# ---------- Step 3: Retinotopy Model Fit ----------
+if [ -f "$RETINO_SCRIPT" ]; then
+    echo "👁️ Running retinotopy model fit..."
+    python3 "$RETINO_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on retinotopy model fit."; fi
 else
     echo "⚠️ Retinotopy script not found. Skipping."
 fi
 
-# ---------- Orientation ----------
-if [ -f "$ORIENT_SCRIPT" ]; then
-    echo "📐 Running group orientation..."
-    python "$ORIENT_SCRIPT" \
-      --manifest-json "$MANIFEST_JSON" \
+# ---------- Step 4: Group Statistical Analysis ----------
+if [ -f "$GROUP_STAT_SCRIPT" ]; then
+    echo "📐 Running group statistical analysis..."
+    python3 "$GROUP_STAT_SCRIPT" \
+      --outputs-dir "$OUTPUTS_DIR" \
+      --mapping "$MAPPING_JSON" \
       --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group statistical analysis."; fi
 else
-    echo "⚠️ Orientation script not found. Skipping."
+    echo "⚠️ Group statistical analysis script not found. Skipping."
 fi
 
-# ---------- ERSP ----------
+# ---------- Step 5: Group ERSP Statistics ----------
 if [ -f "$ERSP_SCRIPT" ]; then
-    echo "🌊 Running group ERSP..."
-    python "$ERSP_SCRIPT" \
-      --manifest-json "$MANIFEST_JSON" \
+    echo "🌊 Running group ERSP statistics..."
+    python3 "$ERSP_SCRIPT" \
+      --outputs-dir "$OUTPUTS_DIR" \
       --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group ERSP statistics."; fi
 else
-    echo "⚠️ ERSP script not found. Skipping."
+    echo "⚠️ ERSP statistics script not found. Skipping."
 fi
 
 echo ""
