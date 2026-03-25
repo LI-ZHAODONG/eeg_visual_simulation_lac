@@ -1,0 +1,364 @@
+{
+  "subject": "sub-01",
+  "session": "ses-01",
+  "recording": "sub-01_ses-01_task-visual_eeg",
+  "notes": "Manual ICA decisions after reviewing topographies and properties.",
+  "component_decisions": {
+    "0": {
+      "label": "frontal_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "1": {
+      "label": "frontal_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "2": {
+      "label": "temporal_edge_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "3": {
+      "label": "lateral_edge_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "4": {
+      "label": "unclear_posterior",
+      "keep": false,
+      "notes": ""
+    },
+    "5": {
+      "label": "global_non_specific",
+      "keep": false,
+      "notes": ""
+    },
+    "6": {
+      "label": "right_lateral_non_visual",
+      "keep": false,
+      "notes": ""
+    },
+    "7": {
+      "label": "posterior_alpha",
+      "keep": true,
+      "notes": "Strong occipital/posterior visual component."
+    },
+    "8": {
+      "label": "left_posterior_lateral",
+      "keep": false,
+      "notes": ""
+    },
+    "9": {
+      "label": "global_non_specific",
+      "keep": false,
+      "notes": ""
+    },
+    "10": {
+      "label": "right_edge_muscle_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "11": {
+      "label": "global_dipole",
+      "keep": false,
+      "notes": ""
+    },
+    "12": {
+      "label": "edge_artifact_spiky",
+      "keep": false,
+      "notes": ""
+    },
+    "13": {
+      "label": "eye_blink_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "14": {
+      "label": "right_edge_muscle",
+      "keep": false,
+      "notes": ""
+    },
+    "15": {
+      "label": "left_edge_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "16": {
+      "label": "right_edge_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "17": {
+      "label": "left_edge_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "18": {
+      "label": "noisy_component",
+      "keep": false,
+      "notes": ""
+    },
+    "19": {
+      "label": "unclear_component",
+      "keep": false,
+      "notes": ""
+    },
+    "20": {
+      "label": "muscle_artifact",
+      "keep": false,
+      "notes": ""
+    },
+    "21": {
+  "label": "right_frontal_edge_artifact",
+  "keep": false,
+  "notes": "Strong focal edge hotspot, not a posterior visual component."
+},
+"22": {
+  "label": "left_edge_artifact",
+  "keep": false,
+  "notes": "Left boundary hotspot, consistent with edge/peripheral artifact."
+},
+"23": {
+  "label": "right_edge_artifact",
+  "keep": false,
+  "notes": "Focal right-edge activity, non-cortical."
+},
+"24": {
+  "label": "mixed_global_artifact",
+  "keep": false,
+  "notes": "Non-dipolar global pattern with high variance."
+},
+"25": {
+  "label": "posterior_visual_component",
+  "keep": true,
+  "notes": "Strong occipital component, likely visual cortex."
+},
+"26": {
+  "label": "left_temporal_edge_artifact",
+  "keep": false,
+  "notes": "Peripheral temporal activity, non-cortical."
+},
+"27": {
+  "label": "unclear_mixed_component",
+  "keep": false,
+  "notes": "Central mixed pattern with right-edge involvement; not a clear posterior visual component."
+},"28": {
+  "label": "left_edge_noise_artifact",
+  "keep": false,
+  "notes": "Edge-localized artifact, likely non-brain."
+},
+"29": {
+  "label": "lateralized_artifact",
+  "keep": false,
+  "notes": "Strong unilateral temporal pattern, non-cortical."
+},
+"30": {
+  "label": "frontal_artifact",
+  "keep": false,
+  "notes": "Frontal-dominant component, likely eye/motion artifact."
+},
+"31": {
+  "label": "frontal_mixed_artifact",
+  "keep": false,
+  "notes": "Frontal-dominant, mixed non-dipolar pattern."
+},
+"32": {
+  "label": "left_temporal_artifact",
+  "keep": false,
+  "notes": "Localized temporal edge activity."
+},
+"33": {
+  "label": "right_edge_artifact",
+  "keep": false,
+  "notes": "Focal right-side artifact, non-brain."
+},
+"34": {
+  "label": "frontal_temporal_artifact",
+  "keep": false,
+  "notes": "Strong left frontal and temporal activity with multiple hotspots; not a clean dipole. Likely eye + muscle contamination (EOG/EMG)."
+},
+"35": {
+  "label": "temporal_muscle_artifact",
+  "keep": false,
+  "notes": "Highly focal right temporal (near ear) activity. Very localized and sharp, typical of jaw/temporal muscle (EMG), not neural."
+},
+"36": {
+  "label": "frontal_edge_artifact",
+  "keep": false,
+  "notes": "Edge-dominant frontal activity with no posterior structure. Likely eye movement or boundary artifact, not brain signal."
+},
+"37": {
+  "label": "right_temporal_edge_artifact",
+  "keep": false,
+  "notes": "Localized activity near right temporal edge (TP10 region), not a posterior visual dipole. Likely muscle or boundary artifact."
+},
+"38": {
+  "label": "posterior_brain_component",
+  "keep": true,
+  "notes": "Broad central-posterior topography with smooth dipole structure, not edge-dominated. Likely neural (visual/posterior cortex)."
+},
+"39": {
+  "label": "right_temporal_muscle_artifact",
+  "keep": false,
+  "notes": "Highly focal hotspot near right ear region, typical of temporal muscle (EMG) or electrode artifact. Not neural."
+},
+"40": {
+  "label": "vertical_eog_blink",
+  "keep": false,
+  "notes": "Strong frontal vertical stripe with high amplitude, characteristic of eye blink (EOG). Not neural."
+},
+"41": {
+  "label": "frontal_mixed_artifact",
+  "keep": false,
+  "notes": "Frontal-dominant activity without clear posterior dipole. Likely mixed eye/drift artifact, not a neural visual component."
+},
+"42": {
+  "label": "frontal_artifact",
+  "keep": false,
+  "notes": "Anterior-dominant activity with transient spike and no posterior structure. Likely eye or movement artifact."
+},
+"43": {
+  "label": "focal_unclear_component",
+  "keep": false,
+  "notes": "Very focal central hotspot with weak surrounding structure; not a convincing posterior visual component."
+},
+"44": {
+  "label": "posterior_visual_component",
+  "keep": true,
+  "notes": "Broad inferior/posterior component with plausible occipital visual topography; slightly lateralized but still consistent with a neural posterior source."
+},
+"45": {
+  "label": "left_temporal_edge_artifact",
+  "keep": false,
+  "notes": "Strong activity at left temporal edge (near ear), highly localized. Typical of muscle or electrode artifact, not neural."
+},
+"46": {
+  "label": "temporal_muscle_artifact",
+  "keep": false,
+  "notes": "Strong lateral edge activity near TP10; typical muscle/peripheral artifact, not neural."
+},
+"47": {
+  "label": "focal_noise_component",
+  "keep": false,
+  "notes": "Localized non-dipolar hotspot; likely noise or channel-specific artifact."
+},
+"48": {
+  "label": "eye_artifact",
+  "keep": false,
+  "notes": "Frontal dominance with low-frequency power; consistent with blink/EOG artifact."
+},
+"49": {
+  "label": "temporal_muscle_artifact",
+  "keep": false,
+  "notes": "Focal activity near inferior temporal edge; typical muscle/electrode artifact."
+},
+"50": {
+  "label": "frontal_eye_artifact",
+  "keep": false,
+  "notes": "Frontal dipole with low-frequency dominance; consistent with eye/movement artifact."
+},
+"51": {
+  "label": "focal_noise_component",
+  "keep": false,
+  "notes": "Localized non-dipolar hotspot; likely channel noise/artifact."
+},
+"52": {
+  "label": "focal_noise_component",
+  "keep": false,
+  "notes": "Small focal central hotspot without a convincing posterior dipolar pattern; more consistent with local noise or weak non-task-related source."
+},
+"53": {
+  "label": "uncertain_central_component",
+  "keep": false,
+  "notes": "Relatively smooth central component, but not clearly posterior or visual-task related. Not strong enough to keep as a reviewed visual source."
+},"54": {
+  "label": "mixed_artifact_component",
+  "keep": false,
+  "notes": "Mixed central-frontal pattern without a clear posterior dipole; not convincing as a clean neural visual component."
+},
+"55": {
+  "label": "inferior_edge_artifact",
+  "keep": false,
+  "notes": "Inferior edge-dominant component, consistent with muscle or peripheral artifact rather than cortical activity."
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  },
+  "generated_files": {
+    "topographies": [
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_components_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_components_1.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_components_2.png"
+    ],
+    "properties": [
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic00_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic01_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic02_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic03_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic04_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic05_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic06_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic07_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic08_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic09_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic10_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic11_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic12_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic13_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic14_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic15_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic16_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic17_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic18_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic19_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic20_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic21_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic22_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic23_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic24_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic25_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic26_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic27_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic28_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic29_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic30_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic31_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic32_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic33_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic34_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic35_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic36_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic37_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic38_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic39_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic40_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic41_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic42_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic43_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic44_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic45_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic46_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic47_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic48_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic49_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic50_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic51_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic52_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic53_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic54_0.png",
+      "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_properties_ic55_0.png"
+    ]
+  }
+}

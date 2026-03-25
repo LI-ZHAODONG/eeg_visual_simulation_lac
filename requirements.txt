@@ -1,5 +1,9 @@
 mne>=1.5
+mne-bids>=0.14
+mne-bids-pipeline>=1.6
 numpy>=1.23
 matplotlib>=3.7
 scipy>=1.9
 python-picard>=0.7
+mne-icalabel>=0.1    
+onnxruntime>=1.15
