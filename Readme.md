@@ -14,6 +14,18 @@ The pipeline is written in Python and uses:
 
 The raw BrainVision/BIDS dataset is **not included** in this checkout.
 
+## Google Colab / Google Drive
+
+The full pipeline outputs (all 31 subjects) are available on Google Drive:
+
+**[Dataset Outputs (Google Drive)](https://drive.google.com/drive/folders/1K8gK-mCERqrjj5tTC1TM29rqIMFqF5pz?usp=sharing)**
+
+To run `submission_report.ipynb` on Colab:
+
+1. Open the shared folder link above
+2. Right-click → *Organise* → *Add shortcut* → place it inside `My Drive/eeg_visual_simulation_lac/`
+3. Open the notebook in Colab and run all cells — Drive will be mounted automatically
+
 ## Current Status
 
 This repo is now:
