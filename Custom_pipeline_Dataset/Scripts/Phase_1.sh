@@ -19,7 +19,7 @@ for i in {01..31}; do
     BASE_NAME="${SUB_ID}_ses-01_task-visual_eeg"
 
     RAW_VHDR="${BIDS_DIR}/${SUB_ID}/ses-01/eeg/${BASE_NAME}.vhdr"
-    OUT_DIR="${PROJECT_DIR}/Dataset/outputs/${SUB_ID}"
+    OUT_DIR="${PROJECT_DIR}/Custom_pipeline_Dataset/outputs/${SUB_ID}"
 
     ICA_PATH="${OUT_DIR}/${BASE_NAME}-ica.fif"
     REVIEW_JSON="${OUT_DIR}/${BASE_NAME}-ica_component_review.json"
@@ -49,7 +49,7 @@ for i in {01..31}; do
 
     # Step 1: Preprocess raw data and fit ICA
     echo "🔧 [Step 1] Preprocessing raw EEG and fitting ICA..."
-    python3 Dataset/Scripts/preprocess.py \
+    python3 Custom_pipeline_Dataset/Scripts/preprocess.py \
       --vhdr "$RAW_VHDR" \
       --out-dir "$OUT_DIR"
     if [ $? -ne 0 ]; then
@@ -64,7 +64,7 @@ for i in {01..31}; do
 
     # Step 2: Run automated ICA inspection
     echo "🧠 [Step 2] Running mne-icalabel..."
-    python3 Dataset/Scripts/auto_inspect_ica.py \
+    python3 Custom_pipeline_Dataset/Scripts/auto_inspect_ica.py \
       --ica-path "$ICA_PATH" \
       --vhdr "$RAW_VHDR" \
       --threshold "$THRESHOLD"
@@ -80,7 +80,7 @@ for i in {01..31}; do
 
     # Step 2.5: Refine the ICA review JSON
     echo "🛠️ [Step 2.5] Refining borderline ICA decisions..."
-    python3 Dataset/Scripts/refine_ica_review.py \
+    python3 Custom_pipeline_Dataset/Scripts/refine_ica_review.py \
       --review-json "$REVIEW_JSON" \
       --out-json "$REFINED_REVIEW_JSON"
     if [ $? -ne 0 ]; then
@@ -95,7 +95,7 @@ for i in {01..31}; do
 
     # Step 3: Apply ICA using refined JSON
     echo "🧹 [Step 3] Applying ICA exclusions from refined review..."
-    python3 Dataset/Scripts/apply_reviewed_ica.py \
+    python3 Custom_pipeline_Dataset/Scripts/apply_reviewed_ica.py \
       --ica-path "$ICA_PATH" \
       --vhdr "$RAW_VHDR" \
       --review-json "$REFINED_REVIEW_JSON"
@@ -111,7 +111,7 @@ for i in {01..31}; do
 
     # Step 4: Extract Band Power
     echo "⚡ [Step 4] Extracting Alpha/Gamma Power..."
-    python3 Dataset/Scripts/extract_band_power.py --epochs-path "$EPOCHS_PATH"
+    python3 Custom_pipeline_Dataset/Scripts/extract_band_power.py --epochs-path "$EPOCHS_PATH"
     if [ $? -ne 0 ]; then
         echo "❌ ERROR on Step 4 for ${SUB_ID}. Skipping."
         continue
@@ -119,7 +119,7 @@ for i in {01..31}; do
 
     # Step 5: Retinotopy
     echo "👁️  [Step 5] Building Retinotopy Summaries..."
-    python3 Dataset/Scripts/condition_analysis.py \
+    python3 Custom_pipeline_Dataset/Scripts/condition_analysis.py \
       --alpha-by-condition "$ALPHA_COND" \
       --gamma-by-condition "$GAMMA_COND" \
       --band-power-summary "$BAND_SUMMARY"
@@ -130,7 +130,7 @@ for i in {01..31}; do
 
     # Step 6: Orientation tuning
     echo "📐 [Step 6] Building Orientation Summaries..."
-    python3 Dataset/Scripts/orientation_tuning_analysis.py \
+    python3 Custom_pipeline_Dataset/Scripts/orientation_tuning_analysis.py \
       --alpha-by-condition "$ALPHA_COND" \
       --gamma-by-condition "$GAMMA_COND" \
       --band-power-summary "$BAND_SUMMARY"
@@ -141,7 +141,7 @@ for i in {01..31}; do
 
     # Step 7: ERSP extraction
     echo "🌊 [Step 7] Extracting Single-Trial ERSPs..."
-    python3 Dataset/Scripts/extract_component_ersp.py \
+    python3 Custom_pipeline_Dataset/Scripts/extract_component_ersp.py \
       --vhdr "$RAW_VHDR" \
       --ica-path "$ICA_PATH"
     if [ $? -ne 0 ]; then
@@ -151,7 +151,7 @@ for i in {01..31}; do
 
     # Step 8: ERSP stats
     echo "📊 [Step 8] Computing ERSP Statistics..."
-    python3 Dataset/Scripts/orientation_ersp_stats.py \
+    python3 Custom_pipeline_Dataset/Scripts/orientation_ersp_stats.py \
       --ersp-npy "$ERSP_NPY" \
       --event-codes-npy "$ERSP_EVENTS" \
       --freqs-npy "$ERSP_FREQS" \

@@ -143,7 +143,7 @@ def main():
         "--out-dir",
         type=Path,
         default=None,
-        help="Output directory. Defaults to Dataset/outputs/<subject>.",
+        help="Output directory. Defaults to Custom_pipeline_Dataset/outputs/<subject>.",
     )
     parser.add_argument(
         "--notch-freq",
@@ -239,7 +239,7 @@ def main():
 
     subject, session, recording = infer_subject_from_vhdr(vhdr_path)
     project_root = Path(__file__).resolve().parents[2]
-    out_dir = args.out_dir or (project_root / "Dataset" / "outputs" / subject)
+    out_dir = args.out_dir or (project_root / "Custom_pipeline_Dataset" / "outputs" / subject)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Loading raw BrainVision file: {vhdr_path}")

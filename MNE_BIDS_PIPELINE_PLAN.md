@@ -208,31 +208,19 @@ on them — much simpler than the current approach since preprocessing is alread
 
 ```
 eeg_visual_simulation_lac/
-├── config.py                    # MNE-BIDS-Pipeline configuration
-├── run_pipeline.py              # Pipeline launcher
-├── requirements.txt             # Updated with mne-bids-pipeline
-├── submission_report.ipynb      # Final report notebook
-├── bids_analysis/               # Project-specific analysis
-│   ├── extract_band_power.py
-│   ├── condition_analysis.py
-│   ├── orientation_tuning.py
-│   ├── retinotopy_model_fit.py
-│   ├── group_statistics.py
-│   └── run_all.py
-├── Dataset/
-│   ├── Scripts/                 # Original scripts (preserved for reference)
-│   └── outputs/                 # Original outputs (preserved)
-└── derivatives/                 # MNE-BIDS-Pipeline output (auto-generated)
-    └── mne-bids-pipeline/
-        ├── sub-01/
-        │   └── ses-01/
-        │       └── eeg/
-        │           ├── *-epo.fif      # Cleaned epochs
-        │           ├── *-ave.fif      # Evoked responses
-        │           └── *-tfr.h5       # Time-frequency
-        ├── sub-02/
-        │   └── ...
-        └── sub-31/
+├── requirements.txt               # Python dependencies
+├── submission_report.ipynb        # Final report notebook
+├── Custom_pipeline_Dataset/
+│   ├── Scripts/                   # Custom pipeline scripts + Phase_1.sh / Phase_2.sh
+│   └── outputs/                   # Custom pipeline outputs
+├── Bids_pipeline_Dataset/
+│   ├── Scripts/                   # BIDS pipeline scripts (config.py, run_pipeline.py, utils.py)
+│   └── outputs/
+│       ├── group_level/           # Group-level results
+│       ├── sub-01/ ... sub-31/    # Per-subject results
+│       └── derivatives/
+│           └── bids_analysis/     # Post-pipeline analysis outputs
+└── MNE_BIDS_PIPELINE_PLAN.md
 ```
 
 ---
@@ -251,8 +239,8 @@ eeg_visual_simulation_lac/
 
 ## Risk Mitigation
 
-- **Original pipeline preserved:** All existing scripts remain in `Dataset/Scripts/`
-- **Original outputs preserved:** All existing outputs remain in `Dataset/outputs/`
+- **Original pipeline preserved:** All existing scripts remain in `Custom_pipeline_Dataset/Scripts/`
+- **Original outputs preserved:** All existing outputs remain in `Custom_pipeline_Dataset/outputs/`
 - **Git branch:** Work on `exp-002` branch (already created)
 - **Fallback:** If pipeline fails for specific subjects, clean epochs can be generated
   from original scripts and placed in derivatives manually

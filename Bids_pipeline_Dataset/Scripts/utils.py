@@ -15,12 +15,13 @@ import numpy as np
 # Paths
 # ──────────────────────────────────────────────────────────────────────────────
 
-# Dataset/Scripts/ → Dataset/ → project_root
+# Bids_pipeline_Dataset/Scripts/ → Bids_pipeline_Dataset/ → project_root
 SCRIPTS_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPTS_DIR.parent.parent
+DATASET_ROOT = SCRIPTS_DIR.parent                         # Bids_pipeline_Dataset/
+PROJECT_ROOT = DATASET_ROOT.parent                        # eeg_visual_simulation_lac/
 BIDS_ROOT = Path("/Volumes/personal/EEG/ds006547")
-DERIV_ROOT = PROJECT_ROOT / "derivatives"
-CUSTOM_OUTPUT_ROOT = PROJECT_ROOT / "derivatives" / "bids_analysis"
+DERIV_ROOT = DATASET_ROOT / "outputs" / "derivatives"
+CUSTOM_OUTPUT_ROOT = DERIV_ROOT / "bids_analysis"
 CONDITION_MAPPING = SCRIPTS_DIR / "condition_mapping.json"
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -125,7 +126,7 @@ def load_pipeline_epochs(subject: str, session: str = "01"):
 
     # Fallback: original pipeline output
     fallback = (
-        PROJECT_ROOT / "Dataset" / "outputs" / f"sub-{subject}"
+        PROJECT_ROOT / "Custom_pipeline_Dataset" / "outputs" / f"sub-{subject}"
         / f"sub-{subject}_ses-{session}_task-visual_eeg-final-epo.fif"
     )
     if fallback.exists():

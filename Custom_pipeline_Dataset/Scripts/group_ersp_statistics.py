@@ -131,7 +131,7 @@ def main():
         "--outputs-dir",
         type=Path,
         required=True,
-        help="Path to Dataset/outputs directory.",
+        help="Path to Custom_pipeline_Dataset/outputs directory.",
     )
     parser.add_argument(
         "--out-dir",
@@ -182,7 +182,7 @@ def main():
     print("\n   (Lower CV = more consistent across subjects)")
     
     print("\n" + "=" * 70)
-    print("Results saved to Dataset/outputs/")
+    print("Results saved to Custom_pipeline_Dataset/outputs/")
     print("=" * 70)
 
 

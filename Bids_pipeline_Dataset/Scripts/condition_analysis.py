@@ -4,7 +4,7 @@ Retinotopy condition analysis.
 Reads per-condition alpha/gamma power and builds spatial tuning summaries,
 bar charts, and alpha-vs-gamma scatter plots.
 
-This replaces: Dataset/Scripts/condition_analysis.py
+This replaces: Custom_pipeline_Dataset/Scripts/condition_analysis.py
 
 Usage:
     python condition_analysis.py              # all subjects

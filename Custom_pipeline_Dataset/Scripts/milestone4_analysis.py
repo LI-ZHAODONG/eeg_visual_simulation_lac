@@ -15,9 +15,9 @@ def pick_best_channel(ch_names):
 
 def main():
     # ---- Paths (robust) ----
-    script_dir = Path(__file__).resolve().parent          # .../Dataset/Scripts
+    script_dir = Path(__file__).resolve().parent          # .../Custom_pipeline_Dataset/Scripts
     project_root = script_dir.parents[1]                  # .../eeg_visual_simulation_lac
-    out_dir = project_root / "Dataset" / "outputs" / "sub-01"
+    out_dir = project_root / "Custom_pipeline_Dataset" / "outputs" / "sub-01"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     epochs_path = out_dir / "sub-01_ses-01_task-visual_eeg-final-epo.fif"

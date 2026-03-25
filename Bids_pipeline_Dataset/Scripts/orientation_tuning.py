@@ -4,7 +4,7 @@ Orientation tuning analysis.
 Builds orientation-selective response summaries, direction selectivity,
 alpha-vs-gamma scatter plots, and pairwise t-test heatmaps.
 
-This replaces: Dataset/Scripts/orientation_tuning_analysis.py
+This replaces: Custom_pipeline_Dataset/Scripts/orientation_tuning_analysis.py
 
 Usage:
     python orientation_tuning.py              # all subjects
