@@ -22,11 +22,11 @@ def find_vhdr(sub_dir: Path) -> Optional[Path]:
 
 
 def main():
-    # This file is: Dataset/Scripts/plot_all_subjects.py
-    scripts_dir = Path(__file__).resolve().parent      # .../Dataset/Scripts
-    dataset_root = scripts_dir.parent                  # .../Dataset
-    subjects_root = dataset_root / "ds006547"          # .../Dataset/ds006547
-    outputs_root = dataset_root / "outputs"            # .../Dataset/outputs
+    # This file is: Custom_pipeline_Dataset/Scripts/raw_visuals_continous.py
+    scripts_dir = Path(__file__).resolve().parent      # .../Custom_pipeline_Dataset/Scripts
+    dataset_root = scripts_dir.parent                  # .../Custom_pipeline_Dataset
+    subjects_root = Path("/Volumes/personal/EEG/ds006547")  # BIDS dataset (external)
+    outputs_root = dataset_root / "outputs"            # .../Custom_pipeline_Dataset/outputs
 
     if not subjects_root.exists():
         raise FileNotFoundError(f"'ds006547' folder not found at {subjects_root}")

@@ -12,7 +12,7 @@ Visual Cortex — Ghaffari, Yavari, Bonyadian, Ghofrani & Butler
 
 Usage
 -----
-    cd Dataset/Scripts
+    cd Bids_pipeline_Dataset/Scripts
 
     # Test on one subject
     mne_bids_pipeline --config config.py --subject 01 --steps preprocessing
@@ -34,7 +34,7 @@ from pathlib import Path
 bids_root = Path("/Volumes/personal/EEG/ds006547")
 
 # Where the pipeline writes its derivatives
-deriv_root = Path("/Volumes/personal/EEG/eeg_visual_simulation_lac/derivatives")
+deriv_root = Path("/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/derivatives")
 
 # Subjects to process (all 31)
 subjects = [f"{i:02d}" for i in range(1, 32)]

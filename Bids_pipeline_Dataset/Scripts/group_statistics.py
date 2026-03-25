@@ -4,9 +4,9 @@ Group-level statistics across subjects.
 Aggregates per-subject band power, retinotopy, and orientation summaries
 into group-level means, SEMs, and consistency metrics.
 
-This replaces: Dataset/Scripts/grand_average_analysis.py,
-               Dataset/Scripts/group_statistical_analysis.py,
-               Dataset/Scripts/group_ersp_statistics.py
+This replaces: Custom_pipeline_Dataset/Scripts/grand_average_analysis.py,
+               Custom_pipeline_Dataset/Scripts/group_statistical_analysis.py,
+               Custom_pipeline_Dataset/Scripts/group_ersp_statistics.py
 
 Usage:
     python group_statistics.py

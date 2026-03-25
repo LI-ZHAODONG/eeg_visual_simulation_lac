@@ -10,15 +10,15 @@ def main():
     rec_id = f"{sub_id}_{ses_id}_task-visual_eeg"  # sub-01_ses-01_task-visual_eeg
 
     # --------- Robust paths (based on your layout) ----------
-    # script: eeg_visual_simulation_lac/Dataset/Scripts/<this_file>.py
+    # script: eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/<this_file>.py
     script_path = Path(__file__).resolve()
-    repo_root = script_path.parents[3]  # folder that contains ds006547/ and eeg_visual_simulation_lac/
+    project_root = script_path.parents[2]  # eeg_visual_simulation_lac/
 
-    bids_root = repo_root / "ds006547"
+    bids_root = Path("/Volumes/personal/EEG/ds006547")
     vhdr_path = bids_root / sub_id / ses_id / "eeg" / f"{rec_id}.vhdr"
 
-    # outputs: eeg_visual_simulation_lac/Dataset/outputs/sub-01/
-    out_dir = repo_root / "eeg_visual_simulation_lac" / "Dataset" / "outputs" / sub_id
+    # outputs: Custom_pipeline_Dataset/outputs/sub-01/
+    out_dir = project_root / "Custom_pipeline_Dataset" / "outputs" / sub_id
     out_dir.mkdir(parents=True, exist_ok=True)
 
     ica_path = out_dir / f"{rec_id}-ica.fif"

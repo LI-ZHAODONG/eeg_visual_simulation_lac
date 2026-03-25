@@ -6,7 +6,7 @@ analytic amplitude in alpha (8-13 Hz) and gamma (40-80 Hz, sub-banded to avoid
 60 Hz line noise), and saves per-trial and per-condition power differences
 (task − baseline).
 
-This replaces: Dataset/Scripts/extract_band_power.py
+This replaces: Custom_pipeline_Dataset/Scripts/extract_band_power.py
 
 Usage:
     python extract_band_power.py            # all subjects

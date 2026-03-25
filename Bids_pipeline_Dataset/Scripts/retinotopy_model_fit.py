@@ -5,7 +5,7 @@ Compares linear and divisive-normalization predictions against observed
 full-field responses across spatial partitions (hemifields, quadrants,
 octants, fovea/periphery).
 
-This replaces: Dataset/Scripts/retinotopy_model_fit.py
+This replaces: Custom_pipeline_Dataset/Scripts/retinotopy_model_fit.py
 
 Usage:
     python retinotopy_model_fit.py

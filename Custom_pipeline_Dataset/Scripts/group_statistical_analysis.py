@@ -280,7 +280,7 @@ def main():
         "--outputs-dir",
         type=Path,
         required=True,
-        help="Path to Dataset/outputs directory containing all subject folders.",
+        help="Path to Custom_pipeline_Dataset/outputs directory containing all subject folders.",
     )
     parser.add_argument(
         "--mapping",
@@ -351,7 +351,7 @@ def main():
     print(f"Retinotopy conditions analyzed: {len(retinotopy_stats)}")
     print(f"Orientation tuning computed: ✓")
     print(f"Model comparison complete: ✓")
-    print("\nAll results saved to Dataset/outputs/")
+    print("\nAll results saved to Custom_pipeline_Dataset/outputs/")
     print("=" * 70)
 
 
