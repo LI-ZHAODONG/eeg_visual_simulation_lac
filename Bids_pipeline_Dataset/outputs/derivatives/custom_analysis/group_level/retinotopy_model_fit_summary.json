@@ -1,0 +1,2773 @@
+{
+  "sigma": 0.5,
+  "n_subjects": 30,
+  "aggregated": {
+    "left_right": {
+      "alpha_linear_mae_mean": 1.826001334561683e-06,
+      "alpha_divnorm_mae_mean": 9.115370772104337e-07,
+      "gamma_linear_mae_mean": 1.0754262516317063e-07,
+      "gamma_divnorm_mae_mean": 8.602394199658515e-08,
+      "n_subjects": 30
+    },
+    "top_bottom": {
+      "alpha_linear_mae_mean": 1.9131238019212705e-06,
+      "alpha_divnorm_mae_mean": 9.96572992166013e-07,
+      "gamma_linear_mae_mean": 2.0858699916469008e-07,
+      "gamma_divnorm_mae_mean": 1.4665852877389334e-07,
+      "n_subjects": 30
+    },
+    "quadrants": {
+      "alpha_linear_mae_mean": 3.1725500391060113e-06,
+      "alpha_divnorm_mae_mean": 6.135381630682067e-07,
+      "gamma_linear_mae_mean": 2.64179550353564e-07,
+      "gamma_divnorm_mae_mean": 1.42439283149237e-07,
+      "n_subjects": 30
+    },
+    "octants": {
+      "alpha_linear_mae_mean": 8.28581928110753e-06,
+      "alpha_divnorm_mae_mean": 7.984047103603432e-07,
+      "gamma_linear_mae_mean": 2.555950068602587e-07,
+      "gamma_divnorm_mae_mean": 1.0093222071261305e-07,
+      "n_subjects": 30
+    },
+    "fovea_periphery": {
+      "alpha_linear_mae_mean": 1.8429564966856477e-06,
+      "alpha_divnorm_mae_mean": 9.677618432201524e-07,
+      "gamma_linear_mae_mean": 1.9931069320091526e-07,
+      "gamma_divnorm_mae_mean": 1.4692019968535043e-07,
+      "n_subjects": 30
+    }
+  },
+  "per_subject": [
+    {
+      "subject": "sub-01",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.669796040499723e-07,
+            "linear_prediction": -6.037546073466224e-07,
+            "divnorm_prediction": -4.0250307156441493e-07,
+            "blank_corrected_linear": -8.010759983897989e-07,
+            "linear_mae": 3.367750032966501e-07,
+            "divnorm_mae": 1.3552346751444262e-07
+          },
+          "gamma": {
+            "observed_full": -1.0975792606225899e-07,
+            "linear_prediction": 1.216734432937843e-07,
+            "divnorm_prediction": 8.111562886252286e-08,
+            "linear_mae": 2.314313693560433e-07,
+            "divnorm_mae": 1.9087355492478185e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.669796040499723e-07,
+            "linear_prediction": -1.2260646241038727e-06,
+            "divnorm_prediction": -8.173764160692484e-07,
+            "blank_corrected_linear": -1.423386015147049e-06,
+            "linear_mae": 9.590850200539004e-07,
+            "divnorm_mae": 5.503968120192761e-07
+          },
+          "gamma": {
+            "observed_full": -1.0975792606225899e-07,
+            "linear_prediction": 1.0469554993292209e-07,
+            "divnorm_prediction": 6.979703328861472e-08,
+            "linear_mae": 2.144534759951811e-07,
+            "divnorm_mae": 1.7955495935087372e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.669796040499723e-07,
+            "linear_prediction": 6.682483745917223e-08,
+            "divnorm_prediction": 2.672993498366889e-08,
+            "blank_corrected_linear": -3.2781794462718045e-07,
+            "linear_mae": 3.338044415091445e-07,
+            "divnorm_mae": 2.937095390336412e-07
+          },
+          "gamma": {
+            "observed_full": -1.0975792606225899e-07,
+            "linear_prediction": -3.144227692966315e-08,
+            "divnorm_prediction": -1.257691077186526e-08,
+            "linear_mae": 7.831564913259584e-08,
+            "divnorm_mae": 9.718101529039373e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.669796040499723e-07,
+            "linear_prediction": -1.8377907754328583e-06,
+            "divnorm_prediction": -4.083979500961907e-07,
+            "blank_corrected_linear": -2.6270763396055634e-06,
+            "linear_mae": 1.570811171382886e-06,
+            "divnorm_mae": 1.414183460462184e-07
+          },
+          "gamma": {
+            "observed_full": -1.0975792606225899e-07,
+            "linear_prediction": -1.597569183756111e-07,
+            "divnorm_prediction": -3.550153741680247e-08,
+            "linear_mae": 4.999899231335212e-08,
+            "divnorm_mae": 7.425638864545653e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.669796040499723e-07,
+            "linear_prediction": -6.182473196410069e-07,
+            "divnorm_prediction": -4.1216487976067124e-07,
+            "blank_corrected_linear": -8.155687106841832e-07,
+            "linear_mae": 3.5126771559103457e-07,
+            "divnorm_mae": 1.4518527571069892e-07
+          },
+          "gamma": {
+            "observed_full": -1.0975792606225899e-07,
+            "linear_prediction": 2.0368996865569665e-08,
+            "divnorm_prediction": 1.357933124371311e-08,
+            "linear_mae": 1.3012692292782866e-07,
+            "divnorm_mae": 1.233372573059721e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-02",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.4228524185920883e-09,
+            "linear_prediction": -8.326225910831985e-07,
+            "divnorm_prediction": -5.55081727388799e-07,
+            "blank_corrected_linear": -5.072262265148041e-07,
+            "linear_mae": 8.301997386646064e-07,
+            "divnorm_mae": 5.526588749702069e-07
+          },
+          "gamma": {
+            "observed_full": -1.8009987144785145e-08,
+            "linear_prediction": 1.3628528660523025e-07,
+            "divnorm_prediction": 9.085685773682017e-08,
+            "linear_mae": 1.5429527375001539e-07,
+            "divnorm_mae": 1.0886684488160532e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.4228524185920883e-09,
+            "linear_prediction": 2.0819539724582201e-07,
+            "divnorm_prediction": 1.3879693149721468e-07,
+            "blank_corrected_linear": 5.335917618142164e-07,
+            "linear_mae": 2.106182496644141e-07,
+            "divnorm_mae": 1.4121978391580675e-07
+          },
+          "gamma": {
+            "observed_full": -1.8009987144785145e-08,
+            "linear_prediction": 3.319195775587598e-08,
+            "divnorm_prediction": 2.2127971837250655e-08,
+            "linear_mae": 5.1201944900661124e-08,
+            "divnorm_mae": 4.01379589820358e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.4228524185920883e-09,
+            "linear_prediction": -1.1581011605789751e-07,
+            "divnorm_prediction": -4.6324046423159006e-08,
+            "blank_corrected_linear": 5.349826130788913e-07,
+            "linear_mae": 1.1338726363930542e-07,
+            "divnorm_mae": 4.3901194004566917e-08
+          },
+          "gamma": {
+            "observed_full": -1.8009987144785145e-08,
+            "linear_prediction": -2.4674148565933027e-08,
+            "divnorm_prediction": -9.86965942637321e-09,
+            "linear_mae": 6.664161421147883e-09,
+            "divnorm_mae": 8.140327718411934e-09
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.4228524185920883e-09,
+            "linear_prediction": -7.382703299655133e-07,
+            "divnorm_prediction": -1.640600733256696e-07,
+            "blank_corrected_linear": 5.633151283080643e-07,
+            "linear_mae": 7.358474775469212e-07,
+            "divnorm_mae": 1.6163722090707754e-07
+          },
+          "gamma": {
+            "observed_full": -1.8009987144785145e-08,
+            "linear_prediction": 3.6650447313100337e-08,
+            "divnorm_prediction": 8.14454384735563e-09,
+            "linear_mae": 5.4660434457885484e-08,
+            "divnorm_mae": 2.6154530992140776e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.4228524185920883e-09,
+            "linear_prediction": -1.0981623573464749e-06,
+            "divnorm_prediction": -7.321082382309832e-07,
+            "blank_corrected_linear": -7.727659927780805e-07,
+            "linear_mae": 1.0957395049278828e-06,
+            "divnorm_mae": 7.296853858123911e-07
+          },
+          "gamma": {
+            "observed_full": -1.8009987144785145e-08,
+            "linear_prediction": 2.571062585943653e-07,
+            "divnorm_prediction": 1.7140417239624353e-07,
+            "linear_mae": 2.751162457391504e-07,
+            "divnorm_mae": 1.8941415954102866e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-03",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.017385264289961e-06,
+            "linear_prediction": -1.6162654618277346e-06,
+            "divnorm_prediction": -1.0775103078851565e-06,
+            "blank_corrected_linear": -2.9313471907310696e-06,
+            "linear_mae": 4.011198024622262e-07,
+            "divnorm_mae": 9.398749564048043e-07
+          },
+          "gamma": {
+            "observed_full": 1.1355650327371202e-08,
+            "linear_prediction": 9.899699110340634e-08,
+            "divnorm_prediction": 6.599799406893756e-08,
+            "linear_mae": 8.764134077603513e-08,
+            "divnorm_mae": 5.464234374156636e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.017385264289961e-06,
+            "linear_prediction": -1.563304061017294e-06,
+            "divnorm_prediction": -1.0422027073448626e-06,
+            "blank_corrected_linear": -2.8783857899206285e-06,
+            "linear_mae": 4.540812032726668e-07,
+            "divnorm_mae": 9.751825569450982e-07
+          },
+          "gamma": {
+            "observed_full": 1.1355650327371202e-08,
+            "linear_prediction": 5.6457160856837815e-08,
+            "divnorm_prediction": 3.763810723789188e-08,
+            "linear_mae": 4.5101510529466616e-08,
+            "divnorm_mae": 2.6282456910520677e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.017385264289961e-06,
+            "linear_prediction": -2.408957518849096e-06,
+            "divnorm_prediction": -9.635830075396384e-07,
+            "blank_corrected_linear": -5.039120976655766e-06,
+            "linear_mae": 3.9157225455913505e-07,
+            "divnorm_mae": 1.0538022567503224e-06
+          },
+          "gamma": {
+            "observed_full": 1.1355650327371202e-08,
+            "linear_prediction": 2.629539918295281e-07,
+            "divnorm_prediction": 1.0518159673181124e-07,
+            "linear_mae": 2.515983415021569e-07,
+            "divnorm_mae": 9.382594640444003e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.017385264289961e-06,
+            "linear_prediction": -9.885703841230718e-06,
+            "divnorm_prediction": -2.1968230758290486e-06,
+            "blank_corrected_linear": -1.5146030756844058e-05,
+            "linear_mae": 7.868318576940757e-06,
+            "divnorm_mae": 1.7943781153908774e-07
+          },
+          "gamma": {
+            "observed_full": 1.1355650327371202e-08,
+            "linear_prediction": -3.9118228027014464e-07,
+            "divnorm_prediction": -8.692939561558769e-08,
+            "linear_mae": 4.0253793059751585e-07,
+            "divnorm_mae": 9.82850459429589e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.017385264289961e-06,
+            "linear_prediction": -1.1431115179673538e-06,
+            "divnorm_prediction": -7.620743453115692e-07,
+            "blank_corrected_linear": -2.4581932468706883e-06,
+            "linear_mae": 8.74273746322607e-07,
+            "divnorm_mae": 1.2553109189783917e-06
+          },
+          "gamma": {
+            "observed_full": 1.1355650327371202e-08,
+            "linear_prediction": 1.4375224808380767e-07,
+            "divnorm_prediction": 9.583483205587177e-08,
+            "linear_mae": 1.3239659775643646e-07,
+            "divnorm_mae": 8.447918172850057e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-04",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.1196467942101734e-07,
+            "linear_prediction": 3.986218232283455e-07,
+            "divnorm_prediction": 2.6574788215223035e-07,
+            "blank_corrected_linear": -1.5166721832049096e-07,
+            "linear_mae": 5.105865026493629e-07,
+            "divnorm_mae": 3.777125615732477e-07
+          },
+          "gamma": {
+            "observed_full": -3.1013329937145e-08,
+            "linear_prediction": -6.576731787689952e-07,
+            "divnorm_prediction": -4.384487858459968e-07,
+            "linear_mae": 6.266598488318502e-07,
+            "divnorm_mae": 4.074354559088518e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.1196467942101734e-07,
+            "linear_prediction": -2.9152117707496246e-07,
+            "divnorm_prediction": -1.943474513833083e-07,
+            "blank_corrected_linear": -8.41810218623799e-07,
+            "linear_mae": 1.7955649765394512e-07,
+            "divnorm_mae": 8.238277196229096e-08
+          },
+          "gamma": {
+            "observed_full": -3.1013329937145e-08,
+            "linear_prediction": 3.302343614991609e-08,
+            "divnorm_prediction": 2.2015624099944057e-08,
+            "linear_mae": 6.40367660870611e-08,
+            "divnorm_mae": 5.3028954037089055e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.1196467942101734e-07,
+            "linear_prediction": -6.337379587029222e-07,
+            "divnorm_prediction": -2.5349518348116885e-07,
+            "blank_corrected_linear": -1.7343160418005951e-06,
+            "linear_mae": 5.217732792819048e-07,
+            "divnorm_mae": 1.4153050406015151e-07
+          },
+          "gamma": {
+            "observed_full": -3.1013329937145e-08,
+            "linear_prediction": -2.0388972962396839e-07,
+            "divnorm_prediction": -8.155589184958735e-08,
+            "linear_mae": 1.728763996868234e-07,
+            "divnorm_mae": 5.0542561912442354e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.1196467942101734e-07,
+            "linear_prediction": 7.628838399827845e-08,
+            "divnorm_prediction": 1.6952974221839654e-08,
+            "blank_corrected_linear": -2.1248677821970673e-06,
+            "linear_mae": 1.882530634192958e-07,
+            "divnorm_mae": 1.28917653642857e-07
+          },
+          "gamma": {
+            "observed_full": -3.1013329937145e-08,
+            "linear_prediction": -1.8029216240710824e-07,
+            "divnorm_prediction": -4.0064924979357385e-08,
+            "linear_mae": 1.4927883246996323e-07,
+            "divnorm_mae": 9.051595042212384e-09
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.1196467942101734e-07,
+            "linear_prediction": 3.2524390537065336e-10,
+            "divnorm_prediction": 2.1682927024710224e-10,
+            "blank_corrected_linear": -5.499637976434658e-07,
+            "linear_mae": 1.1228992332638799e-07,
+            "divnorm_mae": 1.1218150869126444e-07
+          },
+          "gamma": {
+            "observed_full": -3.1013329937145e-08,
+            "linear_prediction": -5.257027793413514e-07,
+            "divnorm_prediction": -3.5046851956090094e-07,
+            "linear_mae": 4.946894494042064e-07,
+            "divnorm_mae": 3.1945518962375596e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-05",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -6.014936304484568e-07,
+            "linear_prediction": -1.3504944517091414e-06,
+            "divnorm_prediction": -9.00329634472761e-07,
+            "blank_corrected_linear": -3.217971466509978e-08,
+            "linear_mae": 7.490008212606846e-07,
+            "divnorm_mae": 2.988360040243042e-07
+          },
+          "gamma": {
+            "observed_full": 8.92370814265589e-08,
+            "linear_prediction": -2.3043651871016823e-08,
+            "divnorm_prediction": -1.5362434580677883e-08,
+            "linear_mae": 1.1228073329757573e-07,
+            "divnorm_mae": 1.0459951600723679e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -6.014936304484568e-07,
+            "linear_prediction": -1.6886918325705767e-06,
+            "divnorm_prediction": -1.1257945550470511e-06,
+            "blank_corrected_linear": -3.7037709552653506e-07,
+            "linear_mae": 1.08719820212212e-06,
+            "divnorm_mae": 5.243009245985943e-07
+          },
+          "gamma": {
+            "observed_full": 8.92370814265589e-08,
+            "linear_prediction": 1.4778622821523415e-07,
+            "divnorm_prediction": 9.852415214348943e-08,
+            "linear_mae": 5.854914678867524e-08,
+            "divnorm_mae": 9.287070716930524e-09
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -6.014936304484568e-07,
+            "linear_prediction": -2.44894737589086e-06,
+            "divnorm_prediction": -9.79578950356344e-07,
+            "blank_corrected_linear": 1.8768209819722345e-07,
+            "linear_mae": 1.8474537454424033e-06,
+            "divnorm_mae": 3.780853199078872e-07
+          },
+          "gamma": {
+            "observed_full": 8.92370814265589e-08,
+            "linear_prediction": 1.9464105253788954e-07,
+            "divnorm_prediction": 7.785642101515581e-08,
+            "linear_mae": 1.0540397111133063e-07,
+            "divnorm_mae": 1.1380660411403094e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -6.014936304484568e-07,
+            "linear_prediction": -6.607749205384761e-06,
+            "divnorm_prediction": -1.4683887123077247e-06,
+            "blank_corrected_linear": -1.334490257208595e-06,
+            "linear_mae": 6.006255574936305e-06,
+            "divnorm_mae": 8.668950818592679e-07
+          },
+          "gamma": {
+            "observed_full": 8.92370814265589e-08,
+            "linear_prediction": 2.0424498655549407e-07,
+            "divnorm_prediction": 4.5387774790109795e-08,
+            "linear_mae": 1.1500790512893516e-07,
+            "divnorm_mae": 4.384930663644911e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -6.014936304484568e-07,
+            "linear_prediction": -1.0390166874935036e-06,
+            "divnorm_prediction": -6.926777916623358e-07,
+            "blank_corrected_linear": 2.79298049550538e-07,
+            "linear_mae": 4.3752305704504684e-07,
+            "divnorm_mae": 9.1184161213879e-08
+          },
+          "gamma": {
+            "observed_full": 8.92370814265589e-08,
+            "linear_prediction": 9.671332563899894e-08,
+            "divnorm_prediction": 6.44755504259993e-08,
+            "linear_mae": 7.476244212440037e-09,
+            "divnorm_mae": 2.476153100055961e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-06",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.283132513232486e-06,
+            "linear_prediction": -2.1519630846868033e-06,
+            "divnorm_prediction": -1.4346420564578688e-06,
+            "blank_corrected_linear": -1.7083335715358283e-06,
+            "linear_mae": 8.688305714543174e-07,
+            "divnorm_mae": 1.5150954322538292e-07
+          },
+          "gamma": {
+            "observed_full": -1.95673882639541e-07,
+            "linear_prediction": -2.791359140063429e-07,
+            "divnorm_prediction": -1.8609060933756193e-07,
+            "linear_mae": 8.346203136680189e-08,
+            "divnorm_mae": 9.583273301979076e-09
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.283132513232486e-06,
+            "linear_prediction": -4.507770736021469e-06,
+            "divnorm_prediction": -3.005180490680979e-06,
+            "blank_corrected_linear": -4.064141222870494e-06,
+            "linear_mae": 3.2246382227889828e-06,
+            "divnorm_mae": 1.7220479774484932e-06
+          },
+          "gamma": {
+            "observed_full": -1.95673882639541e-07,
+            "linear_prediction": -1.6394651630935602e-07,
+            "divnorm_prediction": -1.0929767753957068e-07,
+            "linear_mae": 3.172736633018499e-08,
+            "divnorm_mae": 8.637620509997033e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.283132513232486e-06,
+            "linear_prediction": 1.819332757701136e-06,
+            "divnorm_prediction": 9.09666378850568e-07,
+            "blank_corrected_linear": 2.484777027427599e-06,
+            "linear_mae": 3.1024652709336217e-06,
+            "divnorm_mae": 2.192798892083054e-06
+          },
+          "gamma": {
+            "observed_full": -1.95673882639541e-07,
+            "linear_prediction": 3.872125265238031e-07,
+            "divnorm_prediction": 1.9360626326190155e-07,
+            "linear_mae": 5.828864091633441e-07,
+            "divnorm_mae": 3.8928014590144253e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.283132513232486e-06,
+            "linear_prediction": -1.1018670504636583e-05,
+            "divnorm_prediction": -2.754667626159146e-06,
+            "blank_corrected_linear": -9.465967208608169e-06,
+            "linear_mae": 9.735537991404097e-06,
+            "divnorm_mae": 1.4715351129266599e-06
+          },
+          "gamma": {
+            "observed_full": -1.95673882639541e-07,
+            "linear_prediction": 8.713022355688883e-07,
+            "divnorm_prediction": 2.1782555889222207e-07,
+            "linear_mae": 1.0669761182084293e-06,
+            "divnorm_mae": 4.134994415317631e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.283132513232486e-06,
+            "linear_prediction": 7.05721085565835e-08,
+            "divnorm_prediction": 4.704807237105566e-08,
+            "blank_corrected_linear": 5.142016217075587e-07,
+            "linear_mae": 1.3537046217890694e-06,
+            "divnorm_mae": 1.3301805856035416e-06
+          },
+          "gamma": {
+            "observed_full": -1.95673882639541e-07,
+            "linear_prediction": -8.966130911618016e-08,
+            "divnorm_prediction": -5.977420607745344e-08,
+            "linear_mae": 1.0601257352336085e-07,
+            "divnorm_mae": 1.3589967656208755e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-07",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.5837336397922917e-06,
+            "linear_prediction": -2.466628919971821e-06,
+            "divnorm_prediction": -1.644419279981214e-06,
+            "blank_corrected_linear": -1.3412951852206582e-06,
+            "linear_mae": 8.828952801795294e-07,
+            "divnorm_mae": 6.068564018892234e-08
+          },
+          "gamma": {
+            "observed_full": 8.06012300409319e-08,
+            "linear_prediction": 1.0533922768113815e-07,
+            "divnorm_prediction": 7.022615178742543e-08,
+            "linear_mae": 2.473799764020625e-08,
+            "divnorm_mae": 1.037507825350647e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.5837336397922917e-06,
+            "linear_prediction": -1.430949856439571e-06,
+            "divnorm_prediction": -9.539665709597141e-07,
+            "blank_corrected_linear": -3.0561612168840836e-07,
+            "linear_mae": 1.527837833527206e-07,
+            "divnorm_mae": 6.297670688325775e-07
+          },
+          "gamma": {
+            "observed_full": 8.06012300409319e-08,
+            "linear_prediction": 1.6507636000640013e-07,
+            "divnorm_prediction": 1.1005090667093342e-07,
+            "linear_mae": 8.447512996546823e-08,
+            "divnorm_mae": 2.9449676630001525e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.5837336397922917e-06,
+            "linear_prediction": -1.7955131519892466e-06,
+            "divnorm_prediction": -7.182052607956986e-07,
+            "blank_corrected_linear": 4.55154317513079e-07,
+            "linear_mae": 2.117795121969549e-07,
+            "divnorm_mae": 8.655283789965931e-07
+          },
+          "gamma": {
+            "observed_full": 8.06012300409319e-08,
+            "linear_prediction": -3.6347112107156706e-08,
+            "divnorm_prediction": -1.4538844842862682e-08,
+            "linear_mae": 1.169483421480886e-07,
+            "divnorm_mae": 9.514007488379458e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.5837336397922917e-06,
+            "linear_prediction": -4.806040013773695e-06,
+            "divnorm_prediction": -1.06800889194971e-06,
+            "blank_corrected_linear": -3.047050747690437e-07,
+            "linear_mae": 3.222306373981403e-06,
+            "divnorm_mae": 5.157247478425817e-07
+          },
+          "gamma": {
+            "observed_full": 8.06012300409319e-08,
+            "linear_prediction": -8.652769663461053e-08,
+            "divnorm_prediction": -1.922837702991345e-08,
+            "linear_mae": 1.6712892667554243e-07,
+            "divnorm_mae": 9.982960707084535e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.5837336397922917e-06,
+            "linear_prediction": -2.5936509646384763e-06,
+            "divnorm_prediction": -1.7291006430923175e-06,
+            "blank_corrected_linear": -1.4683172298873133e-06,
+            "linear_mae": 1.0099173248461847e-06,
+            "divnorm_mae": 1.453670033000258e-07
+          },
+          "gamma": {
+            "observed_full": 8.06012300409319e-08,
+            "linear_prediction": 1.2534982821550848e-07,
+            "divnorm_prediction": 8.356655214367232e-08,
+            "linear_mae": 4.4748598174576584e-08,
+            "divnorm_mae": 2.9653221027404284e-09
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-08",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.707661482958772e-07,
+            "linear_prediction": -7.929574908369025e-07,
+            "divnorm_prediction": -5.286383272246016e-07,
+            "blank_corrected_linear": -2.2440706470709095e-07,
+            "linear_mae": 5.221913425410252e-07,
+            "divnorm_mae": 2.578721789287244e-07
+          },
+          "gamma": {
+            "observed_full": 5.8280206533745486e-08,
+            "linear_prediction": 4.3659423348164356e-08,
+            "divnorm_prediction": 2.910628223210957e-08,
+            "linear_mae": 1.462078318558113e-08,
+            "divnorm_mae": 2.9173924301635916e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.707661482958772e-07,
+            "linear_prediction": -3.7989434497336556e-07,
+            "divnorm_prediction": -2.5326289664891036e-07,
+            "blank_corrected_linear": 1.8865608115644595e-07,
+            "linear_mae": 1.0912819667748834e-07,
+            "divnorm_mae": 1.7503251646966867e-08
+          },
+          "gamma": {
+            "observed_full": 5.8280206533745486e-08,
+            "linear_prediction": -8.499466180441283e-08,
+            "divnorm_prediction": -5.666310786960855e-08,
+            "linear_mae": 1.4327486833815833e-07,
+            "divnorm_mae": 1.1494331440335405e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.707661482958772e-07,
+            "linear_prediction": -1.4269872330400117e-06,
+            "divnorm_prediction": -5.707948932160047e-07,
+            "blank_corrected_linear": -2.898863807803886e-07,
+            "linear_mae": 1.1562210847441344e-06,
+            "divnorm_mae": 3.000287449201275e-07
+          },
+          "gamma": {
+            "observed_full": 5.8280206533745486e-08,
+            "linear_prediction": 1.099142151706831e-07,
+            "divnorm_prediction": 4.3965686068273235e-08,
+            "linear_mae": 5.163400863693761e-08,
+            "divnorm_mae": 1.4314520465472251e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.707661482958772e-07,
+            "linear_prediction": -1.5018754728263752e-06,
+            "divnorm_prediction": -3.337501050725278e-07,
+            "blank_corrected_linear": 7.723262316928708e-07,
+            "linear_mae": 1.231109324530498e-06,
+            "divnorm_mae": 6.29839567766506e-08
+          },
+          "gamma": {
+            "observed_full": 5.8280206533745486e-08,
+            "linear_prediction": 1.8675861661550186e-07,
+            "divnorm_prediction": 4.150191480344486e-08,
+            "linear_mae": 1.2847841008175636e-07,
+            "divnorm_mae": 1.6778291730300627e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.707661482958772e-07,
+            "linear_prediction": -4.1444177874064115e-07,
+            "divnorm_prediction": -2.7629451916042743e-07,
+            "blank_corrected_linear": 1.5410864738917036e-07,
+            "linear_mae": 1.4367563044476393e-07,
+            "divnorm_mae": 5.528370864550211e-09
+          },
+          "gamma": {
+            "observed_full": 5.8280206533745486e-08,
+            "linear_prediction": -3.483822283490465e-07,
+            "divnorm_prediction": -2.3225481889936432e-07,
+            "linear_mae": 4.06662434882792e-07,
+            "divnorm_mae": 2.905350254331098e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-09",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.1848240052458e-06,
+            "linear_prediction": -2.3081351768319296e-06,
+            "divnorm_prediction": -1.5387567845546197e-06,
+            "blank_corrected_linear": -2.2049180036276633e-06,
+            "linear_mae": 1.1233111715861295e-06,
+            "divnorm_mae": 3.5393277930881965e-07
+          },
+          "gamma": {
+            "observed_full": -8.004124903784414e-09,
+            "linear_prediction": 6.016524098444023e-08,
+            "divnorm_prediction": 4.011016065629349e-08,
+            "linear_mae": 6.816936588822464e-08,
+            "divnorm_mae": 4.81142855600779e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.1848240052458e-06,
+            "linear_prediction": -2.7155618166294474e-06,
+            "divnorm_prediction": -1.8103745444196316e-06,
+            "blank_corrected_linear": -2.612344643425181e-06,
+            "linear_mae": 1.5307378113836473e-06,
+            "divnorm_mae": 6.255505391738315e-07
+          },
+          "gamma": {
+            "observed_full": -8.004124903784414e-09,
+            "linear_prediction": 1.052043366674035e-08,
+            "divnorm_prediction": 7.0136224444935666e-09,
+            "linear_mae": 1.8524558570524766e-08,
+            "divnorm_mae": 1.5017747348277983e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.1848240052458e-06,
+            "linear_prediction": -4.339988157799083e-06,
+            "divnorm_prediction": -1.7359952631196333e-06,
+            "blank_corrected_linear": -4.133553811390551e-06,
+            "linear_mae": 3.155164152553283e-06,
+            "divnorm_mae": 5.511712578738332e-07
+          },
+          "gamma": {
+            "observed_full": -8.004124903784414e-09,
+            "linear_prediction": -1.6173901455502987e-08,
+            "divnorm_prediction": -6.469560582201195e-09,
+            "linear_mae": 8.169776551718572e-09,
+            "divnorm_mae": 1.5345643215832195e-09
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.1848240052458e-06,
+            "linear_prediction": -6.838429401740427e-06,
+            "divnorm_prediction": -1.5196509781645394e-06,
+            "blank_corrected_linear": -6.425560708923361e-06,
+            "linear_mae": 5.653605396494627e-06,
+            "divnorm_mae": 3.3482697291873933e-07
+          },
+          "gamma": {
+            "observed_full": -8.004124903784414e-09,
+            "linear_prediction": 5.926813543328278e-07,
+            "divnorm_prediction": 1.3170696762951728e-07,
+            "linear_mae": 6.006854792366122e-07,
+            "divnorm_mae": 1.397110925333017e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.1848240052458e-06,
+            "linear_prediction": -1.42178923032735e-06,
+            "divnorm_prediction": -9.478594868849e-07,
+            "blank_corrected_linear": -1.3185720571230838e-06,
+            "linear_mae": 2.3696522508154998e-07,
+            "divnorm_mae": 2.3696451836090004e-07
+          },
+          "gamma": {
+            "observed_full": -8.004124903784414e-09,
+            "linear_prediction": 1.2772393596321708e-07,
+            "divnorm_prediction": 8.514929064214473e-08,
+            "linear_mae": 1.357280608670015e-07,
+            "divnorm_mae": 9.315341554592914e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-10",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -5.807711048652201e-06,
+            "linear_prediction": -2.2963634895293e-06,
+            "divnorm_prediction": -1.5309089930195334e-06,
+            "blank_corrected_linear": -5.975265272714826e-06,
+            "linear_mae": 3.5113475591229007e-06,
+            "divnorm_mae": 4.276802055632667e-06
+          },
+          "gamma": {
+            "observed_full": 5.000982519420703e-08,
+            "linear_prediction": 1.0878462225081774e-07,
+            "divnorm_prediction": 7.252308150054516e-08,
+            "linear_mae": 5.877479705661071e-08,
+            "divnorm_mae": 2.2513256306338128e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -5.807711048652201e-06,
+            "linear_prediction": -4.668237638469227e-06,
+            "divnorm_prediction": -3.112158425646151e-06,
+            "blank_corrected_linear": -8.347139421654753e-06,
+            "linear_mae": 1.139473410182974e-06,
+            "divnorm_mae": 2.6955526230060498e-06
+          },
+          "gamma": {
+            "observed_full": 5.000982519420703e-08,
+            "linear_prediction": -1.7454247215558786e-09,
+            "divnorm_prediction": -1.1636164810372524e-09,
+            "linear_mae": 5.175524991576291e-08,
+            "divnorm_mae": 5.117344167524428e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -5.807711048652201e-06,
+            "linear_prediction": -1.4203589389421387e-05,
+            "divnorm_prediction": -5.681435755768555e-06,
+            "blank_corrected_linear": -2.1561392955792436e-05,
+            "linear_mae": 8.395878340769187e-06,
+            "divnorm_mae": 1.2627529288364564e-07
+          },
+          "gamma": {
+            "observed_full": 5.000982519420703e-08,
+            "linear_prediction": -1.97163731750285e-08,
+            "divnorm_prediction": -7.886549270011399e-09,
+            "linear_mae": 6.972619836923553e-08,
+            "divnorm_mae": 5.789637446421843e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -5.807711048652201e-06,
+            "linear_prediction": -2.0027025403797125e-05,
+            "divnorm_prediction": -4.450450089732694e-06,
+            "blank_corrected_linear": -3.474263253653923e-05,
+            "linear_mae": 1.4219314355144924e-05,
+            "divnorm_mae": 1.3572609589195065e-06
+          },
+          "gamma": {
+            "observed_full": 5.000982519420703e-08,
+            "linear_prediction": 7.076815911586934e-08,
+            "divnorm_prediction": 1.5726257581304296e-08,
+            "linear_mae": 2.075833392166231e-08,
+            "divnorm_mae": 3.428356761290273e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -5.807711048652201e-06,
+            "linear_prediction": -5.679467633868099e-06,
+            "divnorm_prediction": -3.786311755912066e-06,
+            "blank_corrected_linear": -9.358369417053626e-06,
+            "linear_mae": 1.2824341478410183e-07,
+            "divnorm_mae": 2.0213992927401346e-06
+          },
+          "gamma": {
+            "observed_full": 5.000982519420703e-08,
+            "linear_prediction": 2.0077024560456395e-07,
+            "divnorm_prediction": 1.3384683040304264e-07,
+            "linear_mae": 1.507604204103569e-07,
+            "divnorm_mae": 8.38370052088356e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-11",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -3.707806554650382e-07,
+            "linear_prediction": -2.4722504664909183e-07,
+            "divnorm_prediction": -1.6481669776606123e-07,
+            "blank_corrected_linear": 2.591038099151575e-08,
+            "linear_mae": 1.235556088159464e-07,
+            "divnorm_mae": 2.05963957698977e-07
+          },
+          "gamma": {
+            "observed_full": -2.6036352143058166e-08,
+            "linear_prediction": 8.956749913026543e-08,
+            "divnorm_prediction": 5.971166608684362e-08,
+            "linear_mae": 1.1560385127332359e-07,
+            "divnorm_mae": 8.574801822990178e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -3.707806554650382e-07,
+            "linear_prediction": -3.253250616759335e-07,
+            "divnorm_prediction": -2.1688337445062233e-07,
+            "blank_corrected_linear": -5.218963403532595e-08,
+            "linear_mae": 4.545559378910472e-08,
+            "divnorm_mae": 1.538972810144159e-07
+          },
+          "gamma": {
+            "observed_full": -2.6036352143058166e-08,
+            "linear_prediction": -1.0255567884594818e-06,
+            "divnorm_prediction": -6.837045256396545e-07,
+            "linear_mae": 9.995204363164237e-07,
+            "divnorm_mae": 6.576681734965964e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -3.707806554650382e-07,
+            "linear_prediction": -8.2737501189735e-07,
+            "divnorm_prediction": -3.3095000475894e-07,
+            "blank_corrected_linear": -2.811041566161348e-07,
+            "linear_mae": 4.5659435643231176e-07,
+            "divnorm_mae": 3.983065070609824e-08
+          },
+          "gamma": {
+            "observed_full": -2.6036352143058166e-08,
+            "linear_prediction": 5.345846885307435e-07,
+            "divnorm_prediction": 2.138338754122974e-07,
+            "linear_mae": 5.606210406738016e-07,
+            "divnorm_mae": 2.398702275553556e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -3.707806554650382e-07,
+            "linear_prediction": -2.4024730683049636e-06,
+            "divnorm_prediction": -5.338829040677697e-07,
+            "blank_corrected_linear": -1.3099313577425333e-06,
+            "linear_mae": 2.0316924128399255e-06,
+            "divnorm_mae": 1.6310224860273152e-07
+          },
+          "gamma": {
+            "observed_full": -2.6036352143058166e-08,
+            "linear_prediction": 2.182479787197784e-07,
+            "divnorm_prediction": 4.849955082661742e-08,
+            "linear_mae": 2.4428433086283657e-07,
+            "divnorm_mae": 7.453590296967559e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -3.707806554650382e-07,
+            "linear_prediction": -8.237838760039855e-07,
+            "divnorm_prediction": -5.491892506693237e-07,
+            "blank_corrected_linear": -5.50648448363378e-07,
+            "linear_mae": 4.530032205389473e-07,
+            "divnorm_mae": 1.7840859520428545e-07
+          },
+          "gamma": {
+            "observed_full": -2.6036352143058166e-08,
+            "linear_prediction": 4.164508049997597e-08,
+            "divnorm_prediction": 2.7763386999983982e-08,
+            "linear_mae": 6.768143264303414e-08,
+            "divnorm_mae": 5.3799739143042145e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-12",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -5.273683557594278e-06,
+            "linear_prediction": -1.4775690516552634e-05,
+            "divnorm_prediction": -9.850460344368423e-06,
+            "blank_corrected_linear": -1.1847441706349685e-05,
+            "linear_mae": 9.502006958958356e-06,
+            "divnorm_mae": 4.576776786774145e-06
+          },
+          "gamma": {
+            "observed_full": 1.7397673693299008e-07,
+            "linear_prediction": 4.448246557553988e-08,
+            "divnorm_prediction": 2.9654977050359923e-08,
+            "linear_mae": 1.294942713574502e-07,
+            "divnorm_mae": 1.4432175988263015e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -5.273683557594278e-06,
+            "linear_prediction": -1.4661450882225711e-05,
+            "divnorm_prediction": -9.774300588150473e-06,
+            "blank_corrected_linear": -1.1733202072022761e-05,
+            "linear_mae": 9.387767324631433e-06,
+            "divnorm_mae": 4.500617030556196e-06
+          },
+          "gamma": {
+            "observed_full": 1.7397673693299008e-07,
+            "linear_prediction": 4.858277535628408e-08,
+            "divnorm_prediction": 3.2388516904189385e-08,
+            "linear_mae": 1.25393961576706e-07,
+            "divnorm_mae": 1.415882200288007e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -5.273683557594278e-06,
+            "linear_prediction": -2.274357650371776e-05,
+            "divnorm_prediction": -9.097430601487104e-06,
+            "blank_corrected_linear": -1.6887078883311863e-05,
+            "linear_mae": 1.746989294612348e-05,
+            "divnorm_mae": 3.823747043892826e-06
+          },
+          "gamma": {
+            "observed_full": 1.7397673693299008e-07,
+            "linear_prediction": 1.589422791852375e-07,
+            "divnorm_prediction": 6.357691167409501e-08,
+            "linear_mae": 1.5034457747752577e-08,
+            "divnorm_mae": 1.1039982525889507e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -5.273683557594278e-06,
+            "linear_prediction": -3.702877623229892e-05,
+            "divnorm_prediction": -8.228616940510871e-06,
+            "blank_corrected_linear": -2.531578099148713e-05,
+            "linear_mae": 3.1755092674704645e-05,
+            "divnorm_mae": 2.9549333829165935e-06
+          },
+          "gamma": {
+            "observed_full": 1.7397673693299008e-07,
+            "linear_prediction": 9.251427560333839e-08,
+            "divnorm_prediction": 2.0558727911852975e-08,
+            "linear_mae": 8.14624613296517e-08,
+            "divnorm_mae": 1.534180090211371e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -5.273683557594278e-06,
+            "linear_prediction": -1.5141476887339374e-05,
+            "divnorm_prediction": -1.0094317924892916e-05,
+            "blank_corrected_linear": -1.2213228077136428e-05,
+            "linear_mae": 9.867793329745096e-06,
+            "divnorm_mae": 4.820634367298638e-06
+          },
+          "gamma": {
+            "observed_full": 1.7397673693299008e-07,
+            "linear_prediction": -1.112972081250333e-08,
+            "divnorm_prediction": -7.4198138750022196e-09,
+            "linear_mae": 1.851064577454934e-07,
+            "divnorm_mae": 1.813965508079923e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-13",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.514399477016322e-06,
+            "linear_prediction": -6.04995785366317e-06,
+            "divnorm_prediction": -4.033305235775446e-06,
+            "blank_corrected_linear": -6.509526950205241e-06,
+            "linear_mae": 3.535558376646848e-06,
+            "divnorm_mae": 1.5189057587591244e-06
+          },
+          "gamma": {
+            "observed_full": 7.297729929239262e-08,
+            "linear_prediction": 2.740424279365368e-08,
+            "divnorm_prediction": 1.8269495195769122e-08,
+            "linear_mae": 4.5573056498738934e-08,
+            "divnorm_mae": 5.470780409662349e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.514399477016322e-06,
+            "linear_prediction": -5.025742117222698e-06,
+            "divnorm_prediction": -3.350494744815132e-06,
+            "blank_corrected_linear": -5.485311213764768e-06,
+            "linear_mae": 2.511342640206376e-06,
+            "divnorm_mae": 8.360952677988099e-07
+          },
+          "gamma": {
+            "observed_full": 7.297729929239262e-08,
+            "linear_prediction": -1.6125646452067716e-09,
+            "divnorm_prediction": -1.0750430968045144e-09,
+            "linear_mae": 7.458986393759939e-08,
+            "divnorm_mae": 7.405234238919712e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.514399477016322e-06,
+            "linear_prediction": -7.398396836871079e-06,
+            "divnorm_prediction": -2.9593587347484315e-06,
+            "blank_corrected_linear": -8.31753502995522e-06,
+            "linear_mae": 4.883997359854757e-06,
+            "divnorm_mae": 4.449592577321095e-07
+          },
+          "gamma": {
+            "observed_full": 7.297729929239262e-08,
+            "linear_prediction": -6.326881257274407e-08,
+            "divnorm_prediction": -2.5307525029097628e-08,
+            "linear_mae": 1.3624611186513668e-07,
+            "divnorm_mae": 9.828482432149025e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.514399477016322e-06,
+            "linear_prediction": -1.9231909993055755e-05,
+            "divnorm_prediction": -4.273757776234612e-06,
+            "blank_corrected_linear": -2.107018637922404e-05,
+            "linear_mae": 1.6717510516039432e-05,
+            "divnorm_mae": 1.7593582992182898e-06
+          },
+          "gamma": {
+            "observed_full": 7.297729929239262e-08,
+            "linear_prediction": -1.8520964253535767e-08,
+            "divnorm_prediction": -4.115769834119059e-09,
+            "linear_mae": 9.149826354592838e-08,
+            "divnorm_mae": 7.709306912651168e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.514399477016322e-06,
+            "linear_prediction": -6.5370305642244e-06,
+            "divnorm_prediction": -4.3580203761496e-06,
+            "blank_corrected_linear": -6.996599660766471e-06,
+            "linear_mae": 4.022631087208078e-06,
+            "divnorm_mae": 1.8436208991332782e-06
+          },
+          "gamma": {
+            "observed_full": 7.297729929239262e-08,
+            "linear_prediction": 1.0953561850508365e-08,
+            "divnorm_prediction": 7.302374567005577e-09,
+            "linear_mae": 6.202373744188425e-08,
+            "divnorm_mae": 6.567492472538704e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-14",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.8843338022768926e-07,
+            "linear_prediction": -2.139709979839557e-07,
+            "divnorm_prediction": -1.426473319893038e-07,
+            "blank_corrected_linear": -4.2880172773048396e-07,
+            "linear_mae": 2.5537617756266446e-08,
+            "divnorm_mae": 4.578604823838546e-08
+          },
+          "gamma": {
+            "observed_full": -4.3070221510524746e-08,
+            "linear_prediction": 1.1716967773347895e-09,
+            "divnorm_prediction": 7.811311848898596e-10,
+            "linear_mae": 4.4241918287859535e-08,
+            "divnorm_mae": 4.3851352695414605e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.8843338022768926e-07,
+            "linear_prediction": -3.378327782613101e-08,
+            "divnorm_prediction": -2.2522185217420673e-08,
+            "blank_corrected_linear": -2.486140075726593e-07,
+            "linear_mae": 1.5465010240155825e-07,
+            "divnorm_mae": 1.6591119501026858e-07
+          },
+          "gamma": {
+            "observed_full": -4.3070221510524746e-08,
+            "linear_prediction": 1.3160950758345682e-07,
+            "divnorm_prediction": 8.773967172230454e-08,
+            "linear_mae": 1.7467972909398156e-07,
+            "divnorm_mae": 1.308098932328293e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.8843338022768926e-07,
+            "linear_prediction": -4.4359891997320006e-07,
+            "divnorm_prediction": -1.7743956798928003e-07,
+            "blank_corrected_linear": -8.732603794662565e-07,
+            "linear_mae": 2.551655397455108e-07,
+            "divnorm_mae": 1.0993812238409234e-08
+          },
+          "gamma": {
+            "observed_full": -4.3070221510524746e-08,
+            "linear_prediction": 6.096270595598594e-08,
+            "divnorm_prediction": 2.4385082382394377e-08,
+            "linear_mae": 1.0403292746651069e-07,
+            "divnorm_mae": 6.745530389291912e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.8843338022768926e-07,
+            "linear_prediction": -5.742586652670845e-07,
+            "divnorm_prediction": -1.2761303672601877e-07,
+            "blank_corrected_linear": -1.4335815842531977e-06,
+            "linear_mae": 3.858252850393952e-07,
+            "divnorm_mae": 6.08203435016705e-08
+          },
+          "gamma": {
+            "observed_full": -4.3070221510524746e-08,
+            "linear_prediction": 2.4567758872845993e-07,
+            "divnorm_prediction": 5.459501971743554e-08,
+            "linear_mae": 2.8874781023898467e-07,
+            "divnorm_mae": 9.766524122796028e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.8843338022768926e-07,
+            "linear_prediction": -2.1043296187600185e-07,
+            "divnorm_prediction": -1.402886412506679e-07,
+            "blank_corrected_linear": -4.2526369162253013e-07,
+            "linear_mae": 2.1999581648312586e-08,
+            "divnorm_mae": 4.8144738977021364e-08
+          },
+          "gamma": {
+            "observed_full": -4.3070221510524746e-08,
+            "linear_prediction": -1.42176800298014e-07,
+            "divnorm_prediction": -9.478453353200932e-08,
+            "linear_mae": 9.910657878748925e-08,
+            "divnorm_mae": 5.1714312021484576e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-15",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -4.286117749443358e-06,
+            "linear_prediction": -8.47961536983508e-06,
+            "divnorm_prediction": -5.653076913223387e-06,
+            "blank_corrected_linear": -5.988582543420316e-06,
+            "linear_mae": 4.193497620391722e-06,
+            "divnorm_mae": 1.3669591637800292e-06
+          },
+          "gamma": {
+            "observed_full": 4.4838030758844314e-08,
+            "linear_prediction": -8.409036417871746e-08,
+            "divnorm_prediction": -5.606024278581164e-08,
+            "linear_mae": 1.2892839493756177e-07,
+            "divnorm_mae": 1.0089827354465595e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -4.286117749443358e-06,
+            "linear_prediction": -1.0079680596835211e-05,
+            "divnorm_prediction": -6.719787064556807e-06,
+            "blank_corrected_linear": -7.588647770420448e-06,
+            "linear_mae": 5.793562847391854e-06,
+            "divnorm_mae": 2.4336693151134498e-06
+          },
+          "gamma": {
+            "observed_full": 4.4838030758844314e-08,
+            "linear_prediction": 4.2529434778646785e-09,
+            "divnorm_prediction": 2.8352956519097857e-09,
+            "linear_mae": 4.0585087280979636e-08,
+            "divnorm_mae": 4.200273510693453e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -4.286117749443358e-06,
+            "linear_prediction": -1.393204773804484e-05,
+            "divnorm_prediction": -5.572819095217936e-06,
+            "blank_corrected_linear": -8.949982085215312e-06,
+            "linear_mae": 9.645929988601482e-06,
+            "divnorm_mae": 1.2867013457745786e-06
+          },
+          "gamma": {
+            "observed_full": 4.4838030758844314e-08,
+            "linear_prediction": 7.876968183452744e-08,
+            "divnorm_prediction": 3.150787273381097e-08,
+            "linear_mae": 3.393165107568312e-08,
+            "divnorm_mae": 1.3330158025033342e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -4.286117749443358e-06,
+            "linear_prediction": -3.183300425450224e-05,
+            "divnorm_prediction": -7.074000945444942e-06,
+            "blank_corrected_linear": -2.1868872948843184e-05,
+            "linear_mae": 2.7546886505058882e-05,
+            "divnorm_mae": 2.7878831960015844e-06
+          },
+          "gamma": {
+            "observed_full": 4.4838030758844314e-08,
+            "linear_prediction": 1.4521253764181418e-08,
+            "divnorm_prediction": 3.2269452809292042e-09,
+            "linear_mae": 3.0316776994662896e-08,
+            "divnorm_mae": 4.161108547791511e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -4.286117749443358e-06,
+            "linear_prediction": -1.0763494590125303e-05,
+            "divnorm_prediction": -7.175663060083535e-06,
+            "blank_corrected_linear": -8.272461763710539e-06,
+            "linear_mae": 6.477376840681945e-06,
+            "divnorm_mae": 2.8895453106401776e-06
+          },
+          "gamma": {
+            "observed_full": 4.4838030758844314e-08,
+            "linear_prediction": -5.6561068566564325e-08,
+            "divnorm_prediction": -3.7707379044376215e-08,
+            "linear_mae": 1.0139909932540864e-07,
+            "divnorm_mae": 8.254540980322053e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-16",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.2747932020247676e-06,
+            "linear_prediction": -2.9793093124522465e-06,
+            "divnorm_prediction": -1.9862062083014978e-06,
+            "blank_corrected_linear": -3.954847379160591e-06,
+            "linear_mae": 7.045161104274789e-07,
+            "divnorm_mae": 2.885869937232698e-07
+          },
+          "gamma": {
+            "observed_full": -6.468347568714379e-08,
+            "linear_prediction": -5.420759256639074e-08,
+            "divnorm_prediction": -3.6138395044260495e-08,
+            "linear_mae": 1.047588312075305e-08,
+            "divnorm_mae": 2.8545080642883297e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.2747932020247676e-06,
+            "linear_prediction": -3.8854174873334605e-06,
+            "divnorm_prediction": -2.5902783248889735e-06,
+            "blank_corrected_linear": -4.860955554041806e-06,
+            "linear_mae": 1.6106242853086929e-06,
+            "divnorm_mae": 3.154851228642059e-07
+          },
+          "gamma": {
+            "observed_full": -6.468347568714379e-08,
+            "linear_prediction": -5.739241508048723e-08,
+            "divnorm_prediction": -3.826161005365816e-08,
+            "linear_mae": 7.291060606656559e-09,
+            "divnorm_mae": 2.6421865633485635e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.2747932020247676e-06,
+            "linear_prediction": -4.3789860150315966e-06,
+            "divnorm_prediction": -1.7515944060126387e-06,
+            "blank_corrected_linear": -6.330062148448287e-06,
+            "linear_mae": 2.104192813006829e-06,
+            "divnorm_mae": 5.231987960121289e-07
+          },
+          "gamma": {
+            "observed_full": -6.468347568714379e-08,
+            "linear_prediction": 2.2302190086295704e-07,
+            "divnorm_prediction": 8.920876034518282e-08,
+            "linear_mae": 2.877053765501008e-07,
+            "divnorm_mae": 1.538922360323266e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.2747932020247676e-06,
+            "linear_prediction": -1.1182174526972012e-05,
+            "divnorm_prediction": -2.484927672660447e-06,
+            "blank_corrected_linear": -1.5084326793805392e-05,
+            "linear_mae": 8.907381324947245e-06,
+            "divnorm_mae": 2.1013447063567939e-07
+          },
+          "gamma": {
+            "observed_full": -6.468347568714379e-08,
+            "linear_prediction": -6.731659227600791e-07,
+            "divnorm_prediction": -1.4959242728001757e-07,
+            "linear_mae": 6.084824470729353e-07,
+            "divnorm_mae": 8.490895159287378e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.2747932020247676e-06,
+            "linear_prediction": -2.7837402516260744e-06,
+            "divnorm_prediction": -1.855826834417383e-06,
+            "blank_corrected_linear": -3.7592783183344197e-06,
+            "linear_mae": 5.089470496013068e-07,
+            "divnorm_mae": 4.1896636760738467e-07
+          },
+          "gamma": {
+            "observed_full": -6.468347568714379e-08,
+            "linear_prediction": 6.431543871445473e-07,
+            "divnorm_prediction": 4.287695914296982e-07,
+            "linear_mae": 7.078378628316911e-07,
+            "divnorm_mae": 4.93453067116842e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-17",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.7965303757355956e-06,
+            "linear_prediction": -4.8435762838882895e-06,
+            "divnorm_prediction": -3.2290508559255265e-06,
+            "blank_corrected_linear": -5.508516113922247e-06,
+            "linear_mae": 2.047045908152694e-06,
+            "divnorm_mae": 4.325204801899309e-07
+          },
+          "gamma": {
+            "observed_full": 3.270944539847969e-07,
+            "linear_prediction": 3.1921539788995857e-07,
+            "divnorm_prediction": 2.1281026525997238e-07,
+            "linear_mae": 7.879056094838314e-09,
+            "divnorm_mae": 1.142841887248245e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.7965303757355956e-06,
+            "linear_prediction": -5.278593696396521e-06,
+            "divnorm_prediction": -3.5190624642643477e-06,
+            "blank_corrected_linear": -5.943533526430479e-06,
+            "linear_mae": 2.4820633206609257e-06,
+            "divnorm_mae": 7.225320885287521e-07
+          },
+          "gamma": {
+            "observed_full": 3.270944539847969e-07,
+            "linear_prediction": 5.037007626893438e-07,
+            "divnorm_prediction": 3.3580050845956256e-07,
+            "linear_mae": 1.7660630870454696e-07,
+            "divnorm_mae": 8.706054474765682e-09
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.7965303757355956e-06,
+            "linear_prediction": -7.263532923835178e-06,
+            "divnorm_prediction": -2.905413169534071e-06,
+            "blank_corrected_linear": -8.593412583903095e-06,
+            "linear_mae": 4.467002548099582e-06,
+            "divnorm_mae": 1.0888279379847559e-07
+          },
+          "gamma": {
+            "observed_full": 3.270944539847969e-07,
+            "linear_prediction": -1.2122325499387292e-06,
+            "divnorm_prediction": -4.848930199754916e-07,
+            "linear_mae": 1.539327003923526e-06,
+            "divnorm_mae": 8.119874739602885e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.7965303757355956e-06,
+            "linear_prediction": -1.4632989159971015e-05,
+            "divnorm_prediction": -3.2517753688824478e-06,
+            "blank_corrected_linear": -1.729274848010685e-05,
+            "linear_mae": 1.183645878423542e-05,
+            "divnorm_mae": 4.5524499314685217e-07
+          },
+          "gamma": {
+            "observed_full": 3.270944539847969e-07,
+            "linear_prediction": 7.03941117284438e-07,
+            "divnorm_prediction": 1.564313593965418e-07,
+            "linear_mae": 3.7684666329964114e-07,
+            "divnorm_mae": 1.7066309458825509e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.7965303757355956e-06,
+            "linear_prediction": -5.651421104303011e-06,
+            "divnorm_prediction": -3.7676140695353407e-06,
+            "blank_corrected_linear": -6.3163609343369685e-06,
+            "linear_mae": 2.8548907285674153e-06,
+            "divnorm_mae": 9.710836937997451e-07
+          },
+          "gamma": {
+            "observed_full": 3.270944539847969e-07,
+            "linear_prediction": -1.7976534072466984e-08,
+            "divnorm_prediction": -1.1984356048311323e-08,
+            "linear_mae": 3.4507098805726386e-07,
+            "divnorm_mae": 3.390788100331082e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-18",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -9.805206815009489e-09,
+            "linear_prediction": -9.828423276975117e-08,
+            "divnorm_prediction": -6.552282184650078e-08,
+            "blank_corrected_linear": 2.875931800899304e-07,
+            "linear_mae": 8.847902595474169e-08,
+            "divnorm_mae": 5.571761503149129e-08
+          },
+          "gamma": {
+            "observed_full": 4.464834074936231e-08,
+            "linear_prediction": 4.730436469287011e-08,
+            "divnorm_prediction": 3.153624312858007e-08,
+            "linear_mae": 2.6560239435077945e-09,
+            "divnorm_mae": 1.3112097620782241e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -9.805206815009489e-09,
+            "linear_prediction": -1.3973066219716318e-07,
+            "divnorm_prediction": -9.315377479810879e-08,
+            "blank_corrected_linear": 2.4614675066251834e-07,
+            "linear_mae": 1.299254553821537e-07,
+            "divnorm_mae": 8.33485679830993e-08
+          },
+          "gamma": {
+            "observed_full": 4.464834074936231e-08,
+            "linear_prediction": -4.885167698710167e-07,
+            "divnorm_prediction": -3.256778465806778e-07,
+            "linear_mae": 5.33165110620379e-07,
+            "divnorm_mae": 3.703261873300401e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -9.805206815009489e-09,
+            "linear_prediction": -4.947108676029182e-07,
+            "divnorm_prediction": -1.9788434704116727e-07,
+            "blank_corrected_linear": 2.7704395811644486e-07,
+            "linear_mae": 4.849056607879087e-07,
+            "divnorm_mae": 1.8807914022615777e-07
+          },
+          "gamma": {
+            "observed_full": 4.464834074936231e-08,
+            "linear_prediction": -1.9938076775549736e-07,
+            "divnorm_prediction": -7.975230710219895e-08,
+            "linear_mae": 2.440291085048597e-07,
+            "divnorm_mae": 1.2440064785156126e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -9.805206815009489e-09,
+            "linear_prediction": -7.746278529093242e-07,
+            "divnorm_prediction": -1.7213952286873871e-07,
+            "blank_corrected_linear": 7.688817985294019e-07,
+            "linear_mae": 7.648226460943146e-07,
+            "divnorm_mae": 1.6233431605372922e-07
+          },
+          "gamma": {
+            "observed_full": 4.464834074936231e-08,
+            "linear_prediction": -7.066298466011191e-09,
+            "divnorm_prediction": -1.570288548002487e-09,
+            "linear_mae": 5.1714639215373503e-08,
+            "divnorm_mae": 4.62186292973648e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -9.805206815009489e-09,
+            "linear_prediction": -1.8857410454440503e-07,
+            "divnorm_prediction": -1.2571606969627003e-07,
+            "blank_corrected_linear": 1.973033083152765e-07,
+            "linear_mae": 1.7876889772939553e-07,
+            "divnorm_mae": 1.1591086288126054e-07
+          },
+          "gamma": {
+            "observed_full": 4.464834074936231e-08,
+            "linear_prediction": 1.132850474173144e-07,
+            "divnorm_prediction": 7.552336494487627e-08,
+            "linear_mae": 6.863670666795209e-08,
+            "divnorm_mae": 3.0875024195513956e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-19",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -5.905084346862602e-07,
+            "linear_prediction": -1.9194825811138084e-06,
+            "divnorm_prediction": -1.2796550540758724e-06,
+            "blank_corrected_linear": -1.84799760776612e-07,
+            "linear_mae": 1.3289741464275483e-06,
+            "divnorm_mae": 6.891466193896122e-07
+          },
+          "gamma": {
+            "observed_full": -2.290598312807401e-08,
+            "linear_prediction": -2.1054821514221538e-07,
+            "divnorm_prediction": -1.403654767614769e-07,
+            "linear_mae": 1.8764223201414138e-07,
+            "divnorm_mae": 1.174594936334029e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -5.905084346862602e-07,
+            "linear_prediction": -4.3454560315144046e-07,
+            "divnorm_prediction": -2.8969706876762696e-07,
+            "blank_corrected_linear": 1.3001372171857559e-06,
+            "linear_mae": 1.559628315348197e-07,
+            "divnorm_mae": 3.008113659186332e-07
+          },
+          "gamma": {
+            "observed_full": -2.290598312807401e-08,
+            "linear_prediction": 1.1001377817553778e-06,
+            "divnorm_prediction": 7.334251878369186e-07,
+            "linear_mae": 1.1230437648834518e-06,
+            "divnorm_mae": 7.563311709649926e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -5.905084346862602e-07,
+            "linear_prediction": -1.2051715875213732e-06,
+            "divnorm_prediction": -4.820686350085493e-07,
+            "blank_corrected_linear": 2.264194053153019e-06,
+            "linear_mae": 6.14663152835113e-07,
+            "divnorm_mae": 1.084397996777109e-07
+          },
+          "gamma": {
+            "observed_full": -2.290598312807401e-08,
+            "linear_prediction": 1.1912501593444075e-06,
+            "divnorm_prediction": 4.7650006373776297e-07,
+            "linear_mae": 1.2141561424724814e-06,
+            "divnorm_mae": 4.99406046865837e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -5.905084346862602e-07,
+            "linear_prediction": -2.3282734415963797e-06,
+            "divnorm_prediction": -5.173940981325288e-07,
+            "blank_corrected_linear": 4.610457839752405e-06,
+            "linear_mae": 1.7377650069101196e-06,
+            "divnorm_mae": 7.311433655373138e-08
+          },
+          "gamma": {
+            "observed_full": -2.290598312807401e-08,
+            "linear_prediction": 4.305269240017492e-08,
+            "divnorm_prediction": 9.56726497781665e-09,
+            "linear_mae": 6.595867552824894e-08,
+            "divnorm_mae": 3.247324810589066e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -5.905084346862602e-07,
+            "linear_prediction": -2.1183542547657044e-06,
+            "divnorm_prediction": -1.412236169843803e-06,
+            "blank_corrected_linear": -3.836714344285082e-07,
+            "linear_mae": 1.5278458200794443e-06,
+            "divnorm_mae": 8.217277351575429e-07
+          },
+          "gamma": {
+            "observed_full": -2.290598312807401e-08,
+            "linear_prediction": 9.728129804675139e-08,
+            "divnorm_prediction": 6.485419869783426e-08,
+            "linear_mae": 1.201872811748254e-07,
+            "divnorm_mae": 8.776018182590827e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-20",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -2.8397997126370557e-06,
+            "linear_prediction": -7.037864791939177e-06,
+            "divnorm_prediction": -4.6919098612927846e-06,
+            "blank_corrected_linear": -6.469469537647896e-06,
+            "linear_mae": 4.198065079302122e-06,
+            "divnorm_mae": 1.8521101486557288e-06
+          },
+          "gamma": {
+            "observed_full": 3.7067393990053585e-07,
+            "linear_prediction": 1.3853165809705747e-07,
+            "divnorm_prediction": 9.235443873137165e-08,
+            "linear_mae": 2.3214228180347838e-07,
+            "divnorm_mae": 2.783195011691642e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -2.8397997126370557e-06,
+            "linear_prediction": -5.647610925078628e-06,
+            "divnorm_prediction": -3.7650739500524185e-06,
+            "blank_corrected_linear": -5.0792156707873475e-06,
+            "linear_mae": 2.8078112124415723e-06,
+            "divnorm_mae": 9.252742374153628e-07
+          },
+          "gamma": {
+            "observed_full": 3.7067393990053585e-07,
+            "linear_prediction": -5.1938808768830344e-08,
+            "divnorm_prediction": -3.462587251255356e-08,
+            "linear_mae": 4.226127486693662e-07,
+            "divnorm_mae": 4.052998124130894e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -2.8397997126370557e-06,
+            "linear_prediction": -9.505055841909611e-06,
+            "divnorm_prediction": -3.8020223367638445e-06,
+            "blank_corrected_linear": -8.368265333327048e-06,
+            "linear_mae": 6.665256129272556e-06,
+            "divnorm_mae": 9.622226241267887e-07
+          },
+          "gamma": {
+            "observed_full": 3.7067393990053585e-07,
+            "linear_prediction": 3.0547092594556576e-07,
+            "divnorm_prediction": 1.221883703782263e-07,
+            "linear_mae": 6.520301395497009e-08,
+            "divnorm_mae": 2.484855695223095e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -2.8397997126370557e-06,
+            "linear_prediction": -2.4126501291485453e-05,
+            "divnorm_prediction": -5.361444731441212e-06,
+            "blank_corrected_linear": -2.1852920274320328e-05,
+            "linear_mae": 2.1286701578848398e-05,
+            "divnorm_mae": 2.521645018804156e-06
+          },
+          "gamma": {
+            "observed_full": 3.7067393990053585e-07,
+            "linear_prediction": -4.563275309066285e-07,
+            "divnorm_prediction": -1.0140611797925077e-07,
+            "linear_mae": 8.270014708071643e-07,
+            "divnorm_mae": 4.720800578797866e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -2.8397997126370557e-06,
+            "linear_prediction": -7.5317144347724465e-06,
+            "divnorm_prediction": -5.021142956514964e-06,
+            "blank_corrected_linear": -6.963319180481166e-06,
+            "linear_mae": 4.691914722135391e-06,
+            "divnorm_mae": 2.1813432438779086e-06
+          },
+          "gamma": {
+            "observed_full": 3.7067393990053585e-07,
+            "linear_prediction": -1.3738020848907904e-07,
+            "divnorm_prediction": -9.158680565938602e-08,
+            "linear_mae": 5.080541483896149e-07,
+            "divnorm_mae": 4.622607455599219e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-21",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.3748193469899704e-06,
+            "linear_prediction": -3.3585652502254084e-06,
+            "divnorm_prediction": -2.2390435001502724e-06,
+            "blank_corrected_linear": -1.8081617039154116e-06,
+            "linear_mae": 1.9837459032354382e-06,
+            "divnorm_mae": 8.64224153160302e-07
+          },
+          "gamma": {
+            "observed_full": 3.877338882585817e-08,
+            "linear_prediction": -9.254545370608653e-09,
+            "divnorm_prediction": -6.169696913739102e-09,
+            "linear_mae": 4.802793419646683e-08,
+            "divnorm_mae": 4.494308573959727e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.3748193469899704e-06,
+            "linear_prediction": -2.022707601032057e-06,
+            "divnorm_prediction": -1.3484717340213713e-06,
+            "blank_corrected_linear": -4.723040547220602e-07,
+            "linear_mae": 6.478882540420865e-07,
+            "divnorm_mae": 2.6347612968599103e-08
+          },
+          "gamma": {
+            "observed_full": 3.877338882585817e-08,
+            "linear_prediction": 2.8598519319277227e-07,
+            "divnorm_prediction": 1.906567954618482e-07,
+            "linear_mae": 2.472118043669141e-07,
+            "divnorm_mae": 1.5188340663599e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.3748193469899704e-06,
+            "linear_prediction": -6.597511033084455e-06,
+            "divnorm_prediction": -2.639004413233782e-06,
+            "blank_corrected_linear": -3.4967039404644606e-06,
+            "linear_mae": 5.2226916860944845e-06,
+            "divnorm_mae": 1.2641850662438114e-06
+          },
+          "gamma": {
+            "observed_full": 3.877338882585817e-08,
+            "linear_prediction": 1.0503200053912787e-07,
+            "divnorm_prediction": 4.2012800215651144e-08,
+            "linear_mae": 6.625861171326969e-08,
+            "divnorm_mae": 3.2394113897929706e-09
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.3748193469899704e-06,
+            "linear_prediction": -1.3334892045601425e-05,
+            "divnorm_prediction": -2.9633093434669834e-06,
+            "blank_corrected_linear": -7.133277860361438e-06,
+            "linear_mae": 1.1960072698611454e-05,
+            "divnorm_mae": 1.588489996477013e-06
+          },
+          "gamma": {
+            "observed_full": 3.877338882585817e-08,
+            "linear_prediction": -1.8816257002551524e-07,
+            "divnorm_prediction": -4.18139044501145e-08,
+            "linear_mae": 2.269359588513734e-07,
+            "divnorm_mae": 8.058729327597267e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.3748193469899704e-06,
+            "linear_prediction": -4.062248310774861e-06,
+            "divnorm_prediction": -2.7081655405165737e-06,
+            "blank_corrected_linear": -2.511844764464864e-06,
+            "linear_mae": 2.6874289637848904e-06,
+            "divnorm_mae": 1.3333461935266033e-06
+          },
+          "gamma": {
+            "observed_full": 3.877338882585817e-08,
+            "linear_prediction": 1.4301638724476805e-07,
+            "divnorm_prediction": 9.53442581631787e-08,
+            "linear_mae": 1.0424299841890988e-07,
+            "divnorm_mae": 5.6570869337320534e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-22",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.2766028198254177e-06,
+            "linear_prediction": -2.9404831919970816e-06,
+            "divnorm_prediction": -1.9603221279980543e-06,
+            "blank_corrected_linear": -1.6560210867286969e-06,
+            "linear_mae": 1.663880372171664e-06,
+            "divnorm_mae": 6.837193081726366e-07
+          },
+          "gamma": {
+            "observed_full": 4.164969072466012e-09,
+            "linear_prediction": 4.882396766126991e-08,
+            "divnorm_prediction": 3.254931177417994e-08,
+            "linear_mae": 4.46589985888039e-08,
+            "divnorm_mae": 2.8384342701713928e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.2766028198254177e-06,
+            "linear_prediction": -2.457105787296025e-06,
+            "divnorm_prediction": -1.6380705248640166e-06,
+            "blank_corrected_linear": -1.1726436820276402e-06,
+            "linear_mae": 1.1805029674706073e-06,
+            "divnorm_mae": 3.61467705038599e-07
+          },
+          "gamma": {
+            "observed_full": 4.164969072466012e-09,
+            "linear_prediction": 1.5241971275160568e-07,
+            "divnorm_prediction": 1.0161314183440379e-07,
+            "linear_mae": 1.4825474367913968e-07,
+            "divnorm_mae": 9.744817276193777e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.2766028198254177e-06,
+            "linear_prediction": -4.126474929044618e-06,
+            "divnorm_prediction": -1.650589971617847e-06,
+            "blank_corrected_linear": -1.557550718507849e-06,
+            "linear_mae": 2.8498721092192002e-06,
+            "divnorm_mae": 3.739871517924294e-07
+          },
+          "gamma": {
+            "observed_full": 4.164969072466012e-09,
+            "linear_prediction": 1.0483563276355292e-07,
+            "divnorm_prediction": 4.1934253105421166e-08,
+            "linear_mae": 1.006706636910869e-07,
+            "divnorm_mae": 3.776928403295516e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.2766028198254177e-06,
+            "linear_prediction": -8.029854464580382e-06,
+            "divnorm_prediction": -1.784412103240085e-06,
+            "blank_corrected_linear": -2.8920060435068446e-06,
+            "linear_mae": 6.753251644754964e-06,
+            "divnorm_mae": 5.078092834146672e-07
+          },
+          "gamma": {
+            "observed_full": 4.164969072466012e-09,
+            "linear_prediction": 1.0405734908906277e-07,
+            "divnorm_prediction": 2.312385535312506e-08,
+            "linear_mae": 9.989238001659676e-08,
+            "divnorm_mae": 1.8958886280659048e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.2766028198254177e-06,
+            "linear_prediction": -4.135698403710073e-06,
+            "divnorm_prediction": -2.7571322691400487e-06,
+            "blank_corrected_linear": -2.8512362984416884e-06,
+            "linear_mae": 2.8590955838846557e-06,
+            "divnorm_mae": 1.480529449314631e-06
+          },
+          "gamma": {
+            "observed_full": 4.164969072466012e-09,
+            "linear_prediction": -4.609541158009487e-08,
+            "divnorm_prediction": -3.073027438672991e-08,
+            "linear_mae": 5.0260380652560876e-08,
+            "divnorm_mae": 3.489524345919592e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-23",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -3.530909601184668e-07,
+            "linear_prediction": -5.433337486711706e-08,
+            "divnorm_prediction": -3.622224991141137e-08,
+            "blank_corrected_linear": 4.6982604993140334e-07,
+            "linear_mae": 2.9875758525134976e-07,
+            "divnorm_mae": 3.1686871020705544e-07
+          },
+          "gamma": {
+            "observed_full": -7.077404999751575e-08,
+            "linear_prediction": -9.263519484506424e-08,
+            "divnorm_prediction": -6.175679656337616e-08,
+            "linear_mae": 2.1861144847548492e-08,
+            "divnorm_mae": 9.017253434139589e-09
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -3.530909601184668e-07,
+            "linear_prediction": -7.64152955912225e-06,
+            "divnorm_prediction": -5.094353039414833e-06,
+            "blank_corrected_linear": -7.117370134323729e-06,
+            "linear_mae": 7.288438599003782e-06,
+            "divnorm_mae": 4.741262079296366e-06
+          },
+          "gamma": {
+            "observed_full": -7.077404999751575e-08,
+            "linear_prediction": -4.394031893206249e-07,
+            "divnorm_prediction": -2.9293545954708325e-07,
+            "linear_mae": 3.686291393231092e-07,
+            "divnorm_mae": 2.221614095495675e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -3.530909601184668e-07,
+            "linear_prediction": -1.016131593839771e-06,
+            "divnorm_prediction": -4.064526375359084e-07,
+            "blank_corrected_linear": 3.218725575726976e-08,
+            "linear_mae": 6.630406337213042e-07,
+            "divnorm_mae": 5.33616774174416e-08
+          },
+          "gamma": {
+            "observed_full": -7.077404999751575e-08,
+            "linear_prediction": 8.435578095877985e-08,
+            "divnorm_prediction": 3.374231238351194e-08,
+            "linear_mae": 1.551298309562956e-07,
+            "divnorm_mae": 1.0451636238102768e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -3.530909601184668e-07,
+            "linear_prediction": -1.0654442280671095e-06,
+            "divnorm_prediction": -2.367653840149132e-07,
+            "blank_corrected_linear": 1.031193471126972e-06,
+            "linear_mae": 7.123532679486427e-07,
+            "divnorm_mae": 1.1632557610355359e-07
+          },
+          "gamma": {
+            "observed_full": -7.077404999751575e-08,
+            "linear_prediction": 2.3421939890003622e-07,
+            "divnorm_prediction": 5.204875531111916e-08,
+            "linear_mae": 3.04993448897552e-07,
+            "divnorm_mae": 1.2282280530863493e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -3.530909601184668e-07,
+            "linear_prediction": -2.792718580583222e-07,
+            "divnorm_prediction": -1.8618123870554812e-07,
+            "blank_corrected_linear": 2.448875667401982e-07,
+            "linear_mae": 7.381910206014461e-08,
+            "divnorm_mae": 1.6690972141291869e-07
+          },
+          "gamma": {
+            "observed_full": -7.077404999751575e-08,
+            "linear_prediction": 3.032453140919966e-07,
+            "divnorm_prediction": 2.0216354272799773e-07,
+            "linear_mae": 3.740193640895123e-07,
+            "divnorm_mae": 2.729375927255135e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-24",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.0960676893243598e-06,
+            "linear_prediction": -3.247171129220174e-06,
+            "divnorm_prediction": -2.1647807528134494e-06,
+            "blank_corrected_linear": -2.390220478732319e-06,
+            "linear_mae": 2.1511034398958143e-06,
+            "divnorm_mae": 1.0687130634890896e-06
+          },
+          "gamma": {
+            "observed_full": 6.043872663636081e-08,
+            "linear_prediction": -1.4539592155723692e-07,
+            "divnorm_prediction": -9.693061437149129e-08,
+            "linear_mae": 2.0583464819359773e-07,
+            "divnorm_mae": 1.5736934100785208e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.0960676893243598e-06,
+            "linear_prediction": -4.482139837823466e-06,
+            "divnorm_prediction": -2.988093225215644e-06,
+            "blank_corrected_linear": -3.6251891873356104e-06,
+            "linear_mae": 3.3860721484991064e-06,
+            "divnorm_mae": 1.8920255358912843e-06
+          },
+          "gamma": {
+            "observed_full": 6.043872663636081e-08,
+            "linear_prediction": -1.270581948259766e-07,
+            "divnorm_prediction": -8.470546321731773e-08,
+            "linear_mae": 1.874969214623374e-07,
+            "divnorm_mae": 1.4514418985367855e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.0960676893243598e-06,
+            "linear_prediction": -2.5814785620028847e-06,
+            "divnorm_prediction": -1.032591424801154e-06,
+            "blank_corrected_linear": -8.675772610271734e-07,
+            "linear_mae": 1.485410872678525e-06,
+            "divnorm_mae": 6.347626452320588e-08
+          },
+          "gamma": {
+            "observed_full": 6.043872663636081e-08,
+            "linear_prediction": 7.579799300805711e-08,
+            "divnorm_prediction": 3.0319197203222846e-08,
+            "linear_mae": 1.5359266371696306e-08,
+            "divnorm_mae": 3.011952943313796e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.0960676893243598e-06,
+            "linear_prediction": -1.1647511225591989e-05,
+            "divnorm_prediction": -2.588335827909331e-06,
+            "blank_corrected_linear": -8.219708623640564e-06,
+            "linear_mae": 1.055144353626763e-05,
+            "divnorm_mae": 1.492268138584971e-06
+          },
+          "gamma": {
+            "observed_full": 6.043872663636081e-08,
+            "linear_prediction": -1.3929414074200505e-07,
+            "divnorm_prediction": -3.095425349822334e-08,
+            "linear_mae": 1.9973286737836586e-07,
+            "divnorm_mae": 9.139298013458415e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.0960676893243598e-06,
+            "linear_prediction": -3.978932170692976e-06,
+            "divnorm_prediction": -2.6526214471286505e-06,
+            "blank_corrected_linear": -3.1219815202051207e-06,
+            "linear_mae": 2.8828644813686162e-06,
+            "divnorm_mae": 1.5565537578042907e-06
+          },
+          "gamma": {
+            "observed_full": 6.043872663636081e-08,
+            "linear_prediction": 1.5566649500922147e-07,
+            "divnorm_prediction": 1.0377766333948098e-07,
+            "linear_mae": 9.522776837286066e-08,
+            "divnorm_mae": 4.333893670312018e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-25",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -3.3876489626756794e-06,
+            "linear_prediction": -7.603576708997749e-06,
+            "divnorm_prediction": -5.069051139331833e-06,
+            "blank_corrected_linear": -5.069265963384619e-06,
+            "linear_mae": 4.21592774632207e-06,
+            "divnorm_mae": 1.6814021766561536e-06
+          },
+          "gamma": {
+            "observed_full": 8.726245816945591e-08,
+            "linear_prediction": -2.608592389771928e-08,
+            "divnorm_prediction": -1.7390615931812855e-08,
+            "linear_mae": 1.1334838206717519e-07,
+            "divnorm_mae": 1.0465307410126877e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -3.3876489626756794e-06,
+            "linear_prediction": -6.050902735655859e-06,
+            "divnorm_prediction": -4.0339351571039055e-06,
+            "blank_corrected_linear": -3.516591990042728e-06,
+            "linear_mae": 2.6632537729801793e-06,
+            "divnorm_mae": 6.462861944282261e-07
+          },
+          "gamma": {
+            "observed_full": 8.726245816945591e-08,
+            "linear_prediction": 1.2333812894128503e-07,
+            "divnorm_prediction": 8.222541929419002e-08,
+            "linear_mae": 3.607567077182912e-08,
+            "divnorm_mae": 5.037038875265892e-09
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -3.3876489626756794e-06,
+            "linear_prediction": -1.1282699588761111e-05,
+            "divnorm_prediction": -4.513079835504444e-06,
+            "blank_corrected_linear": -6.214078097534851e-06,
+            "linear_mae": 7.895050626085431e-06,
+            "divnorm_mae": 1.125430872828765e-06
+          },
+          "gamma": {
+            "observed_full": 8.726245816945591e-08,
+            "linear_prediction": 3.1388023030124567e-07,
+            "divnorm_prediction": 1.2555209212049827e-07,
+            "linear_mae": 2.2661777213178977e-07,
+            "divnorm_mae": 3.828963395104236e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -3.3876489626756794e-06,
+            "linear_prediction": -2.121502198593413e-05,
+            "divnorm_prediction": -4.714449330207584e-06,
+            "blank_corrected_linear": -1.107777900348161e-05,
+            "linear_mae": 1.782737302325845e-05,
+            "divnorm_mae": 1.3268003675319048e-06
+          },
+          "gamma": {
+            "observed_full": 8.726245816945591e-08,
+            "linear_prediction": -1.5207986406617236e-07,
+            "divnorm_prediction": -3.3795525348038305e-08,
+            "linear_mae": 2.393423222356283e-07,
+            "divnorm_mae": 1.210579835174942e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -3.3876489626756794e-06,
+            "linear_prediction": -7.85571335482808e-06,
+            "divnorm_prediction": -5.237142236552053e-06,
+            "blank_corrected_linear": -5.32140260921495e-06,
+            "linear_mae": 4.468064392152401e-06,
+            "divnorm_mae": 1.849493273876374e-06
+          },
+          "gamma": {
+            "observed_full": 8.726245816945591e-08,
+            "linear_prediction": -1.0970595648375521e-07,
+            "divnorm_prediction": -7.313730432250347e-08,
+            "linear_mae": 1.9696841465321112e-07,
+            "divnorm_mae": 1.603997624919594e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-26",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -8.278022296019772e-07,
+            "linear_prediction": -3.1337206705151646e-06,
+            "divnorm_prediction": -2.0891471136767765e-06,
+            "blank_corrected_linear": -3.362946844706673e-06,
+            "linear_mae": 2.3059184409131873e-06,
+            "divnorm_mae": 1.2613448840747992e-06
+          },
+          "gamma": {
+            "observed_full": 1.4471821384956207e-07,
+            "linear_prediction": -3.777577967234888e-08,
+            "divnorm_prediction": -2.5183853114899254e-08,
+            "linear_mae": 1.8249399352191096e-07,
+            "divnorm_mae": 1.6990206696446132e-07
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -8.278022296019772e-07,
+            "linear_prediction": -2.3200096773893176e-06,
+            "divnorm_prediction": -1.5466731182595451e-06,
+            "blank_corrected_linear": -2.549235851580826e-06,
+            "linear_mae": 1.4922074477873403e-06,
+            "divnorm_mae": 7.18870888657568e-07
+          },
+          "gamma": {
+            "observed_full": 1.4471821384956207e-07,
+            "linear_prediction": 4.5020334942623616e-07,
+            "divnorm_prediction": 3.001355662841574e-07,
+            "linear_mae": 3.0548513557667406e-07,
+            "divnorm_mae": 1.5541735243459535e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -8.278022296019772e-07,
+            "linear_prediction": -3.3021841711732498e-06,
+            "divnorm_prediction": -1.3208736684693e-06,
+            "blank_corrected_linear": -3.760636519556266e-06,
+            "linear_mae": 2.4743819415712725e-06,
+            "divnorm_mae": 4.930714388673228e-07
+          },
+          "gamma": {
+            "observed_full": 1.4471821384956207e-07,
+            "linear_prediction": -9.323231055441733e-08,
+            "divnorm_prediction": -3.729292422176693e-08,
+            "linear_mae": 2.379505244039794e-07,
+            "divnorm_mae": 1.82011138071329e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -8.278022296019772e-07,
+            "linear_prediction": -8.897086028070667e-06,
+            "divnorm_prediction": -1.977130228460148e-06,
+            "blank_corrected_linear": -9.813990724836699e-06,
+            "linear_mae": 8.06928379846869e-06,
+            "divnorm_mae": 1.1493279988581709e-06
+          },
+          "gamma": {
+            "observed_full": 1.4471821384956207e-07,
+            "linear_prediction": 3.0739508968811844e-07,
+            "divnorm_prediction": 6.831001993069299e-08,
+            "linear_mae": 1.6267687583855636e-07,
+            "divnorm_mae": 7.640819391886909e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -8.278022296019772e-07,
+            "linear_prediction": -1.860654647753441e-06,
+            "divnorm_prediction": -1.2404364318356274e-06,
+            "blank_corrected_linear": -2.0898808219449494e-06,
+            "linear_mae": 1.0328524181514638e-06,
+            "divnorm_mae": 4.126342022336502e-07
+          },
+          "gamma": {
+            "observed_full": 1.4471821384956207e-07,
+            "linear_prediction": -1.667057541287811e-07,
+            "divnorm_prediction": -1.1113716941918741e-07,
+            "linear_mae": 3.114239679783432e-07,
+            "divnorm_mae": 2.5585538326874947e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-27",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.0424559196597311e-06,
+            "linear_prediction": -2.11457564599248e-06,
+            "divnorm_prediction": -1.40971709732832e-06,
+            "blank_corrected_linear": -1.4876883230907668e-06,
+            "linear_mae": 1.072119726332749e-06,
+            "divnorm_mae": 3.672611776685889e-07
+          },
+          "gamma": {
+            "observed_full": 3.1333257200844044e-08,
+            "linear_prediction": 3.5634187427939094e-08,
+            "divnorm_prediction": 2.3756124951959396e-08,
+            "linear_mae": 4.3009302270950496e-09,
+            "divnorm_mae": 7.577132248884648e-09
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.0424559196597311e-06,
+            "linear_prediction": -2.5783144569816556e-06,
+            "divnorm_prediction": -1.7188763046544371e-06,
+            "blank_corrected_linear": -1.951427134079942e-06,
+            "linear_mae": 1.5358585373219244e-06,
+            "divnorm_mae": 6.76420384994706e-07
+          },
+          "gamma": {
+            "observed_full": 3.1333257200844044e-08,
+            "linear_prediction": 1.4618358071320784e-08,
+            "divnorm_prediction": 9.74557204754719e-09,
+            "linear_mae": 1.671489912952326e-08,
+            "divnorm_mae": 2.1587685153296853e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.0424559196597311e-06,
+            "linear_prediction": -3.5634903646022955e-06,
+            "divnorm_prediction": -1.4253961458409183e-06,
+            "blank_corrected_linear": -2.3097157187988687e-06,
+            "linear_mae": 2.5210344449425644e-06,
+            "divnorm_mae": 3.829402261811871e-07
+          },
+          "gamma": {
+            "observed_full": 3.1333257200844044e-08,
+            "linear_prediction": -1.0806814388103444e-07,
+            "divnorm_prediction": -4.322725755241378e-08,
+            "linear_mae": 1.3940140108187848e-07,
+            "divnorm_mae": 7.456051475325782e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.0424559196597311e-06,
+            "linear_prediction": -5.30619865770936e-06,
+            "divnorm_prediction": -1.1791552572687467e-06,
+            "blank_corrected_linear": -2.7986493661025074e-06,
+            "linear_mae": 4.263742738049629e-06,
+            "divnorm_mae": 1.3669933760901555e-07
+          },
+          "gamma": {
+            "observed_full": 3.1333257200844044e-08,
+            "linear_prediction": 7.933170715556928e-07,
+            "divnorm_prediction": 1.7629268256793171e-07,
+            "linear_mae": 7.619838143548487e-07,
+            "divnorm_mae": 1.4495942536708767e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.0424559196597311e-06,
+            "linear_prediction": -2.0374935665987576e-06,
+            "divnorm_prediction": -1.3583290443991718e-06,
+            "blank_corrected_linear": -1.4106062436970444e-06,
+            "linear_mae": 9.950376469390264e-07,
+            "divnorm_mae": 3.1587312473944064e-07
+          },
+          "gamma": {
+            "observed_full": 3.1333257200844044e-08,
+            "linear_prediction": 9.043943943524896e-08,
+            "divnorm_prediction": 6.02929596234993e-08,
+            "linear_mae": 5.910618223440492e-08,
+            "divnorm_mae": 2.895970242265526e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-28",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.449890452998578e-06,
+            "linear_prediction": -4.926220320082187e-06,
+            "divnorm_prediction": -3.2841468800547914e-06,
+            "blank_corrected_linear": -5.204538375592278e-06,
+            "linear_mae": 3.476329867083609e-06,
+            "divnorm_mae": 1.8342564270562135e-06
+          },
+          "gamma": {
+            "observed_full": 4.77878810302262e-08,
+            "linear_prediction": 1.0187042963890775e-07,
+            "divnorm_prediction": 6.791361975927183e-08,
+            "linear_mae": 5.4082548608681545e-08,
+            "divnorm_mae": 2.0125738729045625e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.449890452998578e-06,
+            "linear_prediction": -4.8504983835421715e-06,
+            "divnorm_prediction": -3.2336655890281144e-06,
+            "blank_corrected_linear": -5.1288164390522636e-06,
+            "linear_mae": 3.4006079305435934e-06,
+            "divnorm_mae": 1.7837751360295364e-06
+          },
+          "gamma": {
+            "observed_full": 4.77878810302262e-08,
+            "linear_prediction": 3.4072859677904325e-07,
+            "divnorm_prediction": 2.271523978526955e-07,
+            "linear_mae": 2.9294071574881707e-07,
+            "divnorm_mae": 1.793645168224693e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.449890452998578e-06,
+            "linear_prediction": -3.805711633809829e-06,
+            "divnorm_prediction": -1.5222846535239317e-06,
+            "blank_corrected_linear": -4.362347744830011e-06,
+            "linear_mae": 2.3558211808112514e-06,
+            "divnorm_mae": 7.239420052535383e-08
+          },
+          "gamma": {
+            "observed_full": 4.77878810302262e-08,
+            "linear_prediction": 3.0896957601654456e-07,
+            "divnorm_prediction": 1.2358783040661782e-07,
+            "linear_mae": 2.611816949863184e-07,
+            "divnorm_mae": 7.579994937639161e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.449890452998578e-06,
+            "linear_prediction": -9.716670720285914e-06,
+            "divnorm_prediction": -2.1592601600635365e-06,
+            "blank_corrected_linear": -1.082994294232628e-05,
+            "linear_mae": 8.266780267287337e-06,
+            "divnorm_mae": 7.093697070649586e-07
+          },
+          "gamma": {
+            "observed_full": 4.77878810302262e-08,
+            "linear_prediction": 9.382863726916201e-08,
+            "divnorm_prediction": 2.0850808282036002e-08,
+            "linear_mae": 4.604075623893581e-08,
+            "divnorm_mae": 2.69370727481902e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.449890452998578e-06,
+            "linear_prediction": -3.6955667136873466e-06,
+            "divnorm_prediction": -2.463711142458231e-06,
+            "blank_corrected_linear": -3.973884769197438e-06,
+            "linear_mae": 2.2456762606887685e-06,
+            "divnorm_mae": 1.0138206894596531e-06
+          },
+          "gamma": {
+            "observed_full": 4.77878810302262e-08,
+            "linear_prediction": 3.145881517034628e-07,
+            "divnorm_prediction": 2.097254344689752e-07,
+            "linear_mae": 2.668002706732366e-07,
+            "divnorm_mae": 1.6193755343874898e-07
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-29",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -6.835783817866095e-07,
+            "linear_prediction": -1.3689413439235504e-06,
+            "divnorm_prediction": -9.126275626157003e-07,
+            "blank_corrected_linear": -2.05097048167308e-06,
+            "linear_mae": 6.853629621369409e-07,
+            "divnorm_mae": 2.2904918082909082e-07
+          },
+          "gamma": {
+            "observed_full": -1.686459024354783e-07,
+            "linear_prediction": -3.5168909836518847e-07,
+            "divnorm_prediction": -2.3445939891012564e-07,
+            "linear_mae": 1.8304319592971016e-07,
+            "divnorm_mae": 6.581349647464733e-08
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -6.835783817866095e-07,
+            "linear_prediction": -9.331345643467282e-07,
+            "divnorm_prediction": -6.220897095644855e-07,
+            "blank_corrected_linear": -1.6151637020962577e-06,
+            "linear_mae": 2.4955618256011873e-07,
+            "divnorm_mae": 6.148867222212396e-08
+          },
+          "gamma": {
+            "observed_full": -1.686459024354783e-07,
+            "linear_prediction": -4.7340688859694535e-08,
+            "divnorm_prediction": -3.1560459239796354e-08,
+            "linear_mae": 1.2130521357578377e-07,
+            "divnorm_mae": 1.3708544319568195e-07
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -6.835783817866095e-07,
+            "linear_prediction": 6.642811679411954e-07,
+            "divnorm_prediction": 2.6571246717647817e-07,
+            "blank_corrected_linear": -6.997771075578637e-07,
+            "linear_mae": 1.347859549727805e-06,
+            "divnorm_mae": 9.492908489630877e-07
+          },
+          "gamma": {
+            "observed_full": -1.686459024354783e-07,
+            "linear_prediction": 8.12710086980699e-07,
+            "divnorm_prediction": 3.250840347922796e-07,
+            "linear_mae": 9.813559894161773e-07,
+            "divnorm_mae": 4.937299372277579e-07
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -6.835783817866095e-07,
+            "linear_prediction": -2.1189925662433613e-06,
+            "divnorm_prediction": -4.708872369429692e-07,
+            "blank_corrected_linear": -4.8471091172414794e-06,
+            "linear_mae": 1.435414184456752e-06,
+            "divnorm_mae": 2.1269114484364026e-07
+          },
+          "gamma": {
+            "observed_full": -1.686459024354783e-07,
+            "linear_prediction": -2.3221167535921272e-07,
+            "divnorm_prediction": -5.160259452426949e-08,
+            "linear_mae": 6.356577292373442e-08,
+            "divnorm_mae": 1.1704330791120881e-07
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -6.835783817866095e-07,
+            "linear_prediction": -1.0898469356769464e-06,
+            "divnorm_prediction": -7.265646237846309e-07,
+            "blank_corrected_linear": -1.771876073426476e-06,
+            "linear_mae": 4.0626855389033697e-07,
+            "divnorm_mae": 4.298624199802145e-08
+          },
+          "gamma": {
+            "observed_full": -1.686459024354783e-07,
+            "linear_prediction": -3.8698350880842e-07,
+            "divnorm_prediction": -2.5798900587228e-07,
+            "linear_mae": 2.183376063729417e-07,
+            "divnorm_mae": 8.934310343680172e-08
+          }
+        }
+      }
+    },
+    {
+      "subject": "sub-31",
+      "channel": "Oz",
+      "errors": {
+        "left_right": {
+          "alpha": {
+            "observed_full": -1.0826246919524442e-06,
+            "linear_prediction": -2.52602443940896e-06,
+            "divnorm_prediction": -1.6840162929393067e-06,
+            "blank_corrected_linear": -1.4208129761131806e-06,
+            "linear_mae": 1.4433997474565159e-06,
+            "divnorm_mae": 6.013916009868625e-07
+          },
+          "gamma": {
+            "observed_full": -1.2689938737181464e-08,
+            "linear_prediction": -1.077347050364941e-08,
+            "divnorm_prediction": -7.182313669099606e-09,
+            "linear_mae": 1.916468233532055e-09,
+            "divnorm_mae": 5.507625068081858e-09
+          }
+        },
+        "top_bottom": {
+          "alpha": {
+            "observed_full": -1.0826246919524442e-06,
+            "linear_prediction": -2.5054866984804695e-06,
+            "divnorm_prediction": -1.6703244656536463e-06,
+            "blank_corrected_linear": -1.4002752351846896e-06,
+            "linear_mae": 1.4228620065280253e-06,
+            "divnorm_mae": 5.876997737012021e-07
+          },
+          "gamma": {
+            "observed_full": -1.2689938737181464e-08,
+            "linear_prediction": 8.021770345815835e-08,
+            "divnorm_prediction": 5.347846897210557e-08,
+            "linear_mae": 9.290764219533981e-08,
+            "divnorm_mae": 6.616840770928703e-08
+          }
+        },
+        "quadrants": {
+          "alpha": {
+            "observed_full": -1.0826246919524442e-06,
+            "linear_prediction": -3.1668629798923346e-06,
+            "divnorm_prediction": -1.2667451919569338e-06,
+            "blank_corrected_linear": -9.564400533007757e-07,
+            "linear_mae": 2.0842382879398906e-06,
+            "divnorm_mae": 1.841205000044896e-07
+          },
+          "gamma": {
+            "observed_full": -1.2689938737181464e-08,
+            "linear_prediction": 8.426072515904452e-08,
+            "divnorm_prediction": 3.370429006361781e-08,
+            "linear_mae": 9.695066389622597e-08,
+            "divnorm_mae": 4.6394228800799273e-08
+          }
+        },
+        "octants": {
+          "alpha": {
+            "observed_full": -1.0826246919524442e-06,
+            "linear_prediction": -6.415991925575303e-06,
+            "divnorm_prediction": -1.4257759834611785e-06,
+            "blank_corrected_linear": -1.995146072392185e-06,
+            "linear_mae": 5.333367233622859e-06,
+            "divnorm_mae": 3.431512915087343e-07
+          },
+          "gamma": {
+            "observed_full": -1.2689938737181464e-08,
+            "linear_prediction": -1.5355104582226954e-07,
+            "divnorm_prediction": -3.412245462717101e-08,
+            "linear_mae": 1.4086110708508808e-07,
+            "divnorm_mae": 2.1432515889989547e-08
+          }
+        },
+        "fovea_periphery": {
+          "alpha": {
+            "observed_full": -1.0826246919524442e-06,
+            "linear_prediction": -2.3714407475076103e-06,
+            "divnorm_prediction": -1.5809604983384069e-06,
+            "blank_corrected_linear": -1.2662292842118304e-06,
+            "linear_mae": 1.288816055555166e-06,
+            "divnorm_mae": 4.983358063859627e-07
+          },
+          "gamma": {
+            "observed_full": -1.2689938737181464e-08,
+            "linear_prediction": 1.4142206288148863e-07,
+            "divnorm_prediction": 9.428137525432575e-08,
+            "linear_mae": 1.5411200161867009e-07,
+            "divnorm_mae": 1.0697131399150721e-07
+          }
+        }
+      }
+    }
+  ]
+}
