@@ -144,6 +144,34 @@ Condition labels are defined in `Dataset/Scripts/condition_mapping.json`:
 - **Retinotopy:** codes 1–20 (hemifields, quadrants, octants, fovea/periphery, blank)
 - **Orientation:** codes 41–56 (16 orientations, 0°–337.5° in 22.5° steps)
 
+## Development Process
+
+The final automated pipeline (Phase 1 + Phase 2) evolved through several iterations. The repository preserves utility and exploratory scripts that supported this development:
+
+| Script | Role in Development |
+|--------|---------------------|
+| `raw_visual.py` | Early-stage raw EEG visualisation — used to inspect signal quality before designing the preprocessing pipeline |
+| `raw_visuals_continous.py` | Continuous-recording variant of the above; helped decide epoch boundaries and filtering strategy |
+| `Preprocess_continous.py` | Prototype continuous preprocessing — explored before settling on the event-centred approach in `preprocess.py` |
+| `manual_inspect_ica.py` | Original interactive ICA component review with topography plots; replaced by `auto_inspect_ica.py` + `refine_ica_review.py` for full automation |
+| `build_condition_table.py` | Utility that cross-references trigger codes with `condition_mapping.json` to verify event labelling |
+| `milestone4_analysis.py` | Earlier milestone deliverable — single-subject analysis that informed the design of the final per-subject and group-level scripts |
+
+### Why a different pipeline?
+
+Our professor required a **robustness check**, not a step-by-step reproduction. Key differences from the original paper's pipeline:
+
+| Stage | Original Paper | Our Pipeline | Rationale |
+|-------|---------------|-------------|-----------|
+| ICA algorithm | Unspecified (likely FastICA) | Picard (extended) | Modern, faster convergence |
+| Notch filter | Single 60 Hz | Harmonic series (60, 120, 180 Hz) | Removes sub-harmonics that bleed into gamma |
+| Bad-channel detection | Not specified | SSD z-score (10–100 Hz) | Automated, reproducible |
+| Alpha band | 8–12 Hz | 8–13 Hz | Captures individual alpha frequency variability |
+| Gamma extraction | Full 40–80 Hz | Sub-bands 40–55 & 65–80 Hz | Avoids 60 Hz line-noise region |
+| ICA review | Likely manual | Automated (`mne-icalabel` ≥ 0.60) + heuristic refinement | Scalable to 31 subjects |
+
+By reproducing the paper's central findings (gamma/alpha dissociation, divisive normalisation, orientation tuning asymmetry) with these alternative choices, we demonstrate that the conclusions are **robust to preprocessing decisions**.
+
 ## Caveats
 
 This pipeline is **paper-aligned and substantially complete**, but not a guaranteed exact reproduction:
