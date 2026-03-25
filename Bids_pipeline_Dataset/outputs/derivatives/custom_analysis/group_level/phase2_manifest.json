@@ -1,0 +1,10 @@
+{
+  "n_retinotopy_subjects": 30,
+  "n_orientation_subjects": 30,
+  "outputs": [
+    "group_retinotopy_statistics.json",
+    "group_orientation_statistics.json",
+    "group_consistency_metrics.json",
+    "retinotopy_model_fit_summary.json"
+  ]
+}
