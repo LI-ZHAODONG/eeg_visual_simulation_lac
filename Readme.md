@@ -1,4 +1,4 @@
-# Dissociable Spatial and Feature Tuning of Gamma and Alpha Rhythms in Human Visual Cortex
+# Visual EEG Simulation — Alpha and Gamma Rhythm Analysis
 
 Replication and validation of findings from:
 
