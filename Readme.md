@@ -1,18 +1,60 @@
-# EEG Visual Task Analysis
+# EEG Visual Simulation — Dissociable Spatial & Feature Tuning
 
-This repository contains a rebuilt EEG analysis pipeline for a visual task, aligned as closely as possible to the paper:
+An EEG analysis pipeline replicating the methods from:
 
-`Dissociable Spatial and Feature Tuning of Gamma and Alpha Rhythms in Human Visual Cortex`
+> **Dissociable Spatial and Feature Tuning of Gamma and Alpha Rhythms in Human Visual Cortex**
 
-The pipeline is written in Python and uses:
+Built with Python, [MNE](https://mne.tools/), NumPy, SciPy, and Matplotlib.  
+Dataset: [OpenNeuro ds006547](https://openneuro.org/datasets/ds006547) (31 subjects, BrainVision/BIDS format).
 
-- `mne`
-- `numpy`
-- `scipy`
-- `matplotlib`
-- `python-picard`
+---
 
-The raw BrainVision/BIDS dataset is **not included** in this checkout.
+## Results Overview
+
+All 31 subjects were processed end-to-end through two automated phases.
+
+### Retinotopy — Spatial Tuning
+
+| Condition | Alpha Mean | Gamma Mean |
+|-----------|-----------|-----------|
+| Full Field | −8.96 × 10⁻⁷ | −4.94 × 10⁻⁸ |
+| Left Hemifield | −1.05 × 10⁻⁶ | — |
+| Periphery | −1.10 × 10⁻⁶ | — |
+| Fovea | −6.36 × 10⁻⁷ | — |
+| Blank | ≈ 0 | ≈ 0 |
+
+- Strongest alpha suppression in periphery and contralateral hemifields
+- Blank condition confirms valid baseline (near-zero power change)
+
+### Divisive Normalization vs Linear Summation
+
+The divisive-normalization model (σ = 0.5) consistently outperforms linear summation at finer spatial scales:
+
+| Spatial Partition | Linear MAE | DivNorm MAE | Improvement |
+|-------------------|-----------|-------------|-------------|
+| Left / Right | 2.34 × 10⁻⁶ | 1.19 × 10⁻⁶ | ~2× |
+| Top / Bottom | 2.20 × 10⁻⁶ | 1.18 × 10⁻⁶ | ~2× |
+| Quadrants | 4.15 × 10⁻⁶ | 1.06 × 10⁻⁶ | ~4× |
+| Octants | 1.08 × 10⁻⁵ | 1.20 × 10⁻⁶ | **~9×** |
+| Fovea / Periphery | 2.47 × 10⁻⁶ | 1.23 × 10⁻⁶ | ~2× |
+
+### Orientation Tuning
+
+- **Alpha tuning index:** 1.29 — strong selectivity across 16 orientations
+- **Gamma tuning index:** 0.43 — moderate selectivity
+- **Tuning ratio (γ/α):** 0.33 — alpha shows ~3× stronger orientation tuning than gamma
+- 16 orientation bins (0°–337.5° in 22.5° steps, triggers 41–56)
+
+### Cross-Subject Consistency (n = 31)
+
+| Metric | Mean | Std | CV |
+|--------|------|-----|-----|
+| Alpha effect | −1.11 × 10⁻⁶ | 1.07 × 10⁻⁶ | −0.96 |
+| Gamma effect | −1.45 × 10⁻⁷ | 5.35 × 10⁻⁷ | −3.69 |
+
+Alpha effects are consistent (|CV| < 1); gamma effects show high inter-subject variability.
+
+---
 
 ## Google Colab / Google Drive
 
@@ -26,49 +68,59 @@ To run `submission_report.ipynb` on Colab:
 2. Right-click → *Organise* → *Add shortcut* → place it inside `My Drive/eeg_visual_simulation_lac/`
 3. Open the notebook in Colab and run all cells — Drive will be mounted automatically
 
-## Current Status
+---
 
-This repo is now:
+## Pipeline Architecture
 
-- paper-aligned in preprocessing order
-- rebuilt enough to run subject-level and several group-level analyses
-- capable of generating ICA, sensor-space alpha/gamma outputs, ERSP outputs, retinotopy summaries, orientation summaries, model-fit summaries, and rebuilt group topomaps
-- validated far enough to run one full subject (`sub-01`) end-to-end without script errors
+### Phase 1 — Per-Subject Processing (automated)
 
-This repo is **not yet guaranteed to be an exact reproduction** of the paper because:
+```bash
+bash Dataset/Scripts/Phase_1.sh
+```
 
-- retinotopy trigger codes `21` and `22` are still unresolved
-- the current divisive-normalization implementation is an informed approximation
-- ERSP cluster statistics are thresholded clusters, not permutation-based clusters
-- some figure formatting still differs from the paper
-- the current `sub-01` orientation ERSP result is still weaker/noisier than the paper, so ICA selection and multi-subject validation still matter
+| Step | Script | Description |
+|------|--------|-------------|
+| 1 | `preprocess.py` | Channel typing, bad-channel detection, notch filter, 1–100 Hz bandpass, downsample to 200 Hz, ICA fit (Picard, 60 components) |
+| 2 | `auto_inspect_ica.py` | Automatic ICA labelling via `mne-icalabel` (threshold 0.60) |
+| 3 | `refine_ica_review.py` | Heuristic refinement of borderline ICA decisions |
+| 4 | `apply_reviewed_ica.py` | Apply exclusions, save cleaned raw + epochs + PSD QC |
+| 5 | `extract_band_power.py` | Alpha (8–13 Hz) and gamma (40–80 Hz) analytic amplitude; task − baseline |
+| 6 | `condition_analysis.py` | Per-subject retinotopy summaries and scatter plots |
+| 7 | `orientation_tuning_analysis.py` | Orientation tuning summaries, t-test heatmaps |
+| 8 | `extract_component_ersp.py` | Morlet ERSP (4–100 Hz), buffered epochs, baseline-corrected |
+| 9 | `orientation_ersp_stats.py` | ANOVA across orientation triggers, cluster masks |
+
+### Phase 2 — Group-Level Analysis (automated)
+
+```bash
+bash Dataset/Scripts/Phase_2.sh
+```
+
+| Step | Script | Description |
+|------|--------|-------------|
+| 1 | `grand_average_analysis.py` | Grand-average retinotopy & orientation summaries |
+| 2 | `group_topomaps.py` | Condition-wise alpha/gamma scalp topomaps |
+| 3 | `group_statistical_analysis.py` | Group orientation/retinotopy statistics, consistency metrics |
+| 4 | `retinotopy_model_fit.py` | Linear vs divisive-normalization model comparison |
+| 5 | `group_ersp_statistics.py` | Group ERSP cluster statistics |
+
+---
 
 ## Repository Layout
 
 ```text
 .
 ├── Dataset/
-│   ├── Scripts/
-│   │   ├── preprocess.py
-│   │   ├── manual_inspect_ica.py
-│   │   ├── apply_reviewed_ica.py
-│   │   ├── extract_band_power.py
-│   │   ├── extract_component_ersp.py
-│   │   ├── condition_analysis.py
-│   │   ├── orientation_tuning_analysis.py
-│   │   ├── orientation_ersp_stats.py
-│   │   ├── grand_average_analysis.py
-│   │   ├── group_topomaps.py
-│   │   ├── retinotopy_model_fit.py
+│   ├── Scripts/           # All analysis scripts + Phase_1.sh / Phase_2.sh
 │   │   └── condition_mapping.json
 │   └── outputs/
-│       ├── sub-01/
-│       ├── sub-02/
+│       ├── group_level/   # Group-level PNGs + JSONs
+│       ├── sub-01/        # Full example subject (PNGs + JSONs)
+│       ├── sub-02/        # JSON summaries only (PNGs on Google Drive)
 │       ├── ...
 │       └── sub-31/
-├── Paper.pdf
+├── submission_report.ipynb  # Colab-ready final report
 ├── Readme.md
-├── PROJECT_TODO.md
 └── requirements.txt
 ```
 
@@ -81,327 +133,22 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Data Path Note
-
-The raw dataset used during development lived outside this repo in a BIDS/git-annex checkout such as:
-
-```text
-/Volumes/personal/EEG/ds006547
-```
-
-When running BrainVision files from a git-annex dataset, pass the subject-facing `.vhdr` path, for example:
-
-```bash
-/Volumes/personal/EEG/ds006547/sub-01/ses-01/eeg/sub-01_ses-01_task-visual_eeg.vhdr
-```
-
-Do not manually replace that with the resolved `.git/annex/objects/...` path. The scripts now preserve the original `.vhdr` path so MNE can find the matching `.vmrk` and `.eeg` sidecars.
-
-## Full Automation with Phase 1 Script
-
-**New:** All steps 1-8 can now be automated for all 31 subjects using a single bash script:
-
-```bash
-bash Dataset/Scripts/Phase_1.sh
-```
-
-This script:
-- Loops through subjects 01-31
-- Skips preprocessing (assumes already completed)
-- Runs automatic ICA labeling with `mne-icalabel` (threshold = 0.60)
-- Refines borderline ICA decisions
-- Applies ICA exclusions and generates cleaned data
-- Extracts alpha/gamma band power
-- Builds retinotopy and orientation summaries
-- Computes ERSP statistics
-- Includes error handling and checkpoints for each step
-
-**Prerequisites:**
-- All subjects must have preprocessed ICA files (`*-ica.fif`)
-- Raw BIDS dataset at `/Volumes/personal/EEG/project/ds006547`
-
-## Manual Run Order (Individual Steps)
-
-The core run order for one subject is:
-
-### 1. Fit ICA from raw data
-
-```bash
-python Dataset/Scripts/preprocess.py \
-  --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr
-```
-
-This step:
-
-- automatically detects and sets correct channel types (ECG, RESP, photosensor)
-- drops non-EEG channels to preserve signal integrity
-- detects bad channels using `10-100 Hz` SSD z-scores
-- interpolates bad channels
-- applies `60 Hz` notch filtering (with harmonic support up to 180 Hz)
-- creates an ICA-prep copy filtered at `1-100 Hz`
-- downsamples to `200 Hz`
-- epochs `-1.0 to 4.0 s` for ICA training
-- fits ICA and saves:
-  - `*-ica.fif`
-  - bad-channel JSON
-  - preprocess summary JSON
-  - ICA review template JSON
-
-**Optional parameters:**
-- `--notch-freq`: Base notch frequency (default: 60 Hz)
-- `--notch-max-freq`: Highest harmonic to notch (default: 180 Hz)
-- `--bad-z-thresh`: Z-score threshold for bad-channel detection (default: 1.0)
-- `--ica-method`: ICA algorithm - picard, fastica, or infomax (default: picard)
-- `--n-components`: Number of ICA components (default: 60)
-- `--resample-sfreq`: ICA training sampling rate (default: 200 Hz)
-
-### 2. Automatic ICA Component Labeling (NEW)
-
-```bash
-python Dataset/Scripts/auto_inspect_ica.py \
-  --ica-path Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif \
-  --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr \
-  --threshold 0.60
-```
-
-This step:
-
-- uses `mne-icalabel` to automatically classify ICA components
-- marks components as `keep`, `reject`, or `unsure` based on confidence threshold
-- saves automated review JSON with component classifications
-- provides summary of kept/rejected/unsure counts
-
-### 2.5. Refine ICA Decisions (NEW)
-
-```bash
-python Dataset/Scripts/refine_ica_review.py \
-  --review-json Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_component_review.json \
-  --out-json Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_component_review-refined.json
-```
-
-This step:
-
-- refines borderline ICA decisions from mne-icalabel
-- applies heuristics to improve classification
-- saves refined review JSON
-
-### 3. Manual ICA Review (Optional)
-
-```bash
-python Dataset/Scripts/manual_inspect_ica.py \
-  --ica-path Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif \
-  --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr
-```
-
-This step (optional for manual refinement):
-
-- saves ICA topography figures
-- optionally saves ICA property plots if the raw file is supplied
-- interactive review and component marking if needed
-- creates or updates the manual review JSON where components are marked `keep` or `reject`
-
-Important behavior:
-
-- if you mark one or more components with `"keep": true`, [apply_reviewed_ica.py](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/apply_reviewed_ica.py) will exclude every other ICA component
-- if you want to reject only a few artifact components, set those to `"keep": false` and avoid marking a tiny keep-only subset by mistake
-- for first-pass review, it is usually safer to reject only clear artifacts than to keep only one or two components
-
-### 4. Apply reviewed ICA decisions
-
-```bash
-python Dataset/Scripts/apply_reviewed_ica.py \
-  --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr \
-  --ica-path Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif
-```
-
-This step:
-
-- rebuilds the cleaned sensor-space raw data
-- applies reviewed ICA exclusions
-- saves:
-  - cleaned raw `.fif`
-  - cleaned epochs `.fif`
-  - PSD/QC figures
-  - apply summary JSON
-
-### 4. Extract sensor-space alpha/gamma power
-
-```bash
-python Dataset/Scripts/extract_band_power.py \
-  --epochs-path Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-final-epo.fif
-```
-
-This step:
-
-- computes alpha `8-13 Hz`
-- computes gamma `40-80 Hz`
-- uses analytic amplitude and `|task| - |baseline|`
-- saves:
-  - trial-level alpha/gamma arrays
-  - mean alpha/gamma vectors
-  - per-condition alpha/gamma `.npz`
-  - event-code `.npy`
-  - band-power summary JSON
-
-### 5. Build subject-level retinotopy summaries
-
-```bash
-python Dataset/Scripts/condition_analysis.py \
-  --alpha-by-condition Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_by_condition.npz \
-  --gamma-by-condition Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_by_condition.npz \
-  --band-power-summary Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-band_power_summary.json
-```
-
-This step saves:
-
-- retinotopy alpha summary plot
-- retinotopy gamma summary plot
-- alpha-vs-gamma scatter and residuals
-
-### 6. Build subject-level orientation summaries
-
-```bash
-python Dataset/Scripts/orientation_tuning_analysis.py \
-  --alpha-by-condition Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_by_condition.npz \
-  --gamma-by-condition Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_by_condition.npz \
-  --band-power-summary Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-band_power_summary.json
-```
-
-This step saves:
-
-- trigger-level orientation summaries
-- grouped orientation and direction summaries
-- alpha-vs-gamma scatter plots
-- pairwise t-test heatmaps if trial-level arrays are available
-
-### 7. Extract retained-component ERSPs
-
-```bash
-python Dataset/Scripts/extract_component_ersp.py \
-  --vhdr /path/to/sub-01_ses-01_task-visual_eeg.vhdr \
-  --ica-path Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif
-```
-
-This step:
-
-- keeps only reviewed ICA components
-- computes Morlet ERSPs `4-100 Hz`
-- uses buffered epochs `-1.6 to 4.6 s`
-- crops to `-1.0 to 4.0 s`
-- baseline-corrects each trial using `-0.5 to 0 s`
-
-### 8. Compute ERSP orientation statistics
-
-```bash
-python Dataset/Scripts/orientation_ersp_stats.py \
-  --ersp-npy Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-component_ersp.npy \
-  --event-codes-npy Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-component_ersp_event_codes.npy \
-  --freqs-npy Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-component_ersp_freqs.npy \
-  --times-npy Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-component_ersp_times.npy
-```
-
-This step:
-
-- keeps only triggers `41-56`
-- rejects broadband outlier trials
-- smooths ERSPs
-- runs ANOVA across orientation triggers
-- generates a thresholded cluster mask
-- saves ERSP summary figures and a frequency-frequency correlation map
-
-## Group-Level Scripts
-
-Once multiple subjects have been processed, the following scripts aggregate outputs from `Dataset/outputs/sub-*`.
-
-### Grand-average summaries
-
-```bash
-python Dataset/Scripts/grand_average_analysis.py
-```
-
-Saves:
-
-- grand-average retinotopy summaries
-- grand-average orientation trigger summaries
-
-### Group topomaps
-
-```bash
-python Dataset/Scripts/group_topomaps.py
-```
-
-Saves rebuilt alpha/gamma condition topomaps for:
-
-- Full Field
-- Left Hemifield
-- Right Hemifield
-- Upper Hemifield
-- Lower Hemifield
-- Blank
-- Periphery
-- Fovea
-
-### Retinotopy summation/model fits
-
-```bash
-python Dataset/Scripts/retinotopy_model_fit.py
-```
-
-This script compares:
-
-- linear part summation
-- blank-corrected alpha summation
-- fixed-sigma divisive-style summation
-
-across:
-
-- left/right
-- top/bottom
-- quadrants
-- octants
-- fovea/periphery
+**Prerequisites for running the pipeline** (not needed for the notebook):
+- Raw BIDS dataset from [OpenNeuro ds006547](https://openneuro.org/datasets/ds006547)
+- Preprocessed ICA files (`*-ica.fif`) for Phase 1
 
 ## Condition Mapping
 
-Condition labels are defined in:
+Condition labels are defined in `Dataset/Scripts/condition_mapping.json`:
 
-- [condition_mapping.json](/Volumes/personal/EEG/eeg_visual_simulation_lac/Dataset/Scripts/condition_mapping.json)
+- **Retinotopy:** codes 1–20 (hemifields, quadrants, octants, fovea/periphery, blank)
+- **Orientation:** codes 41–56 (16 orientations, 0°–337.5° in 22.5° steps)
 
-Current status:
+## Caveats
 
-- retinotopy mapping is supported for codes `1-20`
-- codes `21-22` are still unresolved
-- orientation mapping is supported for `41-56`
-- orientation and drift-direction bins are inferred from the paper figures
+This pipeline is **paper-aligned and substantially complete**, but not a guaranteed exact reproduction:
 
-## What Still Needs Caution
-
-These parts are still approximate relative to the paper:
-
-- divisive-normalization model formula
-- thresholded ERSP clustering instead of permutation-based clusters
-- exact group-level ERSP pooling
-- exact figure layout/styling
-- exact montage fidelity for rebuilt topomaps
-
-Practical caution from current testing:
-
-- a full `sub-01` run now completes, but the orientation ERSP maps are still somewhat sparse/noisy
-- if results look biologically weak, revisit ICA component selection before trusting downstream summaries
-- single-subject ERSP outputs can be unstable even when the scripts run correctly
-
-So the repo should currently be described as:
-
-- **paper-aligned and substantially rebuilt**
-
-not:
-
-- **guaranteed exact reproduction**
-
-## Notes
-
-- Some older scripts and outputs remain in the repo from earlier stages of the project.
-- The main README file in this repo is `Readme.md` with that exact casing.
-- `eeg-env` appears to be a local virtual environment and would usually not be committed.
-- The paper figure images you dragged into the repo are currently untracked helper files.
-- See [PROJECT_TODO.md](/Volumes/personal/EEG/eeg_visual_simulation_lac/PROJECT_TODO.md) for the current status and remaining gaps.
+- Divisive-normalization uses a fixed σ = 0.5 approximation
+- ERSP clusters are threshold-based, not permutation-based
+- Gamma effects show high inter-subject variability (CV ≈ −3.7)
+- Retinotopy trigger codes 21–22 remain unresolved
