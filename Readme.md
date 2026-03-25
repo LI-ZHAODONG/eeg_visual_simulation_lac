@@ -40,7 +40,7 @@ The paper's pipeline: Picard ICA (60 components), manual ERSP + topography inspe
 
 ## Three-Way Results Summary
 
-| Finding | Original Paper | Custom Pipeline (n=31) | BIDS Pipeline (n=30) | Robust? |
+| Finding | Original Paper | Custom Pipeline (n=31) | BIDS Pipeline (n=29) | Robust? |
 |---------|---------------|----------------------|---------------------|---------|
 | **Alpha suppression** | Broad, posterior | Clear (CV=−0.96) | Clear, 1.7× stronger (CV=−0.97) | **YES** |
 | **Gamma enhancement** | Focal, retinotopic | Present, noisy | Present, noisy | **YES** |
@@ -74,8 +74,6 @@ The BIDS Pipeline's divisive normalization result is **stronger** than the paper
 │       ├── derivatives/      # MNE-BIDS-Pipeline outputs + bids_analysis/
 │       ├── sub-01/ ... sub-31/
 │       └── ...
-├── Paper.pdf                 # Original paper
-├── paper_summary.txt         # Paper methodology summary
 ├── submission_report.ipynb   # Final report notebook (runs locally or on Colab)
 ├── requirements.txt
 └── Readme.md
