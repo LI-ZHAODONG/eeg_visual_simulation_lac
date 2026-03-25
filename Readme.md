@@ -71,7 +71,7 @@ The BIDS Pipeline's divisive normalization result is **stronger** than the paper
 │   ├── Scripts/              # BIDS pipeline scripts (config.py, run_pipeline.py, utils.py)
 │   └── outputs/
 │       ├── group_level/      # Group-level PNGs + JSONs
-│       ├── derivatives/      # MNE-BIDS-Pipeline outputs + custom_analysis/
+│       ├── derivatives/      # MNE-BIDS-Pipeline outputs + bids_analysis/
 │       ├── sub-01/ ... sub-31/
 │       └── ...
 ├── Paper.pdf                 # Original paper

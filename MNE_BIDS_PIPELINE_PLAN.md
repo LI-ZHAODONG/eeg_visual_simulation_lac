@@ -64,7 +64,7 @@ Phase_2.sh                  # Group-level orchestrator
 config.py                   # Single config file controls entire preprocessing
 run_pipeline.py             # Simple launcher script
 
-custom_analysis/            # Post-pipeline analysis scripts
+bids_analysis/              # Post-pipeline analysis scripts
 ├── extract_band_power.py   # Alpha/gamma from cleaned epochs
 ├── condition_analysis.py   # Retinotopy summaries
 ├── orientation_tuning.py   # Orientation tuning analysis
@@ -137,7 +137,7 @@ custom_analysis/            # Post-pipeline analysis scripts
 
 9. **Run custom analyses:**
    ```bash
-   python custom_analysis/run_all.py
+   python bids_analysis/run_all.py
    ```
 
 ### Phase D: Reporting (Day 3)
@@ -212,7 +212,7 @@ eeg_visual_simulation_lac/
 ├── run_pipeline.py              # Pipeline launcher
 ├── requirements.txt             # Updated with mne-bids-pipeline
 ├── submission_report.ipynb      # Final report notebook
-├── custom_analysis/             # Project-specific analysis
+├── bids_analysis/               # Project-specific analysis
 │   ├── extract_band_power.py
 │   ├── condition_analysis.py
 │   ├── orientation_tuning.py

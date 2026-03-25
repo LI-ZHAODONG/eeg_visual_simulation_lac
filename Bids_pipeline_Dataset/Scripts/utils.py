@@ -20,7 +20,7 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPTS_DIR.parent.parent
 BIDS_ROOT = Path("/Volumes/personal/EEG/ds006547")
 DERIV_ROOT = PROJECT_ROOT / "derivatives"
-CUSTOM_OUTPUT_ROOT = PROJECT_ROOT / "derivatives" / "custom_analysis"
+CUSTOM_OUTPUT_ROOT = PROJECT_ROOT / "derivatives" / "bids_analysis"
 CONDITION_MAPPING = SCRIPTS_DIR / "condition_mapping.json"
 
 # ──────────────────────────────────────────────────────────────────────────────
