@@ -1,6 +1,16 @@
 
 # Large derived EEG outputs
 *.fif
+*.npy
+*.npz
+*.mat
 
-# Large derived EEG outputs
-*.fif
+# OS files
+.DS_Store
+
+# Virtual environment
+eeg-env/
+
+# Large binary files
+Paper.pdf
+paper_summary.txt
