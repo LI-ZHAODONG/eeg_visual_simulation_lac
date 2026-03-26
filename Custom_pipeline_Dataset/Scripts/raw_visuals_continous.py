@@ -1,4 +1,5 @@
 import mne
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -25,7 +26,7 @@ def main():
     # This file is: Custom_pipeline_Dataset/Scripts/raw_visuals_continous.py
     scripts_dir = Path(__file__).resolve().parent      # .../Custom_pipeline_Dataset/Scripts
     dataset_root = scripts_dir.parent                  # .../Custom_pipeline_Dataset
-    subjects_root = Path("/Volumes/personal/EEG/ds006547")  # BIDS dataset (external)
+    subjects_root = Path(os.environ.get("BIDS_ROOT", dataset_root.parent.parent / "ds006547"))  # BIDS dataset (external)
     outputs_root = dataset_root / "outputs"            # .../Custom_pipeline_Dataset/outputs
 
     if not subjects_root.exists():

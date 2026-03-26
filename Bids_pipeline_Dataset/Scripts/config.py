@@ -31,10 +31,15 @@ from pathlib import Path
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Path to the BIDS dataset root (OpenNeuro ds006547)
-bids_root = Path("/Volumes/personal/EEG/ds006547")
+# Override with BIDS_ROOT environment variable if needed
+import os
+_config_dir = Path(__file__).resolve().parent          # Bids_pipeline_Dataset/Scripts/
+_dataset_dir = _config_dir.parent                      # Bids_pipeline_Dataset/
+_project_dir = _dataset_dir.parent                     # eeg_visual_simulation_lac/
+bids_root = Path(os.environ.get("BIDS_ROOT", _project_dir.parent / "ds006547"))
 
 # Where the pipeline writes its derivatives
-deriv_root = Path("/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/derivatives")
+deriv_root = _dataset_dir / "outputs" / "derivatives"
 
 # Subjects to process (all 31)
 subjects = [f"{i:02d}" for i in range(1, 32)]

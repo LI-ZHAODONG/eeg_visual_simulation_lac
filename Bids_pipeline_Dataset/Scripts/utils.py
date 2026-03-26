@@ -19,7 +19,8 @@ import numpy as np
 SCRIPTS_DIR = Path(__file__).resolve().parent
 DATASET_ROOT = SCRIPTS_DIR.parent                         # Bids_pipeline_Dataset/
 PROJECT_ROOT = DATASET_ROOT.parent                        # eeg_visual_simulation_lac/
-BIDS_ROOT = Path("/Volumes/personal/EEG/ds006547")
+import os
+BIDS_ROOT = Path(os.environ.get("BIDS_ROOT", PROJECT_ROOT.parent / "ds006547"))
 DERIV_ROOT = DATASET_ROOT / "outputs" / "derivatives"
 CUSTOM_OUTPUT_ROOT = DERIV_ROOT / "bids_analysis"
 CONDITION_MAPPING = SCRIPTS_DIR / "condition_mapping.json"
