@@ -111,6 +111,32 @@ parent/
 export BIDS_ROOT=/path/to/ds006547
 ```
 
+**Downloading the dataset (git-annex):**
+
+OpenNeuro datasets use DataLad/git-annex — cloning the repo only downloads metadata, not the actual EEG files. After cloning, you must fetch the data:
+
+```bash
+# Install DataLad (if not already installed)
+pip install datalad
+
+# Clone the dataset
+datalad install https://github.com/OpenNeuroDatasets/ds006547.git
+
+# Download all files (this fetches the actual EEG data)
+cd ds006547
+datalad get .
+```
+
+Alternatively, using git-annex directly:
+
+```bash
+git clone https://github.com/OpenNeuroDatasets/ds006547.git
+cd ds006547
+git annex get .
+```
+
+Without running `datalad get .` or `git annex get .`, the `.vhdr`, `.eeg`, and `.vmrk` files will be empty symlinks and the pipelines will fail to load any data.
+
 ---
 
 ## Running the Notebook
