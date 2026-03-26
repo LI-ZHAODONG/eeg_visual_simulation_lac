@@ -1,4 +1,5 @@
 import mne
+import os
 from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")  # allows saving figures without GUI
@@ -14,7 +15,7 @@ def main():
     script_path = Path(__file__).resolve()
     project_root = script_path.parents[2]  # eeg_visual_simulation_lac/
 
-    bids_root = Path("/Volumes/personal/EEG/ds006547")
+    bids_root = Path(os.environ.get("BIDS_ROOT", project_root.parent / "ds006547"))
     vhdr_path = bids_root / sub_id / ses_id / "eeg" / f"{rec_id}.vhdr"
 
     # outputs: Custom_pipeline_Dataset/outputs/sub-01/

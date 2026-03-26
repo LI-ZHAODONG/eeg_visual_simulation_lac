@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# --- ABSOLUTE PATHS ONLY ---
-PROJECT_DIR="/Volumes/personal/EEG/eeg_visual_simulation_lac"
-OUTPUTS_DIR="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs"
-PHASE2_DIR="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level"
+# --- Paths (relative to this script's location) ---
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+OUTPUTS_DIR="${PROJECT_DIR}/Custom_pipeline_Dataset/outputs"
+PHASE2_DIR="${OUTPUTS_DIR}/group_level"
 
-MANIFEST_JSON="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level/phase2_manifest.json"
+MANIFEST_JSON="${PHASE2_DIR}/phase2_manifest.json"
 
-RETINO_SCRIPT="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/retinotopy_model_fit.py"
-GRAND_AVG_SCRIPT="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/grand_average_analysis.py"
-TOPOMAP_SCRIPT="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/group_topomaps.py"
-GROUP_STAT_SCRIPT="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/group_statistical_analysis.py"
-ERSP_SCRIPT="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/group_ersp_statistics.py"
-MAPPING_JSON="/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/Scripts/condition_mapping.json"
+RETINO_SCRIPT="${SCRIPT_DIR}/retinotopy_model_fit.py"
+GRAND_AVG_SCRIPT="${SCRIPT_DIR}/grand_average_analysis.py"
+TOPOMAP_SCRIPT="${SCRIPT_DIR}/group_topomaps.py"
+GROUP_STAT_SCRIPT="${SCRIPT_DIR}/group_statistical_analysis.py"
+ERSP_SCRIPT="${SCRIPT_DIR}/group_ersp_statistics.py"
+MAPPING_JSON="${SCRIPT_DIR}/condition_mapping.json"
 
 echo "=================================================="
 echo " 🚀 STARTING PHASE 2 GROUP-LEVEL AUTOMATION 🚀 "

@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# --- HARDCODED ABSOLUTE PATHS ---
-PROJECT_DIR="/Volumes/personal/EEG/eeg_visual_simulation_lac"
-BIDS_DIR="/Volumes/personal/EEG/ds006547"
+# --- Paths (relative to this script's location) ---
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+BIDS_DIR="${BIDS_DIR:-$(cd "$PROJECT_DIR/../ds006547" 2>/dev/null && pwd || echo "$PROJECT_DIR/../ds006547")}"
 THRESHOLD="0.60"
 
 echo "=================================================="
