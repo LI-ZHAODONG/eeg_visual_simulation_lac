@@ -66,7 +66,7 @@ The BIDS Pipeline's divisive normalization result is stronger than the paper's �
 │       ├── group_level/
 │       ├── derivatives/      # MNE-BIDS-Pipeline outputs + bids_analysis/
 │       └── sub-01/ ... sub-31/
-├── submission_report.ipynb   # Final report notebook
+├── EEG_Final_Version.ipynb   # Final report notebook
 ├── requirements.txt
 └── Readme.md
 ```
@@ -104,7 +104,7 @@ pip install -r requirements.txt
 
 ## Running the Notebook
 
-The submission notebook (`submission_report.ipynb`) loads pre-computed results — no raw EEG processing needed.
+The submission notebook (`EEG_Final_Version.ipynb`) loads pre-computed results — no raw EEG processing needed.
 
 **Locally:** Open and run all cells. Paths resolve automatically.
 
