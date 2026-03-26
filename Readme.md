@@ -23,7 +23,7 @@ Using high-density EEG (31 subjects, 64 channels, OpenNeuro ds006547), we invest
 We validate these findings using two independent preprocessing pipelines on the same raw data:
 
 - **Custom Pipeline** — Hand-coded Python scripts with automated ICLabel-based ICA, harmonic notch filtering, and per-trial artifact rejection (n=31 subjects)
-- **BIDS Pipeline** — Standardized MNE-BIDS-Pipeline with config-driven preprocessing, variance-adaptive ICA, and automated EOG/ECG rejection (n=29 subjects)
+- **BIDS Pipeline** — Standardized MNE-BIDS-Pipeline with config-driven preprocessing, variance-adaptive ICA, and automated EOG/ECG rejection (n=30 subjects)
 
 ### Methodology Comparison
 
@@ -34,7 +34,7 @@ We validate these findings using two independent preprocessing pipelines on the 
 | **Bandpass** | 1–100 Hz (FIR) | 1–100 Hz (FIR) | 1–100 Hz (FIR) |
 | **Epochs** | −0.5 to +3.5 s | −0.5 to +3.5 s | −0.5 to +3.0 s |
 | **Gamma band** | 40–80 Hz | 40–55 + 65–80 Hz (sub-bands) | 40–80 Hz |
-| **Artifact rejection** | Broadband gamma outlier (z > 4) | Per-trial PTP rejection | 2 subjects excluded |
+| **Artifact rejection** | Broadband gamma outlier (z > 4) | Per-trial PTP rejection | 1 subject excluded (sub-30) |
 
 ---
 
@@ -99,6 +99,17 @@ pip install -r requirements.txt
 
 **Prerequisites for running the pipelines** (not needed for the notebook):
 - Raw BIDS dataset from [OpenNeuro ds006547](https://openneuro.org/datasets/ds006547)
+- Place `ds006547/` as a sibling of this repository (same parent folder), or set the `BIDS_ROOT` environment variable:
+
+```bash
+# Option A: default layout (ds006547 next to this repo)
+parent/
+├── ds006547/          # BIDS dataset
+└── eeg_visual_simulation_lac/   # this repo
+
+# Option B: dataset elsewhere
+export BIDS_ROOT=/path/to/ds006547
+```
 
 ---
 
@@ -124,7 +135,7 @@ The submission notebook (`EEG_Final_Version.ipynb`) loads pre-computed results �
 - Divisive normalization uses a fixed σ = 0.5 (matching the paper)
 - ERSP clusters are threshold-based, not permutation-based
 - Gamma effects show high inter-subject variability (CV ≈ −3.7)
-- Two subjects excluded in BIDS Pipeline (sub-06, sub-30) due to data quality
+- One subject excluded in BIDS Pipeline (sub-30) due to data quality
 - Alpha-gamma correlation not computed for BIDS Pipeline
 
 ---
