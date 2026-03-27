@@ -79,17 +79,29 @@ The BIDS Pipeline's divisive normalization result is stronger than the paper's �
 
 Located in `Custom_pipeline_Dataset/Scripts/`. Two-phase execution:
 
-**Phase 1** (`Phase_1.sh`) — Per-subject: preprocessing, ICA, band power extraction, retinotopy, orientation tuning, ERSP
+**Phase 1** — Per-subject: preprocessing, ICA, band power extraction, retinotopy, orientation tuning, ERSP
 
-**Phase 2** (`Phase_2.sh`) — Group-level: grand averages, topomaps, statistics, model fitting, ERSP cluster tests
+**Phase 2** — Group-level: grand averages, topomaps, statistics, model fitting, ERSP cluster tests
+
+| Platform | Phase 1 | Phase 2 |
+|----------|---------|---------|
+| Mac / Linux | `Phase_1.sh` | `Phase_2.sh` |
+| Windows | `Phase_1.bat` | `Phase_2.bat` |
 
 ### BIDS Pipeline
 
-Located in `Bids_pipeline_Dataset/Scripts/`. Config-driven MNE-BIDS-Pipeline preprocessing followed by custom analysis scripts for band power, retinotopy, orientation tuning, model fitting, and group statistics.
+Located in `Bids_pipeline_Dataset/Scripts/`. Phase 1 runs MNE-BIDS-Pipeline preprocessing; Phase 2 runs custom analysis scripts (band power, retinotopy, orientation tuning, model fitting, group statistics).
+
+| Platform | Phase 1 | Phase 2 |
+|----------|---------|---------|
+| Mac / Linux | `Phase_1.sh` | `Phase_2.sh` |
+| Windows | `Phase_1.bat` | `Phase_2.bat` |
 
 ---
 
 ## Installation
+
+**Mac / Linux:**
 
 ```bash
 python3 -m venv eeg-env
@@ -97,18 +109,33 @@ source eeg-env/bin/activate
 pip install -r requirements.txt
 ```
 
+**Windows (Command Prompt):**
+
+```bat
+python -m venv eeg-env
+eeg-env\Scripts\activate.bat
+pip install -r requirements.txt
+```
+
 **Prerequisites for running the pipelines** (not needed for the notebook):
 - Raw BIDS dataset from [OpenNeuro ds006547](https://openneuro.org/datasets/ds006547)
-- Place `ds006547/` as a sibling of this repository (same parent folder), or set the `BIDS_ROOT` environment variable:
+- Place `ds006547/` as a sibling of this repository (same parent folder), or set the environment variable:
 
-```bash
-# Option A: default layout (ds006547 next to this repo)
+```
+# Default layout (ds006547 next to this repo)
 parent/
-├── ds006547/          # BIDS dataset
+├── ds006547/                    # BIDS dataset
 └── eeg_visual_simulation_lac/   # this repo
+```
 
-# Option B: dataset elsewhere
+**Mac / Linux — override path:**
+```bash
 export BIDS_ROOT=/path/to/ds006547
+```
+
+**Windows — override path:**
+```bat
+set BIDS_ROOT=C:\path\to\ds006547
 ```
 
 **Downloading the dataset (git-annex):**
@@ -136,6 +163,38 @@ git annex get .
 ```
 
 Without running `datalad get .` or `git annex get .`, the `.vhdr`, `.eeg`, and `.vmrk` files will be empty symlinks and the pipelines will fail to load any data.
+
+---
+
+## Running the Pipelines
+
+### Custom Pipeline
+
+**Mac / Linux:**
+```bash
+bash Custom_pipeline_Dataset/Scripts/Phase_1.sh
+bash Custom_pipeline_Dataset/Scripts/Phase_2.sh
+```
+
+**Windows:**
+```bat
+Custom_pipeline_Dataset\Scripts\Phase_1.bat
+Custom_pipeline_Dataset\Scripts\Phase_2.bat
+```
+
+### BIDS Pipeline
+
+**Mac / Linux:**
+```bash
+bash Bids_pipeline_Dataset/Scripts/Phase_1.sh
+bash Bids_pipeline_Dataset/Scripts/Phase_2.sh
+```
+
+**Windows:**
+```bat
+Bids_pipeline_Dataset\Scripts\Phase_1.bat
+Bids_pipeline_Dataset\Scripts\Phase_2.bat
+```
 
 ---
 
