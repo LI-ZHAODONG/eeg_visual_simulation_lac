@@ -10,12 +10,14 @@ SET "OUTPUTS_DIR=%PROJECT_DIR%\Custom_pipeline_Dataset\outputs"
 SET "PHASE2_DIR=%OUTPUTS_DIR%\group_level"
 SET "MANIFEST_JSON=%PHASE2_DIR%\phase2_manifest.json"
 SET "MAPPING_JSON=%SCRIPT_DIR%\condition_mapping.json"
+SET "TMP_PY=%TEMP%\build_manifest_tmp.py"
 
 ECHO ==================================================
 ECHO   STARTING PHASE 2 GROUP-LEVEL AUTOMATION
 ECHO ==================================================
 
-CD /D "%PROJECT_DIR%" || (ECHO ERROR: Could not find project folder at %PROJECT_DIR% & EXIT /B 1)
+CD /D "%PROJECT_DIR%"
+IF %ERRORLEVEL% NEQ 0 (ECHO ERROR: Could not find project folder at %PROJECT_DIR% & EXIT /B 1)
 
 REM Activate the virtual environment
 CALL "%PROJECT_DIR%\eeg-env\Scripts\activate.bat"
@@ -24,49 +26,53 @@ MKDIR "%PHASE2_DIR%" 2>NUL
 
 ECHO Building manifest of valid subjects...
 
-python - <<EOF 2>NUL
-python -c "
-import json, sys
-from pathlib import Path
+REM Write manifest script to a temp file then run it
+(
+ECHO import json
+ECHO from pathlib import Path
+ECHO outputs_dir = Path(r"%OUTPUTS_DIR%")
+ECHO phase2_dir  = Path(r"%PHASE2_DIR%")
+ECHO manifest_path = Path(r"%MANIFEST_JSON%")
+ECHO subjects = []
+ECHO for i in range(1, 32^):
+ECHO     sub_id = f"sub-{i:02d}"
+ECHO     base   = f"{sub_id}_ses-01_task-visual_eeg"
+ECHO     out_dir = outputs_dir / sub_id
+ECHO     files = {
+ECHO         "subject": sub_id,
+ECHO         "out_dir": str(out_dir^),
+ECHO         "epochs_fif":          str(out_dir / f"{base}-final-epo.fif"^),
+ECHO         "band_power_summary":  str(out_dir / f"{base}-band_power_summary.json"^),
+ECHO         "alpha_by_condition":  str(out_dir / f"{base}-alpha_by_condition.npz"^),
+ECHO         "gamma_by_condition":  str(out_dir / f"{base}-gamma_by_condition.npz"^),
+ECHO         "retinotopy_summary":  str(out_dir / "retinotopy_summary.json"^),
+ECHO         "orientation_summary": str(out_dir / "orientation_tuning_summary.json"^),
+ECHO         "ersp_npy":            str(out_dir / f"{base}-component_ersp.npy"^),
+ECHO         "ersp_event_codes":    str(out_dir / f"{base}-component_ersp_event_codes.npy"^),
+ECHO         "ersp_freqs":          str(out_dir / f"{base}-component_ersp_freqs.npy"^),
+ECHO         "ersp_times":          str(out_dir / f"{base}-component_ersp_times.npy"^),
+ECHO     }
+ECHO     required = [Path(files[k]^) for k in ("epochs_fif","band_power_summary","alpha_by_condition","gamma_by_condition"^)]
+ECHO     if all(p.exists(^) for p in required^):
+ECHO         files["has_retinotopy"] = Path(files["retinotopy_summary"]^).exists(^)
+ECHO         files["has_orientation"] = Path(files["orientation_summary"]^).exists(^)
+ECHO         files["has_ersp"] = all(Path(files[k]^).exists(^) for k in ("ersp_npy","ersp_event_codes","ersp_freqs","ersp_times"^)^)
+ECHO         subjects.append(files^)
+ECHO manifest = {"n_subjects": len(subjects^), "subjects": subjects, "group_output_dir": str(phase2_dir^)}
+ECHO manifest_path.write_text(json.dumps(manifest, indent=2^), encoding="utf-8"^)
+ECHO print(f"Saved manifest: {manifest_path}"^)
+ECHO print(f"Valid subjects found: {len(subjects^)}"^)
+ECHO for s in subjects:
+ECHO     print(f"  - {s['subject']}"^)
+) > "%TMP_PY%"
 
-outputs_dir = Path(r'%OUTPUTS_DIR%')
-phase2_dir  = Path(r'%PHASE2_DIR%')
-manifest_path = Path(r'%MANIFEST_JSON%')
-
-subjects = []
-for i in range(1, 32):
-    sub_id = f'sub-{i:02d}'
-    base   = f'{sub_id}_ses-01_task-visual_eeg'
-    out_dir = outputs_dir / sub_id
-    files = {
-        'subject': sub_id,
-        'out_dir': str(out_dir),
-        'epochs_fif':          str(out_dir / f'{base}-final-epo.fif'),
-        'band_power_summary':  str(out_dir / f'{base}-band_power_summary.json'),
-        'alpha_by_condition':  str(out_dir / f'{base}-alpha_by_condition.npz'),
-        'gamma_by_condition':  str(out_dir / f'{base}-gamma_by_condition.npz'),
-        'retinotopy_summary':  str(out_dir / 'retinotopy_summary.json'),
-        'orientation_summary': str(out_dir / 'orientation_tuning_summary.json'),
-        'ersp_npy':            str(out_dir / f'{base}-component_ersp.npy'),
-        'ersp_event_codes':    str(out_dir / f'{base}-component_ersp_event_codes.npy'),
-        'ersp_freqs':          str(out_dir / f'{base}-component_ersp_freqs.npy'),
-        'ersp_times':          str(out_dir / f'{base}-component_ersp_times.npy'),
-    }
-    required = [Path(files[k]) for k in ('epochs_fif','band_power_summary','alpha_by_condition','gamma_by_condition')]
-    if all(p.exists() for p in required):
-        files['has_retinotopy'] = Path(files['retinotopy_summary']).exists()
-        files['has_orientation'] = Path(files['orientation_summary']).exists()
-        files['has_ersp'] = all(Path(files[k]).exists() for k in ('ersp_npy','ersp_event_codes','ersp_freqs','ersp_times'))
-        subjects.append(files)
-
-manifest = {'n_subjects': len(subjects), 'subjects': subjects, 'group_output_dir': str(phase2_dir)}
-manifest_path.write_text(json.dumps(manifest, indent=2), encoding='utf-8')
-print(f'Saved manifest: {manifest_path}')
-print(f'Valid subjects found: {len(subjects)}')
-for s in subjects:
-    print(f'  - {s[\"subject\"]}')
-"
-IF %ERRORLEVEL% NEQ 0 (ECHO ERROR: Manifest creation failed. & EXIT /B 1)
+python "%TMP_PY%"
+IF %ERRORLEVEL% NEQ 0 (
+    ECHO ERROR: Manifest creation failed.
+    DEL "%TMP_PY%" 2>NUL
+    EXIT /B 1
+)
+DEL "%TMP_PY%" 2>NUL
 
 ECHO.
 ECHO ==================================================
