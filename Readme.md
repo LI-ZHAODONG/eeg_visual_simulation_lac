@@ -117,6 +117,13 @@ eeg-env\Scripts\activate.bat
 pip install -r requirements.txt
 ```
 
+> **Windows note:** Python must be installed from [python.org](https://python.org) with **"Add Python to PATH"** checked. Do not use the Microsoft Store version. If you see `Python was not found`, go to `Settings → Apps → Advanced app settings → App execution aliases` and disable the Python aliases.
+>
+> **Git Bash users:** Use the `.sh` scripts instead of `.bat` — Git Bash runs shell scripts natively:
+> ```bash
+> bash Custom_pipeline_Dataset/Scripts/Phase_1.sh
+> ```
+
 **Prerequisites for running the pipelines** (not needed for the notebook):
 - Raw BIDS dataset from [OpenNeuro ds006547](https://openneuro.org/datasets/ds006547)
 - Place `ds006547/` as a sibling of this repository (same parent folder), or set the environment variable:
