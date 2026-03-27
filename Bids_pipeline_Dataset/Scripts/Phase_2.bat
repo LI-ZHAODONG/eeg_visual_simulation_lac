@@ -13,6 +13,9 @@ ECHO ==================================================
 ECHO   Project : %PROJECT_DIR%
 ECHO ==================================================
 
+SET "PYTHONUTF8=1"
+SET "PYTHONIOENCODING=utf-8"
+
 CD /D "%PROJECT_DIR%" || (ECHO ERROR: Could not find project folder at %PROJECT_DIR% & EXIT /B 1)
 CALL "%PROJECT_DIR%\eeg-env\Scripts\activate.bat"
 

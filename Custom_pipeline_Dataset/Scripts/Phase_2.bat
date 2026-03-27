@@ -14,6 +14,9 @@ ECHO ==================================================
 ECHO   STARTING PHASE 2 GROUP-LEVEL AUTOMATION
 ECHO ==================================================
 
+SET "PYTHONUTF8=1"
+SET "PYTHONIOENCODING=utf-8"
+
 CD /D "%PROJECT_DIR%"
 IF %ERRORLEVEL% NEQ 0 (ECHO ERROR: Could not find project folder at %PROJECT_DIR% & EXIT /B 1)
 
