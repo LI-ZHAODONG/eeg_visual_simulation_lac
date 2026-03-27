@@ -227,7 +227,7 @@ The submission notebook (`EEG_Final_Version.ipynb`) loads pre-computed results �
 - Divisive normalization uses a fixed σ = 0.5 (matching the paper)
 - ERSP clusters are threshold-based, not permutation-based
 - Gamma effects show high inter-subject variability (CV ≈ −3.7)
-- One subject excluded in BIDS Pipeline (sub-30) due to data quality
+- One subject excluded in BIDS Pipeline (sub-30): per-subject preprocessing completed but sub-30 was excluded during pipeline configuration and not included in group analysis
 - Alpha-gamma correlation not computed for BIDS Pipeline
 
 ---
