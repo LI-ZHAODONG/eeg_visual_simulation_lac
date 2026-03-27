@@ -33,7 +33,7 @@ We validate these findings using two independent preprocessing pipelines on the 
 | **Notch filter** | Single 60 Hz | Harmonic series (60, 120, 180 Hz) | Single 60 Hz (width = 2 Hz) |
 | **Bandpass** | 1–100 Hz (FIR) | 1–100 Hz (FIR) | 1–100 Hz (FIR) |
 | **Epochs** | −0.5 to +3.5 s | −0.5 to +3.5 s | −0.5 to +3.0 s |
-| **Gamma band** | 40–80 Hz | 40–55 + 65–80 Hz (sub-bands) | 40–80 Hz |
+| **Gamma band** | 40–80 Hz | 40–55 + 65–80 Hz (sub-bands) | 40–55 + 65–80 Hz (sub-bands) |
 | **Artifact rejection** | Broadband gamma outlier (z > 4) | Per-trial PTP rejection | 1 subject excluded (sub-30) |
 
 ---

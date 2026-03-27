@@ -45,7 +45,7 @@ deriv_root = _dataset_dir / "outputs" / "derivatives"
 # Subjects to process (all 31)
 subjects = [f"{i:02d}" for i in range(1, 32)]
 
-# Exclude subjects with unusable data (insufficient clean epochs after ICA)
+# sub-30 excluded from group analysis
 exclude_subjects = ["30"]
 
 # Sessions
