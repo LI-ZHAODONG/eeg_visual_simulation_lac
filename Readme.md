@@ -5,7 +5,7 @@ Replication and validation of findings from:
 > **Dissociable Spatial and Feature Tuning of Gamma and Alpha Rhythms in Human Visual Cortex**
 > Ghaffari, Yavari, Bonyadian, Ghofrani & Butler (2025). *bioRxiv* doi:10.1101/2025.08.09.669461
 
-Using high-density EEG (31 subjects, 64 channels, OpenNeuro ds006547), we investigate how gamma (40–80 Hz) and alpha (8–13 Hz) rhythms differ in their spatial selectivity, orientation tuning, and summation properties during visual stimulation.
+Using high-density EEG (64 channels, OpenNeuro ds006547, n=30–31 subjects across pipelines), we investigate how gamma (40–80 Hz) and alpha (8–13 Hz) rhythms differ in their spatial selectivity, orientation tuning, and summation properties during visual stimulation.
 
 ---
 
@@ -57,15 +57,15 @@ The BIDS Pipeline's divisive normalization result is stronger than the paper's �
 ```text
 .
 ├── Custom_pipeline_Dataset/
-│   ├── Scripts/              # Custom pipeline scripts + Phase_1.sh / Phase_2.sh
+│   ├── Scripts/              # Custom pipeline scripts + Phase_1/2.sh + Phase_1/2.bat
 │   │   └── condition_mapping.json
 │   └── outputs/              # Per-subject and group-level results
 ├── Bids_pipeline_Dataset/
-│   ├── Scripts/              # BIDS pipeline scripts (config.py, utils.py, etc.)
+│   ├── Scripts/              # BIDS pipeline scripts + Phase_1/2.sh + Phase_1/2.bat
 │   └── outputs/
 │       ├── group_level/
 │       ├── derivatives/      # MNE-BIDS-Pipeline outputs + bids_analysis/
-│       └── sub-01/ ... sub-31/
+│       └── sub-01/ ... sub-29/ sub-31/   # sub-30 excluded
 ├── EEG_Final_Version.ipynb   # Final report notebook
 ├── requirements.txt
 └── Readme.md
