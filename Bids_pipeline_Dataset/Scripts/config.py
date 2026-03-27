@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 MNE-BIDS-Pipeline configuration for the Visual EEG Study (ds006547).
 
@@ -26,9 +27,9 @@ Usage
 
 from pathlib import Path
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # GENERAL SETTINGS
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Path to the BIDS dataset root (OpenNeuro ds006547)
 # Override with BIDS_ROOT environment variable if needed
@@ -44,9 +45,8 @@ deriv_root = _dataset_dir / "outputs" / "derivatives"
 # Subjects to process (all 31)
 subjects = [f"{i:02d}" for i in range(1, 32)]
 
-# Exclude subjects with unusable data (extremely noisy recordings)
-# sub-06 and sub-30: all epochs exceed even 400 µV PTP threshold
-exclude_subjects = ["06", "30"]
+# Exclude subjects with unusable data (insufficient clean epochs after ICA)
+exclude_subjects = ["30"]
 
 # Sessions
 sessions = ["01"]
@@ -61,24 +61,24 @@ ch_types = ["eeg"]
 # Interactive mode off for batch processing
 interactive = False
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PREPROCESSING — BREAK / BAD SEGMENTS
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Find and annotate bad segments automatically
 find_breaks = True
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PREPROCESSING — BAD CHANNEL DETECTION
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Use automated bad channel detection
 find_flat_channels_meg = False  # EEG only
 find_noisy_channels_meg = False  # EEG only
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PREPROCESSING — FILTERING
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Bandpass filter (same philosophy as current pipeline: 1–100 Hz)
 l_freq = 1.0    # High-pass at 1 Hz — removes DC drift
@@ -91,24 +91,24 @@ notch_freq = 60  # Will also remove harmonics (120, 180 Hz) automatically
 # Notch filter width
 notch_widths = 2.0  # Hz — narrow notch to preserve gamma band
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PREPROCESSING — RESAMPLING
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Resample to 200 Hz (matches current pipeline; Nyquist = 100 Hz covers gamma)
 raw_resample_sfreq = 200
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PREPROCESSING — RE-REFERENCING
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Original recording reference: FCz (from sidecar JSON)
 # Re-reference to common average (standard for EEG analysis)
 eeg_reference = "average"
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PREPROCESSING — ICA
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # ICA algorithm: picard (matches current pipeline choice — fast, robust)
 ica_algorithm = "picard"
@@ -121,9 +121,9 @@ ica_n_components = 0.99
 ica_eog_threshold = 3.0
 ica_ecg_threshold = 0.1
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # EVENT RENAMING
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Raw events use BrainVision marker names like "Stimulus/S  1".
 # Rename to meaningful condition names for epoching and analysis.
@@ -173,9 +173,9 @@ rename_events = {
 # Ignore the "New Segment/" marker
 on_rename_missing_events = "ignore"
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # EPOCHING
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Define all conditions from the experiment via trigger codes
 # Retinotopy conditions (codes 1-20) + Orientation conditions (codes 41-56)
@@ -233,13 +233,11 @@ conditions = [
 ]
 
 # Disable fixed PTP rejection — ICA has already cleaned major artifacts.
-# Some subjects (e.g., sub-06, sub-30) have very high amplitude data that
-# would be entirely rejected by any reasonable fixed threshold.
 reject = None
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # SENSOR-LEVEL ANALYSIS
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Contrasts to compute (evoked differences)
 contrasts = [
@@ -249,9 +247,9 @@ contrasts = [
     ("opposing_grating", "blank"), # Grating vs baseline
 ]
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # TIME-FREQUENCY ANALYSIS
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Morlet wavelet TFR (replaces extract_component_ersp.py)
 # Frequency range: 4–100 Hz (same as current ERSP extraction)
@@ -265,22 +263,22 @@ time_frequency_cycles = None  # Use default: freqs / 2
 time_frequency_baseline = (-0.5, 0)
 time_frequency_baseline_mode = "logratio"
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # GROUP ANALYSIS
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Compute grand averages across subjects
 # (replaces grand_average_analysis.py + group_topomaps.py)
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # REPORTING
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Generate per-subject + group HTML reports
 
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 # PERFORMANCE
-# ──────────────────────────────────────────────────────────────────────────────
+# ==============================================================================
 
 # Number of parallel jobs (-1 = use all cores)
 n_jobs = 4
