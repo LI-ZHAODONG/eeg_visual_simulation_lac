@@ -5,12 +5,15 @@
 *.npz
 *.mat
 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
 # OS files
 .DS_Store
 
 # Virtual environment
 eeg-env/
 
-# Large binary files
-Paper.pdf
-paper_summary.txt
+
