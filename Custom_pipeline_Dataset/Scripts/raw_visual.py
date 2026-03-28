@@ -2,8 +2,10 @@ import sys
 import mne
 import os
 from pathlib import Path
+import numpy as np
 import matplotlib
 matplotlib.use("Agg")  # allows saving figures without GUI
+import matplotlib.pyplot as plt
 
 
 def process_subject(sub_id: str, project_root: Path, bids_root: Path):
@@ -26,25 +28,49 @@ def process_subject(sub_id: str, project_root: Path, bids_root: Path):
 
     raw = mne.io.read_raw_brainvision(vhdr_path, preload=True, verbose=False)
 
+    raw_orig = raw.copy()  # truly unfiltered — kept for psd_raw plot
+
     # Match the preprocessing pipeline: notch → bandpass → resample → apply ICA
     raw.notch_filter(freqs=[60, 120, 180], verbose=False)
     raw.filter(l_freq=1.0, h_freq=100.0, verbose=False)
     raw.resample(200, verbose=False)
 
-    raw_orig = raw.copy()
-
     ica = mne.preprocessing.read_ica(ica_path)
     clean_raw = ica.apply(raw.copy())
 
-    # Raw PSD
+    # Raw PSD (unfiltered — 60 Hz spike visible)
     psd_raw = raw_orig.copy().pick_types(eeg=True).compute_psd(fmin=1, fmax=80)
     fig1 = psd_raw.plot(show=False)
+    fig1.axes[0].set_title("Raw EEG — Power Spectral Density (1–80 Hz)")
     fig1.savefig(out_dir / f"{rec_id}-psd_raw.png", dpi=300)
 
-    # Clean PSD (ICA + notch)
+    # Clean PSD (after notch + bandpass + ICA)
     psd_clean = clean_raw.copy().pick_types(eeg=True).compute_psd(fmin=1, fmax=80)
     fig2 = psd_clean.plot(show=False)
+    for ax in fig2.axes:
+        if ax.get_ylabel():
+            ax.set_title("Clean EEG — After Notch + Bandpass + ICA (1–80 Hz)")
+            ax.set_ylim(bottom=-20)
     fig2.savefig(out_dir / f"{rec_id}-psd_clean.png", dpi=300)
+
+    # Comparison: mean of the same PSD objects used above
+    raw_mean = 10 * np.log10(psd_raw.get_data().mean(axis=0) * 1e12)
+    cln_mean = 10 * np.log10(psd_clean.get_data().mean(axis=0) * 1e12)
+    freqs_r = psd_raw.freqs
+    freqs_c = psd_clean.freqs
+
+    fig3, ax3 = plt.subplots(figsize=(10, 4))
+    ax3.plot(freqs_r, raw_mean, label="Raw", color="tab:red", alpha=0.8)
+    ax3.plot(freqs_c, cln_mean, label="Clean (notch + bandpass + ICA)",
+             color="tab:blue", alpha=0.8)
+    ax3.set_xlabel("Frequency (Hz)")
+    ax3.set_ylabel("Power (dB/Hz re 1 µV²)")
+    ax3.set_title("PSD comparison — Raw vs Clean")
+    ax3.set_ylim(bottom=-20)
+    ax3.legend()
+    ax3.set_xlim(1, 80)
+    fig3.tight_layout()
+    fig3.savefig(out_dir / f"{rec_id}-psd_comparison.png", dpi=300)
 
     picks_eeg = mne.pick_types(clean_raw.info, eeg=True)
 
@@ -60,7 +86,6 @@ def process_subject(sub_id: str, project_root: Path, bids_root: Path):
     )
     browser_clean.figure.savefig(out_dir / f"{rec_id}-clean_10s.png", dpi=300)
 
-    import matplotlib.pyplot as plt
     plt.close("all")
 
     print(f"  Saved psd_raw, psd_clean, raw_10s, clean_10s → {out_dir}")
