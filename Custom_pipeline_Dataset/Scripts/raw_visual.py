@@ -25,13 +25,16 @@ def process_subject(sub_id: str, project_root: Path, bids_root: Path):
     print(f"\n--- {sub_id} ---")
 
     raw = mne.io.read_raw_brainvision(vhdr_path, preload=True, verbose=False)
+
+    # Match the preprocessing pipeline: notch → bandpass → resample → apply ICA
+    raw.notch_filter(freqs=[60, 120, 180], verbose=False)
+    raw.filter(l_freq=1.0, h_freq=100.0, verbose=False)
+    raw.resample(200, verbose=False)
+
     raw_orig = raw.copy()
 
     ica = mne.preprocessing.read_ica(ica_path)
     clean_raw = ica.apply(raw.copy())
-
-    # Apply notch filter so psd_clean matches the actual analysis pipeline
-    clean_raw.notch_filter(freqs=[60, 120, 180], verbose=False)
 
     # Raw PSD
     psd_raw = raw_orig.copy().pick_types(eeg=True).compute_psd(fmin=1, fmax=80)
