@@ -49,13 +49,16 @@ def main():
 
     clean_raw = ica.apply(raw.copy())  # IMPORTANT: apply to a copy
 
+    # Apply notch filter to clean data so psd_clean matches the actual analysis pipeline
+    clean_raw.notch_filter(freqs=[60, 120, 180], verbose=False)
+
     # --------- PSD plots ----------
     # Raw PSD
     psd_raw = raw_orig.copy().pick_types(eeg=True).compute_psd(fmin=1, fmax=80)
     fig1 = psd_raw.plot(show=False)
     fig1.savefig(out_dir / f"{rec_id}-psd_raw.png", dpi=300)
 
-    # Clean PSD
+    # Clean PSD (ICA + notch applied — matches actual analysis pipeline)
     psd_clean = clean_raw.copy().pick_types(eeg=True).compute_psd(fmin=1, fmax=80)
     fig2 = psd_clean.plot(show=False)
     fig2.savefig(out_dir / f"{rec_id}-psd_clean.png", dpi=300)
