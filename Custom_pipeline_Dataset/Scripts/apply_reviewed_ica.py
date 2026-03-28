@@ -216,9 +216,15 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     recording = infer_recording_name(ica_path)
-    review_json = (args.review_json or (out_dir / f"{recording}-ica_component_review.json")).resolve()
+    if args.review_json:
+        review_json = args.review_json.resolve()
+    else:
+        refined = (out_dir / f"{recording}-ica_component_review-refined.json").resolve()
+        original = (out_dir / f"{recording}-ica_component_review.json").resolve()
+        review_json = refined if refined.exists() else original
     summary_json = (args.summary_json or (out_dir / f"{recording}-preprocess_summary.json")).resolve()
 
+    print(f"Using review JSON: {review_json}")
     if not review_json.exists():
         raise FileNotFoundError(f"Cannot find review JSON: {review_json}")
     if not summary_json.exists():
