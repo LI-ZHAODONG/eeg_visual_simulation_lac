@@ -129,11 +129,16 @@ def save_qc_figures(raw_before, raw_after, out_dir, recording):
 
     psd_raw = raw_before.copy().pick(picks_eeg).compute_psd(fmin=1, fmax=100)
     fig_psd_raw = psd_raw.plot(show=False)
+    fig_psd_raw.axes[0].set_title("Raw EEG — Before ICA (1–100 Hz)")
     psd_raw_path = out_dir / f"{recording}-psd_before_reviewed_ica.png"
     fig_psd_raw.savefig(psd_raw_path, dpi=300)
 
     psd_clean = raw_after.copy().pick(picks_eeg).compute_psd(fmin=1, fmax=100)
     fig_psd_clean = psd_clean.plot(show=False)
+    for ax in fig_psd_clean.axes:
+        if ax.get_ylabel():
+            ax.set_title("Clean EEG — After ICA Removal (1–100 Hz)")
+            ax.set_ylim(bottom=-20)
     psd_clean_path = out_dir / f"{recording}-psd_after_reviewed_ica.png"
     fig_psd_clean.savefig(psd_clean_path, dpi=300)
 
@@ -211,9 +216,15 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     recording = infer_recording_name(ica_path)
-    review_json = (args.review_json or (out_dir / f"{recording}-ica_component_review.json")).resolve()
+    if args.review_json:
+        review_json = args.review_json.resolve()
+    else:
+        refined = (out_dir / f"{recording}-ica_component_review-refined.json").resolve()
+        original = (out_dir / f"{recording}-ica_component_review.json").resolve()
+        review_json = refined if refined.exists() else original
     summary_json = (args.summary_json or (out_dir / f"{recording}-preprocess_summary.json")).resolve()
 
+    print(f"Using review JSON: {review_json}")
     if not review_json.exists():
         raise FileNotFoundError(f"Cannot find review JSON: {review_json}")
     if not summary_json.exists():

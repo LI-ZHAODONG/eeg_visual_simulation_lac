@@ -3022,7 +3022,7 @@
     }
   },
   "outputs": {
-    "error_plot": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/retinotopy_model_fit_errors.png"
+    "error_plot": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/retinotopy_model_fit_errors.png"
   },
   "notes": [
     "The divisive model here is a simple fixed-sigma approximation inferred from the paper summary.",

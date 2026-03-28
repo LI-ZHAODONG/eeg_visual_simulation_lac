@@ -60,7 +60,7 @@
     }
   },
   "outputs": {
-    "gamma_topomaps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/group_level/Condition_Wise_Gamma_Topomaps_rebuilt.png",
-    "alpha_topomaps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/group_level/Condition_Wise_Alpha_Topomaps_rebuilt.png"
+    "gamma_topomaps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level/Condition_Wise_Gamma_Topomaps_rebuilt.png",
+    "alpha_topomaps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level/Condition_Wise_Alpha_Topomaps_rebuilt.png"
   }
 }
