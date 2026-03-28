@@ -247,8 +247,8 @@
   ],
   "retinotopy_alpha_gamma_correlation": -0.5215292884719741,
   "outputs": {
-    "retinotopy_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/group_level/GA_retinotopy_summary.png",
-    "retinotopy_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/group_level/GA_retinotopy_scatter.png",
-    "orientation_trigger_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/group_level/GA_orientation_trigger_summary.png"
+    "retinotopy_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level/GA_retinotopy_summary.png",
+    "retinotopy_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level/GA_retinotopy_scatter.png",
+    "orientation_trigger_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/group_level/GA_orientation_trigger_summary.png"
   }
 }
