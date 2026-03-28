@@ -1,7 +1,7 @@
 {
   "recording": "sub-01_ses-01_task-visual_eeg",
-  "epochs_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-final-epo.fif",
-  "summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-apply_reviewed_ica_summary.json",
+  "epochs_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-final-epo.fif",
+  "summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-apply_reviewed_ica_summary.json",
   "n_epochs": 456,
   "n_channels": 63,
   "ch_names": [
@@ -140,20 +140,20 @@
     ]
   },
   "outputs": {
-    "alpha_trial_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_trial_diff.npy",
-    "gamma_trial_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_trial_diff.npy",
-    "event_codes_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-event_codes.npy",
-    "alpha_mean_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_diff.npy",
-    "gamma_mean_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_diff.npy",
-    "alpha_by_condition_npz": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_by_condition.npz",
-    "gamma_by_condition_npz": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_by_condition.npz"
+    "alpha_trial_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_trial_diff.npy",
+    "gamma_trial_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_trial_diff.npy",
+    "event_codes_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-event_codes.npy",
+    "alpha_mean_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_diff.npy",
+    "gamma_mean_diff_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_diff.npy",
+    "alpha_by_condition_npz": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-alpha_by_condition.npz",
+    "gamma_by_condition_npz": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-gamma_by_condition.npz"
   },
   "apply_reviewed_ica_summary": {
     "recording": "sub-01_ses-01_task-visual_eeg",
-    "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-01/ses-01/eeg/sub-01_ses-01_task-visual_eeg.vhdr",
-    "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif",
-    "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_component_review-refined.json",
-    "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-preprocess_summary.json",
+    "vhdr_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/../ds006547/sub-01/ses-01/eeg/sub-01_ses-01_task-visual_eeg.vhdr",
+    "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica.fif",
+    "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-ica_component_review-refined.json",
+    "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-preprocess_summary.json",
     "kept_components": [
       6,
       8,
@@ -246,12 +246,12 @@
     },
     "n_epochs": 456,
     "outputs": {
-      "clean_raw_fif": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-clean_raw.fif",
-      "epochs_fif": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-final-epo.fif",
-      "raw_10s": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-raw_cleaning_reference_10s.png",
-      "clean_10s": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-cleaned_10s.png",
-      "psd_before": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-psd_before_reviewed_ica.png",
-      "psd_after": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-psd_after_reviewed_ica.png"
+      "clean_raw_fif": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-clean_raw.fif",
+      "epochs_fif": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-final-epo.fif",
+      "raw_10s": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-raw_cleaning_reference_10s.png",
+      "clean_10s": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-cleaned_10s.png",
+      "psd_before": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-psd_before_reviewed_ica.png",
+      "psd_after": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-01/sub-01_ses-01_task-visual_eeg-psd_after_reviewed_ica.png"
     },
     "suggested_visual_channel": "Oz"
   }

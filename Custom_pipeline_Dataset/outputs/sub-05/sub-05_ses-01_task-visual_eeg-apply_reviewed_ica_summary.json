@@ -1,8 +1,8 @@
 {
   "recording": "sub-05_ses-01_task-visual_eeg",
-  "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-05/ses-01/eeg/sub-05_ses-01_task-visual_eeg.vhdr",
+  "vhdr_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/../ds006547/sub-05/ses-01/eeg/sub-05_ses-01_task-visual_eeg.vhdr",
   "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-05/sub-05_ses-01_task-visual_eeg-ica.fif",
-  "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-05/sub-05_ses-01_task-visual_eeg-ica_component_review.json",
+  "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-05/sub-05_ses-01_task-visual_eeg-ica_component_review-refined.json",
   "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-05/sub-05_ses-01_task-visual_eeg-preprocess_summary.json",
   "kept_components": [
     1,
@@ -16,19 +16,25 @@
     15,
     16,
     17,
+    24,
     25,
+    28,
     37,
-    40
+    40,
+    52,
+    54
   ],
   "excluded_components": [
     0,
     4,
     5,
+    6,
     7,
     18,
     19,
     20,
     21,
+    26,
     27,
     31,
     33,
@@ -42,7 +48,8 @@
     49,
     50,
     55,
-    57
+    57,
+    59
   ],
   "epoch_window_s": [
     -0.5,

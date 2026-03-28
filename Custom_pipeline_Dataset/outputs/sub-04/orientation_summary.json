@@ -213,20 +213,20 @@
     "direction": 0.6665375631996578
   },
   "outputs": {
-    "trigger_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/orientation_trigger_summary.png",
-    "orientation_group_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/orientation_group_summary.png",
-    "direction_group_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/direction_group_summary.png",
-    "orientation_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/orientation_alpha_gamma_scatter.png",
-    "direction_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/direction_alpha_gamma_scatter.png",
-    "orientation_alpha_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/orientation_alpha_ttests.png",
-    "orientation_gamma_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/orientation_gamma_ttests.png",
-    "direction_alpha_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/direction_alpha_ttests.png",
-    "direction_gamma_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/direction_gamma_ttests.png"
+    "trigger_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/orientation_trigger_summary.png",
+    "orientation_group_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/orientation_group_summary.png",
+    "direction_group_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/direction_group_summary.png",
+    "orientation_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/orientation_alpha_gamma_scatter.png",
+    "direction_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/direction_alpha_gamma_scatter.png",
+    "orientation_alpha_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/orientation_alpha_ttests.png",
+    "orientation_gamma_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/orientation_gamma_ttests.png",
+    "direction_alpha_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/direction_alpha_ttests.png",
+    "direction_gamma_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/direction_gamma_ttests.png"
   },
   "ersp_stats_summary": {
     "recording": "sub-04_ses-01_task-visual_eeg",
     "n_orientation_trials": 288,
-    "n_clusters": 32,
+    "n_clusters": 20,
     "outlier_rejection": {
       "kept_trials": 288,
       "rejected_trials": 1,
@@ -235,98 +235,98 @@
     "cluster_rows": [
       {
         "code": 41,
-        "mean": -0.05393235014118023,
-        "sem": 0.027187070964380985,
+        "mean": -0.054599935319595616,
+        "sem": 0.032444193788681776,
         "n_trials": 17
       },
       {
         "code": 42,
-        "mean": 0.01101206799168696,
-        "sem": 0.010827684434004944,
+        "mean": 0.01689586291633931,
+        "sem": 0.010842454691089822,
         "n_trials": 20
       },
       {
         "code": 43,
-        "mean": -0.01724095929678428,
-        "sem": 0.013559561628652907,
+        "mean": -0.039950857443017455,
+        "sem": 0.016874393890524718,
         "n_trials": 10
       },
       {
         "code": 44,
-        "mean": -0.01785615438192396,
-        "sem": 0.008203343960409126,
+        "mean": -0.0250319039655273,
+        "sem": 0.0144108413350868,
         "n_trials": 10
       },
       {
         "code": 45,
-        "mean": -0.008189648186271721,
-        "sem": 0.011029730654681972,
+        "mean": -0.019794174132633378,
+        "sem": 0.013394253764959702,
         "n_trials": 10
       },
       {
         "code": 46,
-        "mean": 0.004583394721451212,
-        "sem": 0.010105156458106695,
+        "mean": 0.01201186683034679,
+        "sem": 0.014941034478731555,
         "n_trials": 19
       },
       {
         "code": 47,
-        "mean": 0.011714946026749985,
-        "sem": 0.011651575322457624,
+        "mean": 0.02552043821272576,
+        "sem": 0.012525260052393305,
         "n_trials": 15
       },
       {
         "code": 48,
-        "mean": 0.032081269513130194,
-        "sem": 0.013423065273924405,
+        "mean": 0.04052329944206006,
+        "sem": 0.019606262681392872,
         "n_trials": 25
       },
       {
         "code": 49,
-        "mean": -0.023612240496659616,
-        "sem": 0.009634141782682378,
+        "mean": -0.03123893490134409,
+        "sem": 0.012664597425849827,
         "n_trials": 20
       },
       {
         "code": 50,
-        "mean": -0.005959662278588309,
-        "sem": 0.014981715273362405,
+        "mean": 0.010781564047618602,
+        "sem": 0.01841480005735362,
         "n_trials": 22
       },
       {
         "code": 51,
-        "mean": -0.008847114923124158,
-        "sem": 0.01051355274846672,
+        "mean": -0.0008057811684445581,
+        "sem": 0.013186629325279442,
         "n_trials": 15
       },
       {
         "code": 52,
-        "mean": 0.02830571138628771,
-        "sem": 0.010329410857032026,
+        "mean": 0.01981060045837883,
+        "sem": 0.013955031171125131,
         "n_trials": 26
       },
       {
         "code": 53,
-        "mean": -0.004740258053904397,
-        "sem": 0.008201302790178467,
+        "mean": -0.01150512997941652,
+        "sem": 0.01018653671753098,
         "n_trials": 21
       },
       {
         "code": 54,
-        "mean": 0.02409334384847499,
-        "sem": 0.011740640502591503,
+        "mean": 0.023509179904427413,
+        "sem": 0.015612350806422929,
         "n_trials": 16
       },
       {
         "code": 55,
-        "mean": 0.010072065537163364,
-        "sem": 0.011222476864997171,
+        "mean": 0.014078596274558323,
+        "sem": 0.011656121440687279,
         "n_trials": 15
       },
       {
         "code": 56,
-        "mean": -0.023761203396970097,
-        "sem": 0.009788674536624624,
+        "mean": -0.028657251730502757,
+        "sem": 0.01140395428848439,
         "n_trials": 27
       }
     ],
