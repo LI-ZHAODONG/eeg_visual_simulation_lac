@@ -39,7 +39,7 @@
     "5": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (91.1%)"
+      "notes": "Auto-rejected: muscle artifact (91.2%)"
     },
     "6": {
       "label": "muscle artifact",
@@ -69,7 +69,7 @@
     "11": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (44.6%)."
+      "notes": "Left unsure: brain (44.7%)."
     },
     "12": {
       "label": "brain",
@@ -79,7 +79,7 @@
     "13": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (42.0%)."
+      "notes": "Left unsure: brain (42.1%)."
     },
     "14": {
       "label": "brain",
@@ -104,7 +104,7 @@
     "18": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (56.3%)."
+      "notes": "Manual-assisted keep: borderline brain (56.2%)."
     },
     "19": {
       "label": "brain",
@@ -144,7 +144,7 @@
     "26": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (61.6%)"
+      "notes": "Auto-rejected: muscle artifact (61.7%)"
     },
     "27": {
       "label": "brain",
@@ -154,12 +154,12 @@
     "28": {
       "label": "channel noise",
       "keep": null,
-      "notes": "Left unsure: channel noise (44.6%)."
+      "notes": "Left unsure: channel noise (44.7%)."
     },
     "29": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (69.2%)"
+      "notes": "Auto-rejected: muscle artifact (69.1%)"
     },
     "30": {
       "label": "brain",
@@ -169,7 +169,7 @@
     "31": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (62.8%)"
+      "notes": "Auto-rejected: other (62.9%)"
     },
     "32": {
       "label": "other",
@@ -214,7 +214,7 @@
     "40": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (73.6%)"
+      "notes": "Auto-rejected: other (73.5%)"
     },
     "41": {
       "label": "brain",
@@ -229,7 +229,7 @@
     "43": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (89.7%)"
+      "notes": "Auto-kept: brain (89.8%)"
     },
     "44": {
       "label": "brain",
@@ -259,7 +259,7 @@
     "49": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (40.9%)."
+      "notes": "Left unsure: brain (41.0%)."
     },
     "50": {
       "label": "brain",
@@ -279,7 +279,7 @@
     "53": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (56.5%)."
+      "notes": "Manual-assisted keep: borderline brain (56.4%)."
     },
     "54": {
       "label": "other",

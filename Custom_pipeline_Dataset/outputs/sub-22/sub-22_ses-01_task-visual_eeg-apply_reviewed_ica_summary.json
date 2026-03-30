@@ -1,6 +1,6 @@
 {
   "recording": "sub-22_ses-01_task-visual_eeg",
-  "vhdr_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/../ds006547/sub-22/ses-01/eeg/sub-22_ses-01_task-visual_eeg.vhdr",
+  "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-22/ses-01/eeg/sub-22_ses-01_task-visual_eeg.vhdr",
   "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/sub-22_ses-01_task-visual_eeg-ica.fif",
   "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/sub-22_ses-01_task-visual_eeg-ica_component_review-refined.json",
   "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/sub-22_ses-01_task-visual_eeg-preprocess_summary.json",
@@ -27,7 +27,7 @@
     37,
     38,
     39,
-    43
+    44
   ],
   "excluded_components": [
     0,
@@ -42,16 +42,10 @@
     33,
     35,
     40,
-    41,
-    42,
-    45,
-    46,
-    47,
+    43,
     49,
-    50,
     51,
     52,
-    53,
     55,
     56,
     58,

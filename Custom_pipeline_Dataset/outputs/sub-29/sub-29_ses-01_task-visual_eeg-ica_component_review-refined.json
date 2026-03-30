@@ -19,7 +19,7 @@
     "1": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (38.6%)."
+      "notes": "Left unsure: other (38.7%)."
     },
     "2": {
       "label": "eye blink",
@@ -39,7 +39,7 @@
     "5": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (82.2%)"
+      "notes": "Auto-rejected: muscle artifact (82.3%)"
     },
     "6": {
       "label": "eye blink",
@@ -59,7 +59,7 @@
     "9": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (46.2%)."
+      "notes": "Left unsure: brain (46.1%)."
     },
     "10": {
       "label": "brain",
@@ -74,7 +74,7 @@
     "12": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (66.7%)"
+      "notes": "Auto-rejected: muscle artifact (66.6%)"
     },
     "13": {
       "label": "brain",
@@ -109,7 +109,7 @@
     "19": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Left unsure: muscle artifact (48.2%)."
+      "notes": "Left unsure: muscle artifact (48.1%)."
     },
     "20": {
       "label": "muscle artifact",
@@ -124,7 +124,7 @@
     "22": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (54.4%)."
+      "notes": "Left unsure: other (54.3%)."
     },
     "23": {
       "label": "muscle artifact",
@@ -274,7 +274,7 @@
     "52": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (89.5%)"
+      "notes": "Auto-kept: brain (89.6%)"
     },
     "53": {
       "label": "other",
