@@ -1,0 +1,193 @@
+{
+  "picked_channel": "Oz",
+  "groups": [
+    {
+      "label": "full",
+      "codes": [
+        1
+      ],
+      "alpha_mean": -0.612041479427867,
+      "gamma_mean": 0.1263283386527077
+    },
+    {
+      "label": "left",
+      "codes": [
+        2
+      ],
+      "alpha_mean": -0.7349724766773172,
+      "gamma_mean": -0.03537096437607809
+    },
+    {
+      "label": "right",
+      "codes": [
+        3
+      ],
+      "alpha_mean": -0.6247188857981457,
+      "gamma_mean": -0.037634301132014665
+    },
+    {
+      "label": "top",
+      "codes": [
+        4
+      ],
+      "alpha_mean": -0.9100228201258834,
+      "gamma_mean": 0.06842651429096984
+    },
+    {
+      "label": "bottom",
+      "codes": [
+        5
+      ],
+      "alpha_mean": -1.0308066417939923,
+      "gamma_mean": 0.05344731115231367
+    },
+    {
+      "label": "quad_BR",
+      "codes": [
+        6
+      ],
+      "alpha_mean": -0.525440724155689,
+      "gamma_mean": 0.10939967130009505
+    },
+    {
+      "label": "quad_BL",
+      "codes": [
+        7
+      ],
+      "alpha_mean": -0.6448426848147208,
+      "gamma_mean": 0.042714515556862655
+    },
+    {
+      "label": "quad_TL",
+      "codes": [
+        8
+      ],
+      "alpha_mean": -0.6809067646222556,
+      "gamma_mean": 0.03561357184818184
+    },
+    {
+      "label": "quad_TR",
+      "codes": [
+        9
+      ],
+      "alpha_mean": -0.6753082241765652,
+      "gamma_mean": 0.08409233945462301
+    },
+    {
+      "label": "oct_BR1",
+      "codes": [
+        10
+      ],
+      "alpha_mean": -0.4310494394320486,
+      "gamma_mean": -0.013428605340746422
+    },
+    {
+      "label": "oct_BR2",
+      "codes": [
+        11
+      ],
+      "alpha_mean": -0.4515398054846931,
+      "gamma_mean": 0.10031083468003293
+    },
+    {
+      "label": "oct_BL2",
+      "codes": [
+        12
+      ],
+      "alpha_mean": -0.8085397935455954,
+      "gamma_mean": 0.01931618456497044
+    },
+    {
+      "label": "oct_BL1",
+      "codes": [
+        13
+      ],
+      "alpha_mean": -0.7933374289686239,
+      "gamma_mean": 0.06930955814064865
+    },
+    {
+      "label": "oct_TL1",
+      "codes": [
+        14
+      ],
+      "alpha_mean": -1.0300199992628967,
+      "gamma_mean": -0.11545089750141863
+    },
+    {
+      "label": "oct_TL2",
+      "codes": [
+        15
+      ],
+      "alpha_mean": -0.5326943917357777,
+      "gamma_mean": 0.02759172783352371
+    },
+    {
+      "label": "oct_TR2",
+      "codes": [
+        16
+      ],
+      "alpha_mean": -0.6444620637610526,
+      "gamma_mean": 0.11733303285297297
+    },
+    {
+      "label": "oct_TR1",
+      "codes": [
+        17
+      ],
+      "alpha_mean": -0.7873888622351527,
+      "gamma_mean": -0.020734984240024797
+    },
+    {
+      "label": "blank",
+      "codes": [
+        18
+      ],
+      "alpha_mean": -0.06230380565190704,
+      "gamma_mean": -0.02957557842634772
+    },
+    {
+      "label": "periph",
+      "codes": [
+        19
+      ],
+      "alpha_mean": -1.1802449296059156,
+      "gamma_mean": -0.019866490736204914
+    },
+    {
+      "label": "fovea",
+      "codes": [
+        20
+      ],
+      "alpha_mean": -0.6321472744425074,
+      "gamma_mean": -0.055748890494945094
+    }
+  ],
+  "alpha_gamma_correlation": 0.15262094754869884,
+  "residuals": [
+    0.0968442896038132,
+    -0.059816602770555866,
+    -0.06659875804584522,
+    0.05115543345499677,
+    0.0411266375170476,
+    0.07636623130988668,
+    0.014574846252675501,
+    0.008952013419279488,
+    0.057201321032212996,
+    -0.05033073642821016,
+    0.06424851520186617,
+    -0.0021142472386599456,
+    0.04725604707002499,
+    -0.12780381221662848,
+    -0.0051444156502148085,
+    0.08917776353564832,
+    -0.04303230136997468,
+    -0.08159100047847762,
+    -0.026062334358406433,
+    -0.08440888984047859
+  ],
+  "outputs": {
+    "gamma_bar": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-15/retinotopy_gamma_summary.png",
+    "alpha_bar": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-15/retinotopy_alpha_summary.png",
+    "scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-15/retinotopy_alpha_gamma_scatter.png"
+  }
+}

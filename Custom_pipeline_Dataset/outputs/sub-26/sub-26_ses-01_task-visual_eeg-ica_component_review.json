@@ -1,0 +1,224 @@
+{
+  "subject": "sub-26",
+  "recording": "sub-26_ses-01_task-visual_eeg",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (75.1%)"
+    },
+    "1": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (75.8%)"
+    },
+    "2": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (73.7%)"
+    },
+    "3": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (87.5%)"
+    },
+    "4": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (74.8%)"
+    },
+    "5": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (82.0%)"
+    },
+    "6": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (69.3%)"
+    },
+    "7": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (96.6%)"
+    },
+    "8": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (72.9%)"
+    },
+    "9": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (79.0%)"
+    },
+    "10": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (76.8%)"
+    },
+    "11": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (70.8%)"
+    },
+    "12": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (78.5%)"
+    },
+    "13": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (64.0%)"
+    },
+    "14": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (67.3%)"
+    },
+    "15": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (66.5%)"
+    },
+    "16": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (63.0%)"
+    },
+    "17": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (49.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "18": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (60.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "19": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (97.0%)"
+    },
+    "20": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (60.4%)"
+    },
+    "21": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (67.5%)"
+    },
+    "22": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.5%)"
+    },
+    "23": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (59.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "24": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (85.5%)"
+    },
+    "25": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (96.0%)"
+    },
+    "26": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (61.1%)"
+    },
+    "27": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (92.9%)"
+    },
+    "28": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (79.1%)"
+    },
+    "29": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (82.8%)"
+    },
+    "30": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (97.6%)"
+    },
+    "31": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (45.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "32": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (41.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "33": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (50.6%) - Did not meet auto-decision rule. Please review."
+    },
+    "34": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (30.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "35": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (48.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "36": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (40.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "37": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (66.5%)"
+    },
+    "38": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (79.3%)"
+    },
+    "39": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (40.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "40": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (50.3%) - Did not meet auto-decision rule. Please review."
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
+  }
+}

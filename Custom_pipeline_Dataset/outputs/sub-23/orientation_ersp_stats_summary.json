@@ -1,0 +1,113 @@
+{
+  "recording": "sub-23_ses-01_task-visual_eeg",
+  "n_orientation_trials": 240,
+  "n_clusters": 21,
+  "outlier_rejection": {
+    "kept_trials": 240,
+    "rejected_trials": 0,
+    "z_threshold": 4.0
+  },
+  "cluster_rows": [
+    {
+      "code": 41,
+      "mean": -0.011716745385078445,
+      "sem": 0.01891321766756166,
+      "n_trials": 15
+    },
+    {
+      "code": 42,
+      "mean": 0.007646646406778764,
+      "sem": 0.016613401719295668,
+      "n_trials": 15
+    },
+    {
+      "code": 43,
+      "mean": -0.035386005700472754,
+      "sem": 0.013844842556880845,
+      "n_trials": 15
+    },
+    {
+      "code": 44,
+      "mean": 0.03237501586012685,
+      "sem": 0.014957659529311844,
+      "n_trials": 15
+    },
+    {
+      "code": 45,
+      "mean": -0.021982294782629655,
+      "sem": 0.013594613024224524,
+      "n_trials": 15
+    },
+    {
+      "code": 46,
+      "mean": -0.07107893107548943,
+      "sem": 0.03416641726174352,
+      "n_trials": 15
+    },
+    {
+      "code": 47,
+      "mean": -0.049779212019365714,
+      "sem": 0.01549823478772234,
+      "n_trials": 15
+    },
+    {
+      "code": 48,
+      "mean": -0.01415052944050153,
+      "sem": 0.014684591202910127,
+      "n_trials": 15
+    },
+    {
+      "code": 49,
+      "mean": 0.011584418277084752,
+      "sem": 0.011264060687231384,
+      "n_trials": 15
+    },
+    {
+      "code": 50,
+      "mean": 0.050847639568647726,
+      "sem": 0.019659873673014985,
+      "n_trials": 15
+    },
+    {
+      "code": 51,
+      "mean": 0.006316485522723649,
+      "sem": 0.016962813526692638,
+      "n_trials": 15
+    },
+    {
+      "code": 52,
+      "mean": 0.02501327788148116,
+      "sem": 0.018973050934550623,
+      "n_trials": 15
+    },
+    {
+      "code": 53,
+      "mean": 0.06747304452927722,
+      "sem": 0.02846467030930352,
+      "n_trials": 15
+    },
+    {
+      "code": 54,
+      "mean": -0.028462252042497506,
+      "sem": 0.01439761164343607,
+      "n_trials": 15
+    },
+    {
+      "code": 55,
+      "mean": -0.016659153564430235,
+      "sem": 0.02061592438306164,
+      "n_trials": 15
+    },
+    {
+      "code": 56,
+      "mean": 0.0037773979435321756,
+      "sem": 0.013847664089724744,
+      "n_trials": 15
+    }
+  ],
+  "outputs": {
+    "anova_maps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-23/orientation_anova_maps.png",
+    "cluster_bar": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-23/orientation_cluster_bar.png",
+    "freq_corr": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-23/orientation_freq_corr.png"
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "picked_channel": "Oz",
+  "trigger_rows": [
+    {
+      "code": 41,
+      "deg": 0.0,
+      "alpha": -0.3648413811632548,
+      "gamma": 0.15555035059878258
+    },
+    {
+      "code": 42,
+      "deg": 22.5,
+      "alpha": -0.6416346314132209,
+      "gamma": 0.049468806112447014
+    },
+    {
+      "code": 43,
+      "deg": 45.0,
+      "alpha": -0.40170354687639503,
+      "gamma": 0.13247205680596616
+    },
+    {
+      "code": 44,
+      "deg": 67.5,
+      "alpha": 0.17423202556031364,
+      "gamma": -0.0006323425319117273
+    },
+    {
+      "code": 45,
+      "deg": 90.0,
+      "alpha": -0.09575364066885396,
+      "gamma": 0.09037311525015454
+    },
+    {
+      "code": 46,
+      "deg": 112.5,
+      "alpha": -0.3826048519110843,
+      "gamma": 0.03695759303806463
+    },
+    {
+      "code": 47,
+      "deg": 135.0,
+      "alpha": -0.0985332673362799,
+      "gamma": -0.014911071374878864
+    },
+    {
+      "code": 48,
+      "deg": 157.5,
+      "alpha": -0.2918280728574786,
+      "gamma": -0.015266864390437748
+    },
+    {
+      "code": 49,
+      "deg": 180.0,
+      "alpha": -0.4143551192474663,
+      "gamma": 0.06116100756151304
+    },
+    {
+      "code": 50,
+      "deg": 202.5,
+      "alpha": -0.5250133983212744,
+      "gamma": 0.051783434395460105
+    },
+    {
+      "code": 51,
+      "deg": 225.0,
+      "alpha": -0.8298519356534544,
+      "gamma": 0.05025726092152511
+    },
+    {
+      "code": 52,
+      "deg": 247.5,
+      "alpha": 0.04821791318091644,
+      "gamma": 0.04094552057906624
+    },
+    {
+      "code": 53,
+      "deg": 270.0,
+      "alpha": -0.33662425051613454,
+      "gamma": 0.0437635221737856
+    },
+    {
+      "code": 54,
+      "deg": 292.5,
+      "alpha": 0.04775073793727095,
+      "gamma": 0.09287642146207238
+    },
+    {
+      "code": 55,
+      "deg": 315.0,
+      "alpha": -0.05006937930993701,
+      "gamma": -0.0018655597584783079
+    },
+    {
+      "code": 56,
+      "deg": 337.5,
+      "alpha": -0.36966083137305195,
+      "gamma": 0.09663174935003417
+    }
+  ],
+  "orientation_groups": [
+    {
+      "label": "orientation_cardinal_combined",
+      "codes": [
+        56,
+        52,
+        48,
+        44
+      ],
+      "alpha": -0.10975974137232512,
+      "gamma": 0.030419515751687734
+    },
+    {
+      "label": "orientation_oblique_perfect_45",
+      "codes": [
+        54,
+        50,
+        46,
+        42
+      ],
+      "alpha": -0.3753755359270771,
+      "gamma": 0.057771563752011035
+    },
+    {
+      "label": "orientation_oblique_vertical_pm_22_5",
+      "codes": [
+        55,
+        49,
+        47,
+        41
+      ],
+      "alpha": -0.2319497867642345,
+      "gamma": 0.049983681756734614
+    },
+    {
+      "label": "orientation_oblique_horizontal_pm_22_5",
+      "codes": [
+        53,
+        51,
+        45,
+        43
+      ],
+      "alpha": -0.41598334342870946,
+      "gamma": 0.07921648878785786
+    },
+    {
+      "label": "orientation_horizontal",
+      "codes": [
+        52,
+        44
+      ],
+      "alpha": 0.11122496937061505,
+      "gamma": 0.020156589023577257
+    },
+    {
+      "label": "orientation_vertical",
+      "codes": [
+        56,
+        48
+      ],
+      "alpha": -0.33074445211526526,
+      "gamma": 0.040682442479798214
+    }
+  ],
+  "direction_groups": [
+    {
+      "label": "leftward",
+      "codes": [
+        42,
+        41,
+        56,
+        55
+      ],
+      "alpha": -0.3565515558148661,
+      "gamma": 0.07494633657569637
+    },
+    {
+      "label": "rightward",
+      "codes": [
+        50,
+        49,
+        48,
+        47
+      ],
+      "alpha": -0.3324324644406248,
+      "gamma": 0.020691626547914135
+    },
+    {
+      "label": "upward",
+      "codes": [
+        46,
+        45,
+        44,
+        43
+      ],
+      "alpha": -0.1764575034740049,
+      "gamma": 0.06479260564056841
+    },
+    {
+      "label": "downward",
+      "codes": [
+        54,
+        53,
+        52,
+        51
+      ],
+      "alpha": -0.2676268837628504,
+      "gamma": 0.05696068128411233
+    }
+  ],
+  "correlations": {
+    "orientation": -0.8692592783301103,
+    "direction": 0.2282394643879758
+  },
+  "outputs": {
+    "trigger_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_trigger_summary.png",
+    "orientation_group_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_group_summary.png",
+    "direction_group_summary": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/direction_group_summary.png",
+    "orientation_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_alpha_gamma_scatter.png",
+    "direction_scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/direction_alpha_gamma_scatter.png",
+    "orientation_alpha_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_alpha_ttests.png",
+    "orientation_gamma_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_gamma_ttests.png",
+    "direction_alpha_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/direction_alpha_ttests.png",
+    "direction_gamma_ttests": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/direction_gamma_ttests.png"
+  },
+  "ersp_stats_summary": {
+    "recording": "sub-22_ses-01_task-visual_eeg",
+    "n_orientation_trials": 238,
+    "n_clusters": 19,
+    "outlier_rejection": {
+      "kept_trials": 238,
+      "rejected_trials": 2,
+      "z_threshold": 4.0
+    },
+    "cluster_rows": [
+      {
+        "code": 41,
+        "mean": -0.016479187578614347,
+        "sem": 0.00992189261615639,
+        "n_trials": 15
+      },
+      {
+        "code": 42,
+        "mean": 0.026357590995088817,
+        "sem": 0.011423793232396869,
+        "n_trials": 15
+      },
+      {
+        "code": 43,
+        "mean": 0.023567961685056437,
+        "sem": 0.00863804294164324,
+        "n_trials": 15
+      },
+      {
+        "code": 44,
+        "mean": 0.01219997913244074,
+        "sem": 0.012442087813233036,
+        "n_trials": 15
+      },
+      {
+        "code": 45,
+        "mean": 0.009561821433341808,
+        "sem": 0.01141966489412838,
+        "n_trials": 15
+      },
+      {
+        "code": 46,
+        "mean": 0.027922901366901856,
+        "sem": 0.015573768108549027,
+        "n_trials": 15
+      },
+      {
+        "code": 47,
+        "mean": -0.07427933804676778,
+        "sem": 0.042357925178892815,
+        "n_trials": 14
+      },
+      {
+        "code": 48,
+        "mean": -0.013906937590076164,
+        "sem": 0.014575428575307648,
+        "n_trials": 15
+      },
+      {
+        "code": 49,
+        "mean": -0.022982283806154587,
+        "sem": 0.015318941184001839,
+        "n_trials": 15
+      },
+      {
+        "code": 50,
+        "mean": -0.017838267868904342,
+        "sem": 0.01237095957086193,
+        "n_trials": 15
+      },
+      {
+        "code": 51,
+        "mean": 0.00023745423726153982,
+        "sem": 0.008298455967293214,
+        "n_trials": 15
+      },
+      {
+        "code": 52,
+        "mean": -0.05037317832660871,
+        "sem": 0.016783196438421612,
+        "n_trials": 14
+      },
+      {
+        "code": 53,
+        "mean": -0.011845980488816124,
+        "sem": 0.011865708484902477,
+        "n_trials": 15
+      },
+      {
+        "code": 54,
+        "mean": 0.00332373376291202,
+        "sem": 0.011602907679935997,
+        "n_trials": 15
+      },
+      {
+        "code": 55,
+        "mean": -0.007226387655687046,
+        "sem": 0.011189784687797988,
+        "n_trials": 15
+      },
+      {
+        "code": 56,
+        "mean": -0.0037767679003433935,
+        "sem": 0.014383743738012468,
+        "n_trials": 15
+      }
+    ],
+    "outputs": {
+      "anova_maps": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_anova_maps.png",
+      "cluster_bar": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_cluster_bar.png",
+      "freq_corr": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-22/orientation_freq_corr.png"
+    }
+  }
+}
