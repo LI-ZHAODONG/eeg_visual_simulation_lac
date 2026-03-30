@@ -4,6 +4,11 @@
 *.npy
 *.npz
 *.mat
+*.vhdr
+*.vmrk
+*.eeg
+*events.tsv
+*.zip
 
 # Python cache
 __pycache__/
