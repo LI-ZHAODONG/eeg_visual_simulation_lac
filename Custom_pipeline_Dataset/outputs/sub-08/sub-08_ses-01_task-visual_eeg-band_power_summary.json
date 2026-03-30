@@ -118,15 +118,9 @@
       40.0,
       80.0
     ],
-    "gamma_subbands": [
-      [
-        40.0,
-        55.0
-      ],
-      [
-        65.0,
-        80.0
-      ]
+    "gamma_band": [
+      40.0,
+      80.0
     ]
   },
   "windows_s": {
@@ -150,7 +144,7 @@
   },
   "apply_reviewed_ica_summary": {
     "recording": "sub-08_ses-01_task-visual_eeg",
-    "vhdr_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/../ds006547/sub-08/ses-01/eeg/sub-08_ses-01_task-visual_eeg.vhdr",
+    "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-08/ses-01/eeg/sub-08_ses-01_task-visual_eeg.vhdr",
     "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-08/sub-08_ses-01_task-visual_eeg-ica.fif",
     "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-08/sub-08_ses-01_task-visual_eeg-ica_component_review-refined.json",
     "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-08/sub-08_ses-01_task-visual_eeg-preprocess_summary.json",
@@ -158,28 +152,29 @@
       1,
       3,
       4,
-      7,
+      8,
       9,
-      11,
+      10,
       13,
       16,
       18,
-      24,
+      22,
       27,
-      30,
       32,
+      33,
       35,
       36
     ],
     "excluded_components": [
       0,
       2,
-      8,
-      10,
+      7,
+      11,
+      12,
       28,
       31,
       37,
-      38,
+      40,
       41,
       42,
       43,

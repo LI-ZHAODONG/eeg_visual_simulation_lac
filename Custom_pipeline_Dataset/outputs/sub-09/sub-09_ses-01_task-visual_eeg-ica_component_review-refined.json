@@ -29,7 +29,7 @@
     "3": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (67.4%)"
+      "notes": "Auto-rejected: other (67.3%)"
     },
     "4": {
       "label": "brain",
@@ -64,12 +64,12 @@
     "10": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (50.1%)."
+      "notes": "Manual-assisted keep: borderline brain (50.2%)."
     },
     "11": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Left unsure: muscle artifact (30.0%)."
+      "notes": "Left unsure: muscle artifact (30.1%)."
     },
     "12": {
       "label": "muscle artifact",
@@ -129,7 +129,7 @@
     "23": {
       "label": "heart beat",
       "keep": false,
-      "notes": "Auto-rejected: heart beat (68.9%)"
+      "notes": "Auto-rejected: heart beat (69.0%)"
     },
     "24": {
       "label": "other",
@@ -164,7 +164,7 @@
     "30": {
       "label": "eye blink",
       "keep": null,
-      "notes": "Left unsure: eye blink (49.3%)."
+      "notes": "Left unsure: eye blink (49.4%)."
     },
     "31": {
       "label": "other",
@@ -174,7 +174,7 @@
     "32": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (59.3%)."
+      "notes": "Left unsure: other (59.4%)."
     },
     "33": {
       "label": "other",
@@ -189,7 +189,7 @@
     "35": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (28.0%)."
+      "notes": "Left unsure: brain (28.1%)."
     },
     "36": {
       "label": "channel noise",
@@ -209,7 +209,7 @@
     "39": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (75.7%)"
+      "notes": "Auto-kept: brain (75.8%)"
     },
     "40": {
       "label": "brain",
@@ -254,7 +254,7 @@
     "48": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (80.4%)"
+      "notes": "Auto-rejected: other (80.5%)"
     },
     "49": {
       "label": "brain",
@@ -279,7 +279,7 @@
     "53": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (83.2%)"
+      "notes": "Auto-kept: brain (83.3%)"
     },
     "54": {
       "label": "channel noise",

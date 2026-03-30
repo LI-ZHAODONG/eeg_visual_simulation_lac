@@ -54,7 +54,7 @@
     "8": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (63.6%)"
+      "notes": "Auto-rejected: other (63.7%)"
     },
     "9": {
       "label": "brain",
@@ -74,12 +74,12 @@
     "12": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Left unsure: muscle artifact (30.1%)."
+      "notes": "Left unsure: muscle artifact (30.2%)."
     },
     "13": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Left unsure: muscle artifact (43.7%)."
+      "notes": "Left unsure: muscle artifact (43.8%)."
     },
     "14": {
       "label": "other",
@@ -89,12 +89,12 @@
     "15": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (70.3%)"
+      "notes": "Auto-rejected: muscle artifact (70.2%)"
     },
     "16": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (87.9%)"
+      "notes": "Auto-rejected: muscle artifact (87.8%)"
     },
     "17": {
       "label": "muscle artifact",
@@ -114,7 +114,7 @@
     "20": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (54.7%)."
+      "notes": "Manual-assisted keep: borderline brain (54.8%)."
     },
     "21": {
       "label": "muscle artifact",
@@ -204,7 +204,7 @@
     "38": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (53.6%)."
+      "notes": "Manual-assisted keep: borderline brain (53.7%)."
     },
     "39": {
       "label": "brain",
@@ -214,7 +214,7 @@
     "40": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (43.8%)."
+      "notes": "Left unsure: brain (43.9%)."
     },
     "41": {
       "label": "brain",
@@ -229,7 +229,7 @@
     "43": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (87.2%)"
+      "notes": "Auto-kept: brain (87.1%)"
     },
     "44": {
       "label": "eye blink",

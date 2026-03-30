@@ -69,12 +69,12 @@
     "11": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (45.3%)."
+      "notes": "Left unsure: brain (45.4%)."
     },
     "12": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (77.5%)"
+      "notes": "Auto-kept: brain (77.4%)"
     },
     "13": {
       "label": "channel noise",
@@ -84,7 +84,7 @@
     "14": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (62.3%)"
+      "notes": "Auto-kept: brain (62.5%)"
     },
     "15": {
       "label": "muscle artifact",
@@ -199,7 +199,7 @@
     "37": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (51.5%)."
+      "notes": "Left unsure: other (51.4%)."
     },
     "38": {
       "label": "eye blink",
@@ -224,7 +224,7 @@
     "42": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (58.5%)."
+      "notes": "Manual-assisted keep: borderline brain (58.4%)."
     },
     "43": {
       "label": "brain",
@@ -289,12 +289,12 @@
     "55": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (54.9%)."
+      "notes": "Left unsure: other (55.1%)."
     },
     "56": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (71.4%)"
+      "notes": "Auto-rejected: other (71.5%)"
     },
     "57": {
       "label": "other",
@@ -309,7 +309,7 @@
     "59": {
       "label": "channel noise",
       "keep": null,
-      "notes": "Left unsure: channel noise (48.7%)."
+      "notes": "Left unsure: channel noise (48.8%)."
     }
   },
   "generated_files": {

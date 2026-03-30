@@ -69,12 +69,12 @@
     "11": {
       "label": "brain",
       "keep": null,
-      "notes": "Unsure: brain (45.3%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: brain (45.4%) - Did not meet auto-decision rule. Please review."
     },
     "12": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (77.5%)"
+      "notes": "Auto-kept: brain (77.4%)"
     },
     "13": {
       "label": "channel noise",
@@ -84,7 +84,7 @@
     "14": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (62.3%)"
+      "notes": "Auto-kept: brain (62.5%)"
     },
     "15": {
       "label": "muscle artifact",
@@ -199,7 +199,7 @@
     "37": {
       "label": "other",
       "keep": null,
-      "notes": "Unsure: other (51.5%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: other (51.4%) - Did not meet auto-decision rule. Please review."
     },
     "38": {
       "label": "eye blink",
@@ -224,7 +224,7 @@
     "42": {
       "label": "brain",
       "keep": null,
-      "notes": "Unsure: brain (58.5%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: brain (58.4%) - Did not meet auto-decision rule. Please review."
     },
     "43": {
       "label": "brain",
@@ -289,12 +289,12 @@
     "55": {
       "label": "other",
       "keep": null,
-      "notes": "Unsure: other (54.9%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: other (55.1%) - Did not meet auto-decision rule. Please review."
     },
     "56": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (71.4%)"
+      "notes": "Auto-rejected: other (71.5%)"
     },
     "57": {
       "label": "other",
@@ -309,7 +309,7 @@
     "59": {
       "label": "channel noise",
       "keep": null,
-      "notes": "Unsure: channel noise (48.7%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: channel noise (48.8%) - Did not meet auto-decision rule. Please review."
     }
   },
   "generated_files": {
