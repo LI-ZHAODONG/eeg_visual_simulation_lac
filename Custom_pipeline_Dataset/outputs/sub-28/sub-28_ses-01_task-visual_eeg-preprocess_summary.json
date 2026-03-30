@@ -4,9 +4,9 @@
   "recording": "sub-28_ses-01_task-visual_eeg",
   "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-28/ses-01/eeg/sub-28_ses-01_task-visual_eeg.vhdr",
   "outputs": {
-    "ica_fif": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-28/sub-28_ses-01_task-visual_eeg-ica.fif",
-    "bad_channels_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-28/sub-28_ses-01_task-visual_eeg-bad_channels.json",
-    "component_review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-28/sub-28_ses-01_task-visual_eeg-ica_component_review.json"
+    "ica_fif": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-28/sub-28_ses-01_task-visual_eeg-ica.fif",
+    "bad_channels_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-28/sub-28_ses-01_task-visual_eeg-bad_channels.json",
+    "component_review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-28/sub-28_ses-01_task-visual_eeg-ica_component_review.json"
   },
   "preprocessing": {
     "bad_channel_detection_band_hz": [
@@ -27,11 +27,12 @@
       "AF8"
     ],
     "notch_freq_hz": 60.0,
-    "notch_max_freq_hz": 180.0,
+    "notch_max_freq_hz": 480.0,
     "notch_freqs_applied_hz": [
       60.0,
       120.0,
-      180.0
+      180.0,
+      240.0
     ],
     "ica_filter_band_hz": [
       1.0,

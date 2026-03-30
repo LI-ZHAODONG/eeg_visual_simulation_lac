@@ -1,0 +1,14 @@
+{
+  "electrode_anova": {
+    "n_subjects": 31,
+    "n_channels": 59
+  },
+  "ersp_clusters": {
+    "n_pixels_p05": 8288,
+    "n_pixels_p001": 5144,
+    "total_pixels": 31409,
+    "pct_sig_05": 26.387341207934035,
+    "pct_sig_001": 16.377471425387625,
+    "n_subjects": 31
+  }
+}

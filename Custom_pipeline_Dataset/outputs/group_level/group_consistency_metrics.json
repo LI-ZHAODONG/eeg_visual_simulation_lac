@@ -1,10 +1,10 @@
 {
-  "alpha_effect_mean": -0.07853848874649819,
-  "alpha_effect_std": 0.15690498336787498,
-  "alpha_reliability_cv": -1.9978100657669065,
-  "gamma_effect_mean": 0.054818656869773115,
-  "gamma_effect_std": 0.038140526116729405,
-  "gamma_reliability_cv": 0.6957581286118669,
+  "alpha_effect_mean": -0.07800198859158528,
+  "alpha_effect_std": 0.15766526059032412,
+  "alpha_reliability_cv": -2.0212979622333984,
+  "gamma_effect_mean": 0.040640461693400236,
+  "gamma_effect_std": 0.037753354985570205,
+  "gamma_reliability_cv": 0.9289597955453621,
   "n_subjects_with_alpha_data": 31,
   "n_subjects_with_gamma_data": 31,
   "interpretation": "Lower CV indicates more consistent effects across subjects"

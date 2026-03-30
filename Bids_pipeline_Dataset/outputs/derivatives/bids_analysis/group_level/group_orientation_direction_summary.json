@@ -1,0 +1,97 @@
+{
+  "n_subjects": 30,
+  "subjects": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09",
+    "sub-10",
+    "sub-11",
+    "sub-12",
+    "sub-13",
+    "sub-14",
+    "sub-15",
+    "sub-16",
+    "sub-17",
+    "sub-18",
+    "sub-19",
+    "sub-20",
+    "sub-21",
+    "sub-22",
+    "sub-23",
+    "sub-24",
+    "sub-25",
+    "sub-26",
+    "sub-27",
+    "sub-28",
+    "sub-29",
+    "sub-31"
+  ],
+  "frequency_correlation": {
+    "orientation_r_mean": 0.02435407934368468,
+    "orientation_r_std": 0.549554019019543,
+    "direction_r_mean": 0.1040476489549211,
+    "direction_r_std": 0.5929648741877834,
+    "n_subjects": 30
+  },
+  "regression": {
+    "slope": 0.08085350974419125,
+    "intercept": 0.11679965409730772,
+    "r": 0.24583623798246707,
+    "p": 0.35873687969955104,
+    "n_triggers": 16,
+    "n_subjects": 30
+  },
+  "pairwise_ttests": {
+    "orientation_alpha": {
+      "n_subjects": 30,
+      "n_pairs": 15,
+      "significant_pairs": [
+        {
+          "pair": [
+            "orientation_cardinal_combined",
+            "orientation_oblique_vertical_pm_22_5"
+          ],
+          "t": -2.2531352369454956,
+          "p": 0.03198527573772692
+        },
+        {
+          "pair": [
+            "orientation_oblique_vertical_pm_22_5",
+            "orientation_horizontal"
+          ],
+          "t": 2.4047236774431586,
+          "p": 0.022793658815059334
+        },
+        {
+          "pair": [
+            "orientation_oblique_horizontal_pm_22_5",
+            "orientation_horizontal"
+          ],
+          "t": 2.1291771832382045,
+          "p": 0.04185580509526099
+        }
+      ]
+    },
+    "orientation_gamma": {
+      "n_subjects": 30,
+      "n_pairs": 15,
+      "significant_pairs": []
+    },
+    "direction_alpha": {
+      "n_subjects": 30,
+      "n_pairs": 6,
+      "significant_pairs": []
+    },
+    "direction_gamma": {
+      "n_subjects": 30,
+      "n_pairs": 6,
+      "significant_pairs": []
+    }
+  }
+}

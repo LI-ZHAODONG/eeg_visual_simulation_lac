@@ -1,24 +1,24 @@
 {
   "linear_summation": {
-    "alpha_prediction": -0.14500001756058117,
-    "gamma_prediction": 0.054851518345089355,
-    "alpha_error": 0.03834322030248212,
-    "gamma_error": 0.017514692617326445
+    "alpha_prediction": -0.1457655566516849,
+    "gamma_prediction": 0.03803277600460542,
+    "alpha_error": 0.03415153283149766,
+    "gamma_error": 0.019349367097891177
   },
   "divisive_normalization": {
-    "alpha_prediction": -0.19333335674744156,
-    "gamma_prediction": 0.07313535779345247,
-    "alpha_error": 0.08667655948934251,
-    "gamma_error": 0.03579853206568956,
+    "alpha_prediction": -0.19435407553557985,
+    "gamma_prediction": 0.05071036800614056,
+    "alpha_error": 0.08274005171539262,
+    "gamma_error": 0.03202695909942632,
     "sigma": 0.5
   },
   "observed": {
-    "alpha": -0.10665679725809905,
-    "gamma": 0.03733682572776291
+    "alpha": -0.11161402382018723,
+    "gamma": 0.01868340890671424
   },
   "model_comparison": {
-    "linear_total_error": 0.055857912919808565,
-    "divnorm_total_error": 0.12247509155503207,
+    "linear_total_error": 0.053500899929388834,
+    "divnorm_total_error": 0.11476701081481894,
     "divnorm_advantage": "no"
   }
 }
