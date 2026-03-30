@@ -46,11 +46,14 @@ def compute_band_difference(epochs, l_freq, h_freq, baseline, task):
     bl_mask = (times >= baseline[0]) & (times < baseline[1])
     task_mask = (times >= task[0]) & (times < task[1])
 
-    baseline_mean = amp[:, :, bl_mask].mean(axis=-1)
-    task_mean = amp[:, :, task_mask].mean(axis=-1)
-    diff = task_mean - baseline_mean
+    power = amp ** 2
+    baseline_power = power[:, :, bl_mask].mean(axis=-1)
+    task_power = power[:, :, task_mask].mean(axis=-1)
+    baseline_power = np.clip(baseline_power, 1e-30, None)
+    task_power = np.clip(task_power, 1e-30, None)
+    diff = np.log(task_power / baseline_power)
 
-    return {"trial_diff": diff, "baseline_mean": baseline_mean, "task_mean": task_mean}
+    return {"trial_diff": diff, "baseline_mean": baseline_power, "task_mean": task_power}
 
 
 def compute_multi_band_difference(epochs, bands, baseline, task):

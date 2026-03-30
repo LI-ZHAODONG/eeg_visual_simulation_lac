@@ -37,6 +37,7 @@ def compute_band_difference(epochs, l_freq, h_freq, baseline, task):
     )
     data = band_epochs.get_data(copy=True)
     amp = analytic_amplitude(data)
+    power = amp ** 2
     times = band_epochs.times
 
     baseline_mask = (times >= baseline[0]) & (times < baseline[1])
@@ -47,14 +48,17 @@ def compute_band_difference(epochs, l_freq, h_freq, baseline, task):
     if not task_mask.any():
         raise RuntimeError(f"No samples found in task window {task}.")
 
-    baseline_mean = amp[:, :, baseline_mask].mean(axis=-1)
-    task_mean = amp[:, :, task_mask].mean(axis=-1)
-    diff = task_mean - baseline_mean
+    baseline_power = power[:, :, baseline_mask].mean(axis=-1)
+    task_power = power[:, :, task_mask].mean(axis=-1)
+    # Clip to avoid log(0); baseline_power should never be zero for EEG
+    baseline_power = np.clip(baseline_power, 1e-30, None)
+    task_power = np.clip(task_power, 1e-30, None)
+    diff = np.log(task_power / baseline_power)
 
     return {
         "trial_diff": diff,
-        "baseline_mean": baseline_mean,
-        "task_mean": task_mean,
+        "baseline_mean": baseline_power,
+        "task_mean": task_power,
     }
 
 
