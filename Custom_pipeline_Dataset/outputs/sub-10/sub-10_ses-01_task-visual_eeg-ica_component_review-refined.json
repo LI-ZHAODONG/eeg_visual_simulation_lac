@@ -219,7 +219,7 @@
     "41": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (50.1%)."
+      "notes": "Manual-assisted keep: borderline brain (50.2%)."
     },
     "42": {
       "label": "brain",
@@ -274,7 +274,7 @@
     "52": {
       "label": "eye blink",
       "keep": false,
-      "notes": "Auto-rejected: eye blink (70.8%)"
+      "notes": "Auto-rejected: eye blink (70.7%)"
     },
     "53": {
       "label": "other",
@@ -284,7 +284,7 @@
     "54": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (84.3%)"
+      "notes": "Auto-rejected: other (84.2%)"
     },
     "55": {
       "label": "other",

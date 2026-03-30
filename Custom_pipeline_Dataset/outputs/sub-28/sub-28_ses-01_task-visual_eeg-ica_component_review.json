@@ -54,7 +54,7 @@
     "8": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (63.8%)"
+      "notes": "Auto-rejected: muscle artifact (63.7%)"
     },
     "9": {
       "label": "brain",
@@ -99,7 +99,7 @@
     "17": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (97.7%)"
+      "notes": "Auto-rejected: muscle artifact (97.8%)"
     },
     "18": {
       "label": "brain",
@@ -159,7 +159,7 @@
     "29": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (61.5%)"
+      "notes": "Auto-kept: brain (61.6%)"
     },
     "30": {
       "label": "brain",
@@ -219,7 +219,7 @@
     "41": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Unsure: muscle artifact (41.6%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: muscle artifact (41.7%) - Did not meet auto-decision rule. Please review."
     },
     "42": {
       "label": "brain",
@@ -264,7 +264,7 @@
     "50": {
       "label": "channel noise",
       "keep": null,
-      "notes": "Unsure: channel noise (47.6%) - Did not meet auto-decision rule. Please review."
+      "notes": "Unsure: channel noise (47.5%) - Did not meet auto-decision rule. Please review."
     },
     "51": {
       "label": "channel noise",
