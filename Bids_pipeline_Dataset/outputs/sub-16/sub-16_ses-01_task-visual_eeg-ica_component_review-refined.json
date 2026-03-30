@@ -1,0 +1,319 @@
+{
+  "subject": "sub-16",
+  "recording": "sub-16_ses-01_task-visual_eeg",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (77.4%)"
+    },
+    "1": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (95.6%)"
+    },
+    "2": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (99.1%)"
+    },
+    "3": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (93.3%)"
+    },
+    "4": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.9%)"
+    },
+    "5": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (36.2%)."
+    },
+    "6": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (56.8%)."
+    },
+    "7": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Left unsure: eye blink (46.9%)."
+    },
+    "8": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (89.2%)"
+    },
+    "9": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.9%)"
+    },
+    "10": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (95.4%)"
+    },
+    "11": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (98.4%)"
+    },
+    "12": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.8%)"
+    },
+    "13": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (39.6%)."
+    },
+    "14": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (96.3%)"
+    },
+    "15": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (95.9%)"
+    },
+    "16": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (84.8%)"
+    },
+    "17": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (62.9%)"
+    },
+    "18": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (100.0%)"
+    },
+    "19": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (90.6%)"
+    },
+    "20": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (99.5%)"
+    },
+    "21": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (38.6%)."
+    },
+    "22": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (92.6%)"
+    },
+    "23": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (90.4%)"
+    },
+    "24": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.7%)"
+    },
+    "25": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (94.7%)"
+    },
+    "26": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (85.4%)"
+    },
+    "27": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (96.2%)"
+    },
+    "28": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (82.4%)"
+    },
+    "29": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (92.3%)"
+    },
+    "30": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (25.5%)."
+    },
+    "31": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (89.6%)"
+    },
+    "32": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (74.6%)"
+    },
+    "33": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (97.5%)"
+    },
+    "34": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (40.0%)."
+    },
+    "35": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (76.6%)"
+    },
+    "36": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (98.1%)"
+    },
+    "37": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (80.9%)"
+    },
+    "38": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline muscle artifact (55.4%)."
+    },
+    "39": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (84.5%)"
+    },
+    "40": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (95.5%)"
+    },
+    "41": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (56.7%)."
+    },
+    "42": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (34.8%)."
+    },
+    "43": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (81.2%)"
+    },
+    "44": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (61.2%)"
+    },
+    "45": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (69.6%)"
+    },
+    "46": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.2%)"
+    },
+    "47": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (46.6%)."
+    },
+    "48": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline muscle artifact (56.9%)."
+    },
+    "49": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (81.5%)"
+    },
+    "50": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (75.7%)"
+    },
+    "51": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Left unsure: muscle artifact (37.9%)."
+    },
+    "52": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (66.6%)"
+    },
+    "53": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (59.5%)."
+    },
+    "54": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (71.9%)"
+    },
+    "55": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline channel noise (57.1%)."
+    },
+    "56": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (55.6%)."
+    },
+    "57": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (99.8%)"
+    },
+    "58": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (60.5%)"
+    },
+    "59": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (72.7%)"
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
+  }
+}
