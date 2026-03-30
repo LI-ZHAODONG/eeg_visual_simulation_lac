@@ -94,7 +94,8 @@ def plot_alpha_gamma_scatter(summary, out_path):
     axes[0].scatter(alpha, gamma, color="#555555")
     axes[0].plot(np.sort(alpha), slope * np.sort(alpha) + intercept, "--", color="#1f77b4")
     for x, y, lbl in zip(alpha, gamma, labels):
-        axes[0].text(x, y, lbl, fontsize=8)
+        axes[0].annotate(lbl, (x, y), fontsize=7, ha="left", va="bottom",
+                         xytext=(4, 4), textcoords="offset points")
     axes[0].set_title(f"Alpha vs Gamma (r = {corr:.2f})")
     axes[0].set_xlabel("Alpha Power")
     axes[0].set_ylabel("Gamma Power")

@@ -78,6 +78,42 @@ IF EXIST "%SCRIPT_DIR%\group_ersp_statistics.py" (
     ECHO WARNING: group_ersp_statistics.py not found. Skipping.
 )
 
+REM Step 6: Group Orientation ERSP Stats
+IF EXIST "%SCRIPT_DIR%\group_orientation_ersp_stats.py" (
+    ECHO Running group orientation ERSP statistics...
+    python "%SCRIPT_DIR%\group_orientation_ersp_stats.py" --outputs-root "%OUTPUTS_DIR%" --out-dir "%PHASE2_DIR%"
+    IF %ERRORLEVEL% NEQ 0 ECHO ERROR on group orientation ERSP stats.
+) ELSE (
+    ECHO WARNING: group_orientation_ersp_stats.py not found. Skipping.
+)
+
+REM Step 7: Group Sensor ERSP
+IF EXIST "%SCRIPT_DIR%\group_sensor_ersp.py" (
+    ECHO Running group sensor ERSP summary...
+    python "%SCRIPT_DIR%\group_sensor_ersp.py" --outputs-root "%OUTPUTS_DIR%" --out-dir "%PHASE2_DIR%"
+    IF %ERRORLEVEL% NEQ 0 ECHO ERROR on group sensor ERSP summary.
+) ELSE (
+    ECHO WARNING: group_sensor_ersp.py not found. Skipping.
+)
+
+REM Step 8: Group Sensor ANOVA
+IF EXIST "%SCRIPT_DIR%\group_sensor_anova.py" (
+    ECHO Running group sensor ANOVA mapping...
+    python "%SCRIPT_DIR%\group_sensor_anova.py" --outputs-root "%OUTPUTS_DIR%" --out-dir "%PHASE2_DIR%"
+    IF %ERRORLEVEL% NEQ 0 ECHO ERROR on group sensor ANOVA mapping.
+) ELSE (
+    ECHO WARNING: group_sensor_anova.py not found. Skipping.
+)
+
+REM Step 9: Group Orientation/Direction Analysis
+IF EXIST "%SCRIPT_DIR%\group_orientation_direction_analysis.py" (
+    ECHO Running group orientation/direction analysis...
+    python "%SCRIPT_DIR%\group_orientation_direction_analysis.py" --outputs-root "%OUTPUTS_DIR%"
+    IF %ERRORLEVEL% NEQ 0 ECHO ERROR on group orientation/direction analysis.
+) ELSE (
+    ECHO WARNING: group_orientation_direction_analysis.py not found. Skipping.
+)
+
 ECHO.
 ECHO ==================================================
 ECHO   PHASE 2 COMPLETED

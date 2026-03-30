@@ -154,7 +154,7 @@ def main():
     parser.add_argument(
     "--notch-max-freq",
     type=float,
-    default=180.0,
+    default=480.0,
     help="Highest harmonic frequency to notch in Hz.",
     )
 

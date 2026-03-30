@@ -63,12 +63,21 @@ def main():
     # Step 3: Orientation tuning analysis
     run_script("orientation_tuning.py", sub_args)
 
+    # Step 3.5: Sensor ERSP Summary (Missing Topographies)
+    run_script("sensor_ersp_summary.py", sub_args)
+
     if not args.skip_group:
         # Step 4: Retinotopy model fitting (group-level)
         run_script("retinotopy_model_fit.py")
 
         # Step 5: Group statistics
         run_script("group_statistics.py")
+
+        # Step 6: Missing Topographical Group Visualizations
+        run_script("group_sensor_ersp.py", ["--outputs-root", str(SCRIPTS_DIR.parent / "outputs" / "derivatives" / "bids_analysis")])
+        run_script("group_sensor_anova.py", ["--outputs-root", str(SCRIPTS_DIR.parent / "outputs" / "derivatives" / "bids_analysis")])
+        run_script("grand_average_analysis.py", ["--outputs-root", str(SCRIPTS_DIR.parent / "outputs" / "derivatives" / "bids_analysis")])
+        run_script("group_orientation_direction_analysis.py", ["--outputs-root", str(SCRIPTS_DIR.parent / "outputs" / "derivatives" / "bids_analysis")])
 
     print("\n" + "=" * 60)
     print("  ALL CUSTOM ANALYSES COMPLETE")
