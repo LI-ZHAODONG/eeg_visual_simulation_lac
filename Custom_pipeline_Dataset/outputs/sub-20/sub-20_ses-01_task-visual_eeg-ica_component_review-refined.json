@@ -49,7 +49,7 @@
     "7": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (51.3%)."
+      "notes": "Manual-assisted keep: borderline brain (51.4%)."
     },
     "8": {
       "label": "brain",
@@ -84,7 +84,7 @@
     "14": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (80.6%)"
+      "notes": "Auto-rejected: muscle artifact (80.5%)"
     },
     "15": {
       "label": "muscle artifact",
@@ -159,12 +159,12 @@
     "29": {
       "label": "brain",
       "keep": true,
-      "notes": "Manual-assisted keep: borderline brain (58.1%)."
+      "notes": "Manual-assisted keep: borderline brain (58.0%)."
     },
     "30": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Left unsure: muscle artifact (40.3%)."
+      "notes": "Left unsure: muscle artifact (40.2%)."
     },
     "31": {
       "label": "other",
@@ -209,12 +209,12 @@
     "39": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (77.9%)"
+      "notes": "Auto-kept: brain (77.8%)"
     },
     "40": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (56.8%)."
+      "notes": "Left unsure: other (56.9%)."
     },
     "41": {
       "label": "brain",
@@ -234,7 +234,7 @@
     "44": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (90.0%)"
+      "notes": "Auto-kept: brain (90.1%)"
     },
     "45": {
       "label": "other",
@@ -244,7 +244,7 @@
     "46": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (74.8%)"
+      "notes": "Auto-kept: brain (74.7%)"
     },
     "47": {
       "label": "other",
@@ -264,7 +264,7 @@
     "50": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (59.2%)."
+      "notes": "Left unsure: other (59.3%)."
     },
     "51": {
       "label": "muscle artifact",
@@ -284,7 +284,7 @@
     "54": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (38.8%)."
+      "notes": "Left unsure: other (38.7%)."
     },
     "55": {
       "label": "channel noise",
@@ -304,7 +304,7 @@
     "58": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (82.7%)"
+      "notes": "Auto-rejected: other (82.6%)"
     },
     "59": {
       "label": "muscle artifact",
