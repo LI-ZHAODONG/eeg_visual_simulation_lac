@@ -117,7 +117,7 @@ def plot_group_scatter(group_vals, out_path, title):
                     fontsize=7, ha="left", va="bottom", xytext=(4, 4),
                     textcoords="offset points")
 
-    if len(alpha_means) >= 6:
+    if len(alpha_means) >= 2:
         slope, intercept, r, p, _ = linregress(alpha_means, gamma_means)
         xline = np.linspace(min(alpha_means), max(alpha_means), 50)
         ax.plot(xline, slope * xline + intercept, "r--", linewidth=1,
@@ -282,19 +282,23 @@ def group_pairwise_ttests(records, group_key):
 
 
 def plot_ttest_heatmap(t_values, p_values, labels, out_path, title):
-    """Plot t-value heatmap with p-value annotations."""
+    """Plot lower-triangle t-value heatmap with p-value annotations."""
     short = [l.replace("orientation_", "").replace("direction_", "")
              .replace("_combined", "").replace("_", " ") for l in labels]
     n = len(labels)
+    # Mask: show only lower triangle (i > j); upper triangle and diagonal are white
+    mask = np.full((n, n), np.nan)
+    for i in range(n):
+        for j in range(i):
+            mask[i, j] = t_values[i, j]
+
     fig, ax = plt.subplots(figsize=(max(6, n * 0.9), max(5, n * 0.8)))
-    vmax = max(abs(t_values).max(), 1)
-    im = ax.imshow(t_values, cmap="RdBu_r", vmin=-vmax, vmax=vmax,
+    vmax = max(np.nanmax(np.abs(mask)), 1)
+    im = ax.imshow(mask, cmap="RdBu_r", vmin=-vmax, vmax=vmax,
                    aspect="equal")
 
     for i in range(n):
-        for j in range(n):
-            if i == j:
-                continue
+        for j in range(i):
             p = p_values[i, j]
             txt = f"{p:.3f}"
             if p < 0.05:

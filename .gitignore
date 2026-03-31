@@ -9,6 +9,7 @@
 *.eeg
 *events.tsv
 *.zip
+*.tsv
 
 
 # Python cache
