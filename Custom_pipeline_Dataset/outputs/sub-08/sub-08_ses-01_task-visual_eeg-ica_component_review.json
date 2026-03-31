@@ -1,0 +1,269 @@
+{
+  "subject": "sub-08",
+  "recording": "sub-08_ses-01_task-visual_eeg",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (66.9%)"
+    },
+    "1": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (60.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "2": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (96.3%)"
+    },
+    "3": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (84.8%)"
+    },
+    "4": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (59.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "5": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (53.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "6": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Unsure: eye blink (43.7%) - Did not meet auto-decision rule. Please review."
+    },
+    "7": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (88.0%)"
+    },
+    "8": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (73.1%)"
+    },
+    "9": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (89.3%)"
+    },
+    "10": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (70.7%)"
+    },
+    "11": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (60.1%)"
+    },
+    "12": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (60.3%)"
+    },
+    "13": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (74.8%)"
+    },
+    "14": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (37.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "15": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (43.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "16": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (74.0%)"
+    },
+    "17": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (59.7%) - Did not meet auto-decision rule. Please review."
+    },
+    "18": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (90.9%)"
+    },
+    "19": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (43.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "20": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (40.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "21": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (54.1%) - Did not meet auto-decision rule. Please review."
+    },
+    "22": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (96.5%)"
+    },
+    "23": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (58.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "24": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (43.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "25": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (49.6%) - Did not meet auto-decision rule. Please review."
+    },
+    "26": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (45.4%) - Did not meet auto-decision rule. Please review."
+    },
+    "27": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (95.2%)"
+    },
+    "28": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (55.8%) - Did not meet auto-decision rule. Please review."
+    },
+    "29": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (44.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "30": {
+      "label": "eye blink",
+      "keep": null,
+      "notes": "Unsure: eye blink (38.1%) - Did not meet auto-decision rule. Please review."
+    },
+    "31": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (89.2%)"
+    },
+    "32": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (84.7%)"
+    },
+    "33": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (61.7%)"
+    },
+    "34": {
+      "label": "heart beat",
+      "keep": null,
+      "notes": "Unsure: heart beat (40.2%) - Did not meet auto-decision rule. Please review."
+    },
+    "35": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (86.6%)"
+    },
+    "36": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (79.6%)"
+    },
+    "37": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (68.7%)"
+    },
+    "38": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Unsure: channel noise (35.9%) - Did not meet auto-decision rule. Please review."
+    },
+    "39": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Unsure: brain (46.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "40": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (82.3%)"
+    },
+    "41": {
+      "label": "muscle artifact",
+      "keep": null,
+      "notes": "Unsure: muscle artifact (55.5%) - Did not meet auto-decision rule. Please review."
+    },
+    "42": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (91.0%)"
+    },
+    "43": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (90.6%)"
+    },
+    "44": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (92.5%)"
+    },
+    "45": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (97.6%)"
+    },
+    "46": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (57.7%) - Did not meet auto-decision rule. Please review."
+    },
+    "47": {
+      "label": "other",
+      "keep": null,
+      "notes": "Unsure: other (46.0%) - Did not meet auto-decision rule. Please review."
+    },
+    "48": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Auto-rejected: muscle artifact (78.5%)"
+    },
+    "49": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (90.7%)"
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
+  }
+}

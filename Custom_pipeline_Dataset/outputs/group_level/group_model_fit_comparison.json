@@ -1,24 +1,24 @@
 {
   "linear_summation": {
-    "alpha_prediction": -1.004947789956846e-06,
-    "gamma_prediction": -4.3242398970314595e-08,
-    "alpha_error": 1.0854314680537472e-07,
-    "gamma_error": 6.1235392248279e-09
+    "alpha_prediction": -0.1457655566516849,
+    "gamma_prediction": 0.03803277600460542,
+    "alpha_error": 0.03415153283149766,
+    "gamma_error": 0.019349367097891177
   },
   "divisive_normalization": {
-    "alpha_prediction": -1.339930386609128e-06,
-    "gamma_prediction": -5.765653196041946e-08,
-    "alpha_error": 4.4352574345765674e-07,
-    "gamma_error": 8.290593765276967e-09,
+    "alpha_prediction": -0.19435407553557985,
+    "gamma_prediction": 0.05071036800614056,
+    "alpha_error": 0.08274005171539262,
+    "gamma_error": 0.03202695909942632,
     "sigma": 0.5
   },
   "observed": {
-    "alpha": -8.964046431514713e-07,
-    "gamma": -4.9365938195142495e-08
+    "alpha": -0.11161402382018723,
+    "gamma": 0.01868340890671424
   },
   "model_comparison": {
-    "linear_total_error": 1.1466668603020263e-07,
-    "divnorm_total_error": 4.518163372229337e-07,
+    "linear_total_error": 0.053500899929388834,
+    "divnorm_total_error": 0.11476701081481894,
     "divnorm_advantage": "no"
   }
 }

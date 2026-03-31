@@ -6,8 +6,7 @@ import mne
 import numpy as np
 from scipy.signal import hilbert
 
-GAMMA_SUBBANDS = ((40.0, 55.0), (65.0, 80.0))
-
+GAMMA_BAND = (40.0, 80.0)   # Full range — power line noise removed by notch filter
 
 def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -37,6 +36,7 @@ def compute_band_difference(epochs, l_freq, h_freq, baseline, task):
     )
     data = band_epochs.get_data(copy=True)
     amp = analytic_amplitude(data)
+    power = amp ** 2
     times = band_epochs.times
 
     baseline_mask = (times >= baseline[0]) & (times < baseline[1])
@@ -47,33 +47,20 @@ def compute_band_difference(epochs, l_freq, h_freq, baseline, task):
     if not task_mask.any():
         raise RuntimeError(f"No samples found in task window {task}.")
 
-    baseline_mean = amp[:, :, baseline_mask].mean(axis=-1)
-    task_mean = amp[:, :, task_mask].mean(axis=-1)
-    diff = task_mean - baseline_mean
+    baseline_power = power[:, :, baseline_mask].mean(axis=-1)
+    task_power = power[:, :, task_mask].mean(axis=-1)
+    # Clip to avoid log(0); baseline_power should never be zero for EEG
+    baseline_power = np.clip(baseline_power, 1e-30, None)
+    task_power = np.clip(task_power, 1e-30, None)
+    diff = np.log(task_power / baseline_power)
 
     return {
         "trial_diff": diff,
-        "baseline_mean": baseline_mean,
-        "task_mean": task_mean,
+        "baseline_mean": baseline_power,
+        "task_mean": task_power,
     }
 
 
-def compute_multi_band_difference(epochs, bands, baseline, task):
-    results = [
-        compute_band_difference(
-            epochs,
-            l_freq=l_freq,
-            h_freq=h_freq,
-            baseline=baseline,
-            task=task,
-        )
-        for l_freq, h_freq in bands
-    ]
-    return {
-        "trial_diff": np.mean([item["trial_diff"] for item in results], axis=0),
-        "baseline_mean": np.mean([item["baseline_mean"] for item in results], axis=0),
-        "task_mean": np.mean([item["task_mean"] for item in results], axis=0),
-    }
 
 
 def compute_condition_means(trial_diff, event_codes):
@@ -154,9 +141,10 @@ def main():
     task = (args.task_start, args.task_end)
 
     alpha = compute_band_difference(epochs, 8.0, 13.0, baseline=baseline, task=task)
-    gamma = compute_multi_band_difference(
+    gamma = compute_band_difference(
         epochs,
-        bands=GAMMA_SUBBANDS,
+        l_freq=GAMMA_BAND[0],
+        h_freq=GAMMA_BAND[1],
         baseline=baseline,
         task=task,
     )
@@ -194,7 +182,7 @@ def main():
         "bands": {
             "alpha": [8.0, 13.0],
             "gamma": [40.0, 80.0],
-            "gamma_subbands": [list(band) for band in GAMMA_SUBBANDS],
+            "gamma_band": list(GAMMA_BAND),
         },
         "windows_s": {
             "baseline": list(baseline),

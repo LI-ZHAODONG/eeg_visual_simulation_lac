@@ -91,6 +91,53 @@ else
     echo "⚠️ ERSP statistics script not found. Skipping."
 fi
 
+# ---------- Step 6: Group Orientation ERSP Stats ----------
+GROUP_ORI_ERSP_SCRIPT="${SCRIPT_DIR}/group_orientation_ersp_stats.py"
+if [ -f "$GROUP_ORI_ERSP_SCRIPT" ]; then
+    echo "📐 Running group orientation ERSP statistics..."
+    python3 "$GROUP_ORI_ERSP_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR" \
+      --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group orientation ERSP stats."; fi
+else
+    echo "⚠️ Group orientation ERSP script not found. Skipping."
+fi
+
+# ---------- Step 7: Group Sensor ERSP ----------
+GROUP_SENSOR_ERSP_SCRIPT="${SCRIPT_DIR}/group_sensor_ersp.py"
+if [ -f "$GROUP_SENSOR_ERSP_SCRIPT" ]; then
+    echo "🌊 Running group sensor ERSP summary..."
+    python3 "$GROUP_SENSOR_ERSP_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR" \
+      --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group sensor ERSP summary."; fi
+else
+    echo "⚠️ Group sensor ERSP script not found. Skipping."
+fi
+
+# ---------- Step 8: Group Sensor ANOVA ----------
+GROUP_SENSOR_ANOVA_SCRIPT="${SCRIPT_DIR}/group_sensor_anova.py"
+if [ -f "$GROUP_SENSOR_ANOVA_SCRIPT" ]; then
+    echo "🧠 Running group sensor ANOVA mapping..."
+    python3 "$GROUP_SENSOR_ANOVA_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR" \
+      --out-dir "$PHASE2_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group sensor ANOVA mapping."; fi
+else
+    echo "⚠️ Group sensor ANOVA script not found. Skipping."
+fi
+
+# ---------- Step 9: Group Orientation/Direction Analysis ----------
+GROUP_ORI_DIR_SCRIPT="${SCRIPT_DIR}/group_orientation_direction_analysis.py"
+if [ -f "$GROUP_ORI_DIR_SCRIPT" ]; then
+    echo "📊 Running group orientation/direction analysis..."
+    python3 "$GROUP_ORI_DIR_SCRIPT" \
+      --outputs-root "$OUTPUTS_DIR"
+    if [ $? -ne 0 ]; then echo "❌ ERROR on group orientation/direction analysis."; fi
+else
+    echo "⚠️ Group orientation/direction analysis script not found. Skipping."
+fi
+
 echo ""
 echo "=================================================="
 echo " 🎉 PHASE 2 COMPLETED 🎉 "

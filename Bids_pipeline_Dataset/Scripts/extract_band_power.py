@@ -2,9 +2,8 @@
 Extract alpha and gamma band power from cleaned epochs.
 
 Reads cleaned epochs from MNE-BIDS-Pipeline derivatives, computes Hilbert-based
-analytic amplitude in alpha (8-13 Hz) and gamma (40-80 Hz, sub-banded to avoid
-60 Hz line noise), and saves per-trial and per-condition power differences
-(task − baseline).
+analytic amplitude in alpha (8-13 Hz) and gamma (40-80 Hz, full range), and saves
+per-trial and per-condition power differences (task − baseline).
 
 This replaces: Custom_pipeline_Dataset/Scripts/extract_band_power.py
 
@@ -24,8 +23,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils import (
     ALL_SUBJECTS,
     ALPHA_BAND,
+    GAMMA_BAND,
     BASELINE_WINDOW,
-    GAMMA_SUBBANDS,
     TASK_WINDOW,
     analytic_amplitude,
     get_custom_output_dir,
@@ -46,23 +45,14 @@ def compute_band_difference(epochs, l_freq, h_freq, baseline, task):
     bl_mask = (times >= baseline[0]) & (times < baseline[1])
     task_mask = (times >= task[0]) & (times < task[1])
 
-    baseline_mean = amp[:, :, bl_mask].mean(axis=-1)
-    task_mean = amp[:, :, task_mask].mean(axis=-1)
-    diff = task_mean - baseline_mean
+    power = amp ** 2
+    baseline_power = power[:, :, bl_mask].mean(axis=-1)
+    task_power = power[:, :, task_mask].mean(axis=-1)
+    baseline_power = np.clip(baseline_power, 1e-30, None)
+    task_power = np.clip(task_power, 1e-30, None)
+    diff = np.log(task_power / baseline_power)
 
-    return {"trial_diff": diff, "baseline_mean": baseline_mean, "task_mean": task_mean}
-
-
-def compute_multi_band_difference(epochs, bands, baseline, task):
-    """Average band power across multiple sub-bands."""
-    results = [
-        compute_band_difference(epochs, l, h, baseline, task) for l, h in bands
-    ]
-    return {
-        "trial_diff": np.mean([r["trial_diff"] for r in results], axis=0),
-        "baseline_mean": np.mean([r["baseline_mean"] for r in results], axis=0),
-        "task_mean": np.mean([r["task_mean"] for r in results], axis=0),
-    }
+    return {"trial_diff": diff, "baseline_mean": baseline_power, "task_mean": task_power}
 
 
 def compute_condition_means(trial_diff, event_names):
@@ -83,15 +73,15 @@ def process_subject(subject):
     code_to_name = {v: k for k, v in epochs.event_id.items()}
     event_names = np.array([code_to_name[c] for c in event_codes])
 
-    # Alpha: single band 8-13 Hz
+    # Alpha: 8-13 Hz
     alpha = compute_band_difference(
         epochs, ALPHA_BAND[0], ALPHA_BAND[1],
         baseline=BASELINE_WINDOW, task=TASK_WINDOW,
     )
 
-    # Gamma: sub-banded (40-55, 65-80 Hz) to avoid 60 Hz
-    gamma = compute_multi_band_difference(
-        epochs, bands=GAMMA_SUBBANDS,
+    # Gamma: 40-80 Hz (full range; power line noise already removed by notch filter)
+    gamma = compute_band_difference(
+        epochs, GAMMA_BAND[0], GAMMA_BAND[1],
         baseline=BASELINE_WINDOW, task=TASK_WINDOW,
     )
 
@@ -118,7 +108,7 @@ def process_subject(subject):
         "event_codes": sorted(set(int(c) for c in event_codes)),
         "bands": {
             "alpha": list(ALPHA_BAND),
-            "gamma_subbands": [list(b) for b in GAMMA_SUBBANDS],
+            "gamma": list(GAMMA_BAND),
         },
         "windows_s": {
             "baseline": list(BASELINE_WINDOW),

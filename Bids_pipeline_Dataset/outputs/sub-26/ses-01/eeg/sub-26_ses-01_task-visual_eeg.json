@@ -1,0 +1,12 @@
+{
+  "TaskName": "visual",
+  "Manufacturer": "Brain Products",
+  "CapManufacturer": "Brain Products",
+  "EEGReference": "FCz",
+  "EEGGround": "AFz",
+  "EEGChannelCount": 64,
+  "SamplingFrequency": 500,
+  "PowerLineFrequency": 60,
+  "RecordingType": "continuous",
+  "SoftwareFilters": "n/a"
+}

@@ -111,6 +111,11 @@ IF NOT EXIST "%EPOCHS_PATH%" (
     EXIT /B 0
 )
 
+REM Step 3.5: Sensor-space ERSP summary
+ECHO [Step 3.5] Computing sensor-space ERSP + topomaps...
+python "%SCRIPT_DIR%\sensor_ersp_summary.py" --epochs-path "%EPOCHS_PATH%"
+IF %ERRORLEVEL% NEQ 0 (ECHO WARNING: Step 3.5 failed for %SUB_ID%. Continuing.)
+
 REM Step 4: Extract Band Power
 ECHO [Step 4] Extracting Alpha/Gamma Power...
 python "%SCRIPT_DIR%\extract_band_power.py" --epochs-path "%EPOCHS_PATH%"
@@ -133,7 +138,7 @@ IF %ERRORLEVEL% NEQ 0 (ECHO ERROR on Step 7 for %SUB_ID%. Skipping. & EXIT /B 0)
 
 REM Step 8: ERSP stats
 ECHO [Step 8] Computing ERSP Statistics...
-python "%SCRIPT_DIR%\orientation_ersp_stats.py" --ersp-npy "%ERSP_NPY%" --event-codes-npy "%ERSP_EVENTS%" --freqs-npy "%ERSP_FREQS%" --times-npy "%ERSP_TIMES%"
+python "%SCRIPT_DIR%\orientation_ersp_stats.py" --ersp-npy "%ERSP_NPY%" --event-codes-npy "%ERSP_EVENTS%" --freqs-npy "%ERSP_FREQS%" --times-npy "%ERSP_TIMES%" --ica-path "%ICA_PATH%" --kept-components-npy "%OUT_DIR%\%BASE_NAME%-component_ersp_kept_components.npy"
 IF %ERRORLEVEL% NEQ 0 (ECHO ERROR on Step 8 for %SUB_ID%. Skipping. & EXIT /B 0)
 
 ECHO SUCCESS: Phase 1 fully completed for %SUB_ID%!

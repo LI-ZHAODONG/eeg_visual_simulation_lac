@@ -44,7 +44,7 @@
     "6": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (81.3%)"
+      "notes": "Auto-kept: brain (81.4%)"
     },
     "7": {
       "label": "other",
@@ -54,7 +54,7 @@
     "8": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (76.3%)"
+      "notes": "Auto-kept: brain (76.2%)"
     },
     "9": {
       "label": "brain",
@@ -79,7 +79,7 @@
     "13": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (61.1%)"
+      "notes": "Auto-kept: brain (61.2%)"
     },
     "14": {
       "label": "other",
@@ -169,7 +169,7 @@
     "31": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (34.7%)."
+      "notes": "Left unsure: brain (34.6%)."
     },
     "32": {
       "label": "muscle artifact",
@@ -179,7 +179,7 @@
     "33": {
       "label": "channel noise",
       "keep": false,
-      "notes": "Auto-rejected: channel noise (65.3%)"
+      "notes": "Auto-rejected: channel noise (65.2%)"
     },
     "34": {
       "label": "muscle artifact",
@@ -204,7 +204,7 @@
     "38": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (54.0%)."
+      "notes": "Left unsure: other (53.9%)."
     },
     "39": {
       "label": "muscle artifact",
@@ -214,7 +214,7 @@
     "40": {
       "label": "brain",
       "keep": null,
-      "notes": "Left unsure: brain (49.4%)."
+      "notes": "Left unsure: brain (49.5%)."
     },
     "41": {
       "label": "brain",
@@ -229,7 +229,7 @@
     "43": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (32.7%)."
+      "notes": "Left unsure: other (32.8%)."
     },
     "44": {
       "label": "muscle artifact",
@@ -254,7 +254,7 @@
     "48": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (87.3%)"
+      "notes": "Auto-rejected: other (87.4%)"
     },
     "49": {
       "label": "other",

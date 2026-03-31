@@ -4,6 +4,7 @@ from pathlib import Path
 
 import matplotlib
 import matplotlib.pyplot as plt
+import mne
 import numpy as np
 from scipy.ndimage import gaussian_filter, label
 from scipy.stats import f_oneway
@@ -188,6 +189,36 @@ def plot_freq_corr(freqs, spectra, out_path):
     return corr
 
 
+OCCIPITAL_CHANNELS = {"Oz", "O1", "O2", "POz", "PO3", "PO4", "PO7", "PO8", "Iz"}
+
+
+def get_occipital_component_mask(ica_path, kept_components, min_fraction=0.15):
+    """Return boolean mask over kept_components selecting occipital-dominant ones."""
+    ica = mne.preprocessing.read_ica(ica_path, verbose=False)
+    mixing = ica.get_components()          # (n_channels, n_ica_components)
+    ch_names = ica.ch_names
+
+    occ_indices = [i for i, ch in enumerate(ch_names) if ch in OCCIPITAL_CHANNELS]
+    if not occ_indices:
+        print("  WARNING: No occipital channels found in ICA — using all components.")
+        return np.ones(len(kept_components), dtype=bool)
+
+    mask = []
+    for comp_idx in kept_components:
+        if comp_idx >= mixing.shape[1]:
+            mask.append(False)
+            continue
+        topo = np.abs(mixing[:, comp_idx])
+        total = topo.sum()
+        occ_weight = topo[occ_indices].sum()
+        fraction = occ_weight / total if total > 0 else 0.0
+        mask.append(fraction >= min_fraction)
+
+    n_occ = sum(mask)
+    print(f"  Occipital components: {n_occ}/{len(kept_components)} kept.")
+    return np.array(mask, dtype=bool)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Compute paper-style ERSP orientation statistics from retained ICA components."
@@ -202,6 +233,18 @@ def main():
         default=Path(__file__).resolve().parent / "condition_mapping.json",
     )
     parser.add_argument("--out-dir", type=Path, default=None)
+    parser.add_argument(
+        "--ica-path", type=Path, default=None,
+        help="Path to ICA .fif. If provided, filters to occipital components only.",
+    )
+    parser.add_argument(
+        "--kept-components-npy", type=Path, default=None,
+        help="Path to *-component_ersp_kept_components.npy.",
+    )
+    parser.add_argument(
+        "--occipital-min-fraction", type=float, default=0.15,
+        help="Minimum fraction of weight on occipital channels to keep a component.",
+    )
     args = parser.parse_args()
 
     ersp_path = args.ersp_npy.resolve()
@@ -223,6 +266,17 @@ def main():
     orientation_mask = np.isin(event_codes, orientation_codes)
     ersp = ersp[orientation_mask]
     event_codes = event_codes[orientation_mask]
+
+    # Filter to occipital components if ICA path provided
+    if args.ica_path and args.kept_components_npy:
+        kept_components = np.load(args.kept_components_npy.resolve()).tolist()
+        occ_mask = get_occipital_component_mask(
+            args.ica_path.resolve(), kept_components, args.occipital_min_fraction
+        )
+        if occ_mask.any():
+            ersp = ersp[:, occ_mask, :, :]
+        else:
+            print("  WARNING: No occipital components found — using all components.")
 
     keep_mask, outlier_scores = reject_broadband_outliers(ersp, freqs, times, z_thresh=4.0)
     ersp = ersp[keep_mask]

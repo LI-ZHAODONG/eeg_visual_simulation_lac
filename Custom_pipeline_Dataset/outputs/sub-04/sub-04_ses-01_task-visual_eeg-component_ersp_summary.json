@@ -1,11 +1,10 @@
 {
   "recording": "sub-04_ses-01_task-visual_eeg",
   "vhdr_path": "/Volumes/personal/EEG/ds006547/sub-04/ses-01/eeg/sub-04_ses-01_task-visual_eeg.vhdr",
-  "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-ica.fif",
-  "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-ica_component_review.json",
-  "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-preprocess_summary.json",
+  "ica_path": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-ica.fif",
+  "review_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-ica_component_review.json",
+  "preprocess_summary_json": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-preprocess_summary.json",
   "kept_components": [
-    9,
     15,
     23,
     39,
@@ -14,7 +13,7 @@
     51
   ],
   "n_epochs": 648,
-  "n_components": 7,
+  "n_components": 6,
   "freq_range_hz": [
     4.0,
     100.0
@@ -34,15 +33,15 @@
   ],
   "output_shape": [
     648,
-    7,
+    6,
     49,
     1001
   ],
   "outputs": {
-    "ersp_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp.npy",
-    "event_codes_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_event_codes.npy",
-    "kept_components_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_kept_components.npy",
-    "freqs_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_freqs.npy",
-    "times_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_times.npy"
+    "ersp_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp.npy",
+    "event_codes_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_event_codes.npy",
+    "kept_components_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_kept_components.npy",
+    "freqs_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_freqs.npy",
+    "times_npy": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Custom_pipeline_Dataset/outputs/sub-04/sub-04_ses-01_task-visual_eeg-component_ersp_times.npy"
   }
 }

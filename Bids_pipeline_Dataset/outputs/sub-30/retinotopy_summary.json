@@ -1,0 +1,193 @@
+{
+  "picked_channel": "Oz",
+  "groups": [
+    {
+      "label": "full",
+      "codes": [
+        1
+      ],
+      "alpha_mean": -4.858720289246483e-08,
+      "gamma_mean": 3.730048408178016e-08
+    },
+    {
+      "label": "left",
+      "codes": [
+        2
+      ],
+      "alpha_mean": -4.907824667820014e-08,
+      "gamma_mean": -3.879397415681926e-09
+    },
+    {
+      "label": "right",
+      "codes": [
+        3
+      ],
+      "alpha_mean": -2.544924382133875e-07,
+      "gamma_mean": 4.429616876418061e-08
+    },
+    {
+      "label": "top",
+      "codes": [
+        4
+      ],
+      "alpha_mean": -3.3179376431807895e-07,
+      "gamma_mean": -4.9427503219954605e-08
+    },
+    {
+      "label": "bottom",
+      "codes": [
+        5
+      ],
+      "alpha_mean": -6.073562858934025e-07,
+      "gamma_mean": -1.7110542498581364e-08
+    },
+    {
+      "label": "quad_BR",
+      "codes": [
+        6
+      ],
+      "alpha_mean": 1.3231078855288474e-07,
+      "gamma_mean": 2.0070404335275922e-07
+    },
+    {
+      "label": "quad_BL",
+      "codes": [
+        7
+      ],
+      "alpha_mean": -3.2671895240610615e-07,
+      "gamma_mean": -4.0899221930599996e-08
+    },
+    {
+      "label": "quad_TL",
+      "codes": [
+        8
+      ],
+      "alpha_mean": -1.186414667670938e-07,
+      "gamma_mean": 6.3542504641369e-08
+    },
+    {
+      "label": "quad_TR",
+      "codes": [
+        9
+      ],
+      "alpha_mean": -5.663457536212463e-07,
+      "gamma_mean": 8.132590506706502e-09
+    },
+    {
+      "label": "oct_BR1",
+      "codes": [
+        10
+      ],
+      "alpha_mean": 6.15901172574485e-08,
+      "gamma_mean": 3.738171194535059e-09
+    },
+    {
+      "label": "oct_BR2",
+      "codes": [
+        11
+      ],
+      "alpha_mean": -2.1846567801863728e-07,
+      "gamma_mean": -1.1120030727374564e-08
+    },
+    {
+      "label": "oct_BL2",
+      "codes": [
+        12
+      ],
+      "alpha_mean": -3.8800342705637213e-07,
+      "gamma_mean": 1.1158231379956655e-07
+    },
+    {
+      "label": "oct_BL1",
+      "codes": [
+        13
+      ],
+      "alpha_mean": -2.1858717704488518e-07,
+      "gamma_mean": 6.935221622635435e-08
+    },
+    {
+      "label": "oct_TL1",
+      "codes": [
+        14
+      ],
+      "alpha_mean": -1.8683170006760926e-07,
+      "gamma_mean": -3.9218710896469233e-08
+    },
+    {
+      "label": "oct_TL2",
+      "codes": [
+        15
+      ],
+      "alpha_mean": -5.627961708863647e-07,
+      "gamma_mean": 4.467081358682492e-08
+    },
+    {
+      "label": "oct_TR2",
+      "codes": [
+        16
+      ],
+      "alpha_mean": 5.646735320897644e-08,
+      "gamma_mean": 4.3544781695634904e-08
+    },
+    {
+      "label": "oct_TR1",
+      "codes": [
+        17
+      ],
+      "alpha_mean": -2.2959298308702197e-07,
+      "gamma_mean": 3.7647889191511306e-08
+    },
+    {
+      "label": "blank",
+      "codes": [
+        18
+      ],
+      "alpha_mean": 1.7590436629388212e-07,
+      "gamma_mean": -9.806889390189564e-09
+    },
+    {
+      "label": "periph",
+      "codes": [
+        19
+      ],
+      "alpha_mean": -6.029565534432146e-07,
+      "gamma_mean": 1.660080376052518e-08
+    },
+    {
+      "label": "fovea",
+      "codes": [
+        20
+      ],
+      "alpha_mean": -7.104721138290631e-07,
+      "gamma_mean": 3.4235469615366943e-09
+    }
+  ],
+  "alpha_gamma_correlation": 0.2619727769644529,
+  "residuals": [
+    6.495967057265562e-11,
+    -4.108664640213144e-08,
+    1.8917138942095297e-08,
+    -7.035534580892388e-08,
+    -2.217086457050091e-08,
+    1.5305199867477967e-07,
+    -6.211928380132448e-08,
+    3.034086503780085e-08,
+    7.107881488486721e-10,
+    -3.984161541168373e-08,
+    -3.8573563835628894e-08,
+    9.389115220646527e-08,
+    4.190567931003777e-08,
+    -6.849380083801241e-08,
+    3.704461813316178e-08,
+    2.5997556491200676e-10,
+    1.083509176989063e-08,
+    -5.996915202256463e-08,
+    1.128713502693414e-08,
+    4.300870205271652e-09
+  ],
+  "outputs": {
+    "gamma_bar": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-30/retinotopy_gamma_summary.png",
+    "alpha_bar": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-30/retinotopy_alpha_summary.png",
+    "scatter": "/Volumes/personal/EEG/eeg_visual_simulation_lac/Bids_pipeline_Dataset/outputs/sub-30/retinotopy_alpha_gamma_scatter.png"
+  }
+}

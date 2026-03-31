@@ -19,7 +19,7 @@
     "1": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (97.1%)"
+      "notes": "Auto-rejected: other (97.2%)"
     },
     "2": {
       "label": "other",
@@ -44,12 +44,12 @@
     "6": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (37.6%)."
+      "notes": "Left unsure: other (37.5%)."
     },
     "7": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (59.3%)."
+      "notes": "Left unsure: other (59.4%)."
     },
     "8": {
       "label": "eye blink",
@@ -59,7 +59,7 @@
     "9": {
       "label": "brain",
       "keep": true,
-      "notes": "Auto-kept: brain (60.0%)"
+      "notes": "Manual-assisted keep: borderline brain (60.0%)."
     },
     "10": {
       "label": "muscle artifact",
@@ -99,7 +99,7 @@
     "17": {
       "label": "eye blink",
       "keep": false,
-      "notes": "Manual-assisted reject: borderline eye blink (54.4%)."
+      "notes": "Manual-assisted reject: borderline eye blink (54.3%)."
     },
     "18": {
       "label": "muscle artifact",
@@ -109,7 +109,7 @@
     "19": {
       "label": "other",
       "keep": null,
-      "notes": "Left unsure: other (47.1%)."
+      "notes": "Left unsure: other (47.2%)."
     },
     "20": {
       "label": "muscle artifact",
@@ -119,7 +119,7 @@
     "21": {
       "label": "muscle artifact",
       "keep": false,
-      "notes": "Auto-rejected: muscle artifact (84.7%)"
+      "notes": "Auto-rejected: muscle artifact (84.6%)"
     },
     "22": {
       "label": "muscle artifact",
@@ -144,7 +144,7 @@
     "26": {
       "label": "muscle artifact",
       "keep": null,
-      "notes": "Left unsure: muscle artifact (33.1%)."
+      "notes": "Left unsure: muscle artifact (33.2%)."
     },
     "27": {
       "label": "muscle artifact",
@@ -179,7 +179,7 @@
     "33": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (73.6%)"
+      "notes": "Auto-rejected: other (73.7%)"
     },
     "34": {
       "label": "muscle artifact",
@@ -194,7 +194,7 @@
     "36": {
       "label": "other",
       "keep": false,
-      "notes": "Auto-rejected: other (86.2%)"
+      "notes": "Auto-rejected: other (86.3%)"
     },
     "37": {
       "label": "muscle artifact",

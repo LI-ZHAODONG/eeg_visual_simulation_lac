@@ -1,0 +1,319 @@
+{
+  "subject": "sub-18",
+  "recording": "sub-18_ses-01_task-visual_eeg",
+  "notes": "Automatically generated using mne-icalabel with a 60.0% confidence threshold.",
+  "guidance": {
+    "keep_if": [
+      "ICLabel classified as 'brain' with high confidence"
+    ],
+    "reject_if": [
+      "ICLabel classified as 'eye', 'muscle', 'channel noise', etc. with high confidence"
+    ]
+  },
+  "component_decisions": {
+    "0": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (91.8%)"
+    },
+    "1": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (97.5%)"
+    },
+    "2": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (71.8%)"
+    },
+    "3": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (60.5%)"
+    },
+    "4": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (74.4%)"
+    },
+    "5": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (50.1%)."
+    },
+    "6": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Auto-rejected: eye blink (83.5%)"
+    },
+    "7": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (83.5%)"
+    },
+    "8": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (59.4%)."
+    },
+    "9": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline eye blink (51.5%)."
+    },
+    "10": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (72.3%)"
+    },
+    "11": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (31.6%)."
+    },
+    "12": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (74.6%)"
+    },
+    "13": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (42.6%)."
+    },
+    "14": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (44.8%)."
+    },
+    "15": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (58.3%)."
+    },
+    "16": {
+      "label": "muscle artifact",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline muscle artifact (51.9%)."
+    },
+    "17": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (94.3%)"
+    },
+    "18": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (56.3%)."
+    },
+    "19": {
+      "label": "eye blink",
+      "keep": false,
+      "notes": "Manual-assisted reject: borderline eye blink (51.4%)."
+    },
+    "20": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (55.9%)."
+    },
+    "21": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (86.8%)"
+    },
+    "22": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (84.9%)"
+    },
+    "23": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (79.3%)"
+    },
+    "24": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (65.1%)"
+    },
+    "25": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (57.9%)."
+    },
+    "26": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (49.1%)."
+    },
+    "27": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (39.0%)."
+    },
+    "28": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (48.4%)."
+    },
+    "29": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (50.5%)."
+    },
+    "30": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (81.5%)"
+    },
+    "31": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (68.4%)"
+    },
+    "32": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (63.4%)"
+    },
+    "33": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (54.5%)."
+    },
+    "34": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (65.3%)"
+    },
+    "35": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (71.8%)"
+    },
+    "36": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (54.0%)."
+    },
+    "37": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (50.9%)."
+    },
+    "38": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (39.7%)."
+    },
+    "39": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (62.7%)"
+    },
+    "40": {
+      "label": "channel noise",
+      "keep": null,
+      "notes": "Left unsure: channel noise (48.5%)."
+    },
+    "41": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (72.8%)"
+    },
+    "42": {
+      "label": "channel noise",
+      "keep": false,
+      "notes": "Auto-rejected: channel noise (75.2%)"
+    },
+    "43": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Auto-kept: brain (71.4%)"
+    },
+    "44": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (45.5%)."
+    },
+    "45": {
+      "label": "brain",
+      "keep": true,
+      "notes": "Manual-assisted keep: borderline brain (52.8%)."
+    },
+    "46": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (69.3%)"
+    },
+    "47": {
+      "label": "brain",
+      "keep": null,
+      "notes": "Left unsure: brain (43.9%)."
+    },
+    "48": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (39.4%)."
+    },
+    "49": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (87.7%)"
+    },
+    "50": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (72.6%)"
+    },
+    "51": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (56.8%)."
+    },
+    "52": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (34.0%)."
+    },
+    "53": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (90.5%)"
+    },
+    "54": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (34.6%)."
+    },
+    "55": {
+      "label": "other",
+      "keep": null,
+      "notes": "Left unsure: other (43.4%)."
+    },
+    "56": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (95.1%)"
+    },
+    "57": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (92.4%)"
+    },
+    "58": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (80.5%)"
+    },
+    "59": {
+      "label": "other",
+      "keep": false,
+      "notes": "Auto-rejected: other (68.8%)"
+    }
+  },
+  "generated_files": {
+    "topographies": [],
+    "properties": []
+  }
+}

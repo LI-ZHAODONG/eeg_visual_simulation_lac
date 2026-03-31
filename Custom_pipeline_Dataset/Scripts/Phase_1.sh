@@ -110,6 +110,14 @@ for i in {01..31}; do
         continue
     fi
 
+    # Step 3.5: Sensor-space ERSP summary
+    echo "🌊 [Step 3.5] Computing sensor-space ERSP + topomaps..."
+    python3 Custom_pipeline_Dataset/Scripts/sensor_ersp_summary.py \
+      --epochs-path "$EPOCHS_PATH"
+    if [ $? -ne 0 ]; then
+        echo "⚠️  WARNING: Step 3.5 failed for ${SUB_ID}. Continuing."
+    fi
+
     # Step 4: Extract Band Power
     echo "⚡ [Step 4] Extracting Alpha/Gamma Power..."
     python3 Custom_pipeline_Dataset/Scripts/extract_band_power.py --epochs-path "$EPOCHS_PATH"
@@ -156,7 +164,9 @@ for i in {01..31}; do
       --ersp-npy "$ERSP_NPY" \
       --event-codes-npy "$ERSP_EVENTS" \
       --freqs-npy "$ERSP_FREQS" \
-      --times-npy "$ERSP_TIMES"
+      --times-npy "$ERSP_TIMES" \
+      --ica-path "$ICA_PATH" \
+      --kept-components-npy "${OUT_DIR}/${BASE_NAME}-component_ersp_kept_components.npy"
     if [ $? -ne 0 ]; then
         echo "❌ ERROR on Step 8 for ${SUB_ID}. Skipping."
         continue

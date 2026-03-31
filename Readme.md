@@ -1,5 +1,7 @@
 # Visual EEG Simulation — Alpha and Gamma Rhythm Analysis
 
+**Repository:** [https://github.com/LI-ZHAODONG/eeg_visual_simulation_lac](https://github.com/LI-ZHAODONG/eeg_visual_simulation_lac)
+
 Replication and validation of findings from:
 
 > **Dissociable Spatial and Feature Tuning of Gamma and Alpha Rhythms in Human Visual Cortex**
@@ -11,9 +13,9 @@ Using high-density EEG (64 channels, OpenNeuro ds006547, n=30–31 subjects acro
 
 ## Key Findings
 
-1. **Alpha suppresses broadly** — Visual stimulation suppresses alpha power across posterior electrodes with little spatial selectivity (CV = −0.96 / −0.97)
+1. **Alpha suppresses broadly** — Visual stimulation suppresses alpha power across posterior electrodes with little spatial selectivity (CV = −2.02 / −0.79)
 2. **Gamma enhances focally** — Gamma power increases are retinotopically specific and localized over occipital cortex
-3. **Divisive normalization governs alpha summation** — Alpha spatial summation is subadditive (DivNorm model, σ = 0.5, outperforms linear prediction); gamma sums approximately linearly
+3. **Divisive normalization governs alpha summation** — Alpha spatial summation is strongly subadditive (DivNorm outperforms linear by 2–10×); gamma is closer to linear than alpha (DivNorm advantage 1.2–3.8×), consistent with the paper's direction
 4. **Gamma is sharply orientation-tuned; alpha is not** — Gamma responses are selective for grating orientation while alpha shows minimal tuning
 
 ---
@@ -30,10 +32,10 @@ We validate these findings using two independent preprocessing pipelines on the 
 | Stage | Original Paper | Custom Pipeline | BIDS Pipeline |
 |-------|---------------|-----------------|---------------|
 | **ICA** | Picard, 60 components, manual selection | Picard, 60 components, ICLabel (≥0.60) | Picard, `n_components=0.99`, EOG/ECG thresholds |
-| **Notch filter** | Single 60 Hz | Harmonic series (60, 120, 180 Hz) | Single 60 Hz (width = 2 Hz) |
+| **Notch filter** | Single 60 Hz | Harmonic series (60–480 Hz, 8 harmonics) | Single 60 Hz (width = 2 Hz) |
 | **Bandpass** | 1–100 Hz (FIR) | 1–100 Hz (FIR) | 1–100 Hz (FIR) |
 | **Epochs** | −0.5 to +3.5 s | −0.5 to +3.5 s | −0.5 to +3.0 s |
-| **Gamma band** | 40–80 Hz | 40–55 + 65–80 Hz (sub-bands) | 40–55 + 65–80 Hz (sub-bands) |
+| **Gamma band** | 40–80 Hz | 40–80 Hz (full band) | 40–80 Hz (full band) |
 | **Artifact rejection** | Broadband gamma outlier (z > 4) | Per-trial PTP rejection | 1 subject excluded (sub-30) |
 
 ---
@@ -42,13 +44,14 @@ We validate these findings using two independent preprocessing pipelines on the 
 
 | Finding | Original Paper | Custom Pipeline | BIDS Pipeline |
 |---------|---------------|-----------------|---------------|
-| **Alpha suppression** | Broad, posterior | Clear (CV=−0.96) | Clear, 1.7× stronger (CV=−0.97) |
-| **Gamma enhancement** | Focal, retinotopic | Present, noisy | Present, noisy |
-| **DivNorm > Linear** | Yes (alpha subadditive) | No (linear won) | Yes (all partitions, both bands) |
+| **Alpha suppression** | Broad, posterior | Clear (CV=−2.02) | Clear, 1.6× stronger (CV=−0.79) |
+| **Gamma enhancement** | Focal, retinotopic | Present, noisy (CV=+0.929) | Present, noisy (CV=+1.734) |
+| **DivNorm > Linear (alpha)** | Yes — subadditive | Yes — 2–9× advantage | Yes — 2–10× advantage |
+| **DivNorm > Linear (gamma)** | No — linear wins | DivNorm wins, small margin (1.2–3.8×) | DivNorm wins, small margin (1.3–2.5×) |
 | **Orientation tuning** | Strong gamma selectivity | TI ratio = 0.33 | Gamma TI > alpha TI |
 | **Cross-subject consistency** | Assumed (n=30) | Alpha reliable; gamma variable | Same pattern |
 
-The BIDS Pipeline's divisive normalization result is stronger than the paper's — DivNorm wins for both alpha and gamma across all 5 spatial partitions. The Custom Pipeline's aggressive harmonic notch filtering likely distorted summation relationships, making this the one finding sensitive to preprocessing choices.
+Both pipelines show DivNorm winning for alpha (strongly, matching the paper) and for gamma (weakly). Gamma is substantially closer to linear summation than alpha across both pipelines, consistent with the paper's direction — gamma at the scalp reflects a mixture of signals from multiple brain sources, pushing the combined response toward linear summation.
 
 ---
 
@@ -226,7 +229,7 @@ The submission notebook (`EEG_Final_Version.ipynb`) loads pre-computed results �
 
 - Divisive normalization uses a fixed σ = 0.5 (matching the paper)
 - ERSP clusters are threshold-based, not permutation-based
-- Gamma effects show high inter-subject variability (CV ≈ −3.7)
+- Gamma effects show high inter-subject variability (CV = +0.929 Custom / +1.734 BIDS)
 - One subject excluded in BIDS Pipeline (sub-30): per-subject preprocessing completed but sub-30 was excluded during pipeline configuration and not included in group analysis
 - Alpha-gamma correlation not computed for BIDS Pipeline
 

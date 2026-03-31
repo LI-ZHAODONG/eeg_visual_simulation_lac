@@ -86,7 +86,7 @@ h_freq = 100.0  # Low-pass at 100 Hz — anti-aliasing before resample
 
 # Notch filter: power line at 60 Hz (from sidecar JSON: PowerLineFrequency=60)
 # Pipeline will auto-detect from BIDS sidecar, but we set explicitly
-notch_freq = 60  # Will also remove harmonics (120, 180 Hz) automatically
+notch_freq = 60  # Will also remove harmonics (120, 180, 240 Hz) up to Nyquist; raw data is 1000 Hz so notch applied before resample
 
 # Notch filter width
 notch_widths = 2.0  # Hz — narrow notch to preserve gamma band

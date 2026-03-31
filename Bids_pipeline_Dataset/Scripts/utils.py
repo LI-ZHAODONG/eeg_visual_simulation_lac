@@ -31,7 +31,7 @@ CONDITION_MAPPING = SCRIPTS_DIR / "condition_mapping.json"
 
 ALPHA_BAND = (8.0, 13.0)
 GAMMA_BAND = (40.0, 80.0)
-GAMMA_SUBBANDS = ((40.0, 55.0), (65.0, 80.0))  # Avoids 60 Hz line noise
+
 
 # Time windows
 BASELINE_WINDOW = (-0.5, 0.0)
