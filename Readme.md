@@ -70,7 +70,6 @@ Both pipelines show DivNorm winning for alpha (strongly, matching the paper) and
 │       ├── derivatives/      # MNE-BIDS-Pipeline outputs + bids_analysis/
 │       └── sub-01/ ... sub-29/ sub-31/   # sub-30 excluded
 ├── EEG_Final_Version.ipynb   # Final report notebook
-├── EEG_Draft_Version.ipynb   # Draft version for comparison
 ├── requirements.txt
 └── Readme.md
 ```
